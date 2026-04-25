@@ -2,8 +2,8 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
+    - cron: '0 3 * * 0'  # Weekly on Sundays at 3 AM UTC
+  workflow_dispatch:     # Allow manual trigger
 
 jobs:
   update:
@@ -29,46 +29,81 @@ jobs:
           import json, requests
           from datetime import datetime, timezone
 
+          # Load configuration
           with open('sources.json') as f:
               config = json.load(f)
 
           rules = set()
-          for url in config['sources']:
+          headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
+
+          for source in config['sources']:
+              # Handle both string URLs and dict objects with options
+              if isinstance(source, str):
+                  url = source
+                  skip_cosmetic = config.get('prefer_network_rules', False)
+              else:
+                  url = source['url']
+                  skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', False))
+
               try:
-                  r = requests.get(url, timeout=30)
-                  r.raise_for_status()
-                  for line in r.text.splitlines():
+                  resp = requests.get(url, headers=headers, timeout=30)
+                  resp.raise_for_status()
+                  for line in resp.text.splitlines():
                       line = line.strip()
+                      # Skip empty lines and metadata comments
                       if not line or line.startswith('!'):
                           continue
-                      if config.get('prefer_network_rules') and line.startswith('##'):
+                      # Skip cosmetic rules if configured for this source
+                      if skip_cosmetic and line.startswith('##'):
                           continue
                       rules.add(line)
               except Exception as e:
-                  print(f"Skip {url}: {e}")
+                  print(f"⚠️ Failed to fetch {url}: {e}")
 
+          # Sort and apply rule limit
           rules = sorted(rules)
-          max_rules = config.get('max_rules', 50000)
+          max_rules = config.get('max_rules', 45000)
           if len(rules) > max_rules:
+              print(f"⚠️ WARNING: Truncated from {len(rules)} to {max_rules} rules")
               rules = rules[:max_rules]
 
+          # Generate output with header
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
+          output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
+          
           header = (
               "[Adblock Plus 2.0]\n"
               f"! Title: Vivaldi iOS Combined (Auto-Updated)\n"
               f"! Version: {today}\n"
-              "! Expires: 1 days\n"
-              f"! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}\n\n"
+              "! Expires: 7 days\n"
+              f"! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}\n"
+              f"! Rules: {len(rules)}\n\n"
           )
-          with open(config['output_file'], 'w') as f:
+          
+          with open(output_file, 'w') as f:
               f.write(header + '\n'.join(rules))
-          print(f"Done: {len(rules)} rules")
+          
+          print(f"✅ Generated {output_file} with {len(rules)} rules")
           PYEND
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add vivaldi-ios-combined.txt
-          git diff --cached --quiet || git commit -m "chore: update filter lists"
-          git push
+          
+          OUTPUT_FILE="vivaldi-ios-combined.txt"
+          
+          # Only commit if file exists and has changes
+          if [ -f "$OUTPUT_FILE" ]; then
+            git add "$OUTPUT_FILE"
+            if ! git diff --cached --quiet; then
+              git commit -m "chore: auto-update filter lists $(date +%Y%m%d)"
+              git push
+              echo "✅ Changes pushed"
+            else
+              echo "ℹ️ No changes to commit"
+            fi
+          else
+            echo "❌ Output file not found: $OUTPUT_FILE"
+            exit 1
+          fi
