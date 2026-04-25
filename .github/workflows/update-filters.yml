@@ -2,8 +2,8 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: '0 3 * * 0'  # Weekly on Sundays at 3 AM UTC
-  workflow_dispatch:     # Allow manual trigger
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -29,7 +29,6 @@ jobs:
           import json, requests
           from datetime import datetime, timezone
 
-          # Load configuration
           with open('sources.json') as f:
               config = json.load(f)
 
@@ -37,47 +36,44 @@ jobs:
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
 
           for source in config['sources']:
-              # Handle both string URLs and dict objects with options
               if isinstance(source, str):
                   url = source
-                  skip_cosmetic = config.get('prefer_network_rules', False)
+                  skip_cosmetic = config.get('prefer_network_rules', True)
               else:
                   url = source['url']
-                  skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', False))
+                  skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', True))
 
               try:
                   resp = requests.get(url, headers=headers, timeout=30)
                   resp.raise_for_status()
                   for line in resp.text.splitlines():
                       line = line.strip()
-                      # Skip empty lines and metadata comments
                       if not line or line.startswith('!'):
                           continue
-                      # Skip cosmetic rules if configured for this source
                       if skip_cosmetic and line.startswith('##'):
                           continue
                       rules.add(line)
               except Exception as e:
                   print(f"⚠️ Failed to fetch {url}: {e}")
 
-          # Sort and apply rule limit
           rules = sorted(rules)
-          max_rules = config.get('max_rules', 40000)
-          if len(rules) > max_rules:
+          max_rules = config.get('max_rules', 35000)
+          truncated = len(rules) >= max_rules
+          if truncated:
               print(f"⚠️ WARNING: Truncated from {len(rules)} to {max_rules} rules")
               rules = rules[:max_rules]
 
-          # Generate output with header
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
           output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
           
+          truncation_note = " (TRUNCATED)" if truncated else ""
           header = (
               "[Adblock Plus 2.0]\n"
-              f"! Title: Vivaldi iOS Combined (Auto-Updated)\n"
+              f"! Title: Vivaldi iOS Combined (Auto-Updated){truncation_note}\n"
               f"! Version: {today}\n"
               "! Expires: 7 days\n"
               f"! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}\n"
-              f"! Rules: {len(rules)}\n\n"
+              f"! Rules: {len(rules)}{truncation_note}\n\n"
           )
           
           with open(output_file, 'w') as f:
@@ -93,7 +89,6 @@ jobs:
           
           OUTPUT_FILE="vivaldi-ios-combined.txt"
           
-          # Only commit if file exists and has changes
           if [ -f "$OUTPUT_FILE" ]; then
             git add "$OUTPUT_FILE"
             if ! git diff --cached --quiet; then
