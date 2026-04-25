@@ -2,8 +2,8 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: '0 3 * * 0'
-  workflow_dispatch:
+    - cron: '0 3 * * 0'  # Weekly on Sundays at 3 AM UTC
+  workflow_dispatch:     # Allow manual trigger
 
 jobs:
   update:
@@ -26,107 +26,87 @@ jobs:
       - name: Fetch and merge lists
         run: |
           python3 - << 'PYEND'
-          import json, requests, re
+          import json, requests
           from datetime import datetime, timezone
 
           with open('sources.json') as f:
               config = json.load(f)
 
-          rules = set()
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
-          source_counts = {}
+          source_data = []
+          seen = set()
+          max_rules = config.get('max_rules', 45000)
 
           for source in config['sources']:
               if isinstance(source, str):
                   url = source
                   skip_cosmetic = config.get('prefer_network_rules', True)
-                  priority = 10
                   keywords = None
               else:
                   url = source['url']
                   skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', True))
-                  priority = source.get('priority', 10)
                   keywords = source.get('keep_only_keywords')
 
               try:
                   resp = requests.get(url, headers=headers, timeout=30)
                   resp.raise_for_status()
-                  count = 0
-                  
+                  rules = []
                   for line in resp.text.splitlines():
                       line = line.strip()
-                      
-                      # Skip empty lines and metadata
-                      if not line or line.startswith('!'):
+                      if not line or line.startswith('!') or line.startswith('@@'):
                           continue
-                      
-                      # Skip cosmetic rules if configured
                       if skip_cosmetic and line.startswith('##'):
                           continue
-                      
-                      # Skip exception rules (less critical for iOS)
-                      if line.startswith('@@'):
-                          continue
-                      
-                      # Skip very long rules (often redundant or iOS-incompatible)
                       if config.get('skip_long_rules') and len(line) > 300:
                           continue
-                      
-                      # Skip rare/complex syntax that iOS may not support well
-                      if config.get('skip_rare_syntax'):
-                          if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
-                              continue
-                      
-                      # For cookie list: keep only rules with relevant keywords if configured
-                      if keywords and 'fanboy-cookiemonster' in url:
-                          if not any(kw in line.lower() for kw in keywords):
-                              continue
-                      
-                      rules.add((priority, line))  # Store with priority for sorting
-                      count += 1
-                  
-                  source_counts[url.split('/')[-1]] = count
-                  print(f"✅ {url.split('/')[-1]}: {count} rules added")
-                  
+                      if config.get('skip_rare_syntax') and ('$redirect=' in line or '$csp=' in line or '$jsonprune=' in line):
+                          continue
+                      if keywords and not any(k in line.lower() for k in keywords):
+                          continue
+                      if line not in seen:
+                          seen.add(line)
+                          rules.append(line)
+                  source_data.append((url, rules))
+                  print(f"✅ {url.split('/')[-1]}: {len(rules)} unique rules")
               except Exception as e:
-                  print(f"⚠️ Failed to fetch {url}: {e}")
+                  print(f"⚠️ Failed {url}: {e}")
+                  source_data.append((url, []))
 
-          # Sort by priority first, then alphabetically, then take top N
-          sorted_rules = sorted(rules, key=lambda x: (x[0], x[1]))
-          rule_strings = [r[1] for r in sorted_rules]
-          
-          max_rules = config.get('max_rules', 45000)
-          truncated = len(rule_strings) >= max_rules
+          # Flatten and apply global limit
+          all_rules = [r for _, rules in source_data for r in rules]
+          truncated = len(all_rules) > max_rules
           if truncated:
-              print(f"⚠️ WARNING: Truncated from {len(rule_strings)} to {max_rules} rules")
-              rule_strings = rule_strings[:max_rules]
+              print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
+              all_rules = all_rules[:max_rules]
 
-          # Debug: print source breakdown
-          print("\n📊 Source breakdown:")
-          for name, count in source_counts.items():
-              print(f"  • {name}: {count} rules")
-          print(f"📦 Total before truncation: {len(sorted_rules)}")
-          print(f"📦 Final count: {len(rule_strings)}\n")
-
-          # Generate output
+          # Write output file with per-source headers
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
-          output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
+          out = config.get('output_file', 'vivaldi-ios-combined.txt')
+          note = " (TRUNCATED)" if truncated else ""
           
-          truncation_note = " (TRUNCATED)" if truncated else ""
           header = (
               "[Adblock Plus 2.0]\n"
-              f"! Title: Vivaldi iOS Combined (Auto-Updated){truncation_note}\n"
+              f"! Title: Vivaldi iOS Combined (Auto-Updated){note}\n"
               f"! Version: {today}\n"
               "! Expires: 7 days\n"
-              f"! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}\n"
-              f"! Rules: {len(rule_strings)}{truncation_note}\n"
-              f"! Sources: {', '.join(source_counts.keys())}\n\n"
+              f"! Global Rules: {len(all_rules)}{note}\n"
+              "! Source Breakdown:\n"
           )
+          for url, rules in source_data:
+              header += f"! • {url}: {len(rules)} unique rules\n"
+          header += "\n"
+
+          with open(out, 'w') as f:
+              f.write(header)
+              remaining = len(all_rules)
+              for url, rules in source_data:
+                  section = rules[:remaining]
+                  remaining -= len(section)
+                  f.write(f"! --- {url} ({len(section)} rules) ---\n")
+                  if section:
+                      f.write('\n'.join(section) + '\n\n')
           
-          with open(output_file, 'w') as f:
-              f.write(header + '\n'.join(rule_strings))
-          
-          print(f"✅ Generated {output_file}")
+          print(f"✅ Generated {out} with {len(all_rules)} final rules")
           PYEND
 
       - name: Commit and push changes
