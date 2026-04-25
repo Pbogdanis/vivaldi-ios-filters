@@ -26,7 +26,7 @@ jobs:
       - name: Fetch and merge lists
         run: |
           python3 - << 'PYEND'
-          import json, requests
+          import json, requests, re
           from datetime import datetime, timezone
 
           with open('sources.json') as f:
@@ -34,35 +34,81 @@ jobs:
 
           rules = set()
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
+          source_counts = {}
 
           for source in config['sources']:
               if isinstance(source, str):
                   url = source
                   skip_cosmetic = config.get('prefer_network_rules', True)
+                  priority = 10
+                  keywords = None
               else:
                   url = source['url']
                   skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', True))
+                  priority = source.get('priority', 10)
+                  keywords = source.get('keep_only_keywords')
 
               try:
                   resp = requests.get(url, headers=headers, timeout=30)
                   resp.raise_for_status()
+                  count = 0
+                  
                   for line in resp.text.splitlines():
                       line = line.strip()
+                      
+                      # Skip empty lines and metadata
                       if not line or line.startswith('!'):
                           continue
+                      
+                      # Skip cosmetic rules if configured
                       if skip_cosmetic and line.startswith('##'):
                           continue
-                      rules.add(line)
+                      
+                      # Skip exception rules (less critical for iOS)
+                      if line.startswith('@@'):
+                          continue
+                      
+                      # Skip very long rules (often redundant or iOS-incompatible)
+                      if config.get('skip_long_rules') and len(line) > 300:
+                          continue
+                      
+                      # Skip rare/complex syntax that iOS may not support well
+                      if config.get('skip_rare_syntax'):
+                          if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
+                              continue
+                      
+                      # For cookie list: keep only rules with relevant keywords if configured
+                      if keywords and 'fanboy-cookiemonster' in url:
+                          if not any(kw in line.lower() for kw in keywords):
+                              continue
+                      
+                      rules.add((priority, line))  # Store with priority for sorting
+                      count += 1
+                  
+                  source_counts[url.split('/')[-1]] = count
+                  print(f"✅ {url.split('/')[-1]}: {count} rules added")
+                  
               except Exception as e:
                   print(f"⚠️ Failed to fetch {url}: {e}")
 
-          rules = sorted(rules)
-          max_rules = config.get('max_rules', 35000)
-          truncated = len(rules) >= max_rules
+          # Sort by priority first, then alphabetically, then take top N
+          sorted_rules = sorted(rules, key=lambda x: (x[0], x[1]))
+          rule_strings = [r[1] for r in sorted_rules]
+          
+          max_rules = config.get('max_rules', 28000)
+          truncated = len(rule_strings) >= max_rules
           if truncated:
-              print(f"⚠️ WARNING: Truncated from {len(rules)} to {max_rules} rules")
-              rules = rules[:max_rules]
+              print(f"⚠️ WARNING: Truncated from {len(rule_strings)} to {max_rules} rules")
+              rule_strings = rule_strings[:max_rules]
 
+          # Debug: print source breakdown
+          print("\n📊 Source breakdown:")
+          for name, count in source_counts.items():
+              print(f"  • {name}: {count} rules")
+          print(f"📦 Total before truncation: {len(sorted_rules)}")
+          print(f"📦 Final count: {len(rule_strings)}\n")
+
+          # Generate output
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
           output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
           
@@ -73,13 +119,14 @@ jobs:
               f"! Version: {today}\n"
               "! Expires: 7 days\n"
               f"! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}\n"
-              f"! Rules: {len(rules)}{truncation_note}\n\n"
+              f"! Rules: {len(rule_strings)}{truncation_note}\n"
+              f"! Sources: {', '.join(source_counts.keys())}\n\n"
           )
           
           with open(output_file, 'w') as f:
-              f.write(header + '\n'.join(rules))
+              f.write(header + '\n'.join(rule_strings))
           
-          print(f"✅ Generated {output_file} with {len(rules)} rules")
+          print(f"✅ Generated {output_file}")
           PYEND
 
       - name: Commit and push changes
