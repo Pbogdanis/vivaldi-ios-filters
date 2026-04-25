@@ -62,7 +62,7 @@ jobs:
 
           # Sort and apply rule limit
           rules = sorted(rules)
-          max_rules = config.get('max_rules', 45000)
+          max_rules = config.get('max_rules', 40000)
           if len(rules) > max_rules:
               print(f"⚠️ WARNING: Truncated from {len(rules)} to {max_rules} rules")
               rules = rules[:max_rules]
