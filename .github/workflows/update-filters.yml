@@ -35,7 +35,7 @@ jobs:
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
           source_data = []  # List of (url, rules_list) tuples
           seen = set()      # For global deduplication
-          max_rules = config.get('max_rules', 45000)
+          max_rules = config.get('max_rules', 46000)
 
           for source in config['sources']:
               # Parse source config (supports both string URLs and dict objects)
