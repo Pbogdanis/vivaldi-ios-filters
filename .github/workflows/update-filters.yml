@@ -26,7 +26,7 @@ jobs:
       - name: Fetch and merge lists
         run: |
           python3 << 'EOF'
-          import json, requests, hashlib
+          import json, requests
           from datetime import datetime, timezone
 
           # Load config
@@ -42,7 +42,7 @@ jobs:
                   resp.raise_for_status()
                   for line in resp.text.splitlines():
                       line = line.strip()
-                      # Skip empty lines and metadata comments
+                      # Skip empty lines and metadata comments (keep only ![#...] for compatibility)
                       if not line or (line.startswith('!') and not line.startswith('![#')):
                           continue
                       # Optional: skip cosmetic rules if prefer_network_rules is true
@@ -61,6 +61,8 @@ jobs:
 
           # Generate output file
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
+          output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
+          
           output = f"""[Adblock Plus 2.0]
 ! Title: Vivaldi iOS Combined (Auto-Updated)
 ! Version: {today}
@@ -70,15 +72,19 @@ jobs:
 
 """ + '\n'.join(rules)
 
-          with open(config['output_file'], 'w') as f:
+          with open(output_file, 'w') as f:
               f.write(output)
 
-          print(f"Generated {config['output_file']} with {len(rules)} rules")
+          print(f"Generated {output_file} with {len(rules)} rules")
           EOF
 
       - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add ${{ fromJson(file('sources.json')).output_file }}
+          
+          # Hardcode output filename to match sources.json (simpler and YAML-safe)
+          OUTPUT_FILE="vivaldi-ios-combined.txt"
+          
+          git add "$OUTPUT_FILE"
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update filters $(date +%Y%m%d)" && git push)
