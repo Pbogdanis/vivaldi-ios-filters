@@ -2,8 +2,8 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # Daily at 3 AM UTC
-  workflow_dispatch:     # Allow manual trigger
+    - cron: '0 3 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -12,11 +12,11 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -25,66 +25,50 @@ jobs:
 
       - name: Fetch and merge lists
         run: |
-          python3 << 'EOF'
+          python3 - << 'PYEND'
           import json, requests
           from datetime import datetime, timezone
 
-          # Load config
           with open('sources.json') as f:
               config = json.load(f)
 
           rules = set()
-          headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
-
           for url in config['sources']:
               try:
-                  resp = requests.get(url, headers=headers, timeout=30)
-                  resp.raise_for_status()
-                  for line in resp.text.splitlines():
+                  r = requests.get(url, timeout=30)
+                  r.raise_for_status()
+                  for line in r.text.splitlines():
                       line = line.strip()
-                      # Skip empty lines and metadata comments (keep only ![#...] for compatibility)
-                      if not line or (line.startswith('!') and not line.startswith('![#')):
+                      if not line or line.startswith('!'):
                           continue
-                      # Optional: skip cosmetic rules if prefer_network_rules is true
                       if config.get('prefer_network_rules') and line.startswith('##'):
                           continue
                       rules.add(line)
               except Exception as e:
-                  print(f"Failed to fetch {url}: {e}")
+                  print(f"Skip {url}: {e}")
 
-          # Convert to sorted list and apply limit
           rules = sorted(rules)
           max_rules = config.get('max_rules', 50000)
           if len(rules) > max_rules:
-              print(f"WARNING: Truncated from {len(rules)} to {max_rules} rules")
               rules = rules[:max_rules]
 
-          # Generate output file
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
-          output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
-          
-          output = f"""[Adblock Plus 2.0]
-! Title: Vivaldi iOS Combined (Auto-Updated)
-! Version: {today}
-! Expires: 1 days
-! Homepage: https://github.com/${{ github.repository }}
-! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}
+          header = (
+              "[Adblock Plus 2.0]\n"
+              f"! Title: Vivaldi iOS Combined (Auto-Updated)\n"
+              f"! Version: {today}\n"
+              "! Expires: 1 days\n"
+              f"! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}\n\n"
+          )
+          with open(config['output_file'], 'w') as f:
+              f.write(header + '\n'.join(rules))
+          print(f"Done: {len(rules)} rules")
+          PYEND
 
-""" + '\n'.join(rules)
-
-          with open(output_file, 'w') as f:
-              f.write(output)
-
-          print(f"Generated {output_file} with {len(rules)} rules")
-          EOF
-
-      - name: Commit and push if changed
+      - name: Commit changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Hardcode output filename to match sources.json (simpler and YAML-safe)
-          OUTPUT_FILE="vivaldi-ios-combined.txt"
-          
-          git add "$OUTPUT_FILE"
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update filters $(date +%Y%m%d)" && git push)
+          git add vivaldi-ios-combined.txt
+          git diff --cached --quiet || git commit -m "chore: update filter lists"
+          git push
