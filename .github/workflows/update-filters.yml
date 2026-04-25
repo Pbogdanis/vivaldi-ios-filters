@@ -33,11 +33,12 @@ jobs:
               config = json.load(f)
 
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
-          source_data = []
-          seen = set()
+          source_data = []  # List of (url, rules_list) tuples
+          seen = set()      # For global deduplication
           max_rules = config.get('max_rules', 45000)
 
           for source in config['sources']:
+              # Parse source config (supports both string URLs and dict objects)
               if isinstance(source, str):
                   url = source
                   skip_cosmetic = config.get('prefer_network_rules', True)
@@ -45,68 +46,96 @@ jobs:
               else:
                   url = source['url']
                   skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', True))
-                  keywords = source.get('keep_only_keywords')
+                  keywords = source.get('keep_only_keywords')  # Only applies to cosmetic rules
 
               try:
                   resp = requests.get(url, headers=headers, timeout=30)
                   resp.raise_for_status()
                   rules = []
+                  
                   for line in resp.text.splitlines():
                       line = line.strip()
-                      if not line or line.startswith('!') or line.startswith('@@'):
+                      
+                      # Skip empty lines and metadata comments
+                      if not line or line.startswith('!'):
                           continue
+                      
+                      # Skip exception rules (less critical for iOS)
+                      if line.startswith('@@'):
+                          continue
+                      
+                      # Skip cosmetic rules if skip_cosmetic is true for this source
                       if skip_cosmetic and line.startswith('##'):
                           continue
+                      
+                      # Skip very long rules (often redundant or iOS-incompatible)
                       if config.get('skip_long_rules') and len(line) > 300:
                           continue
-                      if config.get('skip_rare_syntax') and ('$redirect=' in line or '$csp=' in line or '$jsonprune=' in line):
-                          continue
-                      if keywords and not any(k in line.lower() for k in keywords):
-                          continue
+                      
+                      # Skip rare/complex syntax that iOS may not support well
+                      if config.get('skip_rare_syntax'):
+                          if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
+                              continue
+                      
+                      # KEY FIX: Keyword filtering ONLY applies to cosmetic rules
+                      # Network rules (||domain^, $script, etc.) are NEVER filtered by keywords
+                      if keywords and line.startswith('##'):
+                          if not any(kw in line.lower() for kw in keywords):
+                              continue  # Skip this cosmetic rule if no keyword match
+                      # If line is a network rule, keyword filter is ignored → always kept
+                      
+                      # Global deduplication
                       if line not in seen:
                           seen.add(line)
                           rules.append(line)
+                  
                   source_data.append((url, rules))
                   print(f"✅ {url.split('/')[-1]}: {len(rules)} unique rules")
+                  
               except Exception as e:
-                  print(f"⚠️ Failed {url}: {e}")
+                  print(f"⚠️ Failed to fetch {url}: {e}")
                   source_data.append((url, []))
 
-          # Flatten and apply global limit
+          # Flatten all rules and apply global limit
           all_rules = [r for _, rules in source_data for r in rules]
           truncated = len(all_rules) > max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
               all_rules = all_rules[:max_rules]
 
-          # Write output file with per-source headers
+          # Generate output file with per-source headers for debugging
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
-          out = config.get('output_file', 'vivaldi-ios-combined.txt')
-          note = " (TRUNCATED)" if truncated else ""
+          output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
+          truncation_note = " (TRUNCATED)" if truncated else ""
           
-          header = (
-              "[Adblock Plus 2.0]\n"
-              f"! Title: Vivaldi iOS Combined (Auto-Updated){note}\n"
-              f"! Version: {today}\n"
-              "! Expires: 7 days\n"
-              f"! Global Rules: {len(all_rules)}{note}\n"
-              "! Source Breakdown:\n"
-          )
+          # Build header with source breakdown
+          header_lines = [
+              "[Adblock Plus 2.0]",
+              f"! Title: Vivaldi iOS Combined (Auto-Updated){truncation_note}",
+              f"! Version: {today}",
+              "! Expires: 7 days",
+              f"! Global Rules: {len(all_rules)}{truncation_note}",
+              "! Source Breakdown:"
+          ]
           for url, rules in source_data:
-              header += f"! • {url}: {len(rules)} unique rules\n"
-          header += "\n"
-
-          with open(out, 'w') as f:
-              f.write(header)
+              header_lines.append(f"! • {url}: {len(rules)} unique rules")
+          header_lines.append("")  # Blank line before rules
+          
+          # Write file: header + rules grouped by source (for debugging)
+          with open(output_file, 'w') as f:
+              f.write('\n'.join(header_lines))
+              
               remaining = len(all_rules)
               for url, rules in source_data:
+                  if remaining <= 0:
+                      break
                   section = rules[:remaining]
                   remaining -= len(section)
-                  f.write(f"! --- {url} ({len(section)} rules) ---\n")
                   if section:
-                      f.write('\n'.join(section) + '\n\n')
+                      f.write(f"\n! --- {url.split('/')[-1]} ({len(section)} rules) ---\n")
+                      f.write('\n'.join(section) + '\n')
           
-          print(f"✅ Generated {out} with {len(all_rules)} final rules")
+          print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
           PYEND
 
       - name: Commit and push changes
