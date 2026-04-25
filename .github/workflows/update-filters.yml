@@ -1,0 +1,84 @@
+name: Update Filter Lists
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Daily at 3 AM UTC
+  workflow_dispatch:     # Allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Fetch and merge lists
+        run: |
+          python3 << 'EOF'
+          import json, requests, hashlib
+          from datetime import datetime, timezone
+
+          # Load config
+          with open('sources.json') as f:
+              config = json.load(f)
+
+          rules = set()
+          headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
+
+          for url in config['sources']:
+              try:
+                  resp = requests.get(url, headers=headers, timeout=30)
+                  resp.raise_for_status()
+                  for line in resp.text.splitlines():
+                      line = line.strip()
+                      # Skip empty lines and metadata comments
+                      if not line or (line.startswith('!') and not line.startswith('![#')):
+                          continue
+                      # Optional: skip cosmetic rules if prefer_network_rules is true
+                      if config.get('prefer_network_rules') and line.startswith('##'):
+                          continue
+                      rules.add(line)
+              except Exception as e:
+                  print(f"Failed to fetch {url}: {e}")
+
+          # Convert to sorted list and apply limit
+          rules = sorted(rules)
+          max_rules = config.get('max_rules', 50000)
+          if len(rules) > max_rules:
+              print(f"WARNING: Truncated from {len(rules)} to {max_rules} rules")
+              rules = rules[:max_rules]
+
+          # Generate output file
+          today = datetime.now(timezone.utc).strftime('%Y%m%d')
+          output = f"""[Adblock Plus 2.0]
+! Title: Vivaldi iOS Combined (Auto-Updated)
+! Version: {today}
+! Expires: 1 days
+! Homepage: https://github.com/${{ github.repository }}
+! Last modified: {datetime.now(timezone.utc).strftime('%A, %B %d, %Y')}
+
+""" + '\n'.join(rules)
+
+          with open(config['output_file'], 'w') as f:
+              f.write(output)
+
+          print(f"Generated {config['output_file']} with {len(rules)} rules")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ${{ fromJson(file('sources.json')).output_file }}
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update filters $(date +%Y%m%d)" && git push)
