@@ -95,7 +95,7 @@ jobs:
           sorted_rules = sorted(rules, key=lambda x: (x[0], x[1]))
           rule_strings = [r[1] for r in sorted_rules]
           
-          max_rules = config.get('max_rules', 28000)
+          max_rules = config.get('max_rules', 45000)
           truncated = len(rule_strings) >= max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(rule_strings)} to {max_rules} rules")
