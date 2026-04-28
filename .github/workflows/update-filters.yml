@@ -18,8 +18,6 @@ jobs:
       contents: write
     strategy:
       matrix:
-        # If manual input provided → run only that config
-        # Otherwise (scheduled) → run both daily defaults
         config_file: >-
           ${{ 
             fromJSON(
@@ -28,7 +26,7 @@ jobs:
               || '["sources.json", "sources-150kLimit.json"]'
             )
           }}
-      fail-fast: false  # Continue other configs even if one fails
+      fail-fast: false
 
     steps:
       - name: Checkout repository
@@ -120,7 +118,7 @@ jobs:
               f"! Global Rules: {len(all_rules)}{truncation_note}",
               "! Source Breakdown:"
           ]
-          for url, rules in source_
+          for url, rules in source_data:
               header_lines.append(f"! • {url}: {len(rules)} unique rules")
           header_lines.append("")
 
