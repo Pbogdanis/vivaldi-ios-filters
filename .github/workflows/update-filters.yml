@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       config_file:
-        description: 'Config file to use (default: sources.json)'
+        description: 'Config to run (leave blank to run both daily configs)'
         required: false
-        default: 'sources.json'
+        default: ''
         type: string
 
 jobs:
@@ -16,6 +16,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    strategy:
+      matrix:
+        # If manual input provided → run only that config
+        # Otherwise (scheduled) → run both daily defaults
+        config_file: >-
+          ${{ 
+            fromJSON(
+              github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
+              && format('["{0}"]', github.event.inputs.config_file) 
+              || '["sources.json", "sources-150kLimit.json"]'
+            )
+          }}
+      fail-fast: false  # Continue other configs even if one fails
 
     steps:
       - name: Checkout repository
@@ -31,14 +44,18 @@ jobs:
 
       - name: Fetch and merge lists
         env:
-          INPUT_CONFIG_FILE: ${{ github.event.inputs.config_file || 'sources.json' }}
+          CONFIG_FILE: ${{ matrix.config_file }}
         run: |
           python3 - << 'PYEND'
           import json, requests, os
           from datetime import datetime, timezone
 
-          config_filename = os.environ.get('INPUT_CONFIG_FILE', 'sources.json')
-          print(f"📄 Using config file: {config_filename}")
+          config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
+          print(f"📄 Processing config: {config_filename}")
+
+          if not os.path.exists(config_filename):
+              print(f"❌ Config file not found: {config_filename}")
+              exit(1)
 
           with open(config_filename) as f:
               config = json.load(f)
@@ -103,7 +120,7 @@ jobs:
               f"! Global Rules: {len(all_rules)}{truncation_note}",
               "! Source Breakdown:"
           ]
-          for url, rules in source_data:
+          for url, rules in source_
               header_lines.append(f"! • {url}: {len(rules)} unique rules")
           header_lines.append("")
 
@@ -124,22 +141,22 @@ jobs:
 
       - name: Commit and push changes
         env:
-          INPUT_CONFIG_FILE: ${{ github.event.inputs.config_file || 'sources.json' }}
+          CONFIG_FILE: ${{ matrix.config_file }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          OUTPUT_FILE=$(python3 -c "import json, os; cfg=json.load(open(os.environ.get('INPUT_CONFIG_FILE','sources.json'))); print(cfg['output_file'])")
+          OUTPUT_FILE=$(python3 -c "import json, os; cfg=json.load(open(os.environ.get('CONFIG_FILE'))); print(cfg['output_file'])")
           echo "📦 Output file: $OUTPUT_FILE"
 
           if [ -f "$OUTPUT_FILE" ]; then
             git add "$OUTPUT_FILE"
             if ! git diff --cached --quiet; then
-              git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: ${INPUT_CONFIG_FILE:-sources.json})"
+              git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: $CONFIG_FILE)"
               git push
-              echo "✅ Changes pushed to $OUTPUT_FILE"
+              echo "✅ Changes pushed for $CONFIG_FILE"
             else
-              echo "ℹ️ No changes to commit"
+              echo "ℹ️ No changes for $CONFIG_FILE"
             fi
           else
             echo "❌ Output file not found: $OUTPUT_FILE"
