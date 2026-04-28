@@ -7,14 +7,19 @@
       "priority": 1
     },
     {
-      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt",
+      "url": "https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt",
       "skip_cosmetic": true,
       "priority": 2
     },
     {
-      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt",
+      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt",
       "skip_cosmetic": true,
       "priority": 3
+    },
+    {
+      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt",
+      "skip_cosmetic": true,
+      "priority": 4
     },
     {
       "url": "https://filters.adtidy.org/extension/ublock/filters/18.txt",
@@ -24,7 +29,7 @@
   ],
   "deduplicate": true,
   "remove_comments": true,
-  "max_rules": 46000,
+  "max_rules": 49000,
   "skip_long_rules": true,
   "skip_rare_syntax": true
 }
