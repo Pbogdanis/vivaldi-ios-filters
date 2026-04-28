@@ -2,27 +2,47 @@
   "output_file": "vivaldi-ios-combined-testing.txt",
   "sources": [
     {
-      "url": "https://easylist-downloads.adblockplus.org/easylist-minified.txt",
+      "url": "https://downloads.vivaldi.com/ddg/tds-v2-current.json",
       "skip_cosmetic": false,
       "priority": 1
     },
     {
-      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt",
+      "url": "https://downloads.vivaldi.com/easylist/easyprivacy-current.txt",
       "skip_cosmetic": false,
       "priority": 2
     },
     {
-      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt",
+      "url": "https://downloads.vivaldi.com/lists/abp/abp-filters-anti-cv-current.txt",
       "skip_cosmetic": false,
       "priority": 3
     },
     {
-      "url": "https://filters.adtidy.org/extension/ublock/filters/18.txt",
+      "url": "https://downloads.vivaldi.com/lists/abp/antiadblockfilters-current.txt",
+      "skip_cosmetic": false,
+      "priority": 5
+    },
+    {
+      "url": "https://downloads.vivaldi.com/easylist/easylist-current.txt",
+      "skip_cosmetic": false,
+      "priority": 5
+    },
+    {
+      "url": "https://downloads.vivaldi.com/lists/vivaldi/blocklist-current.txt",
+      "skip_cosmetic": false,
+      "priority": 5
+    },
+    {
+      "url": "https://www.fanboy.co.nz/fanboy-cookiemonster.txt",
+      "skip_cosmetic": false,
+      "priority": 5
+    },
+    {
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1",
       "skip_cosmetic": false,
       "priority": 5
     }
   ],
   "deduplicate": true,
   "remove_comments": true,
-  "max_rules": 100000
+  "max_rules": 150000
 }
