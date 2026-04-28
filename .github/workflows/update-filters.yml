@@ -142,19 +142,23 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          OUTPUT_FILE="vivaldi-ios-combined.txt"
-          
+    
+          # Read output filename from sources.json (dynamic, branch-safe)
+          OUTPUT_FILE=$(python3 -c "import json; print(json.load(open('sources.json'))['output_file'])")
+    
+          echo "📦 Output file: $OUTPUT_FILE"
+    
           if [ -f "$OUTPUT_FILE" ]; then
             git add "$OUTPUT_FILE"
             if ! git diff --cached --quiet; then
               git commit -m "chore: auto-update filter lists $(date +%Y%m%d)"
               git push
-              echo "✅ Changes pushed"
+              echo "✅ Changes pushed to $OUTPUT_FILE"
             else
               echo "ℹ️ No changes to commit"
             fi
           else
             echo "❌ Output file not found: $OUTPUT_FILE"
+            ls -la  # Debug: show what files exist
             exit 1
           fi
