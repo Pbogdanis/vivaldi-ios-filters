@@ -1,2 +1,6 @@
 # vivaldi-ios-filters
-One adblocking filter list for vivaldi iOS that remains under 50K rules. For better results add https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt to the tracker lists ( disable the others )
+## vivaldi-ios-combined
+Adblocking filter list for vivaldi iOS that remains under 50K rules. It includes easylist privacy minified so all other rules can be disabled. ( tracker and adblocking ) 
+
+## vivaldi-ios-combined-150kLimit
+Adblocking filter list for vivaldi iOS ( version 15+ ) that remains under 150K rules. 
