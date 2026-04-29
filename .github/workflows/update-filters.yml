@@ -2,14 +2,31 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: '0 3 * * 0'  # Weekly on Sundays at 3 AM UTC
-  workflow_dispatch:     # Allow manual trigger
+    - cron: '0 3 * * *'  # Daily at 3 AM UTC
+  workflow_dispatch:
+    inputs:
+      config_file:
+        description: 'Config to run (leave blank to run both daily configs)'
+        required: false
+        default: ''
+        type: string
 
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    strategy:
+      matrix:
+        config_file: >-
+          ${{ 
+            fromJSON(
+              github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
+              && format('["{0}"]', github.event.inputs.config_file) 
+              || '["sources.json", "sources-150kLimit.json"]'
+            )
+          }}
+      fail-fast: false
 
     steps:
       - name: Checkout repository
@@ -24,21 +41,29 @@ jobs:
         run: pip install requests
 
       - name: Fetch and merge lists
+        env:
+          CONFIG_FILE: ${{ matrix.config_file }}
         run: |
           python3 - << 'PYEND'
-          import json, requests
+          import json, requests, os
           from datetime import datetime, timezone
 
-          with open('sources.json') as f:
+          config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
+          print(f"📄 Processing config: {config_filename}")
+
+          if not os.path.exists(config_filename):
+              print(f"❌ Config file not found: {config_filename}")
+              exit(1)
+
+          with open(config_filename) as f:
               config = json.load(f)
 
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
-          source_data = []  # List of (url, rules_list) tuples
-          seen = set()      # For global deduplication
-          max_rules = config.get('max_rules', 46000)
+          source_data = []
+          seen = set()
+          max_rules = config.get('max_rules', 110000)
 
           for source in config['sources']:
-              # Parse source config (supports both string URLs and dict objects)
               if isinstance(source, str):
                   url = source
                   skip_cosmetic = config.get('prefer_network_rules', True)
@@ -46,85 +71,59 @@ jobs:
               else:
                   url = source['url']
                   skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', True))
-                  keywords = source.get('keep_only_keywords')  # Only applies to cosmetic rules
+                  keywords = source.get('keep_only_keywords')
 
               try:
                   resp = requests.get(url, headers=headers, timeout=30)
                   resp.raise_for_status()
                   rules = []
-                  
                   for line in resp.text.splitlines():
                       line = line.strip()
-                      
-                      # Skip empty lines and metadata comments
-                      if not line or line.startswith('!'):
+                      if not line or line.startswith('!') or line.startswith('@@'):
                           continue
-                      
-                      # Skip exception rules (less critical for iOS)
-                      if line.startswith('@@'):
-                          continue
-                      
-                      # Skip cosmetic rules if skip_cosmetic is true for this source
                       if skip_cosmetic and line.startswith('##'):
                           continue
-                      
-                      # Skip very long rules (often redundant or iOS-incompatible)
                       if config.get('skip_long_rules') and len(line) > 300:
                           continue
-                      
-                      # Skip rare/complex syntax that iOS may not support well
                       if config.get('skip_rare_syntax'):
                           if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
                               continue
-                      
-                      # KEY FIX: Keyword filtering ONLY applies to cosmetic rules
-                      # Network rules (||domain^, $script, etc.) are NEVER filtered by keywords
                       if keywords and line.startswith('##'):
                           if not any(kw in line.lower() for kw in keywords):
-                              continue  # Skip this cosmetic rule if no keyword match
-                      # If line is a network rule, keyword filter is ignored → always kept
-                      
-                      # Global deduplication
+                              continue
                       if line not in seen:
                           seen.add(line)
                           rules.append(line)
-                  
                   source_data.append((url, rules))
                   print(f"✅ {url.split('/')[-1]}: {len(rules)} unique rules")
-                  
               except Exception as e:
                   print(f"⚠️ Failed to fetch {url}: {e}")
                   source_data.append((url, []))
 
-          # Flatten all rules and apply global limit
           all_rules = [r for _, rules in source_data for r in rules]
           truncated = len(all_rules) > max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
               all_rules = all_rules[:max_rules]
 
-          # Generate output file with per-source headers for debugging
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
           output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
           truncation_note = " (TRUNCATED)" if truncated else ""
-          
-          # Build header with source breakdown
+
           header_lines = [
               "[Adblock Plus 2.0]",
               f"! Title: Vivaldi iOS Combined (Auto-Updated){truncation_note}",
               f"! Version: {today}",
-              "! Expires: 7 days",
+              "! Expires: 1 days",
               f"! Global Rules: {len(all_rules)}{truncation_note}",
               "! Source Breakdown:"
           ]
           for url, rules in source_data:
               header_lines.append(f"! • {url}: {len(rules)} unique rules")
-          header_lines.append("")  # Blank line before rules
-          
-          # Write file: header + rules grouped by source (for debugging)
+          header_lines.append("")
+
           with open(output_file, 'w') as f:
               f.write('\n'.join(header_lines))
-              
               remaining = len(all_rules)
               for url, rules in source_data:
                   if remaining <= 0:
@@ -134,27 +133,36 @@ jobs:
                   if section:
                       f.write(f"\n! --- {url.split('/')[-1]} ({len(section)} rules) ---\n")
                       f.write('\n'.join(section) + '\n')
-          
+
           print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
           PYEND
 
       - name: Commit and push changes
+        env:
+          CONFIG_FILE: ${{ matrix.config_file }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          OUTPUT_FILE="vivaldi-ios-combined.txt"
+          # Pull remote changes first to avoid push rejections
+          git pull --rebase origin ${{ github.ref_name }} || true
+          
+          OUTPUT_FILE=$(python3 -c "import json, os; cfg=json.load(open(os.environ.get('CONFIG_FILE'))); print(cfg['output_file'])")
+          echo "📦 Output file: $OUTPUT_FILE"
           
           if [ -f "$OUTPUT_FILE" ]; then
             git add "$OUTPUT_FILE"
             if ! git diff --cached --quiet; then
-              git commit -m "chore: auto-update filter lists $(date +%Y%m%d)"
+              git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: $CONFIG_FILE)"
+              # Pull again right before push to catch last-minute changes
+              git pull --rebase origin ${{ github.ref_name }} || true
               git push
-              echo "✅ Changes pushed"
+              echo "✅ Changes pushed for $CONFIG_FILE"
             else
-              echo "ℹ️ No changes to commit"
+              echo "ℹ️ No changes for $CONFIG_FILE"
             fi
           else
             echo "❌ Output file not found: $OUTPUT_FILE"
+            ls -la
             exit 1
           fi
