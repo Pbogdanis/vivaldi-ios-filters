@@ -1,18 +1,18 @@
 [Adblock Plus 2.0]
 ! Title: Vivaldi iOS Combined (Auto-Updated)
-! Version: 20260501
+! Version: 20260502
 ! Expires: 1 days
-! Global Rules: 61400
+! Global Rules: 61548
 ! Source Breakdown:
-! • https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt: 4123 unique rules
-! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 23598 unique rules
+! • https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt: 4121 unique rules
+! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 23747 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt: 3942 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt: 2399 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt: 669 unique rules
 ! • https://www.fanboy.co.nz/fanboy-cookiemonster.txt: 24262 unique rules
-! • https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt: 2407 unique rules
+! • https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt: 2408 unique rules
 
-! --- easyprivacy-minified.txt (4123 rules) ---
+! --- easyprivacy-minified.txt (4121 rules) ---
 [Adblock Plus 2.0]
 &action=js_stats
 &ev=PageView&
@@ -1949,7 +1949,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||applicationinsights.azure.com^$third-party,domain=~azure.net
 ||applovin.com/shopify/*/pixel
 ||apps-pbd.ctraffic.io^
-||apps.rokt-api.com/webevents/
 ||appvtexio.weni.ai/pixel.js
 ||arc.pub/clavis/training/events
 ||arcpublishing.com/beacon
@@ -2169,7 +2168,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||forethought.ai/workflow/tracking-event
 ||forms.aweber.com^*/displays.htm?id=
 ||foureyes.io/fe-init.js
-||fp-flame.vercel.app^
 ||fp-it-acc.portal101.cn/deviceprofile/
 ||fst-ec.perimeterx.net^
 ||ftm.fluencyinc.co^
@@ -3196,12 +3194,12 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||exp.notion.so^
 ||expedia.*/cl/
 ||exporntoons.net/api/stats?
+||ezoicanalytics.com/analytics.js
 ||facebook.com/ajax/qm/
 ||facebook.com/sw/log/init/
 ||faphouse.com/collector/
 ||faro-collector-prod-*.grafana.net^
 ||fc2.com/counter_img.php?
-||featureflags.grubhub.com/v1/events
 ||feedly.com/mxpnl/
 ||femetrics.grammarly.io^
 ||fgn-plausible.serverable.com^
@@ -3375,6 +3373,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||nordstrom.com/api/cupcake/
 ||notion.so/api/v*/teV1
 ||nr-data.noelleeming.co.nz^
+||nvrmd.novaramedia.com^
 ||nyt.com/ads/tpc-check.html$domain=nytimes.com
 ||nytimes.com/v1/purr-cache
 ||odysee.com/reports/
@@ -3532,7 +3531,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||terabox.com/abdr?
 ||terminaltrove.com/_t/
 ||thefreedictionary.com/_/tr.ashx?
-||think.ing.com/ajax/ajax_cookie_consent$~third-party,xmlhttprequest
 ||thtk.temu.com^
 ||tiktok.com/ttwid/check/
 ||tiktok.com/v1/list
@@ -4137,7 +4135,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||counter.ukr.net^
 ||prm.ua/en/events/
 
-! --- easylist-minified.txt (23598 rules) ---
+! --- easylist-minified.txt (23747 rules) ---
 -ad-manager/$~stylesheet
 -ads/assets/$script,domain=~web-ads.org
 -banner-ads-$~script
@@ -4869,6 +4867,7 @@ gbnews.com#@#.primis-wrapper
 ||28cb84740b.com^
 ||28j93cngmk2wqonb.rest^
 ||28wbuc4qzpxhquwnoo.rest^
+||2bwq4gig2n5o9hov74im5.rest^
 ||2cpk72iv6qr88g4z88uu9zo.rest^
 ||2d86bbe43f.com^
 ||2dbfd83dac.com^
@@ -4936,6 +4935,7 @@ gbnews.com#@#.primis-wrapper
 ||3ve8tk6lpz1k5fz4z.cfd^
 ||3vmv6fcl3olf8y5ocm.cfd^
 ||3vynh4rw9vnr8z.cfd^
+||3y1v1k7ki6mvmc5f57.rest^
 ||3znoji162fuxp71whii.cfd^
 ||415f764d57.com^
 ||4214nll6bt44z4lr3iv6jmbpf.rest^
@@ -4990,7 +4990,6 @@ gbnews.com#@#.primis-wrapper
 ||4w3tmyk8tzll5qvjwv2qmlwv52elkmpk.rest^
 ||4zverqcht49pqngb6fhz4bjm.rest^
 ||5008677d85.com^
-||50d46dda05.com^
 ||50e7f2cef8.com^
 ||50services.net^
 ||510a62f1a2.com^
@@ -5031,7 +5030,6 @@ gbnews.com#@#.primis-wrapper
 ||5jvc6fp55m3txovvnrt67ic1.cfd^
 ||5kj9ve1k8wv9qxp76y8i2yz.cfd^
 ||5l8i5yppjemm7xl9mxcw96vz.rest^
-||5leosgto.xyz^
 ||5ln2vl94rl576p39t7xe.cfd^
 ||5lz3n3y4ztroby.cfd^
 ||5mn7cf73.xyz^
@@ -5134,6 +5132,7 @@ gbnews.com#@#.primis-wrapper
 ||7de1da816b.com^
 ||7e36f9k3emnqe9xzz5xtmz.cfd^
 ||7eit28evocng5gjuu.rest^
+||7fhginl5cekq8ykr5hc9bn26xwb.cfd^
 ||7ginrogx9vlk8wwch.cfd^
 ||7gtxgmym3yh8y9m7xt.cfd^
 ||7hjy6ni9w3iq6wcynqzmuy8yywqbcvtm.rest^
@@ -5161,6 +5160,7 @@ gbnews.com#@#.primis-wrapper
 ||81aa1f6146.com^
 ||83933bb4b2.com^
 ||83cbda598a.com^
+||84d28a94b3.com^
 ||84e867f7b4.com^
 ||8537b5712c.com^
 ||86a988b20f.com^
@@ -5226,6 +5226,7 @@ gbnews.com#@#.primis-wrapper
 ||9lwl6rsk.xyz^
 ||9m5kp8e5r687jn1w3t3.cfd^
 ||9mjkg4uqmcpxe7.cfd^
+||9n21q93liwkq6nu2bv.rest^
 ||9nizbbyf774vm14cp4e797zk.cfd^
 ||9nmv95m7jl2wx31kk79p7648.cfd^
 ||9nr43xr2bu15iboz8z.rest^
@@ -5277,6 +5278,7 @@ gbnews.com#@#.primis-wrapper
 ||abbiinochgiimsd.xyz^
 ||abcelttun.com^
 ||abedbare.cfd^
+||abedhoneycastle.com^
 ||abeoxtlq.com^
 ||aberrabscindgis.cfd^
 ||abfquoelx.com^
@@ -5381,7 +5383,6 @@ gbnews.com#@#.primis-wrapper
 ||acqolwoxczku.in^
 ||acquisitioncarefully.com^
 ||acqwyqfecrlsh.online^
-||acrazeclaretsdegage.cfd^
 ||acrebackcharacter.com^
 ||acridylraspish.qpon^
 ||acritagiddiedwaives.cyou^
@@ -5435,10 +5436,10 @@ gbnews.com#@#.primis-wrapper
 ||admicro.vn^
 ||admirableinstance.com^
 ||admiredjumper.com^
-||admiredpopulation.pro^
 ||admiredshame.com^
 ||admissibleblinkbesiege.com^
 ||admitad.com^
+||admittedhi.com^
 ||admixer.net^
 ||admonishconcentrate.com^
 ||admonishfistgipsy.com^
@@ -5452,6 +5453,7 @@ gbnews.com#@#.primis-wrapper
 ||adolescent-bonus.pro^
 ||adorablecover.com^
 ||adorarama.com^
+||adornmenttaunt.com^
 ||adotmob.com^
 ||adotone.com^
 ||adpahqji.in^
@@ -5506,7 +5508,9 @@ gbnews.com#@#.primis-wrapper
 ||aekmrkebaawzm.online^
 ||aelqhuuupxmck.online^
 ||aembtielaekdf.online^
+||aemomlrcnzmqj.website^
 ||aeolicborg.qpon^
+||aeoqdvojnld.com^
 ||aephvbsoigwga.site^
 ||aepnxvhkmqvfk.online^
 ||aeragevelaricacider.cfd^
@@ -5543,6 +5547,7 @@ gbnews.com#@#.primis-wrapper
 ||afm01.com^
 ||afmocqhutcta.in^
 ||afraid-attempt.com^
+||afraid-resolution.com^
 ||afritevacandicorella.cfd^
 ||afrontkiester.cyou^
 ||afsohptiq.in^
@@ -5703,6 +5708,7 @@ gbnews.com#@#.primis-wrapper
 ||alaliteinjects.shop^
 ||alandshoidens.qpon^
 ||alanticgasher.cyou^
+||alantolshrikes.shop^
 ||alarmedhit.pro^
 ||alarmingfront.pro^
 ||albainncorneastertia.qpon^
@@ -5844,6 +5850,7 @@ gbnews.com#@#.primis-wrapper
 ||anawymai.com^
 ||anchorbiology.com^
 ||anchored-blow.pro^
+||anchored-hold.com^
 ||ancientmurine.com^
 ||ancientsnow.com^
 ||ancillammmm.com^
@@ -5873,6 +5880,7 @@ gbnews.com#@#.primis-wrapper
 ||aniseshided.shop^
 ||anjgdcgsuew.com^
 ||anjowpoft.in^
+||anklepuny.com^
 ||anlautkipskinbindery.cfd^
 ||anliarognons.com^
 ||anlwpyaqjmu.in^
@@ -5885,6 +5893,7 @@ gbnews.com#@#.primis-wrapper
 ||annulusrewarn.qpon^
 ||anoasscards.qpon^
 ||anograboutell.shop^
+||anoliankerbed.qpon^
 ||anomalaboidae.cyou^
 ||anomerlongest.cyou^
 ||anomiavagancyvexilla.cfd^
@@ -6035,6 +6044,7 @@ gbnews.com#@#.primis-wrapper
 ||areekwiney.com^
 ||areelwefteddwined.cyou^
 ||aretfleechprotura.cyou^
+||argelchanger.com^
 ||argoangivenssensed.qpon^
 ||argoschoisya.cyou^
 ||argrowlitheor.com^
@@ -6131,7 +6141,6 @@ gbnews.com#@#.primis-wrapper
 ||assholeshifty.cyou^
 ||assistantinsignificantthings.com^
 ||assoilnantle.cyou^
-||assured-airport.pro^
 ||assured-character.pro^
 ||assuredguide.pro^
 ||assurerambeers.com^
@@ -6195,6 +6204,7 @@ gbnews.com#@#.primis-wrapper
 ||attendantentertainmentmotorway.com^
 ||attentivefee.pro^
 ||atticalgodshipthumps.qpon^
+||atticinsofar.shop^
 ||attmzxgfkrnbn.com^
 ||attpmhuguafrl.space^
 ||attractivemap.pro^
@@ -6272,9 +6282,10 @@ gbnews.com#@#.primis-wrapper
 ||awiikkjgstrym.online^
 ||awimsqcakvnq.com^
 ||awistats.com^
-||awkwarddetail.pro^
+||awlmiknt.in^
 ||awlqdqbphaw.com^
 ||awmradivlamtw.online^
+||awolbitt.cyou^
 ||awrrujbcua.in^
 ||awsoszfpeag.in^
 ||awtwgrpmlypwj.online^
@@ -6354,6 +6365,7 @@ gbnews.com#@#.primis-wrapper
 ||b5bgvrouookzff.rest^
 ||b681514051.com^
 ||b6c9c4cf28.com^
+||b6keq781g7kwl87lupq9.rest^
 ||b6p953l3ziizb9wu86.rest^
 ||b7510.com^
 ||b7ec509038.com^
@@ -6515,6 +6527,7 @@ gbnews.com#@#.primis-wrapper
 ||bbyybvrspsjdp.site^
 ||bc1bzef6bp4c1u3.rest^
 ||bcaogvgw.in^
+||bccjosqnkqwyz.site^
 ||bcdbullish.cfd^
 ||bchsrazour.cyou^
 ||bckdlkdvpwck.com^
@@ -6530,7 +6543,6 @@ gbnews.com#@#.primis-wrapper
 ||bcwjqztpkeeop68n5me9q44m5vog3l.cfd^
 ||bcyesnflajgfl.space^
 ||bcyxudpzyrxxj.site^
-||bd92cdf877.com^
 ||bdatdyoaiggam.online^
 ||bddhlhaoxqtmo.online^
 ||bddujehaeaubs.space^
@@ -6575,7 +6587,6 @@ gbnews.com#@#.primis-wrapper
 ||bedevildelaystoros.cyou^
 ||bedfootoficina.qpon^
 ||bedqyetgvcljb.website^
-||bedralcombunavian.qpon^
 ||bedsickallanlariid.qpon^
 ||bedsidetray.com^
 ||bedsitetchingwicht.cyou^
@@ -6633,6 +6644,7 @@ gbnews.com#@#.primis-wrapper
 ||belroryomypaf.website^
 ||belviogbxsixc.online^
 ||belyingmystic.cyou^
+||bemeetyappy.com^
 ||bemistsdoffedsiccity.cfd^
 ||bemoatenform.qpon^
 ||bemoatgosmore.qpon^
@@ -6641,6 +6653,7 @@ gbnews.com#@#.primis-wrapper
 ||bemoltconopid.shop^
 ||benamednidulus.cyou^
 ||benatrogon.qpon^
+||bendayejectumskyphos.qpon^
 ||beneficial-airport.pro^
 ||benevolencecompromisefaint.com^
 ||benhfayzmltdk.website^
@@ -6791,8 +6804,10 @@ gbnews.com#@#.primis-wrapper
 ||billetnimkish.shop^
 ||billpussleybovoid.cfd^
 ||billyazotate.com^
+||bimahapiole.qpon^
 ||bimbiljointed.shop^
 ||bimcupful.cyou^
+||bimongtrowman.com^
 ||bineurus.cyou^
 ||biotasjumby.cfd^
 ||biotechcive.cyou^
@@ -6870,6 +6885,7 @@ gbnews.com#@#.primis-wrapper
 ||bleatstringinch.com^
 ||blendesdoup.shop^
 ||blendortenacle.cfd^
+||blesseschazzen.com^
 ||blessesunwary.com^
 ||blestpeltish.qpon^
 ||blfiapwcxgvdl.website^
@@ -6921,7 +6937,6 @@ gbnews.com#@#.primis-wrapper
 ||bluntnebulous.com^
 ||blurbreimbursetrombone.com^
 ||blurbsoutpry.com^
-||blushedagricplage.cyou^
 ||blushing-band.com^
 ||blushing-reaction.pro^
 ||blyibsfexizyt.com^
@@ -6974,6 +6989,7 @@ gbnews.com#@#.primis-wrapper
 ||bodengirny.cyou^
 ||bodiesgetup.com^
 ||bodleanarcho.com^
+||bodybossmotivate.com^
 ||boehwxhleexzc.website^
 ||boffcutter.qpon^
 ||boffoadsfeeds.com^
@@ -6983,7 +6999,6 @@ gbnews.com#@#.primis-wrapper
 ||boggleride.cfd^
 ||bogiechiefty.cfd^
 ||bogomilyald.qpon^
-||bogus-search.pro^
 ||bogusproperty.com^
 ||bogworttampooncothe.cyou^
 ||bogymentracery.cyou^
@@ -7011,7 +7026,6 @@ gbnews.com#@#.primis-wrapper
 ||boobausauhipsa.net^
 ||boodlercentner.cfd^
 ||boofsignorypurlieu.qpon^
-||boogiesflathe.cfd^
 ||bookersowse.qpon^
 ||bookerycausans.shop^
 ||bookmankyloecupania.qpon^
@@ -7019,6 +7033,7 @@ gbnews.com#@#.primis-wrapper
 ||boolcukjtsvj.com^
 ||booleyopacous.cyou^
 ||boomahamoke.com^
+||boomvibices.qpon^
 ||booniessmall.cyou^
 ||boortquaighs.shop^
 ||boostlo.xyz^
@@ -7077,6 +7092,7 @@ gbnews.com#@#.primis-wrapper
 ||boyishlies.qpon^
 ||bpcieckgpwjqp.site^
 ||bpckpw1h3wkwplxhcow214b89uj4y.cfd^
+||bpdovppg.com^
 ||bpdudejimdmdf.online^
 ||bpdwgrtovfhga.site^
 ||bpesscobzunkm.online^
@@ -7264,6 +7280,7 @@ gbnews.com#@#.primis-wrapper
 ||buccanthruv.cyou^
 ||buccinamacules.shop^
 ||buckleleggedarbors.cfd^
+||bucklummaquis.com^
 ||bucksawcowards.qpon^
 ||buddedchaosoreodon.cyou^
 ||budhoes.cfd^
@@ -7342,6 +7359,7 @@ gbnews.com#@#.primis-wrapper
 ||buttery-sick.com^
 ||butylplexor.cfd^
 ||butynevizir.cfd^
+||butyrinbrest.qpon^
 ||buurxllgvbbhe.online^
 ||buviwvdndjpsz.website^
 ||buwiibffvwhjs.online^
@@ -7374,6 +7392,7 @@ gbnews.com#@#.primis-wrapper
 ||bwrlnmpgstsel.website^
 ||bwrpksadewchb.website^
 ||bwtsfdwatsyhz.website^
+||bwuhawag.in^
 ||bwusbdanadvvd.space^
 ||bwvgtmxrqmkwv.website^
 ||bwwuveplotadr.site^
@@ -7425,7 +7444,6 @@ gbnews.com#@#.primis-wrapper
 ||bzojjabyipdsf.website^
 ||bzpqekgjvaqkn.website^
 ||bztzpzqpltlad.site^
-||bzvxbpkdhrzxw.online^
 ||bzwjzhrebzqor.website^
 ||bzwqkfuamelpb.online^
 ||bzxeeoikdaiaw.website^
@@ -7436,6 +7454,7 @@ gbnews.com#@#.primis-wrapper
 ||c20700ec5a.com^
 ||c23vizuyykxbqw.rest^
 ||c2b92903fa.com^
+||c3483eeb22.com^
 ||c635e33b2e.com^
 ||c6f63c450a.com^
 ||c74l4kr3f2fjv8j.rest^
@@ -7445,6 +7464,7 @@ gbnews.com#@#.primis-wrapper
 ||c9hxzbrxxqpnkfc5qzftuz1k3y3382w.rest^
 ||c9qy2q9v217bt6klz5zhlz.rest^
 ||c9r71x11cpfq2byjkxy13q.cfd^
+||ca8ef1ccff.com^
 ||caamingpandore.qpon^
 ||cabinzenith.com^
 ||cabmengrouter.cfd^
@@ -7699,6 +7719,7 @@ gbnews.com#@#.primis-wrapper
 ||centercrock.qpon^
 ||centeredphosphate.com^
 ||centorodge.cyou^
+||centrevtiltersdabuh.cyou^
 ||ceptercedrin.qpon^
 ||cepvrksx.com^
 ||ceqspqzcifqhg.online^
@@ -7801,6 +7822,7 @@ gbnews.com#@#.primis-wrapper
 ||chilversignatehiera.qpon^
 ||chiminggroggerevertor.cyou^
 ||chincricksgaus.cyou^
+||chinesecongressawake.com^
 ||chinesegloriam.qpon^
 ||chiningafrightaband.cyou^
 ||chinkyapposes.cfd^
@@ -7843,6 +7865,7 @@ gbnews.com#@#.primis-wrapper
 ||chunkyaward.cfd^
 ||chutingstuddyapis.cfd^
 ||chvtweykwfbks.website^
+||chwgbfkfyfkof.site^
 ||chymiapieterzoeas.cfd^
 ||chzhqwirsxmad.online^
 ||cibctjgdc.com^
@@ -7964,7 +7987,6 @@ gbnews.com#@#.primis-wrapper
 ||cleverwebserver.com^
 ||clfctybv.com^
 ||clickagy.com^
-||clickcudwort.shop^
 ||climabetons.com^
 ||clintsabaoth.cyou^
 ||clintypleaserjosie.qpon^
@@ -8019,6 +8041,7 @@ gbnews.com#@#.primis-wrapper
 ||cmmcikubohtku.website^
 ||cmmwpkihpyefy.website^
 ||cmptphyupeflf.site^
+||cmqpjvqlgsbqg.site^
 ||cmyiiypwacdah.website^
 ||cmytxndnjnxks.online^
 ||cn47thp48f7fcf.cfd^
@@ -8102,6 +8125,7 @@ gbnews.com#@#.primis-wrapper
 ||colnaagwmayxb.space^
 ||colonexpenditure.com^
 ||colorinmehelyaisodef.qpon^
+||colourrobot.com^
 ||columnhauledhygienic.com^
 ||coluresdoxies.com^
 ||colyoneabassin.com^
@@ -8166,10 +8190,10 @@ gbnews.com#@#.primis-wrapper
 ||conoidsuncanedproxy.cyou^
 ||conorrompishtottle.qpon^
 ||conreysquillatartro.cfd^
+||conscientiouscabbageadrift.com^
 ||conscious-science.pro^
 ||considerablerider.com^
 ||considerateprofile.pro^
-||consistedbullyingdemeanour.com^
 ||consolegnomish.shop^
 ||consumeririssalary.com^
 ||contagiousembodimentstoop.com^
@@ -8255,6 +8279,8 @@ gbnews.com#@#.primis-wrapper
 ||correspondingsphereconceited.com^
 ||corsakbenami.qpon^
 ||corseclerk.com^
+||corsnedragbolt.com^
+||corteslish.cyou^
 ||corucotarnalcuca.cfd^
 ||corulerkedgekerning.cyou^
 ||coryphstoma.com^
@@ -8403,6 +8429,7 @@ gbnews.com#@#.primis-wrapper
 ||crudsenties.cfd^
 ||crumblefilchactive.com^
 ||crumpygodsons.cfd^
+||cruorincager.com^
 ||cruorsaxils.qpon^
 ||crusenotitiahogget.cfd^
 ||crusileletted.cfd^
@@ -8425,6 +8452,7 @@ gbnews.com#@#.primis-wrapper
 ||cshviclkocuzh.space^
 ||csjzlghigiica.site^
 ||cslmpnddwujdf.space^
+||csnysitk.com^
 ||csnzmjgxasazh.website^
 ||csqbydyrdkiow.com^
 ||cssigerwpf.com^
@@ -8462,6 +8490,7 @@ gbnews.com#@#.primis-wrapper
 ||cuecatelly.com^
 ||cuegfjlcarbdq.online^
 ||cueistrapport.cyou^
+||cuflfoodbalq.in^
 ||cugt3bgyv5qcoyq99m7n.cfd^
 ||cuinfocottisedikage.cyou^
 ||cuirieobols.qpon^
@@ -8495,6 +8524,7 @@ gbnews.com#@#.primis-wrapper
 ||cupularstriae.shop^
 ||cupulesgothics.cfd^
 ||curacefondouk.cfd^
+||curacescalper.cyou^
 ||curacoababyish.cyou^
 ||curaresclergy.shop^
 ||curbcapias.com^
@@ -8598,7 +8628,6 @@ gbnews.com#@#.primis-wrapper
 ||cynodongirnel.com^
 ||cynodonrazzing.shop^
 ||cytodegoitres.cyou^
-||cytosthingedsuss.qpon^
 ||cyugiihowa.com^
 ||cyutuwsoxyjju.online^
 ||cyvhtdopt.com^
@@ -8649,9 +8678,9 @@ gbnews.com#@#.primis-wrapper
 ||dalrmayksroqa.online^
 ||dalysv.com^
 ||damagedface.com^
-||damagedice.pro^
 ||damagevariataxa.cyou^
 ||dammerupcry.cyou^
+||damnercold.help^
 ||damnousstanze.com^
 ||damp-exchange.pro^
 ||damp-opportunity.pro^
@@ -8792,6 +8821,7 @@ gbnews.com#@#.primis-wrapper
 ||deerflybeefier.cfd^
 ||deewjyvbqrjdz.site^
 ||defectspalt.com^
+||defeisediked.cfd^
 ||defensivegrand.com^
 ||defethingleprolix.qpon^
 ||defiantenrage.com^
@@ -8881,6 +8911,7 @@ gbnews.com#@#.primis-wrapper
 ||deskunfortunate.com^
 ||desmicmogging.cyou^
 ||desminenabs.cfd^
+||despeedmatzas.cfd^
 ||dessrite.qpon^
 ||destinyjarkman.cyou^
 ||detachmentcancelsuspicion.com^
@@ -8947,6 +8978,7 @@ gbnews.com#@#.primis-wrapper
 ||dhxbrqtpallzi.site^
 ||dhxnhvawducul.site^
 ||dhynxkwbsqrgp.website^
+||dhzwidbzdgmjg.site^
 ||diacocamammey.cyou^
 ||diagramjawlineunhappy.com^
 ||diapirsmooths.cyou^
@@ -9036,6 +9068,7 @@ gbnews.com#@#.primis-wrapper
 ||disloyal-valuable.com^
 ||dismanectopy.qpon^
 ||dismantlepenantiterrorist.com^
+||dispelsoneraryfainted.cyou^
 ||displayvertising.com^
 ||disposablekindlematching.com^
 ||disqualifyderelictcompetition.com^
@@ -9167,12 +9200,12 @@ gbnews.com#@#.primis-wrapper
 ||dolapdarmbldn.site^
 ||doledbasalts.qpon^
 ||dolesdao.com^
-||dolmenscragganmiswern.cyou^
 ||dolphinpeapod.qpon^
 ||dolpxahogqsqk.space^
 ||domaintransver.cfd^
 ||domesticheontinu.org^
 ||dominesbouboustinne.cfd^
+||dominioneastern.com^
 ||domxwabsxuxws.space^
 ||donableloses.cyou^
 ||donablepeens.cyou^
@@ -9386,6 +9419,7 @@ gbnews.com#@#.primis-wrapper
 ||dwinemotivo.cfd^
 ||dwodsonucjvsi.online^
 ||dwoojqak.in^
+||dwpqzkscvbadt.online^
 ||dwpviquajsokn.online^
 ||dwwpaoatfgjvo.space^
 ||dxhvgevhrceia.com^
@@ -9418,6 +9452,7 @@ gbnews.com#@#.primis-wrapper
 ||dyvoursruelikecharre.cyou^
 ||dyynrruwl.com^
 ||dyzaxqldzrxbw.space^
+||dzewsghryyjcr.site^
 ||dzgblqdbbjehb.website^
 ||dziaswanvdt.in^
 ||dzkzmcikxhdy.com^
@@ -9452,18 +9487,22 @@ gbnews.com#@#.primis-wrapper
 ||eafpfzcqlglmt.online^
 ||eagerpossibility.pro^
 ||eaghbchuiefix.site^
+||eaglingmensing.com^
 ||eagreengird.com^
 ||eagresnilous.shop^
 ||eajmeainaeeiq.site^
 ||eakgceovpfqby.xyz^
+||eakpuvxc.com^
 ||ealmtiqryxpox.website^
 ||eamtxxmqwvxfg.website^
 ||earcapimages.cfd^
 ||earholequinia.cyou^
 ||early-indication.pro^
+||earnestnessadamantpal.com^
 ||earringsatisfiedsplice.com^
 ||eartabmaarten.cyou^
 ||eatihghlmcgzi.website^
+||eatingclientconfine.com^
 ||eatstarged.qpon^
 ||eaverscroll.cfd^
 ||eavesdropbogusye.com^
@@ -9542,6 +9581,7 @@ gbnews.com#@#.primis-wrapper
 ||eecebkmig.com^
 ||eechicha.com^
 ||eecyhoahruhv.com^
+||eegcdeyi.com^
 ||eegpdtputhuiz.site^
 ||eehjbmpykwsfj.site^
 ||eeigvdirpfmob.online^
@@ -9724,7 +9764,6 @@ gbnews.com#@#.primis-wrapper
 ||emergeskid.com^
 ||emeroidcaufle.com^
 ||emeuagingnavy.cfd^
-||eminentbonusmeals.com^
 ||emissigougers.cfd^
 ||emitmicaciv.cfd^
 ||emitprocured.com^
@@ -9776,8 +9815,10 @@ gbnews.com#@#.primis-wrapper
 ||enghleforra.qpon^
 ||engif88e1noqt2epbqu6mbx5xmzk.cfd^
 ||englandfaithless.com^
+||engloomsitups.shop^
 ||englynburnfaailk.cyou^
 ||engwlhqyylimw.online^
+||enheartsteamed.com^
 ||eniaclinkup.cyou^
 ||enisledsaltboxoutsend.cyou^
 ||enislesghettosmusquaw.cfd^
@@ -9931,6 +9972,7 @@ gbnews.com#@#.primis-wrapper
 ||erypnmwayaibe.space^
 ||escarpsvimanayearth.cfd^
 ||esclqnhxntiqt.site^
+||escorta-torino.study^
 ||escviyqoekkju.com^
 ||esdoucinesplurgy.qpon^
 ||esgpjkhws.com^
@@ -9952,6 +9994,7 @@ gbnews.com#@#.primis-wrapper
 ||essayresays.cfd^
 ||essedazoles.shop^
 ||esseefeere.cfd^
+||essencereferencetummy.com^
 ||establishscarcely.com^
 ||estaminassign.qpon^
 ||esteemed-ability.pro^
@@ -9975,6 +10018,7 @@ gbnews.com#@#.primis-wrapper
 ||ethcadtfumuzs.space^
 ||ethenoltattier.cyou^
 ||ethicalpractice.pro^
+||ethnicspue.com^
 ||ethnogmoongpersue.cfd^
 ||etjrkgaqrkfad.space^
 ||etkybhmigxoyt.site^
@@ -10100,6 +10144,7 @@ gbnews.com#@#.primis-wrapper
 ||exjsyuhjwjyzr.space^
 ||exlavolsciganged.qpon^
 ||exmainclcknew.com^
+||exo6lobcgyqr7nwh6w2vlg871q5.cfd^
 ||exoclick.com^
 ||exodospaulian.shop^
 ||exodusjailhousetarantula.com^
@@ -10128,6 +10173,7 @@ gbnews.com#@#.primis-wrapper
 ||extrasmallpin.pro^
 ||extrasmallwater.pro^
 ||extremereach.io^
+||extrovertedlecture.com^
 ||extypalhallow.com^
 ||exudingidolet.com^
 ||exulmxryrokbaj.com^
@@ -10213,6 +10259,7 @@ gbnews.com#@#.primis-wrapper
 ||faeknuuqt.com^
 ||faenasplaidie.com^
 ||faenasthereoflalo.cfd^
+||faenasturbit.com^
 ||fafflebotry.shop^
 ||fagaldazinputtan.qpon^
 ||fagaldplaided.cyou^
@@ -10258,7 +10305,6 @@ gbnews.com#@#.primis-wrapper
 ||faraway-bet.com^
 ||faraway-recover.pro^
 ||farawaycookie.pro^
-||farewellvastly.com^
 ||farineiridium.cyou^
 ||farioaudible.cyou^
 ||farnessowenian.cyou^
@@ -10277,6 +10323,7 @@ gbnews.com#@#.primis-wrapper
 ||fastidiousforesterfirearm.com^
 ||fatal-cross.pro^
 ||fatherlycalm.pro^
+||fathomexplodedreluctant.com^
 ||fatidicalisos.cfd^
 ||fattersagamen.cyou^
 ||fattydisgustinghusband.com^
@@ -10295,6 +10342,7 @@ gbnews.com#@#.primis-wrapper
 ||fawgsjeeidnjp.space^
 ||fawnedclamor.cyou^
 ||faydidymis.com^
+||fazuzdahwnkpu.website^
 ||fb7mkgul7v79embpuupb3w1o589qu.rest^
 ||fbbkmuul.com^
 ||fbdcuiaazykhr.online^
@@ -10333,7 +10381,6 @@ gbnews.com#@#.primis-wrapper
 ||fdhxvayocbhwyq.com^
 ||fdpqgljmw.com^
 ||fearerbod.com^
-||fearersversinseabed.cfd^
 ||feasibleunpredictable.com^
 ||feazedsalacotthruout.cfd^
 ||feazingporty.shop^
@@ -10348,7 +10395,6 @@ gbnews.com#@#.primis-wrapper
 ||feedbackadmiralfortnight.com^
 ||feerieense.cyou^
 ||feetagechoomloopist.cfd^
-||feezedbieninial.cyou^
 ||fefupklsamwme.online^
 ||fegg37mtpm6h55.rest^
 ||feilrued.cyou^
@@ -10388,6 +10434,7 @@ gbnews.com#@#.primis-wrapper
 ||feudistteuch.cyou^
 ||fewsomesirupy.cyou^
 ||fexigpijyhuqa.website^
+||feykbhowqazed.online^
 ||feypicrol.qpon^
 ||fezarborer.cyou^
 ||fezzeseleuin.qpon^
@@ -10529,7 +10576,6 @@ gbnews.com#@#.primis-wrapper
 ||fkhqplyxmaafw.space^
 ||fkhwblrosnlrc.space^
 ||fkliaytor.com^
-||fkqfsenwhfhge.online^
 ||fksnk.com^
 ||fkwgcrxzxlqof.online^
 ||fkzcrofqtjawk.space^
@@ -10607,6 +10653,7 @@ gbnews.com#@#.primis-wrapper
 ||fluffy-soft.pro^
 ||fluffymaintenance.pro^
 ||flukywarfaretipmost.cfd^
+||flumedkidnaps.cfd^
 ||flusteredexam.com^
 ||fluteranguleindian.cfd^
 ||fluterozum.cyou^
@@ -10678,7 +10725,6 @@ gbnews.com#@#.primis-wrapper
 ||foredayeng.cyou^
 ||forelaymontemhallo.qpon^
 ||foresaytumors.cyou^
-||foreseehawancestor.com^
 ||forgedmuthunbody.cyou^
 ||forgiveeternal.com^
 ||forgivenessmafia.com^
@@ -10725,7 +10771,6 @@ gbnews.com#@#.primis-wrapper
 ||fplandxtxba.com^
 ||fpnpmcdn.net^
 ||fpomuccanh.in^
-||fpozepoxngmmn.site^
 ||fpqguhajcermv.website^
 ||fpqvfrdcnoxah.online^
 ||fpuditrtxsdhb.online^
@@ -10749,6 +10794,7 @@ gbnews.com#@#.primis-wrapper
 ||fqtmywyncpzwl.space^
 ||fqusyemawhbuw.space^
 ||fqwm8ppl3ykixptyn1e8qhykiv1.cfd^
+||fqy8jp1r75mklvg8oln88u.cfd^
 ||fqzrwiyfyudgz.space^
 ||fr0z3nc0zysm1le.xyz^
 ||fr3q7i2p5pxv5o1xib4egio.cfd^
@@ -10829,7 +10875,6 @@ gbnews.com#@#.primis-wrapper
 ||froswyuwwaogf.site^
 ||frounceuayeb.qpon^
 ||frousyaliped.cyou^
-||frownlag.com^
 ||froxuqviwh.com^
 ||frozenbiopsyskate.com^
 ||frozenprofession.pro^
@@ -10837,11 +10882,11 @@ gbnews.com#@#.primis-wrapper
 ||frskulk.com^
 ||frugal-sex.com^
 ||frugal-wake.pro^
+||frugstrain.qpon^
 ||fruitful-request.com^
 ||fruitfuldeath.pro^
 ||fruitiesmatchina.org^
 ||frumplegoodersexedent.qpon^
-||frwifrmgtrrqi.website^
 ||frzsblxklkuoa.site^
 ||fsaidkuqxrbu.com^
 ||fscxctfrt.com^
@@ -10872,7 +10917,7 @@ gbnews.com#@#.primis-wrapper
 ||fuguhavageputlog.cyou^
 ||fujipeahens.qpon^
 ||fulaxcalkapv.in^
-||fulkunripsmarybud.cfd^
+||fullagecomices.cfd^
 ||fullchemistry.com^
 ||fulldocomedy.cyou^
 ||fulmarmeteor.cyou^
@@ -10892,7 +10937,6 @@ gbnews.com#@#.primis-wrapper
 ||fungidcolder.com^
 ||funiccapoc.qpon^
 ||funjereaving.qpon^
-||funny-secret.pro^
 ||funsday.cfd^
 ||fuoeslwvxboxx.online^
 ||fuosdfqvdvzfd.site^
@@ -10969,6 +11013,7 @@ gbnews.com#@#.primis-wrapper
 ||fyuwwosgka.com^
 ||fywettbfxscbh.online^
 ||fyxkcsmxg.com^
+||fyxxmiwaavpqa.com^
 ||fzaatqzkent.com^
 ||fzanswueeajvf.online^
 ||fzclvegaktwhp.site^
@@ -10995,6 +11040,7 @@ gbnews.com#@#.primis-wrapper
 ||gabbdnlzzwd.com^
 ||gabboun.cfd^
 ||gabibow.cyou^
+||gableaf.qpon^
 ||gadrjhvqbxuyd.site^
 ||gaeawatchethardset.qpon^
 ||gaffkyastatesunfair.cfd^
@@ -11042,6 +11088,7 @@ gbnews.com#@#.primis-wrapper
 ||garliclinens.shop^
 ||garlicwedgie.cfd^
 ||garnishdecoction.com^
+||garotemuruxi.com^
 ||garoterbegaze.shop^
 ||garpikebrent.qpon^
 ||garppjpuuhbby.site^
@@ -11050,6 +11097,7 @@ gbnews.com#@#.primis-wrapper
 ||gasherpossets.cyou^
 ||gaskinramonasoignee.qpon^
 ||gasolineimproveabroad.com^
+||gasparmocha.com^
 ||gaspersliens.qpon^
 ||gaspsoap.com^
 ||gastfulabeles.com^
@@ -11085,7 +11133,6 @@ gbnews.com#@#.primis-wrapper
 ||gcj4q7j5u25hqb23xwruyku6cbmqt4.cfd^
 ||gcjiqxikuiuwa.website^
 ||gcmogssktstxp.online^
-||gcrvzjxhgaeed.website^
 ||gcucilwrior.in^
 ||gcwslmwkvegrffe.com^
 ||gcz85wiobpb651q8px5t53z4gr14.rest^
@@ -11098,6 +11145,7 @@ gbnews.com#@#.primis-wrapper
 ||gdqmnvweycjnl.website^
 ||gdsfkwghjspep.site^
 ||gdxvvxfapccuh.online^
+||gearmanswings.com^
 ||gebir.xyz^
 ||geckad.com^
 ||geckosantu.com^
@@ -11107,6 +11155,7 @@ gbnews.com#@#.primis-wrapper
 ||geesmqgnmzpyq.online^
 ||geetecrlxnygu.online^
 ||geeyfircgahp.com^
+||gegaibdluwero.online^
 ||geggeesublong.shop^
 ||geggercoucaldyer.cyou^
 ||geirathorpe.qpon^
@@ -11181,13 +11230,16 @@ gbnews.com#@#.primis-wrapper
 ||ggzzbqburwmty.website^
 ||gh39ojvo4p39k9xmip.rest^
 ||gharrislapillo.cyou^
+||ghatwalfridays.com^
 ||ghautspuckish.cyou^
 ||ghawbdktdopmt.online^
 ||ghbornoosers.cfd^
 ||ghdwwblzculhq.site^
 ||ghebetasimara.cfd^
 ||gheleemscratchdemises.cfd^
+||ghettosenskied.cfd^
 ||ghfegipre.com^
+||ghhw9g98v17jzng.rest^
 ||ghktwxuzvuufr.online^
 ||ghnkmzpwearnc.site^
 ||ghnoqyfqgsoof.space^
@@ -11200,7 +11252,6 @@ gbnews.com#@#.primis-wrapper
 ||ghsvxitrfvyml.space^
 ||ghsyieqyapmey.online^
 ||ghxjliswdiiax.space^
-||giarrahuddles.cyou^
 ||gibbalsleonite.qpon^
 ||gibbolheterosdiking.qpon^
 ||gibedarcing.qpon^
@@ -11273,7 +11324,6 @@ gbnews.com#@#.primis-wrapper
 ||glancesidahoanobarni.cfd^
 ||glandalongtruce.com^
 ||glaqvchmtign.com^
-||glareoutgoingthey.com^
 ||glargisant.shop^
 ||gldjpbtamwuhf.space^
 ||gleanertzaam.shop^
@@ -11291,7 +11341,6 @@ gbnews.com#@#.primis-wrapper
 ||gllogiubisccs.website^
 ||gloamsenceint.com^
 ||gloaphoo.net^
-||globerotate.com^
 ||globinspapaya.shop^
 ||globity.xyz^
 ||gloeuetruvdsj.com^
@@ -11308,6 +11357,7 @@ gbnews.com#@#.primis-wrapper
 ||glqmnlrtncjni.website^
 ||glsolsdthqgyje.com^
 ||glssp.net^
+||glucasecrabber.com^
 ||glueingbarche.qpon^
 ||gluerxyphoid.qpon^
 ||glumshoulder.pro^
@@ -11453,7 +11503,7 @@ gbnews.com#@#.primis-wrapper
 ||gpvkaotpddqokr.com^
 ||gpvnguetcenxt.online^
 ||gpxjusnktcjyb.online^
-||gpxvhjxwncjte.website^
+||gpxzkvbdzjubk.site^
 ||gpyqfazbyysab.website^
 ||gqalmpybl.xyz^
 ||gqalyislcbru.com^
@@ -11613,6 +11663,7 @@ gbnews.com#@#.primis-wrapper
 ||gummoussubsetlegers.cfd^
 ||gummy-opening.pro^
 ||gummyability.com^
+||gummypours.cyou^
 ||gumpusemf.shop^
 ||gumpusse.qpon^
 ||gundogshump.qpon^
@@ -11636,12 +11687,12 @@ gbnews.com#@#.primis-wrapper
 ||gvjnolhw.com^
 ||gvokzhdxjylzk.site^
 ||gvpxyqoa.com^
+||gvraxzsftmqst.website^
 ||gvrkolrblfwqt.online^
 ||gvsbtyngvsmoe.online^
 ||gvsevgkqvgixo.site^
 ||gvxfvpattvxul.space^
 ||gvxyyvdveimgk.space^
-||gvyrxseoqvugu.online^
 ||gvz6e16t5lcpwtgwti7o.cfd^
 ||gvztlapluvckr.online^
 ||gwallet.com^
@@ -11661,6 +11712,7 @@ gbnews.com#@#.primis-wrapper
 ||gxavpsampcudp.site^
 ||gxdqqpmihainvx.com^
 ||gxfrctjcgfstn.website^
+||gxgjbfopbiiva.space^
 ||gxmlnkybwrvcbtu.com^
 ||gxmtwwxptikbv.site^
 ||gxnisacndepkb.com^
@@ -11692,6 +11744,7 @@ gbnews.com#@#.primis-wrapper
 ||gzoozkenpgaua.online^
 ||gzoznnypuhodq.site^
 ||gzsbcirpmakvd.site^
+||gzty2v2c56823w75fm.rest^
 ||gzvknriwrcwtt.website^
 ||gzxvxwivyjocg.online^
 ||gzyirmypgbwkk.online^
@@ -11785,6 +11838,7 @@ gbnews.com#@#.primis-wrapper
 ||harperflavonelienor.cyou^
 ||harpierwharfsgruf.cyou^
 ||harpingrumpy.shop^
+||harpisttoilyogees.qpon^
 ||harridaphizog.com^
 ||harshlyistles.com^
 ||harsletapardon.cfd^
@@ -11870,9 +11924,11 @@ gbnews.com#@#.primis-wrapper
 ||hdepvpjxbnqnr.space^
 ||hdftzpinpdxwg.website^
 ||hdgcxtfiqsiqo.com^
+||hdkipkzx.com^
 ||hdmxutcrtereb.online^
 ||hdntxwysefgmsu.com^
 ||hduolaveybzmo.site^
+||hdwetwindle.com^
 ||hdwwcryvirhfd.site^
 ||hdyyjcsjpikwt.website^
 ||hdzdghrmhuexs.site^
@@ -11886,6 +11942,7 @@ gbnews.com#@#.primis-wrapper
 ||heavenomitzoom.com^
 ||hectorspankasked.com^
 ||hedgeabruptunlucky.com^
+||hedgybache.com^
 ||heedfulmacan.cfd^
 ||heedinginducer.shop^
 ||heezyslaves.cfd^
@@ -12001,6 +12058,7 @@ gbnews.com#@#.primis-wrapper
 ||hinzjhdlggvjo.website^
 ||hiobplukootgn.site^
 ||hippaqueans.qpon^
+||hippenbatton.cyou^
 ||hippierrapiner.com^
 ||hippopantile.cyou^
 ||hircinwaste.cfd^
@@ -12010,10 +12068,12 @@ gbnews.com#@#.primis-wrapper
 ||hirseluric.cfd^
 ||hirvkfqgoevye.website^
 ||hisfwbkl.com^
+||histoneleppyglue.cyou^
 ||historianoutstandingoverwhelm.com^
 ||historicalaudible.com^
 ||hitchesbyron.cfd^
 ||hitlertylomayashmak.cfd^
+||hivedskeough.qpon^
 ||hivuxuonibnte.space^
 ||hiwgyedcl.xyz^
 ||hiwslahrzvibl.website^
@@ -12065,6 +12125,7 @@ gbnews.com#@#.primis-wrapper
 ||hmdhufaictwl.com^
 ||hmdyhnfncmuckx.com^
 ||hmfqvjlujjwfh.site^
+||hmgpzfivhjpjg.space^
 ||hmkuunkuk.com^
 ||hmmbvdlyhee.com^
 ||hmmrazfydmbtb.online^
@@ -12097,6 +12158,7 @@ gbnews.com#@#.primis-wrapper
 ||hodnjqyavomuj.site^
 ||hodurekaberu.qpon^
 ||hodxdowigps.com^
+||hoefgyzirvgzy.website^
 ||hoeinstitutionbye.com^
 ||hogbackmutuate.com^
 ||hogenoutpity.cyou^
@@ -12127,6 +12189,7 @@ gbnews.com#@#.primis-wrapper
 ||homogendecaneectopia.cfd^
 ||honertumuli.cyou^
 ||honestbroadcasting.com^
+||honestlyquick.com^
 ||honeywhyvowel.com^
 ||honingshowful.cfd^
 ||honorable-responsibility.pro^
@@ -12190,11 +12253,12 @@ gbnews.com#@#.primis-wrapper
 ||hqmtmnnreim.com^
 ||hqmxgbzzoxsfp.website^
 ||hqnwxwuamcofqp.xyz^
+||hqpurqannvmka.com^
 ||hqtdefhbnzqtv.website^
 ||hqulmmitrunui.online^
 ||hqwwgkwpocso.com^
+||hqxlapajiiu.com^
 ||hr5gh98qimott3y1n527mzr8zg.rest^
-||hramiseocsztd.site^
 ||hrawjuqbmowws.online^
 ||hrcswcfxhqdff.website^
 ||hrfokuusjun.com^
@@ -12357,6 +12421,7 @@ gbnews.com#@#.primis-wrapper
 ||hz4lrpj1r4mw8p32.cfd^
 ||hzboheifztyoj.space^
 ||hzcbsqftwlqtz.space^
+||hzkjazbyqzq.com^
 ||hzlhxlivfnxur.site^
 ||hzlkjon8rnz452lt6x3fktn.rest^
 ||hzlswdkrcutie.website^
@@ -12375,6 +12440,7 @@ gbnews.com#@#.primis-wrapper
 ||i4oo4ftoicbtg3xp83bc6.cfd^
 ||i4rocg8lmv3whut9o264.rest^
 ||i5lty436q2mgw1q.cfd^
+||i6cgvqmrr5kfyf.cfd^
 ||i9pyfcl6ouoljr.rest^
 ||iachimocribral.qpon^
 ||iadqryrfuhdkp.space^
@@ -12393,6 +12459,7 @@ gbnews.com#@#.primis-wrapper
 ||ibcdokfbecdda.website^
 ||ibceebobwbhdu.space^
 ||ibexescuffin.cfd^
+||ibexinfancyperopod.qpon^
 ||ibflhrepbphbu.space^
 ||ibfvb229cw6uqz6m7k.rest^
 ||ibickuapdixkk.online^
@@ -12486,6 +12553,7 @@ gbnews.com#@#.primis-wrapper
 ||ifsqiyjvlu.com^
 ||iftuzvnyudfus.online^
 ||ifvrcwxxbmvoo.website^
+||ifxephgaqlxcm.space^
 ||ifyi64u621z2koqbpnvi6.cfd^
 ||igagrrkyfmty.com^
 ||igdrcnifypjq.com^
@@ -12649,6 +12717,7 @@ gbnews.com#@#.primis-wrapper
 ||impastepuggry.cfd^
 ||impededquiina.com^
 ||impeditenomoty.com^
+||imperativefumebewitch.com^
 ||imperbransleurim.cfd^
 ||imperturbable-affair.pro^
 ||imperturbable-article.pro^
@@ -12779,7 +12848,6 @@ gbnews.com#@#.primis-wrapper
 ||inspiredalarmslower.com^
 ||instances228.com^
 ||instanceswith790.com^
-||instantlyounceclubhouse.com^
 ||instantmemorize.com^
 ||instruments911.net^
 ||insultcall.com^
@@ -12793,7 +12861,6 @@ gbnews.com#@#.primis-wrapper
 ||intelligentnatural.pro^
 ||intellipopup.com^
 ||intent-buyer.pro^
-||intentionalfahrenheit.com^
 ||intentionsaspirin.com^
 ||intentlyuncover.com^
 ||intentpound.com^
@@ -12807,7 +12874,6 @@ gbnews.com#@#.primis-wrapper
 ||internationalcraft.pro^
 ||internationalimaginary.com^
 ||interrogateaccustomedgrimly.com^
-||intervalsgetaway.com^
 ||intibwyoigjpf.site^
 ||intombspyralis.qpon^
 ||intrustedzone.site^
@@ -12827,6 +12893,7 @@ gbnews.com#@#.primis-wrapper
 ||ioicafvyjjvu.com^
 ||ioijdsdqornbf.space^
 ||iojvj8gb6prw5pxgwmqu.cfd^
+||iokkw7x8hj4gvr6.rest^
 ||iolitescroupon.cfd^
 ||ionlgwcpbxhjf.site^
 ||ioo2ypx31xfwnck285w5n8.cfd^
@@ -12908,9 +12975,9 @@ gbnews.com#@#.primis-wrapper
 ||isobkdvgydidw.com^
 ||isocrpsgepfchji.com^
 ||isodontaleuron.shop^
-||isoetesflirted.com^
 ||isolatedovercomepasted.com^
 ||isonomyobscuracrocein.qpon^
+||isoptichabiru.com^
 ||isotonyudaler.qpon^
 ||isotroncokeney.qpon^
 ||isotrondumbedwithtee.cfd^
@@ -13052,6 +13119,7 @@ gbnews.com#@#.primis-wrapper
 ||jackalhouseholdnostrils.com^
 ||jackashrocolo.qpon^
 ||jackcivilization.com^
+||jackknifemonuments.com^
 ||jackpotave.com^
 ||jacksonbateaux.com^
 ||jacobcaseose.shop^
@@ -13177,7 +13245,6 @@ gbnews.com#@#.primis-wrapper
 ||jeepearlobe.com^
 ||jeepersmandats.qpon^
 ||jeepneyknaps.cfd^
-||jeeringbemiredcocos.cfd^
 ||jeerscateran.cyou^
 ||jeeteesnotter.qpon^
 ||jeeubfbkqenvr.online^
@@ -13195,6 +13262,7 @@ gbnews.com#@#.primis-wrapper
 ||jeopardizeangrydetrimental.com^
 ||jerkafancgoil.space^
 ||jerktyjgpw.com^
+||jertburi.cfd^
 ||jessantwowedstoled.qpon^
 ||jessurcleamer.shop^
 ||jetsoctroyblusht.cyou^
@@ -13203,6 +13271,7 @@ gbnews.com#@#.primis-wrapper
 ||jevmcmyyokaza.space^
 ||jevvfcpopjvhc.com^
 ||jevybnmrhousp.site^
+||jewlikehuzza.com^
 ||jeziahhostly.com^
 ||jfanqxfctjmfm.site^
 ||jfdlsutrnbeln.website^
@@ -13212,6 +13281,7 @@ gbnews.com#@#.primis-wrapper
 ||jfrthphciuxjk.website^
 ||jfvcvxdljdqxw.website^
 ||jgaxcxbbdbsuy.space^
+||jge46hwmx9eymzp.cfd^
 ||jge8xq1yhwefzq1fo4.cfd^
 ||jglezaldkyldn.online^
 ||jgnzifxswczpu.site^
@@ -13238,6 +13308,7 @@ gbnews.com#@#.primis-wrapper
 ||jicdccqfjcwua.website^
 ||jicyuw1vj3b6f53e4nz.rest^
 ||jiehsiazrrkql.site^
+||jieppqtfmhtbq.online^
 ||jiezxihovoczs.website^
 ||jiggerskohlcasinet.qpon^
 ||jigglerweeper.shop^
@@ -13263,6 +13334,7 @@ gbnews.com#@#.primis-wrapper
 ||jitterendeavour.com^
 ||jivaranlosers.cyou^
 ||jiwvudruhkag.in^
+||jixh85hyliryo6mot2r.rest^
 ||jjcaydbubdvlt.space^
 ||jjhljbqwiowfa.space^
 ||jjhqlyesuecsb.site^
@@ -13557,6 +13629,7 @@ gbnews.com#@#.primis-wrapper
 ||jzotujrdzruxo.online^
 ||jzrooqbeqfvg.com^
 ||jztxtlsupbqcu.site^
+||jzurskxzpkrpw.website^
 ||jzvxcqlqwyybp.online^
 ||jzwgjqulaccsw.site^
 ||jzyxymekrmauc.site^
@@ -13585,7 +13658,6 @@ gbnews.com#@#.primis-wrapper
 ||kakkechudic.shop^
 ||kakoswijwtdlj.online^
 ||kaleidoscopicoffer.pro^
-||kalganscope.com^
 ||kalkviswakeful.qpon^
 ||kallegeferous.shop^
 ||kalzuragzfi.in^
@@ -13647,6 +13719,7 @@ gbnews.com#@#.primis-wrapper
 ||keenedlitmus.com^
 ||keenestdruggyhocking.qpon^
 ||keentiedknives.com^
+||keepnetbombus.com^
 ||keeprecitertung.cyou^
 ||kefgdkgzzhuop.site^
 ||kegfopvreimjm.website^
@@ -13691,6 +13764,7 @@ gbnews.com#@#.primis-wrapper
 ||kg3p4c3r6541nq.cfd^
 ||kgckpuyayqtky.online^
 ||kgejrwflam.com^
+||kgeovjcvkuvdah.com^
 ||kgiqptmzhkidx.website^
 ||kgkwahymywhf.com^
 ||kgmhnaywmhtgi.website^
@@ -13732,7 +13806,6 @@ gbnews.com#@#.primis-wrapper
 ||kighxljnaonwr.site^
 ||kihditogwmf.in^
 ||kihjmotuldm.in^
-||kijbwvznaofju.website^
 ||kikarsundown.com^
 ||killcucroft.qpon^
 ||kimberlite.io^
@@ -13848,6 +13921,7 @@ gbnews.com#@#.primis-wrapper
 ||knitsclaretrugger.cyou^
 ||knivedviqueen.com^
 ||knizqmevqgpmj.space^
+||knkgxmszvcxfg.space^
 ||knknoqpaxluaa.online^
 ||knlswazwikljx.online^
 ||knmvbxfbkgrcw.online^
@@ -13918,12 +13992,14 @@ gbnews.com#@#.primis-wrapper
 ||kprlxtmnaelkd.online^
 ||kpwvntvpoksyw.website^
 ||kq2p4j4ck27rbz.rest^
+||kqdujcth.com^
 ||kqftc.com^
 ||kqgtlbkwxzewo.site^
 ||kqhfuovkrmhkz.online^
 ||kqiyhirquvyrn.online^
 ||kqjgwwuebmmcpfebkg4jb3hq9uwg.cfd^
 ||kqmxodlikwtke.website^
+||kqrbbdjzcsxmp.space^
 ||kqtbwyrudcgeoe.com^
 ||kqtpgtgspdgir.site^
 ||kqwvqvapfvajp.online^
@@ -14088,6 +14164,7 @@ gbnews.com#@#.primis-wrapper
 ||labadena.com^
 ||labrumslui.qpon^
 ||lacemendaimons.com^
+||lacertamylaseslob.cfd^
 ||lachesbegnawairway.qpon^
 ||lacilypelterscoagel.cyou^
 ||lacisaboma.com^
@@ -14226,9 +14303,11 @@ gbnews.com#@#.primis-wrapper
 ||ldwkenwjlxgw.xyz^
 ||ldxpydjykkrmc.space^
 ||ldzjxhzsnphpw.site^
+||leading-back.com^
 ||leafageerugatelagarto.qpon^
 ||leaferyblinger.com^
 ||leaferyclk.cyou^
+||leafletbromide.shop^
 ||leakprudence.com^
 ||leapedunarmed.com^
 ||leaperalamire.qpon^
@@ -14258,6 +14337,7 @@ gbnews.com#@#.primis-wrapper
 ||legmenbescab.cyou^
 ||legumesberylbash.cyou^
 ||lehrmanernesunclew.cyou^
+||lehrreiced.com^
 ||lekythistowingeel.cfd^
 ||lel27q9eleftuv.rest^
 ||lemancantar.qpon^
@@ -14269,6 +14349,7 @@ gbnews.com#@#.primis-wrapper
 ||lenkmio.com^
 ||lenmit.com^
 ||lennowpikers.shop^
+||lentattire.com^
 ||lenvoystrix.qpon^
 ||leonebuduma.cyou^
 ||leonnwztxcdcj.site^
@@ -14374,7 +14455,6 @@ gbnews.com#@#.primis-wrapper
 ||limited-hook.pro^
 ||limited-teacher.com^
 ||limniteosselet.shop^
-||limpassociation.pro^
 ||limpreading.com^
 ||limpseyglob.cfd^
 ||linaloecharms.com^
@@ -14382,7 +14462,6 @@ gbnews.com#@#.primis-wrapper
 ||linealbyes.qpon^
 ||linear-policy.com^
 ||linenychyak.cfd^
-||linerdyeswarn.cyou^
 ||lingotlimpin.shop^
 ||liningsvexil.cyou^
 ||linkaffectionately.com^
@@ -14560,6 +14639,7 @@ gbnews.com#@#.primis-wrapper
 ||lotebanyoro.qpon^
 ||loticsuavely.qpon^
 ||lottoairampocacked.cfd^
+||lotusesrisalarebore.qpon^
 ||loubyvwvqyzdt.site^
 ||louchevips.cyou^
 ||louctlwyghkui.online^
@@ -14679,6 +14759,7 @@ gbnews.com#@#.primis-wrapper
 ||lurofqhkgadxp.online^
 ||lusfnxbxlkyip.site^
 ||lust-goddess-game.online^
+||lustilyshabbossystems.cyou^
 ||lustralplea.cyou^
 ||lutealdossfigbird.qpon^
 ||lutetiamyelin.qpon^
@@ -14694,6 +14775,7 @@ gbnews.com#@#.primis-wrapper
 ||lvjczzaojopzc.website^
 ||lvlzdktkhjxsz.online^
 ||lvqcfuwngsaxmp.com^
+||lvrixcbdhinwu.website^
 ||lvuafqlps.com^
 ||lvwmqmwvauahv.online^
 ||lvyrrqdlenlkswq.com^
@@ -14755,7 +14837,6 @@ gbnews.com#@#.primis-wrapper
 ||lzfljpsjzvokm.space^
 ||lzgnhoihefevf.website^
 ||lzgrsyufpxujx.site^
-||lzhkkgtzlksfd.space^
 ||lzkjricxrvrtx.website^
 ||lzmvhfpfxidbv.website^
 ||lznzljcgtn.com^
@@ -14817,6 +14898,7 @@ gbnews.com#@#.primis-wrapper
 ||maisykejwe.com^
 ||majadallasbaguet.qpon^
 ||majaguaglumabegats.cyou^
+||majjwxcciy.com^
 ||major-agent.pro^
 ||major-celebration.pro^
 ||major-middle.pro^
@@ -14937,7 +15019,6 @@ gbnews.com#@#.primis-wrapper
 ||mavrrtcahjidqr.com^
 ||mavxkcvueybiu.site^
 ||mawgerdewannyclacker.cyou^
-||mawseedswiddendisuses.cyou^
 ||mayingslessees.shop^
 ||maypgvtbvax.com^
 ||mazamemeltage.shop^
@@ -14946,6 +15027,7 @@ gbnews.com#@#.primis-wrapper
 ||maznsshrpkind.space^
 ||mazzngxxmaiul.site^
 ||mbacufxdxoqso.site^
+||mbchpvbeujokh.online^
 ||mbdmildishzontian.cfd^
 ||mbidadm.com^
 ||mbjjulevioisd.online^
@@ -14962,6 +15044,7 @@ gbnews.com#@#.primis-wrapper
 ||mcohogthdeiri.website^
 ||mcomwacfpafmugc.com^
 ||mconjpxvtiqmy.space^
+||mcsatbcs.com^
 ||mcwtjxxpphqrs.online^
 ||mczbf.com^
 ||mdcebngiogqlm.space^
@@ -15022,6 +15105,7 @@ gbnews.com#@#.primis-wrapper
 ||menfraswagmenkeglers.cfd^
 ||menkindbedbugs.cyou^
 ||menrdrxjpdvky.space^
+||mensasavara.qpon^
 ||mentaryrabanna.qpon^
 ||mentaryrewet.qpon^
 ||menterykings.com^
@@ -15110,6 +15194,7 @@ gbnews.com#@#.primis-wrapper
 ||miawmqpezgbui.website^
 ||mibnaa.shop^
 ||mibsyoxjdxilxqj.com^
+||michingfurcae.cyou^
 ||microad.net^
 ||midasbirders.qpon^
 ||middaymishapnotice.com^
@@ -15150,6 +15235,7 @@ gbnews.com#@#.primis-wrapper
 ||milsiesabring.cfd^
 ||miltosstifles.cfd^
 ||milvinebeyship.qpon^
+||mimcystine.com^
 ||mimdarlhf.com^
 ||mimidaebebat.cyou^
 ||mimiunprest.com^
@@ -15167,6 +15253,7 @@ gbnews.com#@#.primis-wrapper
 ||miniature-movie.pro^
 ||miniaturereality.pro^
 ||minimumshortest.com^
+||ministercheckingpeering.com^
 ||minksympathyindoors.com^
 ||minorfortune.pro^
 ||mintyswing.com^
@@ -15174,6 +15261,7 @@ gbnews.com#@#.primis-wrapper
 ||minunetclose.com^
 ||minutessmiles.com^
 ||miomg53b4xlev45nw.rest^
+||mirfidnaupgks.site^
 ||mirthflexiblecolumn.com^
 ||misavermaomao.cyou^
 ||miscarriageapartment.com^
@@ -15191,12 +15279,12 @@ gbnews.com#@#.primis-wrapper
 ||misknewdenials.cyou^
 ||misleargluedplafond.cyou^
 ||misnameruned.cfd^
+||misrmyzwa.in^
 ||missalagopus.cfd^
 ||missangfurlana.shop^
 ||missherself.com^
 ||misshipguilds.qpon^
 ||missimqalmviy.website^
-||mistakeapartgolan.com^
 ||mistedfestaetib.cyou^
 ||misticupcasts.qpon^
 ||mistureoversupcaselty.cfd^
@@ -15221,6 +15309,7 @@ gbnews.com#@#.primis-wrapper
 ||mizrachvirbius.com^
 ||mizzledkl.cyou^
 ||mjdvqfoffagkp.online^
+||mjdytoygabtlt.space^
 ||mjfftuwi.com^
 ||mjjcwatsciuns.online^
 ||mjjksaoubcyto.online^
@@ -15232,6 +15321,7 @@ gbnews.com#@#.primis-wrapper
 ||mjlnomeopcwql.website^
 ||mjtpwtxclfnkt.site^
 ||mkacyblu.com^
+||mkbdxjvwblkmi.website^
 ||mkbgzaxkwyilk.online^
 ||mkehaniyybtru.online^
 ||mkekzahca.com^
@@ -15380,6 +15470,7 @@ gbnews.com#@#.primis-wrapper
 ||motorfromservices.net^
 ||motorsnag.com^
 ||motorstroke.com^
+||motortape.com^
 ||mottowdnpoawt.space^
 ||mottykippedsithe.qpon^
 ||moulageairbag.cfd^
@@ -15437,7 +15528,6 @@ gbnews.com#@#.primis-wrapper
 ||mrydwiast.in^
 ||msdoj.com^
 ||mslvatfrtdfte.space^
-||msnfcixxunwrh.site^
 ||msnxrlyxvrpqo.com^
 ||mstjfzekwtufe.online^
 ||msxalnhlo.com^
@@ -15476,6 +15566,7 @@ gbnews.com#@#.primis-wrapper
 ||mulchesslete.cfd^
 ||mulemenyeech.cyou^
 ||mullsespinalfoziest.cyou^
+||multaniaspredofiot.cyou^
 ||multicoloredfamiliar.pro^
 ||multitrk.com^
 ||multstorage.com^
@@ -15579,7 +15670,6 @@ gbnews.com#@#.primis-wrapper
 ||myricascoastedbushpig.qpon^
 ||myricylhoihere.com^
 ||myroledance.com^
-||myronicbrulzie.cyou^
 ||myrrhbehorn.com^
 ||myrrhstymiesjolted.qpon^
 ||myrtalptinus.shop^
@@ -15588,6 +15678,7 @@ gbnews.com#@#.primis-wrapper
 ||mysoidspaik.cyou^
 ||mysterysaunaawkward.com^
 ||mythoiunfur.cyou^
+||mythskalkvissaronic.cfd^
 ||mytsyoisjverr.space^
 ||myvppmgositlb.website^
 ||mywatchtones.com^
@@ -15634,6 +15725,7 @@ gbnews.com#@#.primis-wrapper
 ||nailadversary.com^
 ||nailsroachedbayamos.cyou^
 ||nairobiramesh.cfd^
+||nairobivatted.com^
 ||naivestphytane.cyou^
 ||naivewidespreadbody.com^
 ||nakbattikwourari.cyou^
@@ -15658,6 +15750,7 @@ gbnews.com#@#.primis-wrapper
 ||nasty-technology.pro^
 ||nasutustinkles.com^
 ||natalschagoma.qpon^
+||nativessupervisor.com^
 ||nativevegetablesentered.com^
 ||natronsserdabsplotty.cfd^
 ||naturaldump.pro^
@@ -15754,6 +15847,7 @@ gbnews.com#@#.primis-wrapper
 ||net5gj5lrxmm3whhmkp6keihqun8o6vbow.cfd^
 ||netamenage.cfd^
 ||netballtampin.cyou^
+||neterbarit.com^
 ||netsmanamminesrustful.cfd^
 ||networking444.net^
 ||neurismstoping.com^
@@ -15774,12 +15868,10 @@ gbnews.com#@#.primis-wrapper
 ||neynypjufelcs.site^
 ||nezeyrfoo.com^
 ||nezigkhbowjhs.site^
-||nfcliqjyhwatk.website^
 ||nfdyrhlrzcszj.online^
 ||nfhsctjaibyji.space^
 ||nfjuntdpgkfvp.website^
 ||nfldvqyvbtkrz.online^
-||nfmnrvmgujczf.website^
 ||nfnxhsdoby.com^
 ||nfqlihferbg.com^
 ||nfrluoaxmt.com^
@@ -15792,6 +15884,7 @@ gbnews.com#@#.primis-wrapper
 ||ngbc3wgx5nw9xqw413qo1fmz7rc9hf8tulhh6o.rest^
 ||ngbmozpzslhtu.site^
 ||ngdrfbutynlnu.website^
+||ngdxwfjtdfxoq.com^
 ||ngeoskdndsoxv.website^
 ||nghjcuimofbbv.online^
 ||nghnbogvkojlk.space^
@@ -15834,9 +15927,7 @@ gbnews.com#@#.primis-wrapper
 ||nickchookie.qpon^
 ||nickedmetered.qpon^
 ||nickeldefiancepriest.com^
-||nickessence.com^
 ||nickeysreplait.cfd^
-||nicksana.shop^
 ||nicolasrhumbaenfile.cyou^
 ||nicyosyoxyvvw.space^
 ||nidakcdk.com^
@@ -15868,6 +15959,7 @@ gbnews.com#@#.primis-wrapper
 ||nimxbomdpgwms.site^
 ||nincommf.com^
 ||ninegarretcurse.com^
+||ninthprerogativerap.com^
 ||niobefrogeye.com^
 ||nioljyrbuctyl.space^
 ||nip6mgvw1otkz6.rest^
@@ -15890,6 +15982,7 @@ gbnews.com#@#.primis-wrapper
 ||nitsulquj.com^
 ||niwocgaqsx.in^
 ||nixeaperchmeltage.cfd^
+||nixingminiateunpetal.qpon^
 ||nixongutwiseschools.qpon^
 ||niynetojcbet.com^
 ||njbdhmocyenk.com^
@@ -15912,6 +16005,7 @@ gbnews.com#@#.primis-wrapper
 ||njzyjuwxi.com^
 ||nkaczwsqxlolq.website^
 ||nkixkadz.in^
+||nkknahpfhktepm.com^
 ||nklqniyenjkth.website^
 ||nkoecpgbeajqs.online^
 ||nkoexprvgclh.com^
@@ -16113,6 +16207,7 @@ gbnews.com#@#.primis-wrapper
 ||ntzgwekoefmwq.site^
 ||nuaooeaurlzpv.space^
 ||nucleicemeclefts.cfd^
+||nucleonfashing.com^
 ||nucopzqt.in^
 ||nucvqszpvdupi.online^
 ||nudeyepely.cyou^
@@ -16182,9 +16277,9 @@ gbnews.com#@#.primis-wrapper
 ||nxxpgruglnfha.online^
 ||nxxvpspfsvmhx.site^
 ||nyaxhrfuifehm.space^
-||nybjwktlrcwca.site^
 ||nycjuaeiuzhxe.site^
 ||nyctsnsuuxbsf.website^
+||nyetexogens.shop^
 ||nyfwoxdfhgufr.online^
 ||nygfadmyxjv.com^
 ||nyjqw9hj8yvjbuzeir75y2.cfd^
@@ -16269,6 +16364,7 @@ gbnews.com#@#.primis-wrapper
 ||ocafujphzaqww.space^
 ||ocasabiloribwork.qpon^
 ||ocbvilarlp.in^
+||occasionforfeitarray.com^
 ||occupationbritain.com^
 ||occupiedstuffgrub.com^
 ||occurrencedoorstepprevention.com^
@@ -16375,6 +16471,7 @@ gbnews.com#@#.primis-wrapper
 ||ogxgulqi.in^
 ||ogzapkyveulam.online^
 ||ogzopanhilgem.online^
+||ohcifxucd.com^
 ||ohdaqtkuvnt.in^
 ||ohfuuzzotyffr.online^
 ||ohgwkaedrbujt.website^
@@ -16419,6 +16516,7 @@ gbnews.com#@#.primis-wrapper
 ||okcagrobn.in^
 ||okehzmhyyflmq.site^
 ||okesexopunmyf.website^
+||okgtvpyukjcelwq.com^
 ||okimonoemp.cyou^
 ||okjmiqaqjakm.in^
 ||okooiejsudbgk.space^
@@ -16467,6 +16565,7 @@ gbnews.com#@#.primis-wrapper
 ||omasalosser.shop^
 ||ombersloach.cfd^
 ||omckeksvvawxv.com^
+||omcusrmpkvi.com^
 ||omfmfaxkion.in^
 ||omg10.com^
 ||omhvxgfsh.com^
@@ -16583,6 +16682,7 @@ gbnews.com#@#.primis-wrapper
 ||optionascertained.com^
 ||optvz.com^
 ||optzqxrrtdoao.site^
+||opvvrosxfrql.com^
 ||opwitbdnfdbcm.website^
 ||opxglqeagamku.space^
 ||opxtlukgjpkhy.space^
@@ -16590,6 +16690,7 @@ gbnews.com#@#.primis-wrapper
 ||opymcaeqyxtmz.site^
 ||opzxapovfra.in^
 ||oqbxaknwo.in^
+||oqdwehdhhswex.online^
 ||oqezuyyzxggyx.site^
 ||oqhvfroyxr1gh5b.rest^
 ||oqjzazobpofq.in^
@@ -16613,6 +16714,7 @@ gbnews.com#@#.primis-wrapper
 ||ordenerastergasman.cyou^
 ||ordinarygoonwritten.com^
 ||ordureleptera.shop^
+||oreideshexeris.qpon^
 ||orfgpyjret.in^
 ||orgamyimogen.cyou^
 ||organic-ground.pro^
@@ -16813,7 +16915,6 @@ gbnews.com#@#.primis-wrapper
 ||ownnessdebater.cyou^
 ||owptcpqzfeajd.site^
 ||owrelayzanzakermis.cyou^
-||owsgvnauvjbfm.online^
 ||owuaxnnhlcoyd.website^
 ||owutrvkpsak.com^
 ||owvkfujan.com^
@@ -16825,6 +16926,7 @@ gbnews.com#@#.primis-wrapper
 ||oxacidunfiend.shop^
 ||oxbhoasufu.com^
 ||oxbpetwufrtht.online^
+||oxcocklzo.in^
 ||oxdooomwmztva.site^
 ||oxducycsdzrlm.site^
 ||oxepmgkryfttv.online^
@@ -16840,7 +16942,6 @@ gbnews.com#@#.primis-wrapper
 ||oxlmsxqhjtykk.online^
 ||oxmhrrzmoqnco.online^
 ||oxqtdcbgjovyl.space^
-||oxrqbdaslqcek.space^
 ||oxshoeaerosatsongs.cyou^
 ||oxsvzahp.in^
 ||oxterschamian.cyou^
@@ -16869,7 +16970,6 @@ gbnews.com#@#.primis-wrapper
 ||oyxfysqkddwyh.space^
 ||oyydrqvuoahcz.online^
 ||oyywxflhbjxtfja.com^
-||ozbjdgfjoztdc.site^
 ||ozcvfonjsadyy.website^
 ||ozdpunfugvki.in^
 ||ozehurtjv.com^
@@ -16902,6 +17002,7 @@ gbnews.com#@#.primis-wrapper
 ||p5r72t3xbr6cinx.cfd^
 ||p6bvuuqjqbnu13zjjyiktqj.rest^
 ||p6mqqxz1hhkchovhbnuqvwuo6pp4pjfcb.rest^
+||p6n0g0ia.xyz^
 ||p6tkffrokgptov6mp7yfl9y4gxzw6.cfd^
 ||p6twcipwooxprj3zmqiu68jb4j693l.rest^
 ||p92729tmxjc835vj47m5ovr44eiw4ux5l.cfd^
@@ -16949,6 +17050,7 @@ gbnews.com#@#.primis-wrapper
 ||palayfianced.cyou^
 ||palelitistsnick.com^
 ||palermosonovox.cfd^
+||palissestrake.cfd^
 ||pallrutul.in^
 ||pallssayal.shop^
 ||palmerdebye.cfd^
@@ -17003,7 +17105,6 @@ gbnews.com#@#.primis-wrapper
 ||parched-mail.com^
 ||pardahdantist.cfd^
 ||parersfacilymalism.cfd^
-||paricaericgillied.cyou^
 ||parissommite.qpon^
 ||parkydiurons.qpon^
 ||parlingescrod.shop^
@@ -17160,6 +17261,7 @@ gbnews.com#@#.primis-wrapper
 ||peisepompeii.qpon^
 ||pejindzozgwfp.site^
 ||pelengtimawa.cyou^
+||pelitesestrich.com^
 ||pellyxfrbufod.space^
 ||peltingafars.qpon^
 ||peludoyinsuntouch.qpon^
@@ -17181,6 +17283,7 @@ gbnews.com#@#.primis-wrapper
 ||pensildammer.com^
 ||pensionermattersarrogant.com^
 ||pentinedonorsbepray.cyou^
+||pentosephycic.shop^
 ||peonesmislit.cyou^
 ||peonizeumteen.qpon^
 ||peonskainit.qpon^
@@ -17224,7 +17327,9 @@ gbnews.com#@#.primis-wrapper
 ||pestilentberrysincere.com^
 ||pestilenttransaction.com^
 ||petemensennas.help^
+||petrbeechereleazar.cyou^
 ||petriewoofy.shop^
+||petrolssallies.cfd^
 ||petsrulefondness.com^
 ||pevccwyfyjssnv.com^
 ||pevrksshtngcg.site^
@@ -17291,6 +17396,7 @@ gbnews.com#@#.primis-wrapper
 ||phleumfz.shop^
 ||phloemstribal.cfd^
 ||phoneboothliningmany.com^
+||phonecustomer.com^
 ||phoneysmelvie.cfd^
 ||phonismsirex.cfd^
 ||phonysection.com^
@@ -17320,6 +17426,7 @@ gbnews.com#@#.primis-wrapper
 ||pianfilix.cfd^
 ||pickedsarcasm.com^
 ||picketgarner.qpon^
+||picoidpayout.com^
 ||picratenonane.shop^
 ||picturesquesizedisabled.com^
 ||pidifudzt.com^
@@ -17360,6 +17467,7 @@ gbnews.com#@#.primis-wrapper
 ||pinnulerepace.com^
 ||pinuluslimlitorpors.qpon^
 ||pinwingbrainy.qpon^
+||pinyonsmohwadraffs.cyou^
 ||pipaffiliates.com^
 ||pipetmosette.com^
 ||pipiestlinguet.shop^
@@ -17384,12 +17492,11 @@ gbnews.com#@#.primis-wrapper
 ||pittermismove.shop^
 ||pittitezazens.com^
 ||pitworktieing.cfd^
+||pitylusguariconoil.cyou^
 ||piufedwchveap.site^
 ||piwzbcvempdur.space^
 ||pixavvqzfqxpi.online^
-||pixiessikatch.qpon^
 ||piyeaztpdsmaj.space^
-||pizbidjinqaq.com^
 ||pizzbeardy.cyou^
 ||pjbpryjubfloy.website^
 ||pjfrxxmajcjypdm.com^
@@ -17414,7 +17521,6 @@ gbnews.com#@#.primis-wrapper
 ||pkjevvtqkxuqe.space^
 ||pkmexmrmihp.com^
 ||pkniseahawkhv.space^
-||pknnuyaekwdlu.website^
 ||pksukrsisidte.com^
 ||pkvqgsvphsxud.online^
 ||pkxpiuwxhtdbe.space^
@@ -17429,6 +17535,7 @@ gbnews.com#@#.primis-wrapper
 ||plaintive-oil.com^
 ||plaintive-point.pro^
 ||plamfcnegzg.com^
+||plankedoxshoe.qpon^
 ||planseffectstrim.com^
 ||plantalstupas.cyou^
 ||planttrains.space^
@@ -17451,7 +17558,6 @@ gbnews.com#@#.primis-wrapper
 ||pledgorapellesmoll.cyou^
 ||plenismagistorregear.cyou^
 ||plentyhelium.com^
-||plexusbawdric.cyou^
 ||plgtxprvrgume.site^
 ||plhflftix.com^
 ||plhtozzewubpe.space^
@@ -17518,6 +17624,7 @@ gbnews.com#@#.primis-wrapper
 ||pnxytfbvhknns.space^
 ||pnzflaiogdwwv.site^
 ||pnzjebwvmqdxv.online^
+||poachminikin.com^
 ||poachpretellelder.qpon^
 ||poatqpupaxsud.website^
 ||pochardroughverists.qpon^
@@ -17530,6 +17637,7 @@ gbnews.com#@#.primis-wrapper
 ||podiaflatlet.cyou^
 ||poduranbaja.shop^
 ||podzolabsi.qpon^
+||poemsthimble.shop^
 ||poetdomwineier.cyou^
 ||pofyybwevmids.online^
 ||pogwinwcsnggrv.com^
@@ -17598,7 +17706,6 @@ gbnews.com#@#.primis-wrapper
 ||popstampurhairpin.qpon^
 ||poqxdbajgjq.com^
 ||porcatedavidicpeytrel.cfd^
-||porcineermanicathud.cyou^
 ||porculahoning.com^
 ||poredsepal.shop^
 ||porgorustlewanning.cfd^
@@ -17639,7 +17746,6 @@ gbnews.com#@#.primis-wrapper
 ||poveuvhuxyltz.website^
 ||powerad.ai^
 ||powerless-total.pro^
-||powitchinkshed.qpon^
 ||pownyempress.qpon^
 ||powsnbzvggnpk.site^
 ||poxescasina.shop^
@@ -17669,6 +17775,7 @@ gbnews.com#@#.primis-wrapper
 ||ppxduwgzlimie.website^
 ||ppxoriqrmrkcq.website^
 ||ppyluxrhatij.com^
+||ppyzwldgzciwy.online^
 ||pqaczzsdayrft.online^
 ||pqetjycqquoet.space^
 ||pqhdiyvlkeg.com^
@@ -17748,6 +17855,7 @@ gbnews.com#@#.primis-wrapper
 ||preterbultowtarkhan.cyou^
 ||pretirenecroseass.cyou^
 ||pretty-fly4.com^
+||pretty-serve.pro^
 ||preverbbumbass.cfd^
 ||previewvenison.com^
 ||previous-specific.pro^
@@ -17786,6 +17894,7 @@ gbnews.com#@#.primis-wrapper
 ||prnvnyflftcrk.online^
 ||pro-market.net^
 ||probablebassinvoke.com^
+||probationthimbledespite.com^
 ||probersouthueblastie.qpon^
 ||proberspegglenocuity.qpon^
 ||problemsmaillibel.com^
@@ -17796,7 +17905,6 @@ gbnews.com#@#.primis-wrapper
 ||prodigiousundercover.com^
 ||prodmp.ru^
 ||producerbuyerlid.com^
-||productive-maximum.pro^
 ||profitable-balance.com^
 ||profitablebutton.com^
 ||profitablecpmrate.com^
@@ -17921,7 +18029,6 @@ gbnews.com#@#.primis-wrapper
 ||pubguru.net^
 ||pubinstancesglorious.com^
 ||pubkisakvsfy.in^
-||publishednundear.com^
 ||publishoccur.com^
 ||pubmatic.com^
 ||pubmine.com^
@@ -17951,7 +18058,6 @@ gbnews.com#@#.primis-wrapper
 ||pukedfacty.shop^
 ||pulbappwwuyulpl.com^
 ||pulletnatuary.qpon^
-||pulsedaughtvulcano.qpon^
 ||pulsedendent.qpon^
 ||pulseola.net^
 ||pulsesphanicminimum.qpon^
@@ -17959,6 +18065,7 @@ gbnews.com#@#.primis-wrapper
 ||pumexlibridrupel.qpon^
 ||pummelstarish.cyou^
 ||pummiceatypic.qpon^
+||pumopgsuhacs.in^
 ||pumovfoqzapz.com^
 ||pumpleungreenspieler.cyou^
 ||pumtzlkifzaqm.site^
@@ -17968,6 +18075,7 @@ gbnews.com#@#.primis-wrapper
 ||punishencoder.cfd^
 ||punishutrubi.com^
 ||puniturullingchuhra.cfd^
+||punkasananym.com^
 ||punkiesinconel.qpon^
 ||punlesscasuals.qpon^
 ||punningcaballo.shop^
@@ -18042,7 +18150,6 @@ gbnews.com#@#.primis-wrapper
 ||pvylvhvp.com^
 ||pvzesryoifiit.online^
 ||pvzhjmmhmsjyk.com^
-||pwbxyinigxrju.website^
 ||pwcfloljtedy.com^
 ||pwdkxfewzpw.com^
 ||pwhjumncludns.website^
@@ -18084,6 +18191,7 @@ gbnews.com#@#.primis-wrapper
 ||pynjcfnchwsui.space^
 ||pynnywwoczyub.website^
 ||pyoidarenous.cfd^
+||pypjsjswidwnlhq.com^
 ||pyqezmcomuayf.website^
 ||pyralidtaiwan.shop^
 ||pyrrhaglazensmatch.qpon^
@@ -18094,7 +18202,6 @@ gbnews.com#@#.primis-wrapper
 ||pyvanqnmywiop.website^
 ||pyxium.net^
 ||pyxpwpixcedlw.online^
-||pzapumrittav.com^
 ||pzcndidfhcoyu.site^
 ||pzebzsagsntlc.online^
 ||pzedsbambaclp.space^
@@ -18217,7 +18324,6 @@ gbnews.com#@#.primis-wrapper
 ||qgtyiikopjaiy.space^
 ||qgvgqhfuessel.com^
 ||qgwwgcnzvecga.site^
-||qgxdgxsrfxyyy.online^
 ||qgztlbdwhqdbn.site^
 ||qhacrbhp.com^
 ||qhcqqocsezad.com^
@@ -18226,7 +18332,6 @@ gbnews.com#@#.primis-wrapper
 ||qhgbxmuytmnpb.website^
 ||qhgimdvyvqtyl.site^
 ||qhhebqciwgxju.space^
-||qhhtjakrzwtwx.site^
 ||qhixpujxjyjkp.site^
 ||qhjexayrgruyj.online^
 ||qhjneybjqcxjm.online^
@@ -18246,7 +18351,6 @@ gbnews.com#@#.primis-wrapper
 ||qibwuklibbm.com^
 ||qidnanah.in^
 ||qidqmephogw.in^
-||qieiepqyflfpk.space^
 ||qiftyholnhlwe.xyz^
 ||qigkciqa.in^
 ||qigkvucouqnjs.space^
@@ -18260,7 +18364,6 @@ gbnews.com#@#.primis-wrapper
 ||qiqpfmnb.com^
 ||qiqqjbiocdmsj.online^
 ||qiqzcyib.com^
-||qirkmeozkzu.com^
 ||qitkpdaoujpxu.space^
 ||qivabsltqgx.com^
 ||qivzzjzsutlwk.site^
@@ -18284,7 +18387,6 @@ gbnews.com#@#.primis-wrapper
 ||qkaadhcu.in^
 ||qkcrfylskdedo.website^
 ||qkignhzgdktgh.online^
-||qkknhauolovpr.site^
 ||qklvxuapbdqtu.online^
 ||qkmzqpxztnran.online^
 ||qkrxetsjnfkms.website^
@@ -18297,7 +18399,6 @@ gbnews.com#@#.primis-wrapper
 ||qkxfqleua.com^
 ||qkywopumttfgd.com^
 ||qkzuoyocjmsgu.site^
-||ql181i9foz886x4.cfd^
 ||qlankrifncwbd.site^
 ||qlcmnszrrzdsp.website^
 ||qledwrstokolid.com^
@@ -18327,6 +18428,7 @@ gbnews.com#@#.primis-wrapper
 ||qnahgxwt.com^
 ||qnankopyneryv.space^
 ||qnfhrgxttmget.site^
+||qnfqwgissngqx.website^
 ||qngwszkzgmmjx.online^
 ||qninldlbtihpt.space^
 ||qnnecfwfjpbx.com^
@@ -18435,12 +18537,13 @@ gbnews.com#@#.primis-wrapper
 ||qtbjxnkjuiuhr.online^
 ||qtcqxssh.com^
 ||qtht4nokue5fjrryh.rest^
+||qticisaxnav.in^
 ||qtiokogebgvdu.space^
 ||qtk9378rlpcn6xgpf.cfd^
 ||qtlpjjdflbdli.site^
+||qtmkgpcvdk.com^
 ||qtotkxbumapye.website^
 ||qtpalfofvpsw.com^
-||qtpyyizgteovh.space^
 ||qtreijcxmssfi.site^
 ||qtroibxoalnmq.site^
 ||qttkyxopotgkk.site^
@@ -18535,6 +18638,7 @@ gbnews.com#@#.primis-wrapper
 ||qvctxkmwiwywr.website^
 ||qvdghscertmgl.site^
 ||qvdzjnrlrwhas.online^
+||qvgovnrkacyla.online^
 ||qvikgrtirgcjs.online^
 ||qvlaccdtxdrsi.site^
 ||qvlxmsrqpe.com^
@@ -18643,7 +18747,6 @@ gbnews.com#@#.primis-wrapper
 ||ragolnnkeo.com^
 ||ragwogidrznow.online^
 ||rahfardc.com^
-||rahjolly.shop^
 ||raidingfeuar.cyou^
 ||raillytottery.shop^
 ||rainsyallachinela.cfd^
@@ -18652,6 +18755,7 @@ gbnews.com#@#.primis-wrapper
 ||raisinovered.cyou^
 ||rajjkaobnt.in^
 ||ralishswarmer.com^
+||rallytrck.website^
 ||rameaneatspentail.qpon^
 ||ramekinpleura.shop^
 ||ramekintewhit.cfd^
@@ -18669,7 +18773,6 @@ gbnews.com#@#.primis-wrapper
 ||ranidaelater.qpon^
 ||ranjitkintyre.shop^
 ||ranketdaphnialeucism.cfd^
-||ransommaliciousveneering.com^
 ||ransomnotify.com^
 ||rapbyxaipylsx.site^
 ||rapfeely.shop^
@@ -18678,7 +18781,7 @@ gbnews.com#@#.primis-wrapper
 ||rapshiera.com^
 ||raptureinsanity.com^
 ||raptuscauch.com^
-||rarafavous.qpon^
+||raqckutw.com^
 ||rare-guy.pro^
 ||rareapasoteunhoned.qpon^
 ||rarelygeoidal.cyou^
@@ -18773,7 +18876,6 @@ gbnews.com#@#.primis-wrapper
 ||realsdauphin.com^
 ||realsrv.com^
 ||reaqkzrca.com^
-||rearguekindredundate.qpon^
 ||reariiferrule.cfd^
 ||rearmcherry.cfd^
 ||rearrangecomecosy.com^
@@ -18782,6 +18884,7 @@ gbnews.com#@#.primis-wrapper
 ||reasoningcoefficient.com^
 ||reasoningdreary.com^
 ||reasonsflacons.cyou^
+||rebakebelage.com^
 ||rebakeuighur.cfd^
 ||rebantaste.cfd^
 ||rebedwhand.cfd^
@@ -18796,7 +18899,6 @@ gbnews.com#@#.primis-wrapper
 ||recacwfsjsmzyj.com^
 ||recallpumpage.cyou^
 ||recanelunkers.shop^
-||recartnitered.cfd^
 ||recastsfracted.shop^
 ||reccyresided.shop^
 ||recentathwartknew.com^
@@ -18808,6 +18910,7 @@ gbnews.com#@#.primis-wrapper
 ||recipessleyingblas.cyou^
 ||recipientpopulationregret.com^
 ||reciprocalextending.com^
+||recitaldezincalonzo.qpon^
 ||recitdams.com^
 ||reckless-image.com^
 ||recklesshumiliated.com^
@@ -18876,7 +18979,6 @@ gbnews.com#@#.primis-wrapper
 ||regimesangliae.cyou^
 ||regimesgyrus.cfd^
 ||regir3m48nk5rlk.rest^
-||regosolbarware.qpon^
 ||regredefractur.qpon^
 ||regretfinancially.com^
 ||regretnotestool.com^
@@ -18889,6 +18991,7 @@ gbnews.com#@#.primis-wrapper
 ||reimpelgulas.shop^
 ||reinainfile.cfd^
 ||reincurberoida.cfd^
+||reissueupshots.qpon^
 ||reivednacrinegusher.cyou^
 ||rekinggawgaw.shop^
 ||reknotpiratry.cyou^
@@ -18906,6 +19009,7 @@ gbnews.com#@#.primis-wrapper
 ||reluctancegenetic.com^
 ||reluctantlyaluminiumput.com^
 ||reluctparablesurfuse.cfd^
+||reluctswornil.shop^
 ||relumetelpath.cyou^
 ||remaininghopefully.com^
 ||remansowner.com^
@@ -18962,6 +19066,7 @@ gbnews.com#@#.primis-wrapper
 ||rescueaccredited.com^
 ||rescuermargie.com^
 ||rescuesoctanol.cfd^
+||reseekshollin.com^
 ||reseiseunlocal.cfd^
 ||resentlocallycamomile.com^
 ||resentmentsadflew.com^
@@ -19039,7 +19144,6 @@ gbnews.com#@#.primis-wrapper
 ||rftxmwcivenzn.space^
 ||rfwvsjpzbpbvd.space^
 ||rfykpggelimft.space^
-||rfzguyfdsbpcf.site^
 ||rgarcorsbqfss.online^
 ||rgbbrdsrwxxoa.space^
 ||rgcnlbiiekneu.space^
@@ -19063,7 +19167,6 @@ gbnews.com#@#.primis-wrapper
 ||rhbfdazisufvw.site^
 ||rhbgsycloyttn.website^
 ||rhbvzptpufabj.space^
-||rhcvbndidmyqt.site^
 ||rhdhtuoci.com^
 ||rhebokscrambes.qpon^
 ||rhedaeyahwism.cyou^
@@ -19131,6 +19234,7 @@ gbnews.com#@#.primis-wrapper
 ||rilcvlgkddvoqra.com^
 ||rillycan.qpon^
 ||rilnkygbfbvru.site^
+||rimeethoxyl.com^
 ||riminganousrattons.cyou^
 ||rimousdozenedaxiom.cyou^
 ||rimpledshop.shop^
@@ -19222,7 +19326,6 @@ gbnews.com#@#.primis-wrapper
 ||rlqg25v4irgjko9hl5y8bmy.rest^
 ||rltafqbnbolec.website^
 ||rltgekdvwpzjd.site^
-||rluillenuqsag.online^
 ||rlusaglqgblxw.website^
 ||rluxjqxjstoya.com^
 ||rlxdmlxvjvumo.com^
@@ -19277,10 +19380,12 @@ gbnews.com#@#.primis-wrapper
 ||rocivctofjzka.space^
 ||rockeryunthaw.qpon^
 ||rockiertalcous.cfd^
+||rocksbrast.cfd^
 ||rockyappliance.com^
 ||rocoads.com^
 ||rodaurir.cfd^
 ||roddtenible.com^
+||rodegedunk.cyou^
 ||rodinalropani.com^
 ||rodletoutwash.cyou^
 ||rodolphavows.cyou^
@@ -19376,6 +19481,7 @@ gbnews.com#@#.primis-wrapper
 ||rpyqdzlibuemr.space^
 ||rq3l3bhkvkgtoqxermbtf.rest^
 ||rqapahxncfrik.website^
+||rqcmkbejtllcg.online^
 ||rqdfafuuswhif.website^
 ||rqgvmvokilgr.com^
 ||rqhnhxvjbulwywh.com^
@@ -19636,7 +19742,6 @@ gbnews.com#@#.primis-wrapper
 ||sacatebaskishmonuron.qpon^
 ||sacbutsforsakebatler.cyou^
 ||sacclivoivodeheep.cfd^
-||sachemscroops.cfd^
 ||sackagelill.qpon^
 ||sackmancromme.cyou^
 ||sacmcusb.com^
@@ -19676,7 +19781,6 @@ gbnews.com#@#.primis-wrapper
 ||salliercushats.qpon^
 ||salmonbestuck.qpon^
 ||salolsharifs.cfd^
-||salomonplexuremopey.qpon^
 ||salpianpungey.cyou^
 ||salpidsjollier.cyou^
 ||saltestinwraps.cyou^
@@ -19688,6 +19792,7 @@ gbnews.com#@#.primis-wrapper
 ||samarasyisneezed.cfd^
 ||sambarverruca.cyou^
 ||sambururaisingdiarial.cfd^
+||same-building.com^
 ||same-replacement.pro^
 ||samhainbewend.com^
 ||samktxppegfqo.website^
@@ -19900,7 +20005,6 @@ gbnews.com#@#.primis-wrapper
 ||sdsthlvfaqcur.online^
 ||sdtzadpayrgsc.space^
 ||sduxfdaxbgtiu.site^
-||sdxvttmpqhdfx.site^
 ||sdxyvdvtowkhw.site^
 ||seabootidols.cfd^
 ||seafowlstimies.qpon^
@@ -19915,6 +20019,7 @@ gbnews.com#@#.primis-wrapper
 ||secernroofers.cyou^
 ||sechiumazlons.qpon^
 ||sechw.com^
+||secludeunhappybungalow.com^
 ||secohmcarle.cyou^
 ||secret-smell.pro^
 ||secsstannum.cyou^
@@ -19953,6 +20058,7 @@ gbnews.com#@#.primis-wrapper
 ||seismquinol.shop^
 ||sejantsiliclewindled.cfd^
 ||sekerdrubbed.com^
+||selectskrafts.com^
 ||selfassured-celebration.com^
 ||selfgems.com^
 ||selfishgrade.pro^
@@ -20005,10 +20111,10 @@ gbnews.com#@#.primis-wrapper
 ||sergerxosa.cyou^
 ||serianwalapai.com^
 ||sericsweller.cyou^
+||serimpinymphid.cyou^
 ||serinrazziasusliks.qpon^
 ||seriolavangloe.com^
 ||serious-machine.pro^
-||serofossanephoca.cyou^
 ||serpentine-vacation.pro^
 ||serranodamask.qpon^
 ||serthavance.com^
@@ -20047,6 +20153,7 @@ gbnews.com#@#.primis-wrapper
 ||sezyaajtqobxn.space^
 ||sfbbnjienctvu.space^
 ||sfbxznczzueqz.website^
+||sfbyctnfokzd.com^
 ||sfcnprnmkvdlh.space^
 ||sfemzosta.in^
 ||sfiaxvhhy.in^
@@ -20128,6 +20235,7 @@ gbnews.com#@#.primis-wrapper
 ||shemurickeys.qpon^
 ||shengfleming.com^
 ||sherifafendinglaunce.cfd^
+||sherifscoraji.com^
 ||shermanwosometoxemic.cyou^
 ||shetfiowkmzap.website^
 ||shevahornedgroin.cyou^
@@ -20187,6 +20295,7 @@ gbnews.com#@#.primis-wrapper
 ||shstvvexwudrg.website^
 ||shtdgmiuejdnn.online^
 ||shucktiffins.com^
+||shuffleentrust.com^
 ||shukriya90.com^
 ||shunnerencinal.shop^
 ||shunremarkbuddy.com^
@@ -20262,11 +20371,11 @@ gbnews.com#@#.primis-wrapper
 ||siphonkuchean.cfd^
 ||siqsxgyvwhvtw.site^
 ||sireimplement.com^
-||siretarreswhisson.cyou^
 ||sirianbraided.shop^
 ||siskinunwillbobfly.qpon^
 ||sisskellum.shop^
 ||sistowxlxfdtn.website^
+||sitathurls.cfd^
 ||sitewithg.com^
 ||sithensarmill.cfd^
 ||sitiohapax.qpon^
@@ -20287,7 +20396,6 @@ gbnews.com#@#.primis-wrapper
 ||sjbkubmrnrqvg.space^
 ||sjdscbmgdke.com^
 ||sjecucnyk.com^
-||sjeiqeuhroksi.site^
 ||sjgtwbmxbviwr.xyz^
 ||sjgvokmmsgudn.space^
 ||sjkdsbsokwjwm.space^
@@ -20295,6 +20403,7 @@ gbnews.com#@#.primis-wrapper
 ||sjmjytjohslin.space^
 ||sjtqduaggooyp.website^
 ||sjugcenvkcfms.website^
+||sjumygfiahihq.site^
 ||sjxctpzzjoxdw.website^
 ||sjyngmfuniiuvy.com^
 ||skaffieionismdisruly.qpon^
@@ -20376,6 +20485,7 @@ gbnews.com#@#.primis-wrapper
 ||slelqtgemhvvt.com^
 ||slesuvveckenb.site^
 ||slfhtrkjbsnbh.space^
+||slgbpidnbnkxg.website^
 ||slicesuction.com^
 ||slickhoarfrost.com^
 ||slicklylifelet.cfd^
@@ -20390,7 +20500,6 @@ gbnews.com#@#.primis-wrapper
 ||slimplumbernotable.com^
 ||slingsocialliterary.com^
 ||slippersexamination.com^
-||slippery-lead.pro^
 ||slipperydesire.pro^
 ||slipwaypan.cyou^
 ||slise.xyz^
@@ -20458,7 +20567,6 @@ gbnews.com#@#.primis-wrapper
 ||smug-network.pro^
 ||smurtlesenam.com^
 ||smuzpaqaw.com^
-||smwadnuydogrh.space^
 ||smwaigbwwbvge.online^
 ||smwtnkacakzxv.site^
 ||snabmettles.qpon^
@@ -20581,7 +20689,9 @@ gbnews.com#@#.primis-wrapper
 ||sonznrlewsztb.space^
 ||soocjcimyikhp.online^
 ||sookyoxtails.cfd^
+||soonishcercal.shop^
 ||soothedsagest.qpon^
+||sootheimportanceworthy.com^
 ||sootheranchors.com^
 ||sopdhkqywwzwn.site^
 ||sopranishamim.com^
@@ -20658,7 +20768,6 @@ gbnews.com#@#.primis-wrapper
 ||specificmix.pro^
 ||spectacular-importance.pro^
 ||speculationchatter.com^
-||speculationpains.com^
 ||speededhorsed.shop^
 ||speederscooch.cfd^
 ||speedingdeadlyplays.com^
@@ -20708,7 +20817,6 @@ gbnews.com#@#.primis-wrapper
 ||spongerscil.cfd^
 ||sponsorinserttimeout.com^
 ||sponsorshipprickly.com^
-||spoorassoria.cyou^
 ||spoorpresses.cfd^
 ||sporedbrazed.cfd^
 ||sporeentropypomey.cyou^
@@ -20735,6 +20843,7 @@ gbnews.com#@#.primis-wrapper
 ||spukechutney.qpon^
 ||spumiercithara.qpon^
 ||spwwcfcddusig.online^
+||spwwuswymuhtz.online^
 ||spxdcbpiqhetd.space^
 ||spylees.com^
 ||sqaqzeqcdigsy.site^
@@ -20753,7 +20862,6 @@ gbnews.com#@#.primis-wrapper
 ||squailshoras.shop^
 ||squailsspoony.cyou^
 ||squamaeamp.cyou^
-||squamaeoorali.qpon^
 ||squareroof.pro^
 ||squeaknilghai.cfd^
 ||squealjoltily.com^
@@ -20860,6 +20968,7 @@ gbnews.com#@#.primis-wrapper
 ||steamyinverts.qpon^
 ||steednasalis.com^
 ||steevecockie.cfd^
+||stefanfiveflytes.cyou^
 ||stellaabesse.qpon^
 ||stepmedieval.com^
 ||stepminorityinept.com^
@@ -20898,7 +21007,6 @@ gbnews.com#@#.primis-wrapper
 ||stingyhandy.com^
 ||stinkramblemileage.com^
 ||stinksboggish.cyou^
-||stinkypaneltotally.com^
 ||stintererudite.qpon^
 ||stklzunstp.com^
 ||stlgleakervisibly.cyou^
@@ -20956,19 +21064,18 @@ gbnews.com#@#.primis-wrapper
 ||stroyerbalebos.cyou^
 ||strubjalapa.com^
 ||structure420.net^
+||strueoptingkorana.cfd^
 ||strugglingelevenfallout.com^
 ||strutsylvage.cfd^
 ||stsgtzbqgfmlz.website^
 ||stuckenfoam.com^
 ||stuckenthimber.qpon^
-||studerich.shop^
 ||studiogillotphenols.cfd^
 ||studiouscode.pro^
 ||studiousfood.pro^
 ||studiousorange.com^
 ||studsbarters.com^
 ||stuffedbismuth.shop^
-||stumbledkate.com^
 ||stumblegneiss.cfd^
 ||stummedmanilio.cyou^
 ||stummelbeelbow.com^
@@ -20983,6 +21090,7 @@ gbnews.com#@#.primis-wrapper
 ||sturdycow.pro^
 ||sturtanmont.qpon^
 ||sturtenonmancrablet.qpon^
+||stussbagiegloea.cfd^
 ||stutfaros.qpon^
 ||stvzuyoseftdw.site^
 ||stwrghzzzgdtd.online^
@@ -20990,11 +21098,13 @@ gbnews.com#@#.primis-wrapper
 ||stybzdgsbxzlk.space^
 ||stydmysre.com^
 ||styecohort.cyou^
+||stylecyberrose.com^
 ||styroltythe.com^
 ||stzvwfubcplyi.space^
 ||stzxdxqfwjjnc.website^
 ||suantlappula.com^
 ||subditclypeal.cfd^
+||subdividecola.com^
 ||subdued-play.com^
 ||subduedattempt.pro^
 ||subechotewter.qpon^
@@ -21023,11 +21133,11 @@ gbnews.com#@#.primis-wrapper
 ||subwayeachaccompaniment.com^
 ||successconfusequick.com^
 ||successesservicetrips.com^
+||succinwafer.com^
 ||succiseloupes.com^
 ||succormillard.qpon^
 ||sucresmoarian.shop^
 ||sucuriugwantus.cfd^
-||sucuryinquiet.qpon^
 ||suczjwsoelppw.site^
 ||suddensvalval.qpon^
 ||suddersalinanmeteors.qpon^
@@ -21037,6 +21147,7 @@ gbnews.com#@#.primis-wrapper
 ||suentpenning.cfd^
 ||suephabbhx.com^
 ||sufferwalkersilliness.com^
+||suffocatedeliberatelyslid.com^
 ||sugamoscry.com^
 ||suganslurps.shop^
 ||suggestionemphasiscourage.com^
@@ -21103,7 +21214,6 @@ gbnews.com#@#.primis-wrapper
 ||surnapelandaus.qpon^
 ||surpasswest.com^
 ||surprised-bunch.pro^
-||surprised-staff.com^
 ||surramodule.qpon^
 ||surreptredwardstuffed.cfd^
 ||surrogateicybeagle.com^
@@ -21121,6 +21231,7 @@ gbnews.com#@#.primis-wrapper
 ||suxmoquhhxkjp.online^
 ||suxpuoujrhfmc.online^
 ||suzzfekhuwz.in^
+||svarajpavises.shop^
 ||svarajssummand.cyou^
 ||svarajwennish.qpon^
 ||svdcvhfdixnsq.space^
@@ -21133,7 +21244,6 @@ gbnews.com#@#.primis-wrapper
 ||svngbsxtotzsd.online^
 ||svozzxgqfxzyt.space^
 ||svqulyres.com^
-||svsykpaqyusra.site^
 ||svuidtjijit.com^
 ||svuitjmujpqua.website^
 ||svvjhxlwfxpsy.website^
@@ -21176,6 +21286,7 @@ gbnews.com#@#.primis-wrapper
 ||swirlyhumet.qpon^
 ||switchofers.com^
 ||switheeyebalm.cyou^
+||swivingvulvaechoky.qpon^
 ||swizzblond.shop^
 ||swjkkethbcsuu.site^
 ||swlvbfovkhela.space^
@@ -21292,6 +21403,7 @@ gbnews.com#@#.primis-wrapper
 ||taglockkayo.qpon^
 ||tagstiding.shop^
 ||tagsukwqhdcgq.space^
+||tahaowsngotkr.space^
 ||tahdshrijvixj.online^
 ||tahgookbemoil.cyou^
 ||tahgookneotype.cyou^
@@ -21412,7 +21524,6 @@ gbnews.com#@#.primis-wrapper
 ||tcdjvujzfhyoc.online^
 ||tce4pi823ckpu6ooulw.cfd^
 ||tcfjjiomnshlh.com^
-||tcfydbeatqqbq.website^
 ||tcgjhulupwqpc.space^
 ||tchaicolumna.cfd^
 ||tchikycb.com^
@@ -21503,7 +21614,6 @@ gbnews.com#@#.primis-wrapper
 ||telicsagummilkers.cfd^
 ||telliesmawks.com^
 ||tellsorganfederal.com^
-||tellvisual.com^
 ||telomewispier.com^
 ||teltdnnvbbmxq.online^
 ||teltlowlier.com^
@@ -21617,7 +21727,6 @@ gbnews.com#@#.primis-wrapper
 ||theetheks.com^
 ||theezanburroethnize.cfd^
 ||thegtvgbycbtl.website^
-||theirscarpenter.com^
 ||theowcamaieu.cyou^
 ||theresehoodingalcippe.qpon^
 ||theretenoned.com^
@@ -21738,7 +21847,6 @@ gbnews.com#@#.primis-wrapper
 ||tinilyethmose.com^
 ||tinkledtertium.com^
 ||tinnetrespan.shop^
-||tinpolonia.cyou^
 ||tinselsazymousrooed.qpon^
 ||tintedjoint.com^
 ||tintypetabid.shop^
@@ -21750,6 +21858,7 @@ gbnews.com#@#.primis-wrapper
 ||tipreeflyway.qpon^
 ||tipulaeremian.qpon^
 ||tipxfsxhlsxnj.site^
+||tiragecystis.cfd^
 ||tirawpwflqxow.space^
 ||tired-discount.pro^
 ||tired-negotiation.pro^
@@ -21878,6 +21987,7 @@ gbnews.com#@#.primis-wrapper
 ||togachasse.cfd^
 ||togemanalgates.shop^
 ||togglecrex.shop^
+||togotosleepbutju.com^
 ||togvnrchpuflt.site^
 ||togxfwvfslruy.space^
 ||toieetnnb.com^
@@ -21886,6 +21996,7 @@ gbnews.com#@#.primis-wrapper
 ||tokyotossycay.qpon^
 ||tolerantdire.com^
 ||tollwaytabacin.cyou^
+||toluidebaffled.com^
 ||toluidhottleslighty.qpon^
 ||toluscoughed.shop^
 ||tomandligula.com^
@@ -22086,7 +22197,6 @@ gbnews.com#@#.primis-wrapper
 ||troghypoxis.cyou^
 ||trojanspithfreyja.cfd^
 ||troopinvariably.com^
-||tropaiajouncedphotog.cyou^
 ||trophalrafael.qpon^
 ||trophonstammel.cyou^
 ||trophygoral.cfd^
@@ -22165,7 +22275,6 @@ gbnews.com#@#.primis-wrapper
 ||tubedbraggle.shop^
 ||tubericasso.cyou^
 ||tubfishhechtia.cfd^
-||tubicenpokeful.qpon^
 ||tubsterbetoya.shop^
 ||tuckerclassesjackal.com^
 ||tuckergrass.com^
@@ -22281,7 +22390,6 @@ gbnews.com#@#.primis-wrapper
 ||twinrdengine.com^
 ||twinrdsyn.com^
 ||twinrdsyte.com^
-||twiremus.com^
 ||twirlsap.com^
 ||twlkvgoftigox.online^
 ||twmwzyznjtaou.website^
@@ -22293,6 +22401,7 @@ gbnews.com#@#.primis-wrapper
 ||twpeosoaprnhi.site^
 ||twpewseamhrz.com^
 ||twpmswdmu.com^
+||twppfczwnmirm.space^
 ||twqcylkvuahqk.space^
 ||twqxuciig.com^
 ||twssjklsmrjyo.website^
@@ -22402,7 +22511,6 @@ gbnews.com#@#.primis-wrapper
 ||u9zug1qjz4hu2n2.cfd^
 ||uabvpjljbbaqa.website^
 ||uactszpkkulbv.space^
-||uajkaphyuopgu.website^
 ||uakbviletrmyf.site^
 ||uamnikjpfscxw.website^
 ||uapcmhjywzbkh.online^
@@ -22434,6 +22542,7 @@ gbnews.com#@#.primis-wrapper
 ||uc7cyz979xkykenvcw9ql.rest^
 ||ucaavjcweklhn.space^
 ||ucayalesabeca.cfd^
+||ucbzlearkaogi.space^
 ||uccxfabqtah.com^
 ||ucdoapvmkteve.online^
 ||ucehsodxblmxj.online^
@@ -22517,6 +22626,7 @@ gbnews.com#@#.primis-wrapper
 ||ugszjrrqanqdc.site^
 ||ugtbxnlaclzop.site^
 ||uguynhculyxgkti.com^
+||ugvqtnaldwagy.space^
 ||ugwjndrwmuico.space^
 ||ugwvkdottvlyqqt.com^
 ||ugxqsbsdsuhqx.website^
@@ -22617,7 +22727,6 @@ gbnews.com#@#.primis-wrapper
 ||ulkauxqg.com^
 ||ulkpioanzeyth.website^
 ||ullavyyijnxcw.site^
-||ulm3o2zip5wwmfnr2k8c5n4xr9.cfd^
 ||ulmatehalmmiae.cyou^
 ||ulmoxtamgg.com^
 ||ulnsdmljoaygo.website^
@@ -22625,7 +22734,6 @@ gbnews.com#@#.primis-wrapper
 ||ulpjdqgndygby.space^
 ||ulqaxfzytnnpp.site^
 ||ulqlijlriiclv.online^
-||ulteriorreporting.com^
 ||ultmpeejvc.com^
 ||uluhiiotas.com^
 ||uluuggxnhrxord.com^
@@ -22673,7 +22781,6 @@ gbnews.com#@#.primis-wrapper
 ||unbetpailow.com^
 ||unblindmiliaspurl.qpon^
 ||unblownbombusmayst.cfd^
-||unboweddonarbunter.cfd^
 ||unboybandeng.top^
 ||unbraveunvague.shop^
 ||unbredtraclia.shop^
@@ -22689,10 +22796,10 @@ gbnews.com#@#.primis-wrapper
 ||unclimbgrided.cyou^
 ||uncoilaoniancareen.cfd^
 ||uncoltahurapasis.cyou^
-||uncommon-quiet.pro^
 ||uncotorture.com^
 ||uncramppurrer.qpon^
 ||uncrownrinch.cyou^
+||uncrudetheses.cfd^
 ||uncterilitasory.com^
 ||uncurluranous.com^
 ||uncxggzlzlrww.website^
@@ -22713,7 +22820,6 @@ gbnews.com#@#.primis-wrapper
 ||undrawnibo.cfd^
 ||undrysao.shop^
 ||unemployedscarinterbase.com^
-||unequaled-switch.pro^
 ||unequaledbeginning.pro^
 ||unerectcolonic.qpon^
 ||unfainfewsomeshowmen.qpon^
@@ -22737,6 +22843,7 @@ gbnews.com#@#.primis-wrapper
 ||unfrizzpacinko.com^
 ||unfurlsburgesshalvas.qpon^
 ||ungildfreithtornal.qpon^
+||ungildnumac.cyou^
 ||ungirtsoloed.shop^
 ||ungreatbasatembrace.cfd^
 ||ungtkeltic.qpon^
@@ -22752,7 +22859,6 @@ gbnews.com#@#.primis-wrapper
 ||unhhxqsvirudt.online^
 ||unhoodtorrone.shop^
 ||unhuedloviers.qpon^
-||unicingmennuet.qpon^
 ||unifierespouse.shop^
 ||unifieskerch.cfd^
 ||uniform-development.pro^
@@ -22792,7 +22898,6 @@ gbnews.com#@#.primis-wrapper
 ||unmirybembex.shop^
 ||unmowedsicaniabuttal.qpon^
 ||unnailsukkoth.qpon^
-||unnaturalcask.com^
 ||unnaturaljune.com^
 ||unneedyturneryvoluper.cfd^
 ||unnewthrene.com^
@@ -22818,6 +22923,7 @@ gbnews.com#@#.primis-wrapper
 ||unrealcorrupt.com^
 ||unrealisticmaybe.pro^
 ||unreelsrimples.com^
+||unregaldiceras.qpon^
 ||unreindpt.cyou^
 ||unresolvedbuckwheat.com^
 ||unrestcontemporary.com^
@@ -22877,7 +22983,6 @@ gbnews.com#@#.primis-wrapper
 ||unveilsengram.cfd^
 ||unvenomflatbed.shop^
 ||unviqdsbljqan.space^
-||unvoicecapsid.cyou^
 ||unvyingliberumtricky.qpon^
 ||unwelcomewave.pro^
 ||unwheelpunster.cyou^
@@ -23001,6 +23106,7 @@ gbnews.com#@#.primis-wrapper
 ||uromog.sbs^
 ||uroovwrouh.com^
 ||urpaldueuqktf.website^
+||urpjftdfykkpz.site^
 ||urpqgcglytucg.online^
 ||urqpvwovevlni.site^
 ||urqtwkydh.com^
@@ -23171,6 +23277,7 @@ gbnews.com#@#.primis-wrapper
 ||v86op739p1gjr2f.cfd^
 ||v8hrx1kbzk18k5evmc4.rest^
 ||v8m2rqhrvmjg27uvyh1jhhn5.rest^
+||v8uq327bic54hq.cfd^
 ||v9gb1bfvyzig484tk.cfd^
 ||v9tq117zy2ezftc5.rest^
 ||vacancyconsiderably.com^
@@ -23238,7 +23345,6 @@ gbnews.com#@#.primis-wrapper
 ||varicalsalomon.cfd^
 ||varietytooartmolge.cyou^
 ||varshaaristoi.qpon^
-||varyresponsible.com^
 ||vasconshussars.shop^
 ||vaseletfact.shop^
 ||vast-subject.pro^
@@ -23335,6 +23441,7 @@ gbnews.com#@#.primis-wrapper
 ||vemqmwugvdudt.site^
 ||ven5k12mb81cjklipi8nf.cfd^
 ||venafoistoutpipe.cfd^
+||vendedlayup.com^
 ||vendoroven.qpon^
 ||vendsborrows.cfd^
 ||veneeringhystericalreward.com^
@@ -23413,6 +23520,7 @@ gbnews.com#@#.primis-wrapper
 ||vhazqzndinbo.com^
 ||vhcuuplr.com^
 ||vhefkwkpwnbgooo.com^
+||vhfajacddrzzj.site^
 ||vhfteuvvkpeqc.com^
 ||vhiamqzkvqyhe.space^
 ||vhkmrcigdljdv.website^
@@ -23441,13 +23549,13 @@ gbnews.com#@#.primis-wrapper
 ||vicaireuniaxal.cfd^
 ||vicesgotrajabeice.cyou^
 ||victorious-lead.pro^
+||victoriousmansion.com^
 ||vicuatallied.com^
 ||vicunaholloa.shop^
 ||videocdnmetrika.com^
 ||videocdnshop.com^
 ||videoplaza.tv^
 ||videosprofitnetwork.com^
-||videotapewagon.com^
 ||videturcarapax.qpon^
 ||vidjebudnvlyuqd.com^
 ||vidowjhxbrmyr.online^
@@ -23476,6 +23584,7 @@ gbnews.com#@#.primis-wrapper
 ||vindicosuite.com^
 ||vinermusingsinjust.cyou^
 ||vinouscavish.com^
+||vinousfirycondors.cfd^
 ||vinvnuddyhvrv.online^
 ||vinylaphodi.qpon^
 ||vinytalustzar.cfd^
@@ -23559,7 +23668,6 @@ gbnews.com#@#.primis-wrapper
 ||vknnriwlhfnfe.space^
 ||vkofmhfpfjyak.online^
 ||vkprdolfen.com^
-||vkpxcxxkjbiog.online^
 ||vkqbdibh.com^
 ||vkschwjklmans.website^
 ||vkvttxhtuqeol.space^
@@ -23570,6 +23678,7 @@ gbnews.com#@#.primis-wrapper
 ||vkzekotcfcvlm.website^
 ||vkzkmfqcediaf.site^
 ||vl3c2qbmpforqyl.cfd^
+||vl3kzllozqmpiljg9kqegwj1jkfv.cfd^
 ||vlauqfbnfigdk.site^
 ||vlejajflc.com^
 ||vlgmfdchutvxh.website^
@@ -23623,6 +23732,7 @@ gbnews.com#@#.primis-wrapper
 ||vnnvrstpewqyb.site^
 ||vnoeytklzthqu.website^
 ||vnourljxqtsxz.site^
+||vntjfxxewlclre.com^
 ||vntsm.com^
 ||vntsm.io^
 ||vnueqiwqyt.com^
@@ -23640,6 +23750,7 @@ gbnews.com#@#.primis-wrapper
 ||voguesebkhabrucina.cyou^
 ||voirpfhavircs.online^
 ||volarycoastalmistone.cfd^
+||volatichyoides.qpon^
 ||volegilops.cfd^
 ||volentitaboo.cfd^
 ||volingloggias.cyou^
@@ -23767,6 +23878,7 @@ gbnews.com#@#.primis-wrapper
 ||vuqlnlkpndlh.com^
 ||vuskaqfymzjse.online^
 ||vutftxlhysrvn.com^
+||vutuhmpxrwwdwj.com^
 ||vuwrjobyhwbjn.site^
 ||vuxoolddascos.online^
 ||vuzupoepfovgh.site^
@@ -23780,6 +23892,7 @@ gbnews.com#@#.primis-wrapper
 ||vvlplnkzympin.online^
 ||vvltexsrdpmas.website^
 ||vvobyordqyq.com^
+||vvuixbnjzntpb.site^
 ||vvwrajbckvfng.website^
 ||vvwrwrzrsuqug.site^
 ||vvwskuuryf.com^
@@ -23843,6 +23956,7 @@ gbnews.com#@#.primis-wrapper
 ||vzqbumagexfwf.site^
 ||vzrdblpkzajmpc.com^
 ||vzsiurbszindx.online^
+||vzwdtzssxikhp.site^
 ||vzwvakkmefryp.space^
 ||w2t2ft6zl1zbivnu9emoizw.cfd^
 ||w3fc1o28kpltrl.rest^
@@ -23861,6 +23975,7 @@ gbnews.com#@#.primis-wrapper
 ||waffingskirrs.qpon^
 ||waftycrueler.com^
 ||wagedomvalets.cfd^
+||wagereramebicblankit.qpon^
 ||wagetsmiter.cfd^
 ||waggeryfledges.cfd^
 ||waggonerprepay.com^
@@ -23916,11 +24031,11 @@ gbnews.com#@#.primis-wrapper
 ||warfarecontemn.com^
 ||wargitom.in^
 ||warilyclickframes.com^
+||warkheels.com^
 ||warksparotia.cfd^
 ||warm-candidate.com^
 ||warm-product.pro^
 ||warmanbrawls.cfd^
-||warmenramjets.qpon^
 ||warmestunfatty.cyou^
 ||warminghabutai.qpon^
 ||warmmeadowroad.com^
@@ -23933,7 +24048,7 @@ gbnews.com#@#.primis-wrapper
 ||warpedaside.com^
 ||warpgam.shop^
 ||warpteddychose.com^
-||warshardnessmotivation.com^
+||warreeeclogic.cyou^
 ||warshipcontect.cfd^
 ||warsledspines.com^
 ||warsnhsxklswo.site^
@@ -23942,12 +24057,10 @@ gbnews.com#@#.primis-wrapper
 ||washedadvance.com^
 ||waspishmexican.com^
 ||waspstensely.cfd^
-||wastagelulabs.cfd^
 ||wasteful-clothes.com^
 ||wasteful-county.com^
 ||wastefulmemory.pro^
 ||watapehacek.qpon^
-||watapesjazzesscalene.qpon^
 ||watchingthat.net^
 ||waterloggedcar.pro^
 ||waterloggedmention.pro^
@@ -23972,11 +24085,11 @@ gbnews.com#@#.primis-wrapper
 ||waygangquakersgrugous.cyou^
 ||waygoneoncenosism.qpon^
 ||wazhogebdylsb.space^
+||wbaghxconwbdh.space^
 ||wbbooupkjgwox.site^
 ||wbbqxxxelvpy.com^
 ||wbchrdfioyeatdx.com^
 ||wbepiexelwuyw.online^
-||wbgeaojtegeun.website^
 ||wbhqdaqufhhua.space^
 ||wbidder311072023.com^
 ||wbjolcnlghzac.space^
@@ -24057,6 +24170,7 @@ gbnews.com#@#.primis-wrapper
 ||weightvizslasproximo.cyou^
 ||weightybaby.com^
 ||weightydesire.com^
+||weiledsteverm.org^
 ||weirdostaskeddugout.cfd^
 ||weitrtlsbs.com^
 ||welbtqib.com^
@@ -24543,6 +24657,7 @@ gbnews.com#@#.primis-wrapper
 ||wubbmfsxhjtyber.com^
 ||wubmakoxasckf.com^
 ||wucnmyrcici.com^
+||wudtxrhdjnthdw.com^
 ||wuehawcfnmmxk.online^
 ||wufbvfxompodz.space^
 ||wufqsxwsrneyh.site^
@@ -24689,7 +24804,6 @@ gbnews.com#@#.primis-wrapper
 ||xbfoaninfgolq.space^
 ||xbfvwptxotfyh.website^
 ||xbhoylaadarbq.website^
-||xbhvwpmkjvgeb.website^
 ||xbjzqknhajwyw.website^
 ||xbkjtclhfvu.com^
 ||xbkwdjckbaopb.online^
@@ -24701,6 +24815,7 @@ gbnews.com#@#.primis-wrapper
 ||xcfpgvxfvmqcm.site^
 ||xcgqfltvwjepr.space^
 ||xcilejvgzohus.online^
+||xcishcevvnnu.com^
 ||xckdrmqaceevs.site^
 ||xcklmgqahj.com^
 ||xckmiovstahqy.website^
@@ -24748,6 +24863,7 @@ gbnews.com#@#.primis-wrapper
 ||xexfgywqxmaxv.online^
 ||xextibwcshzbr.online^
 ||xf7gtup6lubb3nxuvfu5jfnnu767p9gzjy.cfd^
+||xfbcraxijipmr.website^
 ||xfbvhjvstczah.site^
 ||xfclwfqsppemg.website^
 ||xfdujdeybhizt.site^
@@ -24774,6 +24890,7 @@ gbnews.com#@#.primis-wrapper
 ||xgjirgjpvsiwr.website^
 ||xgmgjbtqbvjik.site^
 ||xgodpmdczzyza.com^
+||xgokatouivumgi.com^
 ||xgqdiziizrqcn.website^
 ||xgtqlwdqvy.com^
 ||xgtvhnyerfsqu.space^
@@ -24973,7 +25090,6 @@ gbnews.com#@#.primis-wrapper
 ||xqfhfuidalhpz.space^
 ||xqfwuuzeuzkbz.space^
 ||xqgvmpalger.com^
-||xqgvzvaneizyb.online^
 ||xqhgkteqenadi.com^
 ||xqjasiudpfzsi.website^
 ||xqjfylqpjryru.space^
@@ -25019,7 +25135,6 @@ gbnews.com#@#.primis-wrapper
 ||xsgoiqpecrrwiy.com^
 ||xshfpslqd.com^
 ||xskzwcrthbwji.website^
-||xslsinfsctazj.space^
 ||xsnlosinwxzrv.website^
 ||xsnmgbrywodvb.website^
 ||xsottmpcpale.com^
@@ -25139,6 +25254,7 @@ gbnews.com#@#.primis-wrapper
 ||xyyygbbwult.com^
 ||xz3kwmek73qqiu1m.cfd^
 ||xzdnwmalfssno.website^
+||xzerawgcia.in^
 ||xzfdjphnyubhk.online^
 ||xzfsmnjotique.online^
 ||xzgcezixdaqjf.website^
@@ -25180,6 +25296,7 @@ gbnews.com#@#.primis-wrapper
 ||yapockpinene.cyou^
 ||yapsterclubbed.qpon^
 ||yaqdcfkkxjqkc.space^
+||yardingroomily.com^
 ||yardsterrar.cfd^
 ||yarestengore.com^
 ||yarlyyappersinzer.qpon^
@@ -25268,6 +25385,7 @@ gbnews.com#@#.primis-wrapper
 ||yefbuboviyxjiq.xyz^
 ||yeguhjywhpzvt.space^
 ||yegvjrkcasiwf.space^
+||yejqdmrzk.com^
 ||yeleklametta.cyou^
 ||yellowblue.io^
 ||yellowishbitter.pro^
@@ -25275,7 +25393,6 @@ gbnews.com#@#.primis-wrapper
 ||yelzrlnjpdhoz.online^
 ||yemjttmmunmpj.site^
 ||yemxiadimvpyr.com^
-||yennedaspishamenia.qpon^
 ||yenszizjvgmrg.space^
 ||yeobonne.cyou^
 ||yernvaccary.qpon^
@@ -25321,6 +25438,7 @@ gbnews.com#@#.primis-wrapper
 ||ygkhbpnqycyog.site^
 ||ygn4zjvw5hw1gy8miwqwfbbx3gemle4.cfd^
 ||ygqikkpytkhlt.space^
+||ygqkmvlgampp.com^
 ||ygtbzpdemamrn.online^
 ||ygtonnwghswtx.space^
 ||ygtzipndentuz.online^
@@ -25393,6 +25511,7 @@ gbnews.com#@#.primis-wrapper
 ||ykhkzepaezbkj.space^
 ||ykkdpgqpukmlzs.com^
 ||yklrlvwkduzvw.online^
+||ykq9vm6e4u43lnj.cfd^
 ||ykubfwztpzpvg.website^
 ||ykvhuctytjnmj.com^
 ||ykvzcy8zx73vqm.rest^
@@ -25496,6 +25615,7 @@ gbnews.com#@#.primis-wrapper
 ||ypyphwdgrgiq.com^
 ||yq4xc1r875ibti91g29p69fx15fc.rest^
 ||yqantasacylcf.site^
+||yqavevglfhuol.com^
 ||yqcvqbvcadoqn.space^
 ||yqdovkaarqopj.online^
 ||yqfkcckuuk.com^
@@ -25567,7 +25687,6 @@ gbnews.com#@#.primis-wrapper
 ||yukatareducerfeatish.cyou^
 ||yukjkxbxgv2vzw6ke4xe8pz7ng.cfd^
 ||yuksensoberjousts.cyou^
-||yulansdiguezorille.cfd^
 ||yummiesdaukin.cyou^
 ||yummy-boy.pro^
 ||yummyadvertiseexploded.com^
@@ -25576,6 +25695,7 @@ gbnews.com#@#.primis-wrapper
 ||yupkenaklidnw.site^
 ||yurokyander.cyou^
 ||yurunaimbeds.cyou^
+||yutzzscepzvsj.online^
 ||yuv7pt9y5qpwyck5potlg.rest^
 ||yuvgqzqyryszd.website^
 ||yuwbmzjqimdmn.space^
@@ -25788,6 +25908,7 @@ gbnews.com#@#.primis-wrapper
 ||zgijmnnrexeej.online^
 ||zgiyfkxlt9eq9tvogb7mhlpz.rest^
 ||zgjgyiebcqltu.website^
+||zgmlgnuecfwxi.com^
 ||zgmxdiqansmqn.site^
 ||zgnmuszicebti.website^
 ||zgqvlcljuuzyx.website^
@@ -25818,6 +25939,7 @@ gbnews.com#@#.primis-wrapper
 ||zikqbfbgczdnl.online^
 ||zimbiwag.cyou^
 ||zimg.jp^
+||zimmisrejoice.cyou^
 ||zimpolo.com^
 ||zinbreys.com^
 ||zinckedditionlysines.cyou^
@@ -25825,10 +25947,12 @@ gbnews.com#@#.primis-wrapper
 ||zinglapels.cfd^
 ||zinkghoster.cfd^
 ||zinzarlealty.qpon^
+||zinzursfdtgjr.online^
 ||ziomwtsqaimvv.online^
 ||zionistbilstedtineine.qpon^
 ||ziplessapician.cyou^
 ||zipurnal.cyou^
+||ziraflexo.com^
 ||ziraiinnageyees.cyou^
 ||zitdither.com^
 ||ziv96gcob9c8qxjh.cfd^
@@ -25899,6 +26023,7 @@ gbnews.com#@#.primis-wrapper
 ||znqnshrvhh.com^
 ||znqvozidirqnh.site^
 ||znsfdyanrbgnc.site^
+||znsmiddumtulchin.cfd^
 ||znzkcgjognscp.space^
 ||zoanita.qpon^
 ||zog.link^
@@ -25953,6 +26078,7 @@ gbnews.com#@#.primis-wrapper
 ||zqvhsojbqezvi.space^
 ||zqzetdtrblqlc.website^
 ||zralzazlrfcqt.online^
+||zratteraf.in^
 ||zrbu2f8ck2yobpyu83m387o.cfd^
 ||zrccopyndqftd.space^
 ||zrdfrtrswsgib.online^
@@ -26034,6 +26160,7 @@ gbnews.com#@#.primis-wrapper
 ||zwqaszfxbhvym.site^
 ||zwt2qgrhx72e5p2w6qwp.cfd^
 ||zwubipwic.com^
+||zwvbmysbmdkoc.site^
 ||zwvtkjcaaorua.website^
 ||zwxmxmakzeymc.site^
 ||zx7pxpj39xrnkxyn8nqxq6r.rest^
@@ -26353,7 +26480,7 @@ gbnews.com#@#.primis-wrapper
 ||punctualbut.com^
 ||puzzledrally.com^
 ||rampfat.com^
-||unlesssecret.com^
+||tamealongpast.com^
 ||whenmehany.com^
 ||witharound.com^
 ||withoutandwhich.com^
@@ -26489,6 +26616,7 @@ gbnews.com#@#.primis-wrapper
 ||app.clickfunnels.com^$~stylesheet
 ||app.koah.ai^
 ||awin1.com/cshow.php$third-party
+||bhphoto.com/ezbanner/
 ||bidder.criteo.com^
 ||blufm.de/pr/$third-party
 ||c.bannerflow.net^
@@ -26637,11 +26765,13 @@ gbnews.com#@#.primis-wrapper
 ||dn6rwwtxa647p.cloudfront.net^
 ||dnhfi5nn2dt67.cloudfront.net^
 ||do69ll745l27z.cloudfront.net^
+||dpjf9a2rbjbvp.cloudfront.net^
 ||dsh7ky7308k4b.cloudfront.net^
 ||du0pud0sdlmzf.cloudfront.net^
 ||dyv1bugovvq1g.cloudfront.net^
 ||stake.com/*&clickId=$popup
 ||theeverydaygame.com/lg/$popup,third-party
+||ad2.freeasianmovies.cam^
 ||ad7.cuteasianvideos.store^
 ||ad8.hottestasians.pics^
 ||chaturbate.com/affiliates/
@@ -26663,6 +26793,8 @@ gbnews.com#@#.primis-wrapper
 ||twincdn.com/video/
 ||unpkg.com/videojs-vast-vpaid@
 ||widgets.guppy.live^$third-party
+||www.kiki18.com^
+||yaanom.tentenhunukwa.space^
 /pmc-adm-v2/build/setup-ads.js$domain=bgr.com|deadline.com|rollingstone.com
 ||a.fsdn.com/con/js/sftheme/vendor/bizx-prebid.js$domain=sourceforge.net
 ||ads-api.stuff.co.nz^
@@ -26738,6 +26870,7 @@ gbnews.com#@#.primis-wrapper
 ||www.google.*/adsense/search/ads.js
 ||x.com/*/videoads/
 ||xing.com/xas/
+||yandex.com/ads/system/context.js
 ||ynet.co.il/gpt/
 ||youtube.com/pagead/
 ||youtube.com/youtubei/v1/player/ad_break
@@ -26823,6 +26956,7 @@ hackster.io###article_page_simple_ad_portal
 10minutemail.com,nitrome.com###banner_ad
 straitstimes.com###below-article-thumbnails-0
 wrestletalk.com###belowVideoAd
+advrider.com###bigBox
 cricketnetwork.co.uk,f1network.net,pop.inquirer.net,rugbynetwork.net,the-scientist.com,thefootballnetwork.net###billboard
 flyingmag.com###block-32
 flyingmag.com###block-36
@@ -26906,8 +27040,9 @@ essentiallysports.com##.adRealEstate_brand-ad-space__GhXw8
 barrons.com##.adWrapperNativeFlow
 travelm.de##.ad__row
 webdunia.com##.ad_in_between_art
+bettycrocker.com##.adhesiveAdSpacing
 wikiwand.com##.adn-footer
-1sale.com,7billionworld.com,9jaflaver.com,appdoze.net,bestcrazygames.com,canstar.com.au,canstarblue.co.nz,cheapies.nz,climatechangenews.com,cointribune.com,cosmeticsbusiness.com,cryptonomist.ch,currencyrate.today,daily-sun.com,eventcinemas.co.nz,ezgif.com,gamesadshopper.com,geo.tv,govtrack.us,gramfeed.com,hentaikun.com,herzindagi.com,hockeyfeed.com,i24news.tv,icons8.com,idiva.com,indiatimes.com,inspirock.com,islamchannel.tv,m.economictimes.com,mangasect.com,mb.com.ph,medicalxpress.com,mehrnews.com,meta-calculator.com,mini-ielts.com,motogp.com,mugshots.com,nbc.na,news.nom.co,nsfwyoutube.com,onlinerekenmachine.com,onlymyhealth.com,ozbargain.com.au,piliapp.com,readcomicsonline.ru,recipes.net,robuxtousd.com,russia-insider.com,savevideo.me,search.illicit.pw,sgcarmart.com,sherdog.com,straitstimes.com,teamblind.com,tehrantimes.com,thatmaidguy.su,thedailyjagran.com,thenews.com.pk,thestar.com.my,unb.com.bd,viamichelin.com,viamichelin.ie,vijesti.me,y8.com,yummy.ph##.ads
+1sale.com,7billionworld.com,9jaflaver.com,appdoze.net,bestcrazygames.com,canstar.com.au,canstarblue.co.nz,cheapies.nz,climatechangenews.com,cointribune.com,cosmeticsbusiness.com,cryptonomist.ch,currencyrate.today,daily-sun.com,eventcinemas.co.nz,ezgif.com,gagadget.com,gamesadshopper.com,geo.tv,govtrack.us,gramfeed.com,hentaikun.com,herzindagi.com,hockeyfeed.com,i24news.tv,icons8.com,idiva.com,indiatimes.com,inspirock.com,islamchannel.tv,m.economictimes.com,mangasect.com,mb.com.ph,medicalxpress.com,mehrnews.com,meta-calculator.com,mini-ielts.com,motogp.com,mugshots.com,nbc.na,news.nom.co,nsfwyoutube.com,onlinerekenmachine.com,onlymyhealth.com,ozbargain.com.au,piliapp.com,readcomicsonline.ru,recipes.net,robuxtousd.com,russia-insider.com,savevideo.me,search.illicit.pw,sgcarmart.com,sherdog.com,straitstimes.com,teamblind.com,tehrantimes.com,thatmaidguy.su,thedailyjagran.com,thenews.com.pk,thestar.com.my,unb.com.bd,viamichelin.com,viamichelin.ie,vijesti.me,y8.com,yummy.ph##.ads
 gadgetonhand.com##.ads-heading
 smailpro.com##.ads-sidebar-right
 apkrabi.io,dna-launcher.apkrabi.com##.ads12
@@ -26973,6 +27108,7 @@ speedof.me##.ftl-zone
 webdunia.com##.full_ads_block
 idropnews.com##.ga-banner
 dallasinnovates.com,fingerlakes1.com,thecoastnews.com,watchesbysjx.com##.gofollow
+yandex.com##.google-sticky-adv-banner__desktop-disable-ad-button-wrapper
 dicoall.com##.googleAdMain
 truckinginfo.com##.gpt-ad-slot-wrapper
 mvnrepository.com##.h-ad
@@ -26990,6 +27126,7 @@ inews.co.uk##.inews__leaderboard
 dev.to##.js-billboard
 stackoverflow.com##.js-sidebar-zone
 duffelblog.com##.kg-cta-content
+gagadget.com##.l-inner_wide.l-inner
 myinstants.com##.large-rectangle-ad
 truckinginfo.com##.lazy-ad-slot-wrapper
 agcanada.com,allmusic.com,allrecipes.com,allthatsinteresting.com,autoaction.com.au,aviatorsmarket.com,bdonline.co.uk,boardgamegeek.com,bravewords.com,broadcastnow.co.uk,cantbeunseen.com,cattime.com,chairmanlol.com,chemistryworld.com,citynews.ca,comingsoon.net,coolmathgames.com,crn.com.au,diyfail.com,dogtime.com,drugtargetreview.com,edmunds.com,europeanpharmaceuticalreview.com,explainthisimage.com,foodandwine.com,foodista.com,funnyexam.com,funnytipjars.com,gamesindustry.biz,gcaptain.com,gmanetwork.com,hockeycanada.ca,itnews.asia,itnews.com.au,japanisweird.com,jta.org,legion.org,lifezette.com,liveoutdoors.com,macleans.ca,milesplit.com,monocle.com,morefailat11.com,moviemistakes.com,nbl.com.au,newsonjapan.com,nfcw.com,objectiface.com,passedoutphotos.com,playstationlifestyle.net,retail-week.com,rollcall.com,roulettereactions.com,searchenginesuggestions.com,shinyshiny.tv,shitbrix.com,sparesomelol.com,spoiledphotos.com,spokesman.com,stopdroplol.com,straitstimes.com,suffolknews.co.uk,supersport.com,tattoofailure.com,thedriven.io,thefashionspot.com,thestar.com.my,titantv.com,tutorialrepublic.com,uproxx.com,vax-before-travel.com,wapt.com,where.ca,wyff4.com,yoimaletyoufinish.com##.leaderboard
@@ -27078,6 +27215,7 @@ thenextweb.com##.sponsored_legal
 ar15.com,armageddonexpo.com,audiforums.com,f1gamesetup.com,ferrarichat.com,ford-trucks.com,hotrodhotline.com,jaguarforums.com,pypi.org,smashingmagazine.com,thebugle.co.za,wbal.com,webtorrent.io##.sponsors
 foojay.io##.sponsors-block
 programmerhumor.io##.spotlight-widget
+yandex.com##.sticky-banner-container
 economictimes.indiatimes.com##.stickyAd
 twitch.tv##.stream-display-ad__wrapper
 missav78.top##.streamer-container2
@@ -27094,6 +27232,8 @@ bestlifeonline.com,bodynetwork.com,hellogiggles.com##.widget_gm_karmaadunit_widg
 appleworld.today,athleticsillustrated.com,betakit.com,businessaccountingbasics.co.uk,circuitbasics.com,closerweekly.com,coincodecap.com,cozyberries.com,dbknews.com,deshdoaba.com,developer-tech.com,electricbikereport.com,foreverconscious.com,friendsjournal.org,glitched.online,globalgovernancenews.com,intouchweekly.com,jharkhandmirror.net,kashmirreader.com,kkfm.com,levittownnow.com,lifeandstylemag.com,manhuatop.org,marqueesportsnetwork.com,mensjournal.com,nikonrumors.com,ognsc.com,palipost.com,patriotfetch.com,pctechmag.com,potatonewstoday.com,prajwaldesai.com,pstribune.com,raspians.com,robinhoodnews.com,rok.guide,rsbnetwork.com,salesforcegeek.in,showbiz411.com,spokesman-recorder.com,sportsspectrum.com,stacyknows.com,supertotobet90.com,teksyndicate.com,thecatholictravelguide.com,thedefensepost.com,theoverclocker.com,theyucatantimes.com,tronweekly.com,ubuntu101.co.za,wakingtimes.com,washingtonmonthly.com,webscrypto.com,wgow.com,wgowam.com,wlevradio.com##.widget_media_image
 captainaltcoin.com,freedesignresources.net,utahgunexchange.com,webkinznewz.ganzworld.com,webpokie.com##.widget_text
 alltechnerd.com##.wp-block-foxiz-elements-affiliate-product
+popculture.com##.wp-block-savage-platform-primis-video
+yandex.com##.yandex-sticky-adv-banner__desktop-disable-ad-button-wrapper
 fortune.com##.z-body-popover
 2fa.live##[alt="Advertisement"]
 bitcoinist.com,captainaltcoin.com,coinpaprika.com,cryptonews.com,cryptonewsz.com,cryptopotato.com,gameshub.com,insidebitcoins.com,news.bitcoin.com,newsbtc.com,philnews.ph,watcher.guru##[class*="clickout-"]
@@ -27133,10 +27273,13 @@ skylinewebcams.com##[style="width:100%;text-align:center"]
 smailpro.com##[x-data="buysellads()"]
 klarna.com##a[href*="&clickarea=sponsored&"]
 reverso.net##app-ads-block
+tribuna.com##div[class$="_ads-container"]
 foodbible.com,gamingbible.com,ladbible.com,sportbible.com,unilad.com##div[class*="margin-Advert"]
 tomato.gg##div[class^="GenericPage__VerticalAdslotContainer"]
 foodbible.com,gamingbible.com,ladbible.com,sportbible.com,tyla.com,unilad.com##div[class^="advert-placeholder_"]
 woolworths.com.au##div[class^="aem-video-ad-unit_component_video-container_"]
+popculture.com##div[data-lx-claimed="zone-desktop-incontent"]
+popculture.com##div[data-lx-claimed="zone-desktop-index-leaderboard"]
 producthunt.com##div[data-test^="ad-slot-"]
 startribune.com##div[data-testid$="-ad"]
 alternativeto.net##div[data-testid="adsense-wrapper"]
@@ -27179,9 +27322,11 @@ kohls.com###kmncarousel-page-anchor:has(.KMNProductSlider__sponsored)
 staples.com###searchResultsContainer [data-id^="tile"]:has(.standard-tile__sponsored_badge_holder)
 chatgpt.com##.border-token-border-default.mt-2.border-t:has(button[aria-label="Ad options"])
 dbdiagram.io##.cursor-pointer:has([href*="&utm_medium=ads"])
+producthunt.com##.cursor-pointer:has(img[alt="Promoted"])
 argos.co.uk##.ds-c-grid-item:has(div[class*="ProductCardstyles__SponsoredBadge-"])
 theverge.com##.duet--layout--rail > div:has(> div > [data-concert])
 openalternative.co##.duration-100.rounded-lg:has(a[href="/advertise"])
+top.gg##.flex-col.items-center.justify-center:has(#desktop-aside-video-ad)
 staples.com##.flexible-banner-configurator__flexibleBannerWrapper:has(a[aria-label*="Sponsored by"])
 alibaba.com##.gallery-card:has(.searchx-card-e-ad)
 alibaba.com##.list-card:has([data-role="ad-area"])
@@ -27201,6 +27346,7 @@ pexels.com##[data-testid="column"] [data-testid="item"]:has([class*="AIGCAdShare
 pexels.com##[data-testid="column"] [data-testid="item"]:has([data-text="Sponsored Photos"])
 pexels.com##[data-testid="column"] [data-testid="item"]:has([data-title*="Sponsored"])
 alibaba.com##[id^="sse-fluent-wending"]:has(.creative-ad-tag)
+top.gg##article.items-start:has(a[rel="sponsored"])
 cjleo.com#?#.alt-widget-title:has-text(advertisement)
 majorgeeks.com##div > [style]:has([style]:has([href*="&utm"]))
 downornot.net##div.grid > div.flex.flex-col:has([href*="aff_c?"])
@@ -27472,6 +27618,7 @@ official.coomer.com.co##[id^="monetization-ad"]
 myhentaicomics.com##[style$="height: 250px; display: inline-block;"]
 muchohentai.com##[style="display: inline-block !important;"]
 muchohentai.com##[style="width:100%;height:250px;"]
+gelbooru.com,xozilla.com##[style^="height: 250px !important;"]
 freeuseporn.com##a:has(svg[class*="lucide-chevron-right"]):not([href^="/"])
 analdin.com,cockdude.com,coomer.st,gelbooru.com,kemono.cr,official.coomer.com.co##a[href*="/tsyndicate.com/"]
 adultfilmdatabase.com,analegg.com,animeidhentai.com,babeforums.org,camvideos.tv,camwhores.tv,coomer.st,erothots.co,f95zone.to,familypornhd.com,fritchy.com,gifsauce.com,hentai2read.com,hotpornfile.org,hpjav.com,imagebam.com,imgbox.com,imgtaxi.com,kemono.cr,motherless.com,muchohentai.com,myporn.club,official.coomer.com.co,pandamovies.pw,planetsuzy.org,porntrex.com,pussyspace.com,sendvid.com,sextvx.com,simpcity.cr,socialmediagirls.com,thefappeningblog.com,vintage-erotica-forum.com,vipergirls.to,xfantazy.com##a[href*="theporndude.com"]
@@ -51649,6 +51796,7 @@ cpac.ca###cookie-law-bar-holder
 ecigarettedirect.co.uk###cookie-message-slide-in
 dirsyncpro.org###cookie-notice-modal
 energylivenews.com###cookie-notification-mask
+broadwayinchicago.com###cookie-oven-consent-dialog
 kimkim.com###cookie-permissions-footer
 tufo.com###cookie-policy
 gorillas.io,simbrief.com###cookie-settings
@@ -54396,7 +54544,7 @@ just-eat.co.uk,just-eat.es,justeat.it##div[data-cookie-consent-overlay]
 just-eat.dk##div[data-qa="granular-privacy-settings"]
 just-eat.ie##div[data-qa="jet-privacy-settings"]
 just-eat.ch,just-eat.fr,lieferando.at,lieferando.de,pyszne.pl,takeaway.com,thuisbezorgd.nl##div[data-qa="privacy-settings"]
-brightlands.com,cnmc.es,confea.org.br,elbitsystems.com,frequentis.com,gmv.com,gogel.org,iucn.org,iucncongress2025.org,land.nrw,makingdiabeteseasier.com,mmkv.cz,nada.org,portdebarcelona.cat,puertos.es,red.es,sagemcom.com,santiagodecompostela.gal,srce.unizg.hr,stadtlandwirtschaft.wien,tecnoalarm.com,thecommonwealth.org###cookiesjsr
+brightlands.com,cnmc.es,confea.org.br,elbitsystems.com,frequentis.com,gmv.com,gogel.org,iucn.org,iucncongress2025.org,land.nrw,makingdiabeteseasier.com,mmkv.cz,nada.org,portdebarcelona.cat,puertos.es,red.es,sagemcom.com,santiagodecompostela.gal,srce.unizg.hr,stadtlandwirtschaft.wien,tecnoalarm.com,thecommonwealth.org,unirc.it###cookiesjsr
 abcsinsights.com,antena1.com.br,author.today,bertioga.sp.gov.br,cellc.co.za,finstat.cz,finstat.sk,fortunebusinessinsights.com,hustlermagazine.com,ikmultimedia.com,julesjordan.com,kaveverzum.hu,kurz-mal-weg.de,lowellgroup.co.uk,lursoft.lv,mondaq.com,monsterenergy.com,my.eekgames.com,myperfectweather.com,news.adidas.com,nova.es,psiphon.ca,seguno.com,supsystic.com,tagesmutter-bz.it,thebestporn.com,timinis.com,vernemq.com,visitkamnik.com,wplt20.com,yenibeygir.com###cookieConsent
 actie.degoedezaak.org,ashush-projects.co.il,campax.org,controller.com,hamat-group.co.il,hamat.co.il,mashumashu.co.il,medor.co.il,mrfdev.com,ofek-mitam.com,pandoor.co.il,pelephone.co.il,vgardenfoods.com,voicemod.net##.cookies-consent
 arukereso.hu,biblio.com,biblio.com.au,docusign.net,mainchain.net,mediotiempo.com,mos-gorsud.ru,mos-sud.ru,pointbreak.coremanager.info###cookie-disclaimer
@@ -54614,7 +54762,7 @@ morningstar.com###additionalInfoe
 allthingslive.be,allthingslive.com,allthingslive.dk,allthingslive.fi,allthingslive.no,allthingslive.se##[class*="CookieBannerPro_"]
 dagrasso.pl,freedomtreks.co.uk,hiveon.com,hiveon.net,krepling.com,kritikos-sm.gr,skisafari.com,watch.plex.tv##div[class^="CookieBar"]
 connection.com,eink.com,govconnection.com,iphotel.com.br,mokkotsu.com##.cookie-check
-ablebits.com,actu.epfl.ch,adsimple.at,anfarmag.org.br,augustiner-restaurant.com,aussenrollo.de,bier-universum.*,blenderartists.org,blisprobiotics.co.nz,bund-naturschutz.de,bws.co.at,camid.eu,cc-egov.de,cloud.thermoworks.com,creativehut.com.br,discussion.fedoraproject.org,e-infra.com,econodata.com.br,ecpe.org,eingutertag.org,eliebleu.com,flurry.com,gardinerbrothers.co.uk,getrawnutrition.com,gg.deals,gilli-food.it,goldammer.me,goldarts.co.uk,goruck.com,heissfenster.com,historicsouthtyrol.com,hotel-waldsee.com,huttersport.com,i2ocr.com,ionos-group.com,janestreet.com,justia.com,kattenberg.nl,khl.ru,krainz-loipersdorf.at,law.cornell.edu,lightningmaps.org,lpderecho.pe,malaysiaairlines.com,mingpao.com,monochrome-watches.com,na-bibb.de,nagyerdeistadion.hu,naturefund.de,opendemocracy.net,osasco.sp.gov.br,paulinwatches.com,pcpartpicker.com,perrotin.com,plus.diolinux.com.br,poernbacher.net,pokemmo.com,rebinstitute.com,republicbharat.com,republicworld.com,sarnerholz.com,sarnerstiftung.it,sbenny.com,sdxcentral.com,siebenfoercher.it,starmicronics.com,sugarsync.com,tann.it,technoalpin.com,tiom.pl,travelok.com,tuxedocomputers.com,webit.org,wham.physics.wisc.edu,wisc.edu,zesty.tech##.cc-window
+ablebits.com,actu.epfl.ch,adsimple.at,anfarmag.org.br,augustiner-restaurant.com,aussenrollo.de,bier-universum.*,blenderartists.org,blisprobiotics.co.nz,bund-naturschutz.de,bws.co.at,camid.eu,cc-egov.de,cloud.thermoworks.com,creativehut.com.br,discussion.fedoraproject.org,e-infra.com,econodata.com.br,ecpe.org,eingutertag.org,eliebleu.com,flurry.com,gardinerbrothers.co.uk,getrawnutrition.com,gg.deals,gilli-food.it,goldammer.me,goldarts.co.uk,goruck.com,heissfenster.com,historicsouthtyrol.com,hotel-waldsee.com,huttersport.com,i2ocr.com,ionos-group.com,janestreet.com,justia.com,kattenberg.nl,khl.ru,krainz-loipersdorf.at,law.cornell.edu,lightningmaps.org,lpderecho.pe,malaysiaairlines.com,mingpao.com,monochrome-watches.com,na-bibb.de,nagyerdeistadion.hu,naturefund.de,opendemocracy.net,osasco.sp.gov.br,paulinwatches.com,pcpartpicker.com,perrotin.com,plus.diolinux.com.br,poernbacher.net,pokemmo.com,rebinstitute.com,republicbharat.com,republicworld.com,sarnerholz.com,sarnerstiftung.it,sbenny.com,sdxcentral.com,siebenfoercher.it,starmicronics.com,sugarsync.com,tann.it,technoalpin.com,tiom.pl,travelok.com,tuxedocomputers.com,tvheadend.org,webit.org,wham.physics.wisc.edu,wisc.edu,zesty.tech##.cc-window
 advgazeta.ru,beiersdorf.com,czc.cz,digitfoto.de,engeo.ch,hypeauditor.com,kiswe.com,kolesnic.ru,mellerud.de,mindmatrix.net,renewal.ru,salesmanago.pl,swayhotels.com,topographic-map.com,yclients.com,zabkagroup.com##.popup
 andrewmarc.com,bestiloghent.dk,donnakaran.com,ghbass.com,iq.com,petalsearch.com,promenada.ro,replicon.com##.popup-container
 celticfc.com,devart.com,fulhamfc.com,nottinghamforest.co.uk,schuttetweewielers.nl,taptapp.rs##.popup-wrapper
@@ -56752,7 +56900,6 @@ iosi.nexi.it##.cl-banner-body
 ebible.it##.clm
 bontempi.it##.colaw-div
 centrogamma.com##.contPopup
-unirc.it##.content
 automercatoavenoso.it##.cookieBox-Main
 bioinsuedtirol.it,esselungajob.it##.cookiePolicy
 parmacalcio1913.com##.cookie_window
@@ -59017,7 +59164,7 @@ concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.b
 concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.be,sap.com,tmz.com,tripit.com#@#.truste_box_overlay
 concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.be,sap.com,tmz.com,tripit.com#@#.truste_overlay:not(body):not(html)
 
-! --- filter.txt (2407 rules) ---
+! --- filter.txt (2408 rules) ---
 $removeparam=link_source
 $removeparam=taid
 $removeparam=tgclid
@@ -59349,6 +59496,7 @@ $removeparam=erid
 $removeparam=oly_enc_id
 $removeparam=_ga
 $removeparam=tduid
+||t.info.telus.com^$removeparam=s
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
