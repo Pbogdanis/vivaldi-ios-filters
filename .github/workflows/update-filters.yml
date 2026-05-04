@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -143,39 +145,22 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    
+          
           OUTPUT_FILE=$(python3 -c "import json, os; cfg=json.load(open(os.environ.get('CONFIG_FILE'))); print(cfg['output_file'])")
           echo "📦 Output file: $OUTPUT_FILE"
-    
+          
           if [ -f "$OUTPUT_FILE" ]; then
             git add "$OUTPUT_FILE"
             if ! git diff --cached --quiet; then
               # Fetch latest remote state
               git fetch origin
-        
-              # Create a temp branch to avoid rebase conflicts with unstaged changes
+              
+              # Create a temp branch to avoid rebase conflicts
               TEMP_BRANCH="temp-update-$(date +%s)"
               git checkout -b "$TEMP_BRANCH"
-        
+              
               # Commit on temp branch
               git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: $CONFIG_FILE)"
-        
-              # Force-push temp branch to target branch (safe for deterministic bot updates)
-              git push --force-with-lease origin "$TEMP_BRANCH:${{ github.ref_name }}"
-        
-              # Cleanup: switch back and delete temp branch
-              git checkout "${{ github.ref_name }}"
-              git branch -D "$TEMP_BRANCH" || true
-        
-              echo "✅ Changes pushed for $CONFIG_FILE"
-            else
-              echo "ℹ️ No changes for $CONFIG_FILE"
-            fi
-          else
-            echo "❌ Output file not found: $OUTPUT_FILE"
-            ls -la
-            exit 1
-          fi
-            ls -la
-            exit 1
-          fi
+              
+              # Force-push with lease protection
+              git push --
