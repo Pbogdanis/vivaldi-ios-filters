@@ -2,7 +2,7 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # Daily at 3 AM UTC
+    - cron: '0 3 * * *'
   workflow_dispatch:
     inputs:
       config_file:
@@ -42,12 +42,10 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-      - name: Fetch and merge lists
-        env:
-          CONFIG_FILE: ${{ matrix.config_file }}
+      - name: Write merge script
         run: |
-          python3 - << 'PYEND'
-          import json, requests, os
+          cat > merge_filters.py << 'EOF'
+          import json, requests, os, sys
           from datetime import datetime, timezone
 
           config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
@@ -55,7 +53,7 @@ jobs:
 
           if not os.path.exists(config_filename):
               print(f"❌ Config file not found: {config_filename}")
-              exit(1)
+              sys.exit(1)
 
           with open(config_filename) as f:
               config = json.load(f)
@@ -137,7 +135,12 @@ jobs:
                       f.write('\n'.join(section) + '\n')
 
           print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
-          PYEND
+          EOF
+
+      - name: Run merge script
+        env:
+          CONFIG_FILE: ${{ matrix.config_file }}
+        run: python3 merge_filters.py
 
       - name: Commit and push changes
         env:
@@ -152,15 +155,19 @@ jobs:
           if [ -f "$OUTPUT_FILE" ]; then
             git add "$OUTPUT_FILE"
             if ! git diff --cached --quiet; then
-              # Fetch latest remote state
               git fetch origin
-              
-              # Create a temp branch to avoid rebase conflicts
               TEMP_BRANCH="temp-update-$(date +%s)"
               git checkout -b "$TEMP_BRANCH"
-              
-              # Commit on temp branch
               git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: $CONFIG_FILE)"
-              
-              # Force-push with lease protection
-              git push --
+              git push --force-with-lease origin "$TEMP_BRANCH:${{ github.ref_name }}"
+              git checkout "${{ github.ref_name }}"
+              git branch -D "$TEMP_BRANCH" || true
+              echo "✅ Changes pushed for $CONFIG_FILE"
+            else
+              echo "ℹ️ No changes for $CONFIG_FILE"
+            fi
+          else
+            echo "❌ Output file not found: $OUTPUT_FILE"
+            ls -la
+            exit 1
+          fi
