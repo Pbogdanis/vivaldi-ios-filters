@@ -118,14 +118,14 @@ jobs:
               f"! Global Rules: {len(all_rules)}{truncation_note}",
               "! Source Breakdown:"
           ]
-          for url, rules in source_
+          for url, rules in source_data:
               header_lines.append(f"! • {url}: {len(rules)} unique rules")
           header_lines.append("")
 
           with open(output_file, 'w') as f:
               f.write('\n'.join(header_lines))
               remaining = len(all_rules)
-              for url, rules in source_
+              for url, rules in source_data:
                   if remaining <= 0:
                       break
                   section = rules[:remaining]
