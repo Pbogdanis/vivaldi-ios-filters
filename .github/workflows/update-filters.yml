@@ -151,4 +151,39 @@ jobs:
           
           # Pull FIRST while repo is clean → rebase succeeds
           git fetch origin
-          git pull --rebase origin ${{ github.ref
+          git pull --rebase origin ${{ github.ref_name }} || true
+          
+          OUTPUT_FILE=$(python3 -c "import json, os; cfg=json.load(open(os.environ.get('CONFIG_FILE'))); print(cfg['output_file'])")
+          echo "📦 Output file: $OUTPUT_FILE"
+          
+          if [ -f "$OUTPUT_FILE" ]; then
+            git add "$OUTPUT_FILE"
+            if ! git diff --cached --quiet; then
+              # Pull again before commit to catch last-minute changes
+              git pull --rebase origin ${{ github.ref_name }} || true
+              
+              git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: $CONFIG_FILE)"
+              
+              # Push with retry logic
+              for i in 1 2 3; do
+                if git push origin ${{ github.ref_name }}; then
+                  echo "✅ Changes pushed for $CONFIG_FILE"
+                  break
+                elif [ $i -eq 3 ]; then
+                  echo "❌ Push failed after 3 attempts for $CONFIG_FILE"
+                  exit 1
+                else
+                  echo "⚠️ Push attempt $i failed, retrying in 5s..."
+                  git fetch origin
+                  git pull --rebase origin ${{ github.ref_name }} || true
+                  sleep 5
+                fi
+              done
+            else
+              echo "ℹ️ No changes for $CONFIG_FILE"
+            fi
+          else
+            echo "❌ Output file not found: $OUTPUT_FILE"
+            ls -la
+            exit 1
+          fi
