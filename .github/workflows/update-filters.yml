@@ -118,14 +118,14 @@ jobs:
               f"! Global Rules: {len(all_rules)}{truncation_note}",
               "! Source Breakdown:"
           ]
-          for url, rules in source_data:
+          for url, rules in source_
               header_lines.append(f"! • {url}: {len(rules)} unique rules")
           header_lines.append("")
 
           with open(output_file, 'w') as f:
               f.write('\n'.join(header_lines))
               remaining = len(all_rules)
-              for url, rules in source_data:
+              for url, rules in source_
                   if remaining <= 0:
                       break
                   section = rules[:remaining]
@@ -149,25 +149,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          OUTPUT_FILE=$(python3 -c "import json, os; cfg=json.load(open(os.environ.get('CONFIG_FILE'))); print(cfg['output_file'])")
-          echo "📦 Output file: $OUTPUT_FILE"
-          
-          if [ -f "$OUTPUT_FILE" ]; then
-            git add "$OUTPUT_FILE"
-            if ! git diff --cached --quiet; then
-              git fetch origin
-              TEMP_BRANCH="temp-update-$(date +%s)"
-              git checkout -b "$TEMP_BRANCH"
-              git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: $CONFIG_FILE)"
-              git push --force-with-lease origin "$TEMP_BRANCH:${{ github.ref_name }}"
-              git checkout "${{ github.ref_name }}"
-              git branch -D "$TEMP_BRANCH" || true
-              echo "✅ Changes pushed for $CONFIG_FILE"
-            else
-              echo "ℹ️ No changes for $CONFIG_FILE"
-            fi
-          else
-            echo "❌ Output file not found: $OUTPUT_FILE"
-            ls -la
-            exit 1
-          fi
+          # Pull FIRST while repo is clean → rebase succeeds
+          git fetch origin
+          git pull --rebase origin ${{ github.ref
