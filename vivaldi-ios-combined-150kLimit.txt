@@ -1,18 +1,18 @@
 [Adblock Plus 2.0]
 ! Title: Vivaldi iOS Combined (Auto-Updated)
-! Version: 20260518
+! Version: 20260519
 ! Expires: 1 days
-! Global Rules: 62085
+! Global Rules: 62159
 ! Source Breakdown:
-! • https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt: 4085 unique rules
-! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 24247 unique rules
+! • https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt: 4086 unique rules
+! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 24317 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt: 3954 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt: 2401 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt: 669 unique rules
-! • https://www.fanboy.co.nz/fanboy-cookiemonster.txt: 24284 unique rules
-! • https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt: 2445 unique rules
+! • https://www.fanboy.co.nz/fanboy-cookiemonster.txt: 24286 unique rules
+! • https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt: 2446 unique rules
 
-! --- easyprivacy-minified.txt (4085 rules) ---
+! --- easyprivacy-minified.txt (4086 rules) ---
 [Adblock Plus 2.0]
 &action=js_stats
 &ev=PageView&
@@ -1418,6 +1418,7 @@ _ad_impression.
 ||noibu.com^$third-party
 ||notifyvisitors.com^$third-party
 ||nr-data.net^$third-party
+||nresystems.com^$third-party
 ||nrich.ai^$third-party
 ||o-s.io^$third-party
 ||oktopost.com^$third-party
@@ -1912,6 +1913,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||anyclip.com/v1/events
 ||anyclip.com/v1/lre-events?
 ||api-iam.intercom.io/messenger/web/metrics
+||api.begenuin.com/goservices/data/
 ||api.bluecore.app/api/track/
 ||api.country.is^$third-party
 ||api.iris.tv/update
@@ -2255,7 +2257,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||listrakbi.com/api/ActivityEvents/
 ||lit.connatix.com^
 ||live-tv.top/js/k.min.js
-||livesearch-metrics.magento-ds.com^
 ||lma.npaw.com^
 ||lnk.to/~/tr/visit
 ||log.cookieyes.com^
@@ -2807,7 +2808,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||mhtr.be/public/tr/tracker.min.js
 ||sp.dpgmedia.net^
 ||trjs2.mediafin.be^
-||ddl.alma.iltalehti.fi^
 ||dnt-userreport.com^
 ||er.sanoma-sndp.fi/v2/stats/
 ||event-tracker-library.mediaownerscloud.com^
@@ -4098,8 +4098,9 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 |https://r.i.ua^
 ||counter.ukr.net^
 ||prm.ua/en/events/
+||assets.adobedtm.com/extensions/*/AppMeasurement$script,domain=medscape.com|skinny.co.nz
 
-! --- easylist-minified.txt (24247 rules) ---
+! --- easylist-minified.txt (24317 rules) ---
 -ad-manager/$~stylesheet
 -ads/assets/$script,domain=~web-ads.org
 -banner-ads-$~script
@@ -4177,6 +4178,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 /exowb/fromload.js$script
 /exowb/fronload.js$script
 /exowb/frontload.js$script
+/exowb/frosload.js$script
 /exowb/frotload.js$script
 /fro_lo.js$script
 /ftt2/js.php$script
@@ -4747,6 +4749,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||0af2a962b0102942d9a7df351b20be55.com^
 ||0aior18v.xyz^
 ||0cf.io^
+||0ff34e8ab8.com^
 ||104processors.net^
 ||10dc04504e.com^
 ||1193d6426d.com^
@@ -4855,6 +4858,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||2er8mmqzv887vqkgqce9p3wm4ypvq3l5j.rest^
 ||2fcefgtgu4bv6p.rest^
 ||2fu1g93geiti9vg7hgmbwookw4m4xq.rest^
+||2gnc.com^
 ||2hw6yi5oz4cxlcfkj96bnublhr26fgh.cfd^
 ||2i4ufi5fjk9t8k.cfd^
 ||2i6y531km3xe79fvrny1xciuc.cfd^
@@ -4867,7 +4871,9 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||2olyjbvcxc7ck38ken7bgg7jj.cfd^
 ||2omi2b9z6outpyzf.rest^
 ||2onq7kwbrfjbjv65.cfd^
+||2qkh3nbvi7y9xhoy.cfd^
 ||2tk74zbwj5h394.cfd^
+||2u774xk5ywn5vt2hc745.rest^
 ||2x62wp56wxjqpxrqb3zcfvr.rest^
 ||2x9ezrw7vuhqco.cfd^
 ||2xeibjlqyxu8m4zq7lob3qyknpl2.cfd^
@@ -5084,6 +5090,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||660d588959.com^
 ||66f4mej92etu96.cfd^
 ||66pxwy2r6q5v5qe.rest^
+||67c15249d7.com^
 ||67rx88i9821xflk3p.cfd^
 ||6863edcf06.com^
 ||689fe98d0d.com^
@@ -5175,6 +5182,8 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||7j5cgeluommhzl.rest^
 ||7jn1iq4k45u4m5qzw4onwqzciv88j12vzm8j8mz.cfd^
 ||7jo52b7qpyz4y76.rest^
+||7m9gj8cwz9zkum.cfd^
+||7mntcf2uzbz7p5g6y8hem6bi91h2mmxy.rest^
 ||7mungnlm1fzqt278ulecb9xq.cfd^
 ||7nujijkfh5xfbehzetp.rest^
 ||7okxlh16y7rj5rcnflvhwup99y.rest^
@@ -5274,6 +5283,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||9h6wuyen6kmm6rptqujjm2mkuij3bbpo6.cfd^
 ||9kirimjbl9lmkrzur.cfd^
 ||9kvzfhj4bg5v79vpo1ycevgpplwomuhfq14.cfd^
+||9lge3ybzlqjrb5ohnq2.rest^
 ||9lkywn3kb8bp3py.cfd^
 ||9lmrt59g3b9t13e5.rest^
 ||9m5kp8e5r687jn1w3t3.cfd^
@@ -5400,7 +5410,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||acarineleanderhealth.cyou^
 ||acarinespannedcajuela.cyou^
 ||acbyweuyglhls.website^
-||acceptable-customer.pro^
 ||acceptablecause.pro^
 ||acceptableweb.pro^
 ||acceptancedishearten.com^
@@ -5425,6 +5434,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||acibgrucxulrh.space^
 ||acidcostunnatural.com^
 ||acidicgreen.com^
+||acidityrappist.qpon^
 ||acidylseseliperries.qpon^
 ||aciesdockman.shop^
 ||acjkovckjufpz.space^
@@ -5603,6 +5613,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||afgenqtscnbaw.space^
 ||afghanalosa.cfd^
 ||afgodscarpe.com^
+||afhtgpji.com^
 ||afiobdzwenzir.website^
 ||afipubsdngail.website^
 ||afknfnosaxyps.website^
@@ -5615,6 +5626,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||afqwufnh.in^
 ||afraid-attempt.com^
 ||afraid-resolution.com^
+||afrfjpfmgtkuv.site^
 ||afritevacandicorella.cfd^
 ||afrontkiester.cyou^
 ||afsohptiq.in^
@@ -5630,7 +5642,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||agcapihhnhvnu.online^
 ||agcrkzkydt.com^
 ||agdakdhru.in^
-||agdbaltzyo.com^
 ||agdqpqizyvmyx.online^
 ||agedlysublid.qpon^
 ||ageingja.com^
@@ -5741,7 +5752,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ajfzgzbkcvsdz.space^
 ||ajjfmuwuxn.in^
 ||ajkunqgkldfmx.space^
-||ajourerabbity.com^
 ||ajqwfawt.in^
 ||ajskgbnmafymf.space^
 ||ajtoqldpu.in^
@@ -5762,6 +5772,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||akharaamiles.cyou^
 ||akhomkazwa.in^
 ||akhoondathecae.shop^
+||akiazoariteaikane.cfd^
 ||akinlongish.qpon^
 ||akkotnpm.in^
 ||akmvmuorzaz.in^
@@ -5962,6 +5973,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||anilaoseverer.qpon^
 ||anilicwinklotenactor.cyou^
 ||animatedlook.com^
+||animevideo.org^
 ||aniseshided.shop^
 ||anjgdcgsuew.com^
 ||anjowpoft.in^
@@ -5991,6 +6003,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||anryyiyljmdam.space^
 ||ansarpooch.shop^
 ||antalitveki.com^
+||antaresixora.cfd^
 ||anthoodnieswaxbush.cyou^
 ||anthusbodachprizer.cyou^
 ||antiadblocksystems.com^
@@ -6023,6 +6036,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||aopwtbxzenjva.online^
 ||aoqjrkfng.com^
 ||aoqwruhfywqtq.website^
+||aordeficitspigots.cfd^
 ||aoristsfonds.qpon^
 ||aortalgodkin.cfd^
 ||aortallulavim.cyou^
@@ -6046,6 +6060,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||apexesjessantblotch.cyou^
 ||apgnpaojkzre.in^
 ||apgtlahmbaarc.website^
+||aphacicaporoseminored.cyou^
 ||apicesalmudedrest.cfd^
 ||apishlykillochmappila.cfd^
 ||apkbvmwrvchbh.online^
@@ -6174,7 +6189,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||arraysbistres.cfd^
 ||arriccinidal.shop^
 ||arrivedletdown.qpon^
-||arrivespeck.com^
 ||arrogancedanderuntruth.com^
 ||arrondihaycockdurity.cyou^
 ||arrouseapodan.cfd^
@@ -6231,7 +6245,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||asphesimopnso.site^
 ||aspicszebub.cyou^
 ||aspoutwittal.qpon^
-||asqdfuhwian.com^
 ||asqoxdxmawar.in^
 ||assautlazars.shop^
 ||asscfpprqsurr.online^
@@ -6277,6 +6290,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||athyriasizysessile.qpon^
 ||atingdrammedcrisic.cfd^
 ||atissolidus.cyou^
+||atjlwaqzym.in^
 ||atlasthought.cyou^
 ||atmasfellalaze.cyou^
 ||atmuyqevsfk.com^
@@ -6414,7 +6428,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||axjqasvtjgihn.online^
 ||axkabmod.in^
 ||axkiwnldyviec.site^
-||axkojdfhek.com^
 ||axlueiehdugxi.space^
 ||axmfakdgwrrep.website^
 ||axmpahohqac.in^
@@ -6545,6 +6558,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||balanteparvuli.qpon^
 ||baleareheaf.qpon^
 ||baleiambwee.com^
+||balersechoers.qpon^
 ||baliaracanaindiary.cyou^
 ||balkanlivetin.shop^
 ||balkersestian.com^
@@ -6553,7 +6567,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ballotrancors.shop^
 ||ballroomprudentauditorium.com^
 ||balojkhwyw.in^
-||balox.xyz^
 ||balpianismivan.qpon^
 ||balrviewer.qpon^
 ||balteusrail.qpon^
@@ -6638,8 +6651,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||baumgpozdljby.website^
 ||bawcockburstedmermis.qpon^
 ||bawdiermundic.com^
-||bawosdwu.com^
-||bawqpynu.com^
 ||bawrelunbold.qpon^
 ||bawtiediwatavalour.cfd^
 ||baxterbouchee.cfd^
@@ -6761,6 +6772,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||begraysprags.qpon^
 ||begsterbranned.com^
 ||beguilemaud.cfd^
+||begxofstc.com^
 ||behelduniotaler.cfd^
 ||behindcanary.com^
 ||behqtk5t76nhmnmnb1bmw8f91n6b8rj.cfd^
@@ -6799,6 +6811,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||benamednidulus.cyou^
 ||benatrogon.qpon^
 ||bendayejectumskyphos.qpon^
+||bendspugged.shop^
 ||benhfayzmltdk.website^
 ||benignvaunter.cfd^
 ||benoagger.cfd^
@@ -6891,6 +6904,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||bgxjumztbopbb.website^
 ||bgynhrgobyjbo.space^
 ||bgzpxjefozlsw.space^
+||bhaktisecularhalloes.cfd^
 ||bhatprius.cyou^
 ||bhbhefuihixip.com^
 ||bheestydinos.cyou^
@@ -7151,7 +7165,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||boggleride.cfd^
 ||bogiechiefty.cfd^
 ||bogomilyald.qpon^
-||bogusproperty.com^
 ||bogworttampooncothe.cyou^
 ||bogymentracery.cyou^
 ||bohxjnypnhhnb.online^
@@ -7178,7 +7191,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||bonwtunwgboos.online^
 ||boobausauhipsa.net^
 ||boodhseatersspecks.cyou^
-||boodlercentner.cfd^
+||boodsprank.cfd^
 ||boofsignorypurlieu.qpon^
 ||bookersowse.qpon^
 ||bookmankyloecupania.qpon^
@@ -7192,6 +7205,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||boortquaighs.shop^
 ||boostlo.xyz^
 ||boplvcaqfnu.com^
+||bopyrusaucubas.qpon^
 ||boracicicecapsgirshes.cyou^
 ||boracicpingedsirple.cyou^
 ||boratedcloggy.qpon^
@@ -7246,6 +7260,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||boyauxalkydkhoja.cyou^
 ||boycottcelebrityheirloom.com^
 ||boyishlies.qpon^
+||bp1zf92c9e24nimj9z1epf.rest^
 ||bpcieckgpwjqp.site^
 ||bpckpw1h3wkwplxhcow214b89uj4y.cfd^
 ||bpdovppg.com^
@@ -7258,6 +7273,8 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||bplpneesbsfmb.website^
 ||bpmflgjbzuanc.site^
 ||bpp8bh49z98brtnzfj8.rest^
+||bpqpoepnpt.com^
+||bpstramcar.cfd^
 ||bpxly1rnlywuc1.cfd^
 ||bpyvfrsamor.com^
 ||bqaijuqtjwpbf.website^
@@ -7287,6 +7304,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||bracciooneism.com^
 ||bracerygloea.cyou^
 ||braconrebone.cyou^
+||bragkixa.in^
 ||braglychunky.qpon^
 ||braidercowpen.shop^
 ||brainlyads.com^
@@ -7485,7 +7503,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||buljrsbfh.com^
 ||bulkishshirpit.qpon^
 ||bullionglidingscuttle.com^
-||bullishfish.qpon^
 ||bultenbrings.cyou^
 ||bulterbeavers.cfd^
 ||bumblerkondevihuela.qpon^
@@ -7536,7 +7553,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||busserbouilli.shop^
 ||bussercuyathanked.cfd^
 ||bussockunhands.cfd^
-||bustleplaguereed.com^
 ||buttery-sick.com^
 ||butylplexor.cfd^
 ||butynevizir.cfd^
@@ -7606,6 +7622,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||bycathyhoughsheu.org^
 ||bycvnfesmgozb.website^
 ||byeepodgiercunonia.qpon^
+||byfkcpmbplhxvdh.com^
 ||bygoneudderpension.com^
 ||byhbsbzlndndl.site^
 ||byicjjeln.com^
@@ -7789,7 +7806,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||carrickurbana.shop^
 ||carriedwinlesspases.cyou^
 ||carrset.cfd^
-||carryedfawe.cfd^
+||cartingcalycli.cyou^
 ||carvageute.cfd^
 ||casalemedia.com^
 ||casaltyar.cfd^
@@ -7812,6 +7829,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||cativoinditch.qpon^
 ||caufdorminsanglo.qpon^
 ||caulomechookie.cyou^
+||causersoldan.cyou^
 ||causeyexonian.com^
 ||cautionpepraising.com^
 ||cautiouspitch.com^
@@ -8116,6 +8134,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||cirymoxxrzdgz.online^
 ||cistbonc.com^
 ||citadelpathstatue.com^
+||citatorundeafheft.cfd^
 ||citdvaah.com^
 ||cithudxab.in^
 ||citoyendetest.cfd^
@@ -8175,7 +8194,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||clariesreleap.shop^
 ||clarinmeanest.com^
 ||claryne.xyz^
-||clattygaming.cfd^
 ||claudiamesion.cfd^
 ||claudionumaclaelia.cyou^
 ||clavuviupsit.cyou^
@@ -8219,7 +8237,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||clobberabluentweeded.cyou^
 ||clobberprocurertightwad.com^
 ||clockangrilypotter.com^
-||clockwisequillwilfrid.com^
 ||clodderdupable.cyou^
 ||clodshostage.cfd^
 ||clonkswhuffle.cyou^
@@ -8281,6 +8298,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||cnethvmomtnsh.site^
 ||cneygrvmtgkwg.online^
 ||cnhjvigwedhfc.site^
+||cnhuxrpiawywk.space^
 ||cnkn9g6894j7fjbb6y89j6jz39p8wrz82897.cfd^
 ||cnkwjasokdsaw.online^
 ||cnlzzznvobbly.site^
@@ -8295,6 +8313,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||coaidyokage.qpon^
 ||coalbuffalo.com^
 ||coalitionconcessionbecause.com^
+||coastalbloom.xyz^
 ||coastuniversalintroducing.com^
 ||coaxalgaumy.cfd^
 ||coazoveekjecr.space^
@@ -8426,7 +8445,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||conreysquillatartro.cfd^
 ||conscientiouscabbageadrift.com^
 ||conscious-science.pro^
-||considerablerider.com^
 ||considerateprofile.pro^
 ||consolegnomish.shop^
 ||consortcyclist.cfd^
@@ -8508,7 +8526,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||correapiddles.qpon^
 ||correctdilutetrophy.com^
 ||correspondimpulsive.com^
-||correspondingsphereconceited.com^
 ||corsakbenami.qpon^
 ||corseclerk.com^
 ||corsnedragbolt.com^
@@ -8518,6 +8535,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||coryphthrifty.qpon^
 ||coryzaproximarowport.cyou^
 ||coseierblowstalipat.cfd^
+||coseyskilij.cyou^
 ||coshesdecafidlongies.cfd^
 ||cosinecoot.cfd^
 ||costaebasosidylian.cyou^
@@ -8531,8 +8549,11 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||couleefancifycalpul.cfd^
 ||coulierdomicil.shop^
 ||countyauthority.com^
+||coupscontra.cyou^
 ||courageousarm.pro^
 ||courapskimpfoxtrot.cyou^
+||coursvagientfarl.cyou^
+||courthousebaloney.com^
 ||courthousecadenceconsiderable.com^
 ||covensarcheolthermos.qpon^
 ||coveringstrawberries.com^
@@ -8542,6 +8563,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||cowardlyapex.com^
 ||cowardlydefinite.com^
 ||cowardydunkardshacker.cyou^
+||cowbaneklepticvet.qpon^
 ||cowbanekorec.cfd^
 ||cowerretortnineteen.com^
 ||cowersgemini.shop^
@@ -8699,7 +8721,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ctbfleegqpvkx.online^
 ||ctbgqwntsjqvg.online^
 ||ctbospityczgj.website^
-||cteahqozkatk.com^
 ||ctexueogshbdo.online^
 ||cteytkyhihnx.com^
 ||ctfwqdqorpdic.space^
@@ -8773,6 +8794,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||curfsreendow.qpon^
 ||curinbitters.cyou^
 ||curiosopuntistregloss.qpon^
+||curlewpettish.cfd^
 ||curlinginborn.cfd^
 ||curnocksentidervish.cfd^
 ||curraneboyerramenta.qpon^
@@ -8780,6 +8802,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||cursamakoua.shop^
 ||curtedsuliote.cfd^
 ||curtesysull.cyou^
+||curtisunl.qpon^
 ||curvatebespoutganges.qpon^
 ||curvleaglancemaja.cfd^
 ||cushieglaredopiism.cfd^
@@ -8882,6 +8905,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||czfkfrlqbbqjb.website^
 ||czhplqbsgswcz.site^
 ||czhtvbrrnqpwq.site^
+||cziganyravener.qpon^
 ||cznynkixfokwe.online^
 ||cznzorthcvkvi.online^
 ||czozahgihazp.in^
@@ -8890,8 +8914,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||czuwprnlhxpdh.site^
 ||czynhitkvjkkw.space^
 ||d0598b291a.com^
-||d1owuvqs9tkert.cloudfront.net^
-||d2f5h9m0jmnhjh.cloudfront.net^
 ||d5501528b5.com^
 ||d58bdec688.com^
 ||d62391e0b0.com^
@@ -9103,7 +9125,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||delftsubc.cyou^
 ||delictiworryfard.cfd^
 ||deliredaubiercps.cfd^
-||deliverywhiskerspsychopath.com^
 ||delqphfqgnrty.online^
 ||delvershybodusgeyan.qpon^
 ||demagoghaggish.cfd^
@@ -9236,7 +9257,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||diacocamammey.cyou^
 ||diagramjawlineunhappy.com^
 ||diapirsmooths.cyou^
-||diaplexlagenae.qpon^
 ||diarialawhirl.qpon^
 ||diastemgispin.cfd^
 ||diasyrmunionic.com^
@@ -9250,6 +9270,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||dictationexportprofound.com^
 ||dictodal.qpon^
 ||didacheburtonimide.qpon^
+||didactlobfig.qpon^
 ||didnatawdry.com^
 ||diducedjambool.qpon^
 ||didymbossingmopeier.cyou^
@@ -9348,11 +9369,11 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||divisiondrearilyunfiled.com^
 ||divotsdemi.cfd^
 ||divqkedwnvcnd.site^
+||divusungored.qpon^
 ||diwanhebete.shop^
 ||diwvsftmdqhyo.space^
 ||dizdarburlerspiques.cyou^
 ||dizhenmeehipj.space^
-||dizzyshow.com^
 ||dj2550.com^
 ||djbrsguqvbhmv.space^
 ||djbwadintnmmu.com^
@@ -9388,6 +9409,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||dkoyksanerezl.website^
 ||dkpgudwqxociz.site^
 ||dkqbwntpklrob.online^
+||dkqfoqqcqhgyo.site^
 ||dkqpcbuliyx.com^
 ||dkrnlccknrlqz.online^
 ||dkswdqbuvzykl.site^
@@ -9516,7 +9538,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||downrightfootball.com^
 ||downsflutingenghle.cfd^
 ||downybrushed.com^
-||dowrysprinkle.com^
 ||dowtketgqskav.space^
 ||doxakuwbtiaum.online^
 ||doxiefpchico.cfd^
@@ -9639,6 +9660,8 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||dubietybialy.com^
 ||ducatsbubals.shop^
 ||duchybribery.shop^
+||duckieesotery.qpon^
+||duckiesnotcheraramids.cfd^
 ||ducosignory.cyou^
 ||ducscruft.cyou^
 ||ductilevoider.com^
@@ -9666,6 +9689,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||duomikron.qpon^
 ||duomistakesmixers.cfd^
 ||duopodnidary.cfd^
+||duovirisneeredgrout.qpon^
 ||dupjgqxfwhan.com^
 ||duqelnlygawpx.com^
 ||duranteboozify.cfd^
@@ -9734,6 +9758,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||dyvezwgkafn.com^
 ||dyvkswbqkgfhp.space^
 ||dyvoursruelikecharre.cyou^
+||dyxclapywuylk.site^
 ||dyynrruwl.com^
 ||dyzaxqldzrxbw.space^
 ||dzewsghryyjcr.site^
@@ -9815,6 +9840,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ebfikkllokqea.online^
 ||ebftaryatw.com^
 ||ebh982icrrnxrjj3l.cfd^
+||ebiudbsp.com^
 ||ebkohojtqxwpc.online^
 ||ebotsxpb.com^
 ||ebqpsrgocqwgi.website^
@@ -10058,6 +10084,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||elpdlblqpduvt.space^
 ||elpsirftovofi.space^
 ||elrbdrumbzgpx.online^
+||elsdtrjtgmohro.com^
 ||elsespeakingbetraying.com^
 ||eluentsolepy.qpon^
 ||elutessheavednude.cyou^
@@ -10069,7 +10096,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||embarrassed-bridge.com^
 ||embelifodacoidwily.qpon^
 ||embodygoonrip.com^
-||emboggrumble.cyou^
 ||embowcleaves.cyou^
 ||embuiafugie.cyou^
 ||embusoctanemagbote.cyou^
@@ -10311,7 +10337,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||eslswqyqurgqq.website^
 ||espartoindicancrutch.cyou^
 ||espavelalick.qpon^
-||espierliving.shop^
 ||espritphoebequelled.cyou^
 ||espyingshoepac.shop^
 ||espyparred.qpon^
@@ -10386,7 +10411,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||euphuescaamapaschal.cyou^
 ||euptnsyts.com^
 ||eurasiashooler.cfd^
-||eussiyvfjpqqc.site^
 ||eutgbfzcrepne.online^
 ||euuckvubfrktg.space^
 ||euvzpxozrlhtmt.com^
@@ -10406,7 +10430,9 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||everlasting-inflation.com^
 ||everlasting-river.pro^
 ||evfnzynxs.com^
+||evgberthedabater.cyou^
 ||evhtgmfimyw.com^
+||evhyrskk.com^
 ||eviafiegoxsru.space^
 ||evkjlmtnqwwcu.space^
 ||evkmgofne.com^
@@ -10439,6 +10465,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ewnkihlavfnv.com^
 ||ewnrvw9j1pone8qhg1b.rest^
 ||ewosbbumveduj.space^
+||ewurdjdppzfzd.online^
 ||ewwnmrvdkfasc.online^
 ||ewwxz8jj24wyjng6wnzhinwu9xt.cfd^
 ||ex7wk49t7jxz4ei6mzztxbyf.cfd^
@@ -10567,6 +10594,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ezzovjr13vh3kmh.rest^
 ||f1246cpzz2r5kmc2mypx2gh.rest^
 ||f19062be44.com^
+||f247dab479.com^
 ||f24xu8blr9m2znr9eieghg7c8rgvqqviwv.cfd^
 ||f270fefbd3.com^
 ||f279jmh5vqkkzpylluzx3y.rest^
@@ -10668,7 +10696,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||faskiwftip.in^
 ||fastclick.net^
 ||fastestetaerio.shop^
-||fastidiousforesterfirearm.com^
 ||fatal-cross.pro^
 ||fatherlycalm.pro^
 ||fathomexplodedreluctant.com^
@@ -10696,6 +10723,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||fbdcuiaazykhr.online^
 ||fbdjpebrvocxf.website^
 ||fbdpinychafpr.website^
+||fbdwowgjjskjy.website^
 ||fbgubsoogfntj.website^
 ||fbijrbsgoqyh.com^
 ||fbjnkfsnloxib.online^
@@ -10726,7 +10754,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||fcrenghyactrz.website^
 ||fcryingforanythin.org^
 ||fcyetcher.shop^
-||fd2722b11f.com^
 ||fd5237eac5.com^
 ||fdcfbvikm.com^
 ||fdcvnprkhtbzy.com^
@@ -10815,7 +10842,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ffsrxeamzwtsl.website^
 ||fftiyxescpqux.site^
 ||fftvarabrusqk.website^
-||ffuonqdlvkdpm.online^
 ||ffvdkfnqfcbhl.space^
 ||ffynohyp.com^
 ||ffzljtcftssxn.space^
@@ -10910,6 +10936,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||firmsepacme.com^
 ||fisddlapfuife.website^
 ||fishermanwithavenge.com^
+||fishfulraylet.com^
 ||fishierdears.shop^
 ||fishilyobsede.qpon^
 ||fishletfume.shop^
@@ -11066,6 +11093,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||fnlpncdfxwphb.site^
 ||fnltlstihhovn.site^
 ||fnmlyxokigkgs.site^
+||fnnnmmaqihint.site^
 ||fnnrequdvzwpw.space^
 ||fnntccfbzvsvp.space^
 ||fntwrcugsohjh.online^
@@ -11088,6 +11116,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||foggageskaff.com^
 ||foggierbabasdeeming.cfd^
 ||foggiergriper.cyou^
+||foicuoxmzjthm.site^
 ||foiningitauba.cfd^
 ||fojatepjfrfdc.space^
 ||fojfrrpwyvlhq.website^
@@ -11119,9 +11148,9 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||forgedmuthunbody.cyou^
 ||forgiveeternal.com^
 ||forgivenessmafia.com^
-||forgivengirlie.com^
 ||forgiverapine.shop^
 ||forgoesstreng.qpon^
+||forhalelequearbraccia.cyou^
 ||forhooylaulau.qpon^
 ||forkypectousdingly.cfd^
 ||forleitspikes.cfd^
@@ -11347,6 +11376,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||funiccapoc.qpon^
 ||funjereaving.qpon^
 ||funsday.cfd^
+||funukghkefdfm.space^
 ||fuoeslwvxboxx.online^
 ||fuosdfqvdvzfd.site^
 ||fuqivseerjysf.website^
@@ -11438,7 +11468,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||fywettbfxscbh.online^
 ||fyxkcsmxg.com^
 ||fyxxmiwaavpqa.com^
-||fzaatqzkent.com^
 ||fzanswueeajvf.online^
 ||fzclvegaktwhp.site^
 ||fzdimble.com^
@@ -11482,6 +11511,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||galeaeevovae.com^
 ||galerescurled.qpon^
 ||galetepidermbhang.qpon^
+||galikbrekkygreeter.cyou^
 ||galleonentopic.com^
 ||gallnutiterant.cyou^
 ||galuthxosaarmil.cfd^
@@ -11513,7 +11543,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||gargantuan-raise.pro^
 ||garliclinens.shop^
 ||garlicwedgie.cfd^
-||garnishdecoction.com^
 ||garotemuruxi.com^
 ||garoterbegaze.shop^
 ||garpikebrent.qpon^
@@ -11570,6 +11599,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||gdettpmgaoahnl.com^
 ||gdftfhlfnnbox.online^
 ||gdhqnpzbzttxz.website^
+||gdjurefuxajcg.site^
 ||gdjzrobyzulpx.site^
 ||gdlrfbdnmmwes.com^
 ||gdmonqqvzxnob.com^
@@ -11596,6 +11626,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||gelilahsuffolk.cyou^
 ||gellynocketescalan.qpon^
 ||gelosinscreigh.cfd^
+||gelvvcdvxbaan.space^
 ||gemaricdispelsheight.cfd^
 ||geminalorion.cyou^
 ||gemlikevarios.com^
@@ -11729,7 +11760,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||gishscorpii.qpon^
 ||gitksanscattedvowess.qpon^
 ||gitoxgmnnauiz.space^
-||giulioevasive.shop^
 ||givenchuser.qpon^
 ||giwiauztyyesr.online^
 ||gixto.xyz^
@@ -11814,13 +11844,13 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||glutsillfareplutei.cfd^
 ||glutslacunar.shop^
 ||glwfjcfrgrydb.website^
-||glwisiqnbmvmd.site^
 ||glxyvjptwgknk.online^
 ||glycanjelske.cfd^
 ||glyphicfliskeduspoke.qpon^
 ||gmfcfejaqmkma.online^
 ||gmfrdnovhdnyuve.com^
 ||gmhlsxchqfoon.site^
+||gmhyebojlimvqbc.com^
 ||gmkklmvohblvz.space^
 ||gmkwefibocegb.online^
 ||gml-grp.com^
@@ -12016,6 +12046,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||grinnerskimmia.cyou^
 ||griony.xyz^
 ||gripedeuton.cyou^
+||griphushogmace.qpon^
 ||gripmanuals.shop^
 ||gripping-cook.pro^
 ||grisardgallfly.cyou^
@@ -12356,7 +12387,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||hbknvlliozttz.space^
 ||hblsqhwlsfuax.space^
 ||hbmispage.cfd^
-||hbmjhfdxtwhwq.website^
 ||hbmufipefxfts.website^
 ||hbnmpdcnlvghb.com^
 ||hbovtg4y76tveij4z.rest^
@@ -12409,7 +12439,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||heaterlumberexploit.com^
 ||heavenomitzoom.com^
 ||hectorspankasked.com^
-||hedgeabruptunlucky.com^
 ||hedgybache.com^
 ||heedfulmacan.cfd^
 ||heedinginducer.shop^
@@ -12491,6 +12520,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||hhibegwitnseix.com^
 ||hhihpgdsvtdiy.com^
 ||hhjcuoyaaekut.site^
+||hhjmzywlpqqkb.space^
 ||hhkjridsviiwu.website^
 ||hhkld.com^
 ||hhltugvtk.com^
@@ -12509,7 +12539,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||hideseducts.shop^
 ||hidewnpdtbou.com^
 ||hidingallelic.cfd^
-||hidlinsboart.com^
 ||hidqxldlujo.com^
 ||hieragirrock.qpon^
 ||hifrqtlxje.com^
@@ -12762,7 +12791,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||hrmiruedsaawv.com^
 ||hrmruv1z7wyr8cpppfbjyc4n.cfd^
 ||hroxzeacto.in^
-||hrpbmvgbihfac.site^
 ||hrqnethvkcqw.com^
 ||hrrrlgyuofqka.site^
 ||hrtqvxkfdhvwz.website^
@@ -12854,7 +12882,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||hutlikeynrebated.cyou^
 ||hutmentoppidangeason.qpon^
 ||hutsbvjvusfzg.space^
-||hutteddyinfluenced.com^
 ||huuyfctjyqlfr.website^
 ||huuyywvjm.com^
 ||huwnxmnpnrzhh.website^
@@ -12875,6 +12902,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||hvnlokepsnskr.com^
 ||hvohrkwunio.com^
 ||hvoukybkppvfo.space^
+||hvpzuiuotbtli.space^
 ||hvqwjvoisrnhx.website^
 ||hvrssbpkfihmg.online^
 ||hvsyhgchivc.com^
@@ -12883,7 +12911,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||hw6i5jh5efhor5c6.rest^
 ||hwinlebxdqwnh.site^
 ||hwnsopghuafi.com^
-||hwocwionv.com^
 ||hwsyicaxuuwyl.online^
 ||hwtryxoyqoskua.com^
 ||hwuhkabi.in^
@@ -13407,6 +13434,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||intombspyralis.qpon^
 ||intrailoutpomp.cyou^
 ||intratebarger.cyou^
+||intrunkdetartots.qpon^
 ||intrustedzone.site^
 ||intunepyrryl.qpon^
 ||intwinebespit.cyou^
@@ -13438,6 +13466,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ipgnnofsqflxr.com^
 ||ipgtxicw.com^
 ||ipildaymark.cfd^
+||ipjwhkkpeoxk.com^
 ||iplrzphyynhbe.website^
 ||ipmwxckqtnapb.website^
 ||ipouucslkqmra.site^
@@ -13539,6 +13568,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||itkqsyscyjmp.com^
 ||itmbchrqf.com^
 ||itnbvizrelueq.online^
+||itngonicaebll.website^
 ||itnnzkipjcxxt.space^
 ||itpzsqymtedb.com^
 ||itsguiltymistaken.com^
@@ -13594,6 +13624,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||iwvxbrnsrpbv.com^
 ||iwyzycodonzlm.website^
 ||iwzomgnuboeol.site^
+||ixcrtwik.com^
 ||ixdhtszsircsl.site^
 ||ixdlpmpolaptm.website^
 ||ixdxyerfgeljb.online^
@@ -13650,6 +13681,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||j6wbzu8v37qi1h.cfd^
 ||j6xi94453pjc84qengv1w466yf5c7ovq7l5zl7.cfd^
 ||j7p664pwr83zn1f4looml9bjej28.cfd^
+||j8geljwqehp8mlhq48.cfd^
 ||j8pngwt16ggotzxwp9ex5ftmj4byn35.rest^
 ||jaapwinevat.cyou^
 ||jaattafibqjst.website^
@@ -13673,7 +13705,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jadjkuofzwad.com^
 ||jads.co^
 ||jadtyhkygmemd.online^
-||jadwidal.com^
 ||jaegervitallydele.cyou^
 ||jagatpastils.cfd^
 ||jagged-friendship.pro^
@@ -13687,7 +13718,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jalzarrujo.in^
 ||jambautoist.shop^
 ||jambesmatres.cyou^
-||jambiyatowy.qpon^
 ||jamony.xyz^
 ||jampackedquestion.com^
 ||jamsalon.com^
@@ -13724,6 +13754,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jbmkkejbxkwyg.site^
 ||jbno6u2jlcrm45gqw.rest^
 ||jbogixigsf.com^
+||jboppyhawqzfo.online^
 ||jbqmjdbxsxlyj.site^
 ||jbrgsykvwshap.space^
 ||jbtqolskzxoky.online^
@@ -13758,6 +13789,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jdceqzaoqjfdk.space^
 ||jddguaepajiwu.space^
 ||jdewvyxxyuv.com^
+||jdfhwxboadwvg.online^
 ||jdflygzwiglsi.online^
 ||jdhbpehrcmndd.website^
 ||jdjiuhwooalvp.website^
@@ -13791,7 +13823,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jeepearlobe.com^
 ||jeepersmandats.qpon^
 ||jeepneyknaps.cfd^
-||jeerscateran.cyou^
 ||jeeubfbkqenvr.online^
 ||jeflakrlrdysq.website^
 ||jeftndczbkmwb.site^
@@ -13827,6 +13858,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jfanqxfctjmfm.site^
 ||jfcsreslx.com^
 ||jfdlsutrnbeln.website^
+||jfdnvsrvkhnke.website^
 ||jfeeighqihi.com^
 ||jfef3ilp49whwf5l3rle6umgzgt1ejuivtt.rest^
 ||jfjk8j2lc642epz95vkeq3knr8qr.rest^
@@ -13841,6 +13873,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jgnvpyf2prkcf98oqrbhx2b1kl.rest^
 ||jgnzifxswczpu.site^
 ||jgpnanmtdd.com^
+||jgqccztrsqbtb.website^
 ||jgrkdzxsjgovw.online^
 ||jgsceqkcobpvh.website^
 ||jgwiveeokjknk.space^
@@ -13908,7 +13941,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jjtrynkptjcce.website^
 ||jjwlgscgtvuvo.space^
 ||jjwrkevlnopvq.site^
-||jjxcwurdtouaw.online^
 ||jk-to-mn.com^
 ||jk-to-pq.com^
 ||jkcoydrnywyjg.space^
@@ -13921,6 +13953,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jklxapwjjgyqb.space^
 ||jklxltljnrvnt.space^
 ||jkntebxbvq.com^
+||jkrquetufcr.com^
 ||jkuhzigovljcc.space^
 ||jkuozvkzevfe.in^
 ||jkxihdymwxueh.space^
@@ -13988,6 +14021,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||joint-club.com^
 ||jointerestpred.cyou^
 ||jojougynzvhzs.site^
+||jokedecays.com^
 ||jokfrivqogtwq.site^
 ||jokingslavs.shop^
 ||jolesshit.qpon^
@@ -14108,10 +14142,10 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jubnaadserve.com^
 ||jubnvmtaztqpa.website^
 ||jubsgzufzicne.site^
+||juckfabular.shop^
 ||jucwzabuqagh.in^
 ||judandvfmi.com^
 ||judaparevernia.cfd^
-||judicialimpatientgenerator.com^
 ||judicious-analyst.pro^
 ||judweeda.qpon^
 ||jue33lxjclmeb8ek7zyn7p5.cfd^
@@ -14140,6 +14174,8 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||junkiebeepconfusion.com^
 ||junkingpissed.com^
 ||junkytestoonmisbusy.cfd^
+||jupongimped.qpon^
+||juratawoohoo.qpon^
 ||jurelsmacacoscaller.qpon^
 ||jussalromeine.qpon^
 ||justinepulvino.qpon^
@@ -14191,6 +14227,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||jwyvtewajahc.in^
 ||jxawcxgxuerba.online^
 ||jxfmkz6pw3zft4p.cfd^
+||jxgncozqhyfo1v5zmnzc6u.cfd^
 ||jxhdcxvzodjui.site^
 ||jxiiwldewtdql.online^
 ||jxiqoaszcfxve.website^
@@ -14255,6 +14292,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||kafllipgvjtqw.site^
 ||kafsalkc.in^
 ||kaguranaamgyrates.qpon^
+||kahajnccyar.in^
 ||kahblkqxbjscd.website^
 ||kahenyptedkzt.website^
 ||kahhkduphuniv.com^
@@ -14402,6 +14440,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||khahoonzonulesplan.cfd^
 ||khakiedfuroate.cyou^
 ||khamalbesaint.cyou^
+||khamilangoontower.cyou^
 ||khanumshorer.cfd^
 ||khayaoxydase.cfd^
 ||khazarardeliorewards.cyou^
@@ -14551,6 +14590,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||knewspeight.qpon^
 ||knfuooxe.com^
 ||kngkkiwfqqgho.site^
+||kngrxhxtefpmo.com^
 ||knishtwinnedtoyless.qpon^
 ||knitsaphakia.cyou^
 ||knivedviqueen.com^
@@ -14641,6 +14681,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||kqiyhirquvyrn.online^
 ||kqjgwwuebmmcpfebkg4jb3hq9uwg.cfd^
 ||kqmxodlikwtke.website^
+||kqoktwdktjvdg.space^
 ||kqprihwraboim.site^
 ||kqrbbdjzcsxmp.space^
 ||kqtbwyrudcgeoe.com^
@@ -14691,6 +14732,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ktrhklrmemarv.space^
 ||ktut7wyvmcke5opp6k1ie48y.rest^
 ||ktwbcdypkcsnc.xyz^
+||ktwllzdco.com^
 ||ktwvbnfxd.com^
 ||ktxmnweyvslpo.website^
 ||ktxofwditvygq.online^
@@ -14718,6 +14760,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||kuoxgfkgnw.com^
 ||kurcyslwlfahi.online^
 ||kustiforwarn.qpon^
+||kusykxcry.com^
 ||kutpadog.in^
 ||kuttarbewidow.shop^
 ||kuzpqknxmvcai.site^
@@ -14878,7 +14921,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||lanugowands.qpon^
 ||lapdmotmslqps.space^
 ||lapeisedhehe.qpon^
-||lapisnaga.com^
 ||lapobrmuhojv.in^
 ||lappetboites.cfd^
 ||lappseyessannus.qpon^
@@ -14909,7 +14951,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||laudedpencils.qpon^
 ||laughsvales.cfd^
 ||launoiibcxdom.site^
-||laurelcourtesyreservation.com^
 ||lavagessoggily.qpon^
 ||laveinn.shop^
 ||lavish-bill.pro^
@@ -14929,7 +14970,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||lbbopwtbctjbb.website^
 ||lbdbxeionelgiba.com^
 ||lbdcneidh.com^
-||lbefscvpuihal.website^
 ||lbflkilpukb.com^
 ||lbjkrojavrquu.com^
 ||lblscpmfxuzqq.space^
@@ -15103,6 +15143,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||liepottensify.com^
 ||lieusreredosanack.cyou^
 ||lieutenantvealelongated.com^
+||lievestportemoireed.cyou^
 ||lifeystatuaemmew.cyou^
 ||liftedquack.cfd^
 ||liftmanpernine.com^
@@ -15115,7 +15156,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||lightmeadowwalk.com^
 ||lignoneveridic.cyou^
 ||lignoseengagee.cfd^
-||ligydaloca.com^
 ||likable-spiritual.pro^
 ||likedgreetedrape.com^
 ||likelihoodcheerleaderdefender.com^
@@ -15132,7 +15172,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||limited-teacher.com^
 ||limniteosselet.shop^
 ||limpingmission.pro^
-||limpreading.com^
 ||limpseyglob.cfd^
 ||linageswhippa.cfd^
 ||linaloecharms.com^
@@ -15156,6 +15195,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||lipideludo.cyou^
 ||lipidichoutou.cfd^
 ||lipstickeducate.com^
+||lipubetoeiqg.com^
 ||liqnkbkszalmy.site^
 ||liquid-student.com^
 ||lisedhvqseoqa.online^
@@ -15173,7 +15213,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||litholprehaps.cyou^
 ||litmuswungee.cyou^
 ||litowlzmav.in^
-||litterarenadisembroildisembroil.com^
 ||littlessuomi.cyou^
 ||litustrues.qpon^
 ||livableprelacy.com^
@@ -15395,6 +15434,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||lscsexsnjacwr.site^
 ||lseqmdjfm.com^
 ||lsgojyyuezgoj.website^
+||lsjtahyldpima.online^
 ||lsjxeddoklmrso.com^
 ||lskegdkjywkfp.online^
 ||lslvtfxznrtpo.space^
@@ -15428,6 +15468,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||lublxclzdwcea.online^
 ||lucarneepoxy.qpon^
 ||lucentanxiouslyfleeting.com^
+||luckilylagooneither.com^
 ||luckingkiers.cfd^
 ||luckypresentation.com^
 ||ludianrecap.cfd^
@@ -15497,6 +15538,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||lwgadm.com^
 ||lwhhscaioywoy.online^
 ||lwiwzmmzrwyse.online^
+||lwkkjmi23g76j2.cfd^
 ||lwkoqsjextwgy.site^
 ||lwkxfllgvcip.com^
 ||lwlhmnqlzvjvu.site^
@@ -15658,7 +15700,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mandrinpalmaegrownup.qpon^
 ||manegespoutier.com^
 ||manesstoupees.cyou^
-||manettisebacic.cyou^
 ||manfammkohf.in^
 ||mangetapajo.cyou^
 ||mangoldsectors.qpon^
@@ -15710,6 +15751,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||martinioakwood.cfd^
 ||martitetavell.cyou^
 ||martnetinhumed.cyou^
+||martted.com^
 ||marydrillsmoither.qpon^
 ||marysth.cyou^
 ||mascledearldom.cfd^
@@ -15717,10 +15759,10 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mascotscastes.shop^
 ||masdwrbzvpevo.site^
 ||mashmanlyceums.cfd^
+||mashmenjump.qpon^
 ||maskinsazulejorouleau.cfd^
 ||masonplantsirresponsibility.com^
 ||masqueradepatheticburden.com^
-||massesblabbed.cyou^
 ||masticnoshing.cfd^
 ||mastprefixhandkerchief.com^
 ||matanzaaldoses.cyou^
@@ -15735,6 +15777,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mathspositionuproar.com^
 ||matiehypoxis.cfd^
 ||matraceinlyinghasting.cyou^
+||matreedfelahin.qpon^
 ||mattersmark.com^
 ||mattressthere.com^
 ||maturespeaker.pro^
@@ -15752,6 +15795,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mazzngxxmaiul.site^
 ||mbacufxdxoqso.site^
 ||mbavrunwljhyz.space^
+||mbbmkiknytots.space^
 ||mbchpvbeujokh.online^
 ||mbdleafdom.cyou^
 ||mbdmildishzontian.cfd^
@@ -15777,6 +15821,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mcwtjxxpphqrs.online^
 ||mcxelftdvq.com^
 ||mcyigpyyapjrn.website^
+||mcyvlhru.com^
 ||mczbf.com^
 ||mdbsmkponfsof.site^
 ||mdcebngiogqlm.space^
@@ -15807,7 +15852,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||meccanbulder.qpon^
 ||mecnvxnvxdx.xyz^
 ||medakasep.cyou^
-||meddlingregret.com^
+||medalscreak.shop^
 ||medeanicene.com^
 ||medfoodsafety.com^
 ||media6degrees.com^
@@ -15950,12 +15995,14 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||midgetreckon.com^
 ||midstegeriaulema.cfd^
 ||mifonrcki.in^
+||mifvigmz.com^
 ||mig3incvggbukg.cfd^
 ||migrationwheat.com^
 ||mihadlagqfa.in^
 ||mihlmuhij.in^
 ||mikaniasoogan.cfd^
 ||mikeyfanging.shop^
+||mikgtaagl.in^
 ||mikisoka.shop^
 ||mikvahvirally.shop^
 ||milchigpassout.cyou^
@@ -16038,6 +16085,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mitchatelier.shop^
 ||mitherpoisons.shop^
 ||mitrafoxtail.shop^
+||mitresaxillae.com^
 ||mitvoppwqjiqo.space^
 ||miu8ekuryezmw8.cfd^
 ||miuoblmhdenct.com^
@@ -16203,6 +16251,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||moqtnysownefx.site^
 ||moralealanyl.cfd^
 ||moralgetups.qpon^
+||moraysremass.cfd^
 ||moraythurt.shop^
 ||morbosesycones.cfd^
 ||morceautourer.cyou^
@@ -16268,6 +16317,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mpsuadv.ru^
 ||mpu6mn15u35xeeif.rest^
 ||mpvblevopfdxo.site^
+||mpvituper.cfd^
 ||mpvyuhdclkwjl.space^
 ||mpyixo2ijzon2zm.rest^
 ||mq7fm7llitvu7wcyrltube.cfd^
@@ -16309,6 +16359,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mtjglumdezujo.website^
 ||mtkhbxksjjom.com^
 ||mtmqdcgzgduhb.website^
+||mtnafcqarbre.com^
 ||mtnklans.cyou^
 ||mtpgzhaoroxln.online^
 ||mtpmbrpe.com^
@@ -16459,6 +16510,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||mytsyoisjverr.space^
 ||myvppmgositlb.website^
 ||mywatchtones.com^
+||mywovcjadrtcb.online^
 ||myxacivitas.cyou^
 ||myyuexte7989mwq.cfd^
 ||myyzbvqmnedee.space^
@@ -16759,12 +16811,10 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||nipponliangs.qpon^
 ||nipponstay.lat^
 ||nipterlibbard.com^
-||nipxqhbthzrdi.site^
 ||niqlfeh6mfbof3.cfd^
 ||niromzkm.in^
 ||nirweydhaawas.com^
 ||nishars.care^
-||nistquarry.qpon^
 ||nisuhweeciet.com^
 ||nitencymaracarammy.cyou^
 ||nitencyovicell.qpon^
@@ -16873,6 +16923,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||nobodymiller.com^
 ||nockcdonfqlyf.space^
 ||noctulegeira.qpon^
+||noddlesmuvule.qpon^
 ||nodiakcowponystared.cfd^
 ||nodisuasive.qpon^
 ||nodntchkyhhrg.website^
@@ -16929,6 +16980,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||notifypicture.info^
 ||notix.io^
 ||notvxwxkjtsxf.website^
+||nounsacredlimb.com^
 ||novaeunswearchol.cfd^
 ||novaleelds.com^
 ||novatorunflush.cfd^
@@ -16989,6 +17041,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||nrlhvfqxwstsb.website^
 ||nrqveiycgotkw.online^
 ||nrrofvqgzprnb.space^
+||nrsvbequlde.com^
 ||nrtshmxbrnn.com^
 ||nrwxvgpgjwbvk.site^
 ||nrxmbbhpevxji.site^
@@ -17063,7 +17116,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||nutty-break.com^
 ||nuwlgkoejgirn.online^
 ||nuxp9z1wl15ve2.rest^
-||nuxuwhawo.com^
 ||nv28lejfvb4gqi.rest^
 ||nvagcpwuffuxj.space^
 ||nvgnealcimsdq.space^
@@ -17130,7 +17182,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||nzoewqerfluws.online^
 ||nzrfwzqdeqtci.site^
 ||o333o.com^
-||o368sxdu.xyz^
 ||o3g3yg34om876u.rest^
 ||o3r4yx8ckyltzzuu7tf61zkciu.rest^
 ||o5kbgigoq9gu4k8.cfd^
@@ -17215,6 +17266,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ochrodivoto.shop^
 ||ocijnhmnvjsdq.com^
 ||ocinzfdyslxja.online^
+||ocjavdmujipry.online^
 ||ocjawbam.in^
 ||ocjtaigijm.com^
 ||ockejnktywjtjl.com^
@@ -17230,6 +17282,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||octaviasughing.qpon^
 ||octectlycopin.com^
 ||octopeddefoam.qpon^
+||octopodmittens.qpon^
 ||octopuspop.com^
 ||octotraf.xyz^
 ||octroikilter.qpon^
@@ -17298,6 +17351,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ofrkpiuxqhwq.xyz^
 ||ofsorpwpvdym.com^
 ||oftahmqpuon.in^
+||ofxiyvxmc.com^
 ||ofyuawtbjmbgt.website^
 ||ofzl3q285oifbt1ct757.cfd^
 ||og4cyempxfuvnw.cfd^
@@ -17410,6 +17464,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||oleronmussick.cyou^
 ||oleronraid.com^
 ||olhuaebuicnfr.site^
+||olhvrikhabyvngb.com^
 ||oliosthrene.qpon^
 ||olivestrip.shop^
 ||oljtvghlb.com^
@@ -17512,6 +17567,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ooktgltucmhnf.site^
 ||oolakdarwesh.cyou^
 ||oollycarlina.cyou^
+||oologicrenatedisks.cfd^
 ||oolongmatlow.com^
 ||oolzuqohpxqqg.site^
 ||oomaugnaps.net^
@@ -17557,7 +17613,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||optimeagast.cyou^
 ||optimesiredon.cfd^
 ||optimistic-inspection.com^
-||optionascertained.com^
 ||optvz.com^
 ||optzqxrrtdoao.site^
 ||opvvrosxfrql.com^
@@ -17657,6 +17712,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||osmosisfalerno.com^
 ||osoneskulled.cfd^
 ||osqfmhfdtt.com^
+||osrcabkto.in^
 ||osseaprouder.com^
 ||ossetbulimus.com^
 ||ossmightyenar.net^
@@ -17808,7 +17864,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ownnessdebater.cyou^
 ||owsuhntty.com^
 ||owutrvkpsak.com^
-||owvkfujan.com^
 ||owvoxqzcua.in^
 ||owwbulasllttm.space^
 ||owywlwjvvkcjc.site^
@@ -17838,7 +17893,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||oxwalfakz.in^
 ||oxwpsqfoyaxkc.website^
 ||oxybangiceless.cyou^
-||oxygenopposed.com^
 ||oxysijnvkoujm.space^
 ||oxyuriddesmicdimin.qpon^
 ||oydtmcxdmxkihlj.com^
@@ -17894,7 +17948,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||p9q9k5h72g3k7hy.rest^
 ||paccubokdjry.in^
 ||pacestrengthentribute.com^
-||pachtblanket.shop^
 ||packeryshellacchacmas.cfd^
 ||packetsprewar.cfd^
 ||packouabain.cfd^
@@ -17925,6 +17978,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||pakdarfrtfftebi.com^
 ||pakzamexbopaf.online^
 ||palacessilicylphyle.cfd^
+||palaitebacking.qpon^
 ||palamounty.com^
 ||palatablepicture.pro^
 ||palaveredifies.cyou^
@@ -17969,6 +18023,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||paologinners.cyou^
 ||papelonkokoona.com^
 ||paperedunmitre.cfd^
+||paperestop.qpon^
 ||papiosaiid.com^
 ||papmeatidigbo.com^
 ||pappeahemepechay.cyou^
@@ -18087,7 +18142,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||pdzumsyn.com^
 ||pe9rpy76iw1oior76gkxyp4y8np17.rest^
 ||peacefulhillwalk.com^
-||peachesbrulzie.cyou^
 ||peacoatpopular.shop^
 ||peacockvowel.com^
 ||peadeplete.com^
@@ -18101,6 +18155,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||peasantferned.qpon^
 ||peatcueing.shop^
 ||peatypreened.cyou^
+||peaviesapios.cyou^
 ||pebancolor.cfd^
 ||peboietcyzpwi.website^
 ||peccantdhurna.com^
@@ -18165,6 +18220,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||pericupygmies.qpon^
 ||perillasherds.cfd^
 ||periodic-target.pro^
+||periodyakshi.qpon^
 ||perksburian.com^
 ||perninecochero.cyou^
 ||perniowillier.shop^
@@ -18193,6 +18249,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||pezksldjeasrv.website^
 ||pezwjfoozrpiv.online^
 ||pfbcmfoqapv.xyz^
+||pfckhpjabpmiv.site^
 ||pfewuoymt9hzkei41v8bqpfwi6x.cfd^
 ||pfghvoxuygf.xyz^
 ||pfgziijrgqmxf.website^
@@ -18212,6 +18269,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||pgfoxwqwtjtxu.online^
 ||pgfviujllriob.website^
 ||pgkiezbeamnfn.website^
+||pgkmbmnndmwwo.online^
 ||pglxfermxwuoyk.com^
 ||pgomvmaqemsar.site^
 ||pgovikzhcfwwu.space^
@@ -18236,6 +18294,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||phleumfz.shop^
 ||phloemstribal.cfd^
 ||phobiasila.qpon^
+||phobpyorgiokc.space^
 ||phoneboothliningmany.com^
 ||phonecustomer.com^
 ||phonemedutra.cyou^
@@ -18598,7 +18657,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||pqvjrwfrpfql.com^
 ||pqvzkhit.com^
 ||pqxzcqijvlgcn.online^
-||prabblealltud.com^
 ||prabblemegasse.shop^
 ||prancedcaratesbide.qpon^
 ||prandbenefic.com^
@@ -18615,6 +18673,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||precuthogton.shop^
 ||predamnmanweed.cyou^
 ||predatorvernonforefather.com^
+||predialburgalldypnone.qpon^
 ||predictivdisplay.com^
 ||predictremnantimportance.com^
 ||prefecturesuggestions.com^
@@ -18661,7 +18720,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||primeix.net^
 ||primeurcamara.qpon^
 ||primglossem.qpon^
-||primitivenor.com^
 ||pringed.space^
 ||pringlecymule.cfd^
 ||prinkfag.cyou^
@@ -18717,7 +18775,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||propenechemins.shop^
 ||properashcakestonen.qpon^
 ||propermolala.qpon^
-||prophetalongconstituent.com^
 ||propositionmeltdown.com^
 ||propositionvowelladen.com^
 ||prosectunrufe.cyou^
@@ -18815,6 +18872,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||puduepirotemailes.qpon^
 ||puduloaming.shop^
 ||puegmzopokqht.space^
+||pueriledod.qpon^
 ||puffilydinged.cfd^
 ||pugareeapa.cfd^
 ||pugetbehaver.cyou^
@@ -18834,6 +18892,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||pumopgsuhacs.in^
 ||pumpleungreenspieler.cyou^
 ||pungarerrsyn.shop^
+||pungent-care.com^
 ||pungentsecretary.pro^
 ||punicinbumelia.com^
 ||punishutrubi.com^
@@ -19010,6 +19069,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||qcbdwwahprmoa.website^
 ||qceoqfolwri.in^
 ||qcgdmncatgybd.site^
+||qck8uf3xt17hncc5p.rest^
 ||qcoirrkdtkwck.site^
 ||qcrjfkqvvl.com^
 ||qcrnybsusbbvu.com^
@@ -19050,6 +19110,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||qfvrdevcfs.com^
 ||qfxheyyfxnply.site^
 ||qfywv223iizxxzijm.cfd^
+||qgdgcxmdccrdx.com^
 ||qgitfyktwfhba.website^
 ||qgkmvbxkskdeb.space^
 ||qgmngielybrwv.online^
@@ -19059,6 +19120,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||qgtyiikopjaiy.space^
 ||qguwsuivlnmxr.site^
 ||qgvgqhfuessel.com^
+||qgzrflmykgtgy.site^
 ||qgztlbdwhqdbn.site^
 ||qhacrbhp.com^
 ||qhdrmniqdbqa.com^
@@ -19159,6 +19221,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||qnvoxiasfk.com^
 ||qnyxvpsblunca.site^
 ||qo4pm5bgem3gtbb.cfd^
+||qoaqupbodgss.com^
 ||qobfocmmyhbaw.space^
 ||qobpxugcqtsk.com^
 ||qoebdgzpnonpu.online^
@@ -19382,6 +19445,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||qxrcbjtqtzvdcp.com^
 ||qxrtkqsxrljbm.site^
 ||qxummanifgrjp.site^
+||qyaaesutjciib.site^
 ||qybratedbxyac.online^
 ||qybrsqzj.com^
 ||qyjlopimxtyq.com^
@@ -19445,6 +19509,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ramekinpleura.shop^
 ||ramekintewhit.cfd^
 ||ramismhelenabolting.cyou^
+||ramistbeaborith.cfd^
 ||ramlvunszdcxt.website^
 ||ramosequab.cfd^
 ||ramtagustinghaviour.cfd^
@@ -19454,10 +19519,10 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||rangeyfrapler.cfd^
 ||ranidaelater.qpon^
 ||ranketdaphnialeucism.cfd^
+||ransackbolases.qpon^
 ||ranseursinoper.shop^
 ||ransomnotify.com^
 ||rapbyxaipylsx.site^
-||rapfeely.shop^
 ||rapidinvoicebasket.com^
 ||rapshiera.com^
 ||raptureinsanity.com^
@@ -19842,7 +19907,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||riavffzufihdw.website^
 ||ribbonauthentic.com^
 ||ribbonybedways.cfd^
-||ribbyplungy.com^
 ||ribkdvpyszfm.com^
 ||richanswer.pro^
 ||riciniclatrobe.cyou^
@@ -19973,7 +20037,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||rmishe.com^
 ||rmoolrrw.com^
 ||rmpgcpimiudoi.space^
-||rmqgscbitoadp.site^
 ||rmsktnoqvhzrq.com^
 ||rmujceobds.in^
 ||rmuommjaxr.in^
@@ -20032,6 +20095,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||romsangles.shop^
 ||ronionmatral.qpon^
 ||ronracepub.com^
+||roodlesuval.qpon^
 ||rookeddecors.cfd^
 ||rookerygravest.com^
 ||rookswealthy.cfd^
@@ -20145,6 +20209,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||rtaaiwotyocku.website^
 ||rtalffozjnwkq.space^
 ||rtbsystem.com^
+||rtbzohtaqbqgw.site^
 ||rtcaqnwh.com^
 ||rtcdupmicrfkp.site^
 ||rtceeemh.com^
@@ -20368,10 +20433,10 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||salliercushats.qpon^
 ||salmonbestuck.qpon^
 ||salolsharifs.cfd^
-||salpidsjollier.cyou^
 ||saltestinwraps.cyou^
 ||saltpancansephebe.qpon^
 ||saltyjunkerma.qpon^
+||salutesembusy.qpon^
 ||salvingjews.cfd^
 ||salwjc.cyou^
 ||samanishiatsu.shop^
@@ -20451,6 +20516,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||savinist.com^
 ||saviourcrimpycrimpyhem.com^
 ||savorbolmbt.in^
+||savorlynanigo.shop^
 ||savttuegxztst.site^
 ||sawingsdemioxcrimp.cfd^
 ||sawneboenolic.com^
@@ -20574,7 +20640,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||sdsthlvfaqcur.online^
 ||sdtzadpayrgsc.space^
 ||sduxfdaxbgtiu.site^
-||sdxyvdvtowkhw.site^
 ||seafowlstimies.qpon^
 ||sealedovillus.com^
 ||seamarklime.qpon^
@@ -20599,6 +20664,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||sedovicovermencytinus.cyou^
 ||seducepolice.com^
 ||seducerperjury.cyou^
+||seedersbaiza.shop^
 ||seeinglie.com^
 ||seeksgironny.com^
 ||seektrousers.com^
@@ -20660,6 +20726,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||sephiraasperly.com^
 ||sephiramaths.cfd^
 ||sepioidpuker.shop^
+||sepocsusw.com^
 ||sepoystable.shop^
 ||sepparesphaffat.qpon^
 ||septemberbrightest.com^
@@ -20668,6 +20735,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||seraglibandido.qpon^
 ||serapischoroid.com^
 ||serdabsbifolia.cyou^
+||seredbongo.cfd^
 ||serene-pace.pro^
 ||serenechapter.pro^
 ||serenosnyed.cyou^
@@ -20829,6 +20897,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||shortenoverleg.com^
 ||shortergroundyanew.cfd^
 ||shorterwanderer.com^
+||shorthammalsdryer.cyou^
 ||shoverstrumeau.qpon^
 ||showednidi.qpon^
 ||showyfee.pro^
@@ -20840,7 +20909,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||shrieksgyroseazorian.cfd^
 ||shrikeskainite.shop^
 ||shrivenspyboat.qpon^
-||shrugaged.com^
 ||shrugverificationauto.com^
 ||shrugworlds.qpon^
 ||shstvvexwudrg.website^
@@ -20962,6 +21030,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||skeichspinel.cfd^
 ||skellycaaba.cfd^
 ||skeojagroup.help^
+||skewedcarbone.com^
 ||skezzrcswlajp.online^
 ||skgiibpdmsaqn.space^
 ||skgjnitfsnknnl.com^
@@ -20992,7 +21061,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||slackenkebars.cfd^
 ||slacklovely.com^
 ||slaggerpiete.qpon^
-||slahxfnkp.com^
 ||slamuellmgtvv.com^
 ||slamwaterie.cyou^
 ||slangshavanabesant.cfd^
@@ -21229,7 +21297,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||sorbedprinter.cyou^
 ||sordgables.cyou^
 ||sore-list.pro^
-||sorelylibeled.cfd^
+||sorermegabar.qpon^
 ||sorghoswidens.qpon^
 ||sornfaire.com^
 ||soroseaguralinens.qpon^
@@ -21313,7 +21381,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||spicersdotters.cyou^
 ||spielsboorishtestees.cyou^
 ||spigwjjbhjvpl.site^
-||spihvffsoskwlg.com^
 ||spikerarioian.com^
 ||spikesandcurrant.com^
 ||spikestanak.qpon^
@@ -21360,6 +21427,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||spouaeznyeppq.space^
 ||spousesstapes.com^
 ||spouteroutgain.com^
+||sppebshiopdan.space^
 ||sppopups.com^
 ||sppxwntjpeujb.space^
 ||spranglacklesslackless.com^
@@ -21416,6 +21484,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||sridharkindlesbeaux.qpon^
 ||srlofrogoqcxj.website^
 ||srmaskoidsleigh.qpon^
+||srozawuskktxh.site^
 ||srpsnvtisuznr.site^
 ||srrreyyfbbiv.com^
 ||srrzzijmzsyfw.online^
@@ -21449,6 +21518,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||stackadapt.com^
 ||stackcoalitionmole.com^
 ||stackrealreliant.com^
+||stackwitotopolices.qpon^
 ||stagypisgahtavola.qpon^
 ||staid-economics.pro^
 ||staidlyunhitch.shop^
@@ -21507,7 +21577,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||stgowan.com^
 ||stheneellagicresight.cyou^
 ||sthenianootkaonefold.cfd^
-||sthhbqpjfdves.space^
 ||stibmaidism.qpon^
 ||stickingholdingconcussion.com^
 ||stickscoltdependent.com^
@@ -21544,6 +21613,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||stoorybag.cyou^
 ||stootershaman.shop^
 ||stopads-now.com^
+||stopingporks.qpon^
 ||storkhemodia.com^
 ||stoundinhumed.shop^
 ||stoveslodgers.cyou^
@@ -21653,7 +21723,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||suczjwsoelppw.site^
 ||sudariacueman.cyou^
 ||suddersalinanmeteors.qpon^
-||sudorbabassu.cfd^
 ||sudsmenhazanim.cyou^
 ||suejvtxdvjtqc.website^
 ||suentpenning.cfd^
@@ -21819,7 +21888,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||sxozpjjozfkbe.online^
 ||sxplhiygikhhq.com^
 ||sxprkwlk.com^
-||sxpxdgtiotoy.com^
 ||sxrvqduqkggdep.com^
 ||sxsftevgkwlam.site^
 ||sxwgentwgojen.site^
@@ -22038,6 +22106,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||tckdemcpsjd.com^
 ||tcmuw99jf99j3uw82yyhphn2u54.cfd^
 ||tcneqnkonxydt.space^
+||tcotakyaptua.com^
 ||tcpmjizhgaypw.site^
 ||tcsndrvora.xyz^
 ||tcsuspptwmoy.com^
@@ -22056,7 +22125,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||tdlqvfegemqte.com^
 ||tdncvkechx.com^
 ||tdrfecial.shop^
-||tdrpnjyxspboat.com^
 ||tdvnadvdusjco.site^
 ||tdxegdjfabfgkg.com^
 ||tdxwtdxyvgi.com^
@@ -22069,7 +22137,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||teammuonic.cyou^
 ||teapoyhocused.com^
 ||tearersuttin.cfd^
-||tearerswalkup.shop^
 ||tearpitboozier.cyou^
 ||teashopplugged.com^
 ||teboyamudyc.com^
@@ -22086,6 +22153,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||tediousrelinquish.com^
 ||tediumshypnoid.shop^
 ||tedrejozqqqpm.site^
+||teedtosherorbate.cyou^
 ||teeduczqhhtpx.space^
 ||teeforgotten.com^
 ||teekbtiocvgrwbc.com^
@@ -22145,7 +22213,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||termagetepehuaabb.qpon^
 ||ternarlogoutphossy.qpon^
 ||terniontertian.qpon^
-||terraum.net^
 ||terrierpoleman.cfd^
 ||terronzesting.qpon^
 ||terryreverbanglish.cfd^
@@ -22199,7 +22266,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||tgwcft3t2cyjw8q.cfd^
 ||tgwjtefhjqj.com^
 ||tgwrwrcfelhfp.online^
-||th48wwx3hegworkihmmic1pl3mwfu.rest^
 ||thaffeam.in^
 ||thakcrunchy.com^
 ||thamengabsent.qpon^
@@ -22226,7 +22292,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||theowcamaieu.cyou^
 ||theresehoodingalcippe.qpon^
 ||theretenoned.com^
-||thermalcustom.com^
 ||thermometeranalogyincomprehensible.com^
 ||thermoslichensmarli.cfd^
 ||theseandoand.qpon^
@@ -22363,6 +22428,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||tjiphjigugivk.online^
 ||tjktbalmpgghx.space^
 ||tjmchkmpqfszj.online^
+||tjqnwagybqjaa.space^
 ||tjrexuqtj.com^
 ||tjrybgqiqdafe.site^
 ||tjsycxwnxpqmu.online^
@@ -22375,7 +22441,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||tkebenpwjpsdx.online^
 ||tkexutqf.in^
 ||tkexuxqedplxh.space^
-||tkhfcmvwbtvqoh.com^
 ||tkhosiciqqhwnut.com^
 ||tkiodsor.in^
 ||tklgigbmkfupa.online^
@@ -22410,6 +22475,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||tmdwtgflpgzus.online^
 ||tmeklaoastqv.com^
 ||tmeofcvtl.com^
+||tmesesrebills.cfd^
 ||tmesiswebers.cfd^
 ||tmftllgmyklie.online^
 ||tmhlarncollyr.qpon^
@@ -22458,10 +22524,12 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||togachasse.cfd^
 ||togemanalgates.shop^
 ||togglecrex.shop^
+||tognrhqgiyaja.online^
 ||togotosleepbutju.com^
 ||togtmicah.cfd^
 ||togvnrchpuflt.site^
 ||togxfwvfslruy.space^
+||tohoef.com^
 ||toieetnnb.com^
 ||toilfulpooa.cyou^
 ||toitorgue.qpon^
@@ -22498,7 +22566,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||topassmarsha.shop^
 ||topcreativeformat.com^
 ||topesunist.cyou^
-||tophetaglance.cyou^
 ||tophousblued.cfd^
 ||tophoussapient.shop^
 ||topmostshrink.com^
@@ -22539,6 +22606,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||towghtfermi.cfd^
 ||towghtruinershahs.cyou^
 ||towmontfessing.cfd^
+||townyomnist.shop^
 ||toxanickingpeaked.cfd^
 ||toyerbuyable.qpon^
 ||toyingimsonic.cfd^
@@ -22631,7 +22699,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||trickretrorest.com^
 ||triflevicety.qpon^
 ||trigrambyard.cfd^
-||trimertzetse.cyou^
 ||trimsbrahminwarb.cfd^
 ||trineswashrag.qpon^
 ||trinkleplaice.shop^
@@ -22658,6 +22725,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||trojanspithfreyja.cfd^
 ||trolleyjackpotbummer.com^
 ||trollopkubong.shop^
+||tronasamylonschick.qpon^
 ||troopinvariably.com^
 ||trophalrafael.qpon^
 ||trophonstammel.cyou^
@@ -23046,11 +23114,9 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||uevokddauuynh.space^
 ||uewgpjnrcxlm.com^
 ||uewphjjrjqxxt.com^
-||uey6jgncw7w3yp4579w1u6.rest^
 ||ueykchdijnefs.website^
 ||uezjfdonducbm.online^
 ||ufdnysonfvwnj.space^
-||ufeoukrwowmoj.site^
 ||ufesktjbbjpwk.online^
 ||uffkojlrrjoxw.website^
 ||ufgqsvqtxvsrtq.com^
@@ -23079,12 +23145,10 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ugnyuemxxrdsv.site^
 ||ugoodjynotjrq.online^
 ||ugoujglhvut.com^
-||ugsqgrktszazz.site^
 ||ugszjrrqanqdc.site^
 ||ugtbxnlaclzop.site^
 ||uguynhculyxgkti.com^
 ||ugvqtnaldwagy.space^
-||ugwjndrwmuico.space^
 ||ugwvkdottvlyqqt.com^
 ||ugzdlvrnoanpo.online^
 ||uhciwutgmauzd.website^
@@ -23114,9 +23178,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||uimrynxkuybmb.website^
 ||uimserv.net^
 ||uiosxrwn.com^
-||uipwzccynwczy.space^
 ||uivvaiwswvgx.com^
-||uiwhfyqg.xyz^
 ||uiwlq6xo5kb2y1.rest^
 ||uiyxoowmkcppo.online^
 ||uj4z4lu78k8z4thex.rest^
@@ -23237,7 +23299,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||unburlycosaque.cfd^
 ||unbusyenamber.shop^
 ||uncadyaewiajd.online^
-||uncannygallonerosion.com^
 ||uncharycarnac.qpon^
 ||uncialsrefined.shop^
 ||uncleanwindups.shop^
@@ -23348,7 +23409,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||unpietychabot.cyou^
 ||unpinconiums.cyou^
 ||unpleasantdegree.pro^
-||unpottulnic.shop^
 ||unpracticalwhich.org^
 ||unprimeserut.cyou^
 ||unpufframpler.com^
@@ -23473,7 +23533,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||upperbilayer.qpon^
 ||uppitydiester.cyou^
 ||upright-priority.pro^
-||uprightbent.com^
 ||uprightwrixlenome.cyou^
 ||upripparotic.shop^
 ||upriseinga.cfd^
@@ -23484,7 +23543,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||upskipapothgm.com^
 ||upskittyan.com^
 ||upspearcutline.cfd^
-||upspearstowp.qpon^
 ||upstealrance.com^
 ||upstepyhwh.cfd^
 ||upstirslowmosttrabant.cfd^
@@ -23539,6 +23597,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||urnoyllbyjaji.com^
 ||uromog.sbs^
 ||uroovwrouh.com^
+||uropodobolet.cfd^
 ||urpjftdfykkpz.site^
 ||urpkikevrfzxh.website^
 ||urpqgcglytucg.online^
@@ -23589,6 +23648,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||uswqumrdseugf.site^
 ||usxhqgokbxuya.site^
 ||usxiqtjuigcse.site^
+||usztvnmmlukau.website^
 ||uszxsqvpukbwz.website^
 ||utagyernjwdnw.website^
 ||utahansninonsconamed.cfd^
@@ -23597,7 +23657,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||utewdaccthukq.online^
 ||uthdrjcqnajx.com^
 ||utiygjfbalqqn.online^
-||utiylyxlobmdn.com^
 ||utqsamjgxtrhv.website^
 ||utriyfpfxldfq.space^
 ||utrldrjrsrvbs.online^
@@ -23629,6 +23688,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||uvkqyxjdiswkt.site^
 ||uvmqjrpzbzhkp.website^
 ||uvmxflkoddohr.com^
+||uvoyiosnw.com^
 ||uvpcsohrnfxqk.site^
 ||uvpjieiphaiec.site^
 ||uvrilvrgeysmr.com^
@@ -23638,6 +23698,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||uwavgfrn.com^
 ||uwbyuykkrpgsr.website^
 ||uwcbmixttuex.com^
+||uwclsmkkrfyqi.site^
 ||uwfdngfnpiovxt.com^
 ||uwfrrgmecphjw.com^
 ||uwoavaqodoqfqgn.com^
@@ -23896,11 +23957,13 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||vergerbabysit.com^
 ||vergitarted.qpon^
 ||verifygoog.cfd^
+||verminloughskentia.cyou^
 ||vermixwaltzerhavance.cyou^
 ||verrucaauburn.cfd^
 ||verticallysaturate.com^
 ||vervetalchimy.qpon^
 ||verzinoskirter.qpon^
+||vesperprayful.qpon^
 ||vesseldoubts.com^
 ||vestedrebab.cyou^
 ||vetascotoma.shop^
@@ -24000,6 +24063,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||vidjebudnvlyuqd.com^
 ||vidlmexunoww.in^
 ||vidowjhxbrmyr.online^
+||viellewhittaw.cyou^
 ||viesalascan.cfd^
 ||viewbirch.com^
 ||viewycaulds.shop^
@@ -24051,7 +24115,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||virgasaharan.cyou^
 ||virgedesistnotates.qpon^
 ||virtuestoque.cfd^
-||visaedsolanin.qpon^
 ||visagraters.cyou^
 ||visariomedia.com^
 ||visayafacet.cfd^
@@ -24113,7 +24176,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||vlauqfbnfigdk.site^
 ||vlckdbjxmdvxs.com^
 ||vlejajflc.com^
-||vlgmfdchutvxh.website^
 ||vlhoopsc.com^
 ||vlhqwfcajivguim.com^
 ||vlitag.com^
@@ -24200,7 +24262,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||vovlacjs.cfd^
 ||vovlacjs.cyou^
 ||vovlbctpwng.com^
-||vovnjqjpzxqdr.space^
 ||vowelfemininecherish.com^
 ||vowsavageskim.com^
 ||vowwyaqxc.com^
@@ -24243,6 +24304,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||vrczzppuqwqsz.space^
 ||vrftribpxdzcs.online^
 ||vrhxycsnyr.com^
+||vriddhicroker.qpon^
 ||vriuocjmlxoqc.website^
 ||vrklxvwbv8vo6g.rest^
 ||vrluvwemmoamuh.com^
@@ -24395,9 +24457,9 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||w2t2ft6zl1zbivnu9emoizw.cfd^
 ||w3fc1o28kpltrl.rest^
 ||w4k65h3vz538fmrt3jz1453i546h.cfd^
+||w4w8jhqxetxbhw6e5ry625v.rest^
 ||w55c.net^
 ||w63eql6qoxqbco97xb7hlnkubni1.cfd^
-||w64ykf5y5qt5zr41q.cfd^
 ||w6ecevvubhmntx.rest^
 ||w6jh9ubc5fzffwqhi43nt9cmk18j6g6q.rest^
 ||w6q4kyzo49966l9h5rpk5z25hrgowz.rest^
@@ -24420,6 +24482,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wagetsmiter.cfd^
 ||waggeryfledges.cfd^
 ||waggonerprepay.com^
+||waglikeaahing.cfd^
 ||wagoncoruco.cyou^
 ||waicjerazuuix.space^
 ||wainfulcaspian.com^
@@ -24546,6 +24609,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wbyrnwpwpoml.com^
 ||wbzbyegbobjxk.com^
 ||wbzkaueecchkb.site^
+||wc5cyztpew2t9po8.cfd^
 ||wchjbappsl.com^
 ||wcjlxvtk.com^
 ||wcowvwhwenmy.com^
@@ -24635,6 +24699,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||weqeagfolnehx.space^
 ||weskitsdelator.com^
 ||westerawnesschirmed.qpon^
+||wetdisown.qpon^
 ||weuaubbolvxby.website^
 ||wevegvybfsgilp.com^
 ||wevstbzzdxwej.website^
@@ -24676,6 +24741,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wghvkrik.com^
 ||wgilqtailcrqa.space^
 ||wgimhiakumdkf.site^
+||wglfykhuldxxnme.com^
 ||wgpnkfvdbiq.com^
 ||wgptspxgngbhf.space^
 ||wgqpzsxx.com^
@@ -24705,7 +24771,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||whicheverspeaklights.com^
 ||whickermxdvying.qpon^
 ||whidahsphaeton.qpon^
-||whigpaoslqr.com^
 ||whiledtalloelvmsize.cfd^
 ||whimsicalhit.com^
 ||whimsicalstate.pro^
@@ -24761,7 +24826,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||widowreseduereseduedescription.com^
 ||wieldedwanesfevered.qpon^
 ||wieldhaemins.shop^
-||wieymjenebzsv.site^
 ||wifeletseck.cyou^
 ||wifkwcrzm.com^
 ||wifyijykcqknk.site^
@@ -24785,10 +24849,12 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wimbrelduftitedillisk.qpon^
 ||wimpimpatience.com^
 ||windfallleavebrawl.com^
+||windupsfibulas.cfd^
 ||wingatebullismacrawl.cfd^
 ||winged-rice.pro^
 ||wingedformity.qpon^
 ||wingerswetchet.cfd^
+||wingsmob.com^
 ||winlysuecism.cfd^
 ||winningjanuaryshrubs.com^
 ||winningprofit.cyou^
@@ -24850,7 +24916,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wkwigtqydvqin.website^
 ||wkxvopwtaykla.website^
 ||wlfmddrbvkocw.site^
-||wlfulyrpgl.xyz^
 ||wlllugwvqq.com^
 ||wlmymjdszscyk.online^
 ||wlncydsetnshu.com^
@@ -24910,6 +24975,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wnuoqyophobbm.site^
 ||wnwccsuyrll.com^
 ||wnwsrvygbmyqx.com^
+||wo8mx5i68fc1i8uho3yyqgh.rest^
 ||woakaithfence.cfd^
 ||woayhhildjge.com^
 ||wobblesdisorbneper.cfd^
@@ -24950,7 +25016,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||woofersgargets.cyou^
 ||wooldedapitong.qpon^
 ||woolfamboyna.cyou^
-||woolledtzaam.shop^
+||woolsawfuster.cfd^
 ||woonwaysidewesty.qpon^
 ||wooshedwidgets.cyou^
 ||woozleutahite.shop^
@@ -25046,6 +25112,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wristedcrawful.shop^
 ||writersecutoraylet.qpon^
 ||wrjq4mv3pyk8my2of.cfd^
+||wrjyvfpdwk.com^
 ||wrlbcpmeilare.online^
 ||wrlntwiam.com^
 ||wrnttowsy.qpon^
@@ -25130,6 +25197,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wvobtiloxul.com^
 ||wvpw5ko552izqnmv.rest^
 ||wvrfguqscnuim.space^
+||wvurwdsokdgnm.space^
 ||wvwixnjmffufy.site^
 ||wvxhgmazjdjla.space^
 ||wvxviezpcoihe.space^
@@ -25165,7 +25233,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wxwjidcqfsakq.space^
 ||wyandotmisusesmacules.cyou^
 ||wybrjgnnhbxgo.website^
-||wycffjgftyrfo.space^
 ||wyebbkxinxgud.website^
 ||wyelxnbpncckcgm.com^
 ||wyemijjnbkrol.space^
@@ -25191,7 +25258,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||wyvarlldek.com^
 ||wywqdsha.com^
 ||wyxxrdfd.com^
-||wyylhzlyhyspv.com^
 ||wzccrzcdntskz.space^
 ||wzfhnacjottbbb.com^
 ||wzhrxlsjafwwd.online^
@@ -25221,14 +25287,12 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xadsmart.com^
 ||xafedxfwqqzuv.online^
 ||xafrxcfr.com^
-||xagdficxgdrkfyy.com^
 ||xahdcrsfahoat.space^
 ||xajnoxqxffozt.site^
 ||xakinarsljlwm.space^
 ||xanokvognqak.in^
 ||xanvjayulcjcb.xyz^
 ||xaofsaemoqkoc.com^
-||xaplonmsgwn.com^
 ||xatatsvkak.in^
 ||xatocccuzzrwe.com^
 ||xattuzyahnzzv.space^
@@ -25256,6 +25320,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xckmiovstahqy.website^
 ||xcmeojaowcn.com^
 ||xcnbsakvd.com^
+||xcnvozvipuucf.space^
 ||xcofupnperuq.in^
 ||xcowtuocxolz.in^
 ||xcpmfvlfcdltd.online^
@@ -25307,7 +25372,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xfbvhjvstczah.site^
 ||xfclwfqsppemg.website^
 ||xfhkkjwigpsnlv.com^
-||xfibjqxcbomqf.website^
 ||xfidfuxidr.in^
 ||xfimfkergryibd.com^
 ||xfolivosro.in^
@@ -25371,6 +25435,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xiumpwpvrerqc.online^
 ||xivfbmyndlnoz.site^
 ||xivjfeopco.in^
+||xixtbvjiwpxnz.space^
 ||xiypojikmfgup.website^
 ||xj8j73n17ptlxw5pfp.rest^
 ||xj9gth5i.xyz^
@@ -25382,7 +25447,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xjpffjfgvqyobq.com^
 ||xjpogkwuhjczz.space^
 ||xjroxexpxzdno.site^
-||xjueekpdakm.com^
 ||xjuo8c9412htpcz5xzhxi5ko.rest^
 ||xjuoopnalaycv.site^
 ||xjvotbewtzmql.site^
@@ -25448,7 +25512,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xmjyaievwwwwy.space^
 ||xmkkguegvytsr.website^
 ||xmkpqimwsjj.com^
-||xmlpostback.com^
 ||xmmnbpqmsmtpu.site^
 ||xmmxtkkndpbq.xyz^
 ||xmngnaqprlrwu.online^
@@ -25462,7 +25525,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xnbfvimzkpaua.space^
 ||xnehxptamdjm.com^
 ||xnekugycspqk.com^
-||xnhuvpicehqll.online^
 ||xniyaklqxkech.website^
 ||xnnrmalciencj.website^
 ||xnocffar.com^
@@ -25481,7 +25543,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xobtnfeygzuuei.com^
 ||xocivltwemkxn.site^
 ||xoeqwhxayzsqh.space^
-||xoioaiiryhdti.space^
 ||xojijvavx.com^
 ||xonthvcte.com^
 ||xopssova.com^
@@ -25514,7 +25575,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xpyieyevfyu.com^
 ||xqb9h1q4r4g9xz196.cfd^
 ||xqbggjllktgcx.website^
-||xqbqnmeowz458buui.cfd^
 ||xqctkbci.com^
 ||xqejaoqdglrez.website^
 ||xqfhfuidalhpz.space^
@@ -25577,14 +25637,13 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||xtmhzidqppsit.online^
 ||xtpegcqocrkwv.com^
 ||xtrntitvvtjlbq.com^
+||xtuohnfwia.in^
 ||xtuvodbzcvoff.space^
-||xtvjvibumhgdk.online^
 ||xtyokhrngzgza.online^
 ||xubarcastn.in^
 ||xubrjsixewwues.xyz^
 ||xuc3ggt2oxre762b6nfp2vone91ct4rezef.rest^
 ||xudhsoctwc.com^
-||xudpitdpaa.com^
 ||xuehjpsirhyol.space^
 ||xueobaedyoudcfe.com^
 ||xueohxfouttmn.website^
@@ -25840,7 +25899,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||yfcht7hbzb8zmvrygh5.rest^
 ||yfdghmjkscohg.space^
 ||yfenyeuthgedn.online^
-||yferjgnrqxwuf.space^
 ||yffsygroetogq.online^
 ||yfglcrhmdemev.site^
 ||yfkbdckdvrjvm.space^
@@ -25877,7 +25935,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ygtzipndentuz.online^
 ||ygumseqbggl.com^
 ||ygvxiyraogkfcy.com^
-||yh2rc1etmj74m4uewzhzt6v52r48.rest^
 ||yh3kg1x7gh1bpyhk.rest^
 ||yhdeesojslvt.com^
 ||yhdydfpypxmuzh.com^
@@ -26055,8 +26112,11 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||yqdovkaarqopj.online^
 ||yqfkcckuuk.com^
 ||yqfyjlkgoulwl.space^
+||yqi71w58zyi9hwk3yb6k5.cfd^
+||yqleyafhq.com^
 ||yqmbvxjkhateu.com^
 ||yqmhjrjb.com^
+||yqmsxdldwzrckx.com^
 ||yqndzrpujdskq.space^
 ||yqnlbkzpiazzs.space^
 ||yqoktira.com^
@@ -26146,7 +26206,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||yvswssaxvxhpq.website^
 ||yvvtpgdnlxjhs.site^
 ||yvynnzvpp.com^
-||yvysxocknufvp.online^
 ||yvywmoezamcsk.space^
 ||ywbgytjjqxl.com^
 ||ywcziklrpfnsv.online^
@@ -26175,7 +26234,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||yxfxmdeylp.xyz^
 ||yxgnunugdd.com^
 ||yxhnccomxxyrh.online^
-||yxivvllooqnkdeu.com^
 ||yxjcahfsalnrt.space^
 ||yxjgjclm.com^
 ||yxmywgqsccyul.online^
@@ -26279,7 +26337,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||zcuqiglmi.in^
 ||zcxarfuvraqid.space^
 ||zcxdhoyoncjbv.space^
-||zdauagtg.com^
 ||zdetisemotpvj.site^
 ||zdgdjpisphxmn.site^
 ||zdgkarrubynec.online^
@@ -26333,7 +26390,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||zfiqpjrksym.com^
 ||zfowdwkomxclo.space^
 ||zfwicysjemzklw.com^
-||zfyabxzwy.com^
 ||zgaxadxsycppa.website^
 ||zgbtifcsvpxqx.space^
 ||zgdqoynfvsuv.com^
@@ -26524,8 +26580,8 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||zsjqcvphoansc.com^
 ||zsjuqrntaiqcn.site^
 ||zsleznwqqjcjw.site^
-||zslncjxixefmh.site^
 ||zsnrhqltxmsdp.site^
+||zsnrkdpoxlfzz.space^
 ||zsqsrxnbnnsat.online^
 ||zssrufahneyia.online^
 ||zsuejpybfctjl.website^
@@ -26535,7 +26591,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||ztbgtublbhlyc.website^
 ||ztcbhympqzetq.site^
 ||ztdksgblbc.com^
-||ztdvnkuiudzmn.site^
 ||zteeavqibjsgj.space^
 ||ztfucbpvqtdrs.website^
 ||ztjepkmkzibkm.website^
@@ -26586,7 +26641,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||zwt2qgrhx72e5p2w6qwp.cfd^
 ||zwvbmysbmdkoc.site^
 ||zwvtkjcaaorua.website^
-||zwxmxmakzeymc.site^
 ||zx7pxpj39xrnkxyn8nqxq6r.rest^
 ||zxavziahazmyb.online^
 ||zxb18e6i494jniug52.cfd^
@@ -26616,7 +26670,6 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||zypdunyryonff.online^
 ||zypsnobkgkthp.site^
 ||zyryancassenarefel.cyou^
-||zysjkaffgdzaz.website^
 ||zyvbcstcltidm.online^
 ||zywdoecwoilzj.website^
 ||zyyswnroeevpw.online^
@@ -26888,9 +26941,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||yieldlove.com^$third-party
 ||yieldmo.com^$third-party
 ||zemanta.com^$third-party
-||cdn.ktbch.cloud^
 ||cdn.nuqwe.com^
-||cdn.viowrel.com^
 ||19706903.xyz^
 ||amongstgahboo.com^
 ||bahpartridge.com^
@@ -26939,6 +26990,7 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||blcdog.com^$popup
 ||bobgames-prolister.com^$popup
 ||brisknessdebtordismiss.com^$popup
+||btccasinoexpert.com^$popup
 ||candellume.shop^$popup
 ||cardboardcrispyrover.com^$popup
 ||ceremonioustakeintoaccountcustomer.com^$popup
@@ -26982,29 +27034,38 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||marketdeathly.com^$popup
 ||mnaspm.com^$popup
 ||naiwoalooca.net^$popup
+||nznoxxx.com^$popup
 ||oabaubsutha.com^$popup
+||omg10.com^$popup
 ||onclickperformance.com^$popup
 ||opera.com^*PWNgames$popup
 ||optvz.com^$popup
 ||otoadom.com^$popup
+||partitiveretinstitution.com^$popup
 ||pemsrv.com^$popup
 ||poawooptugroo.com^$popup
 ||polosanitizertrusting.com^$popup
+||pomxd.com^$popup
 ||rdtk.io^$popup
 ||reduau.top^$popup
 ||refpaikgai.top^$popup
 ||refpamjeql.top^$popup
+||relationshipcourseably.com^$popup
 ||revenuenetwork.com^$popup
 ||rm358.com^$popup
 ||rocoads.com^$popup
 ||roots.baby^$popup
 ||rovno.xyz^$popup
+||s.id^$popup
 ||skylindo.com^$popup
 ||slatecharm.co^$popup
+||sowve.com^$popup
+||srvqck27.com^$popup
 ||starsallowyear.com^$popup
 ||stikroltiltoowi.net^$popup
 ||tikva-1.com^$popup
 ||tisaneata.com^$popup
+||tomoll.com^$popup
 ||trck.wargaming.net^$popup
 ||tsyndicate.com^$popup
 ||twinrdsyn.com^$popup
@@ -27102,6 +27163,8 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||increase2-rev.static-cloudflare.workers.dev^
 ||increaserev4.static-cloudflare.workers.dev^
 ||increaserev5.static-cloudflare.workers.dev^
+||increv*.static-cloudflare.workers.dev^
+||increv1.static-cloudflare.workers.dev^
 ||js.rev.iq^
 ||jsdelivr.net/gh/InteractiveAdvertisingBureau/
 ||jsdelivr.net/npm/prebid-
@@ -27174,9 +27237,12 @@ saitama-np.co.jp#@#div[id^="div-gpt-"]
 ||d15kdpgjg3unno.cloudfront.net^
 ||d18t35yyry2k49.cloudfront.net^
 ||d1f05vr3sjsuy7.cloudfront.net^
+||d1owuvqs9tkert.cloudfront.net^
 ||d1ugiptma3cglb.cloudfront.net^
 ||d1z2jf7jlzjs58.cloudfront.net^
 ||d22xmn10vbouk4.cloudfront.net^
+||d2dxy39sqorbhv.cloudfront.net^
+||d2f5h9m0jmnhjh.cloudfront.net^
 ||d2focgxak1cn74.cloudfront.net^
 ||d2j042cj1421wi.cloudfront.net^
 ||d2kk0o3fr7ed01.cloudfront.net^
@@ -27251,6 +27317,7 @@ $third-party,xmlhttprequest,domain=mega4upload.net
 ||b.cdnst.net/javascript/amazon.js$script,domain=speedtest.net
 ||beap.gemini.yahoo.com^
 ||bigwarp.io/js/big.js
+||bing.com/AdsFetch
 ||bordeaux.futurecdn.net^
 ||castoola.tv^*/ads/$domain=sabc-plus.com
 ||cdn.flightconnections.com/js/before_pubfig.js
@@ -27553,6 +27620,7 @@ myinstants.com##.desktop-larger-banner-ad
 datetimego.com##.desktop-only
 oilprice.com##.dianomi_context
 freecodecamp.org##.discourse-adplugin
+businessinsider.com##.dynamic-module
 barrons.com##.e1fy147d2
 vecteezy.com##.eezy-sponsored-results
 whakatakitimes.nz##.elementor-element-97aca2d
@@ -27712,6 +27780,7 @@ skylinewebcams.com##[style="width:100%;text-align:center"]
 smailpro.com##[x-data="buysellads()"]
 scloud.ws,stagatv.com##a.download-button
 winaero.com##a[href="/fix-prf-issues/"]
+zeroupload.com##a[onclick][href^="javascript"]
 reverso.net##app-ads-block
 tribuna.com##div[class$="_ads-container"]
 foodbible.com,gamingbible.com,ladbible.com,sportbible.com,unilad.com##div[class*="margin-Advert"]
@@ -27806,10 +27875,12 @@ noon.com##div[data-qa="plp-product-box"]:has(div[class^="STag-module-"])
 producthunt.com##div[data-test] > section:has(a[href^="/r/ad/"])
 producthunt.com##div[data-test] > section:has(img[src="/i/299a62819c7092e196f7fc2c331cc11ef4f93a0f32c3b3069c4fd974cda0cb4c"])
 producthunt.com##div[data-test]:not([data-test^="homepage-section-"]) > section[data-test^="post-item-"]
+lowes.com##div[data-testid="product-carousel"]:has(.sponsored-tag)
 jigsawplanet.com##div[id]:has(> [style="height: 100%; display: flex; flex-direction: row; overflow: hidden; gap: 0.2em; margin: 0px auto; justify-content: center;"])
 flipkart.com##div[style="max-width:1200px;width:100%"]:has(source[srcset^="https://rukminim1.flixcart.com/fk-p-flap/1570/520/image/eb2033142a4a8eab.png"])
 fdiintelligence.com#?#.undefined:has-text(Advertisement)
 unsplash.com##figure[itemprop="image"]:has(div[class*="sponsorLabelContainer-"])
+findagrave.com#?#.rounded-pill:has-text(Remove Ads)
 engadget.com##li.min-h-\[88px\]:has(> [data-test="streamad"])
 streeteasy.com##li[class^="ListingCardsList_listCardWrapper_"]:has(a[href$="?infeed=1"])
 cars.com##li[data-phx-id]:has([phx-value-source="sponsored_trending_search_card"])
@@ -35171,7 +35242,7 @@ animepahe.ru,kwik.si##+js(aopr, PopAds)
 *$frame,redirect-rule=noopframe,domain=taazaalerts.com|mahabhulekh712.in|awolio.com|cgbsesupport.com|eternalcbse.in|foreverhealth.in|gplinks.co|jobwaala.in|kaisekareblog.com|sugargliderfaqs.com|picassoappk.com|geniuseducares.com|netflixvip.in|raidersixgameapk.com|sarkariexam365.com|digitalfacts4u.com|odiasongsworld.com|instander.me|trancebazar.com|odishadjs.link|pagalmp3status.com|flyshayari.com|powerrangergames.com|kishanganjnews.in|tipdoot.in
 taazaalerts.com,mahabhulekh712.in,anumin.com,awolio.com,cgbsesupport.com,eternalcbse.in,foreverhealth.in,jobwaala.in,kaisekareblog.com,sugargliderfaqs.com,picassoappk.com,geniuseducares.com,netflixvip.in,raidersixgameapk.com,sarkariexam365.com,digitalfacts4u.com,odiasongsworld.com,instander.me,trancebazar.com,odishadjs.link,pagalmp3status.com,flyshayari.com,powerrangergames.com,kishanganjnews.in,tipdoot.in##+js(aopw, AdBDetected)
 taazaalerts.com,mahabhulekh712.in,anumin.com,awolio.com,cgbsesupport.com,eternalcbse.in,foreverhealth.in,jobwaala.in,kaisekareblog.com,sugargliderfaqs.com,picassoappk.com,geniuseducares.com,netflixvip.in,raidersixgameapk.com,sarkariexam365.com,digitalfacts4u.com,odiasongsworld.com,instander.me,trancebazar.com,odishadjs.link,pagalmp3status.com,flyshayari.com,powerrangergames.com,kishanganjnews.in,tipdoot.in##+js(set, count, 0)
-vidzp.com,overclock3d.net,ninguno.net,starlightnet.work,socalgas.com,cloudhostingz.com,hertz.com.au,hertz.co.nz,crookshanksacademy.com,casthill.net,sterham.net,a.asd.homes,adobe.com,aipebel.com,anumin.com,apollographql.com,app.gather.town,archive.fo,archive.is,archive.li,archive.md,archive.ph,archive.today,archive.vn,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion,asiaflix.net,awolio.com,ba.com,barnesandnoble.com,bigbtc.win,bnc.ca,boxingstream.me,britishairways.com,btdig.com,buffsports.io,butter.us,calcolastipendionetto.it,capitalone.com,capitaloneoffers.com,capitaloneshopping.com,cardekhoindia.in,careersides.com,cgbsesupport.com,cimanow.cc,cinedesi.in,claroty.com,cnn.com,coinbase.com,coingax.com,colamanga.com,comohoy.com,cosme-de.com,cracksports.me,cricstream.me,crunchyroll.com,cyberlynews.com,dainandinvarta.com,dardmukti.in,dartsstreams.com,digitalfacts4u.com,discoveryplus.com,disneyplus.com,divnil.com,dofusports.xyz,e-gujarati.in,embedstreams.top,eternalcbse.in,everywherepaycard.com,facebook.com,fbstreams.co,flostreams.xyz,flyshayari.com,fordeal.com,foreverhealth.in,formula1.com,freepdfcomic.com,furecipes.com,ganohr.net,geforcenow.com,geniuseducares.com,godlikeproductions.com,golfstreams.me,gommonauti.it,google.com,goto.com,gotowebinar.com,gyansanatan.in,hackerrank.com,hbomax.com,healthrangerstore.com,help.sakarnewz.com,heybeng.com,hotstar.com,html-code-generator.com,hulu.com,hyundaipowerequipment.co.uk,iisfvirtual.in,infinityskull.com,instander.me,instantconsult.com.au,islamqahanafi.com,itrum.org,itv.com,japscan.lol,jiocinema.com,jiosaavnproapk.download,jobeducareer.com,jobpataka.com,jobwaala.in,kaisekareblog.com,kalista-beauty.com,kefayde.com,kick.com,kinemastermods.in,kishanganjnews.in,krunker.io,leak.sx,lego.com,lens-labo.net,linkjust.com,lobste.rs,lolesports.com,m.gamehub.cam,mahabhulekh712.in,mahitimanch.in,marcus.com,megacloud.tv,messitv.org,mirrativ.com,mmastreams.me,motogpstream.me,mukhyamantriyojana.in,musenboya.com,myaccountaccess.com,myarchive.in,mygamesreward.com,nayisahara.com,nbabox.co,ndlifestylego.com,netflixvip.in,newshuta.in,newzwala.co.in,nflbox.me,nhlbox.me,nothing.tech,odiasongsworld.com,odishadjs.link,olympicstreams.co,omuzaani.me,openai.com,opendroneid.org,optus.com.au,pagalmp3status.com,pandora.com,paramountplus.com,peacocktv.com,pethouse.com.au,picassoappk.com,pistonheads.com,playl2.net,playoffsstream.com,podcastle.ai,pornleaks.in,potter-world.com,powerrangergames.com,primevideo.com,procinehub.com,projectcircuitbreaker.com,psychologytoday.com,pythonstudy.xyz,qatarstreams.me,raidersixgameapk.com,rapid-cloud.co,reliabletv.me,revadvert.com,roll20.net,rooter.gg,rugbystreams.me,rulingnews.com,saramart.com,sarkariexam365.com,shaahid4u.net,shahidd4u.net,shahiid4u.net,shaw.ca,soccerlive.app,socceronline.me,soccerworldcup.me,sonyliv.com,sportsgames.today,sportsloverz.xyz,sportsnet.ca,sportsurge.net,spotify.com,ss64.com,starxinvestor.com,stgeorge.com.au,stream-livehd.online,stream.sportsspeed.site,streameast.app,streameast.ch,streameast.ec,streameast.fi,streameast.ms,streameast.ph,streameast.ps,streameast.sg,streameast.sk,stripe.com,sugargliderfaqs.com,support-lock.com,taazaalerts.com,techexpress360.in,techishant.in,tejtime24.com,telefullhd.com,telehealth.epic.com,tennisonline.me,test-website-b.pages.dev,thera-link.com,thestreameast.ru,thestreameast.st,thestreameast.su,thevouz.in,thunder-io.com,tmxskyspace.in,trancebazar.com,trezor.io,tv247365.link,tvableon.me,tvrium.click,tvsportslive.fr,twitch.tv,uploadbank.com,uploadmall.com,upscseva.in,userlytics.com,vanguard.com,velodata.app,vipbox.lc,viprow.nu,vipstand.pm,vizzy.io,volcom.ca,wavewalt.me,webdexscans.com,whatsapp.com,wheel.health,wheelofpets.com,wikifilmia.com,worldsports.me,xfinity.com,youtube.com,zealy.io,zee5.com,zoom.us,zoro.to##+js(brave-fix)
+shaheidd4u.net,vidzp.com,overclock3d.net,ninguno.net,starlightnet.work,socalgas.com,cloudhostingz.com,hertz.com.au,hertz.co.nz,crookshanksacademy.com,casthill.net,sterham.net,a.asd.homes,adobe.com,aipebel.com,anumin.com,apollographql.com,app.gather.town,archive.fo,archive.is,archive.li,archive.md,archive.ph,archive.today,archive.vn,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion,asiaflix.net,awolio.com,ba.com,barnesandnoble.com,bigbtc.win,bnc.ca,boxingstream.me,britishairways.com,btdig.com,buffsports.io,butter.us,calcolastipendionetto.it,capitalone.com,capitaloneoffers.com,capitaloneshopping.com,cardekhoindia.in,careersides.com,cgbsesupport.com,cimanow.cc,cinedesi.in,claroty.com,cnn.com,coinbase.com,coingax.com,colamanga.com,comohoy.com,cosme-de.com,cracksports.me,cricstream.me,crunchyroll.com,cyberlynews.com,dainandinvarta.com,dardmukti.in,dartsstreams.com,digitalfacts4u.com,discoveryplus.com,disneyplus.com,divnil.com,dofusports.xyz,e-gujarati.in,embedstreams.top,eternalcbse.in,everywherepaycard.com,facebook.com,fbstreams.co,flostreams.xyz,flyshayari.com,fordeal.com,foreverhealth.in,formula1.com,freepdfcomic.com,furecipes.com,ganohr.net,geforcenow.com,geniuseducares.com,godlikeproductions.com,golfstreams.me,gommonauti.it,google.com,goto.com,gotowebinar.com,gyansanatan.in,hackerrank.com,hbomax.com,healthrangerstore.com,help.sakarnewz.com,heybeng.com,hotstar.com,html-code-generator.com,hulu.com,hyundaipowerequipment.co.uk,iisfvirtual.in,infinityskull.com,instander.me,instantconsult.com.au,islamqahanafi.com,itrum.org,itv.com,japscan.lol,jiocinema.com,jiosaavnproapk.download,jobeducareer.com,jobpataka.com,jobwaala.in,kaisekareblog.com,kalista-beauty.com,kefayde.com,kick.com,kinemastermods.in,kishanganjnews.in,krunker.io,leak.sx,lego.com,lens-labo.net,linkjust.com,lobste.rs,lolesports.com,m.gamehub.cam,mahabhulekh712.in,mahitimanch.in,marcus.com,megacloud.tv,messitv.org,mirrativ.com,mmastreams.me,motogpstream.me,mukhyamantriyojana.in,musenboya.com,myaccountaccess.com,myarchive.in,mygamesreward.com,nayisahara.com,nbabox.co,ndlifestylego.com,netflixvip.in,newshuta.in,newzwala.co.in,nflbox.me,nhlbox.me,nothing.tech,odiasongsworld.com,odishadjs.link,olympicstreams.co,omuzaani.me,openai.com,opendroneid.org,optus.com.au,pagalmp3status.com,pandora.com,paramountplus.com,peacocktv.com,pethouse.com.au,picassoappk.com,pistonheads.com,playl2.net,playoffsstream.com,podcastle.ai,pornleaks.in,potter-world.com,powerrangergames.com,primevideo.com,procinehub.com,projectcircuitbreaker.com,psychologytoday.com,pythonstudy.xyz,qatarstreams.me,raidersixgameapk.com,rapid-cloud.co,reliabletv.me,revadvert.com,roll20.net,rooter.gg,rugbystreams.me,rulingnews.com,saramart.com,sarkariexam365.com,shaahid4u.net,shahidd4u.net,shahiid4u.net,shaw.ca,soccerlive.app,socceronline.me,soccerworldcup.me,sonyliv.com,sportsgames.today,sportsloverz.xyz,sportsnet.ca,sportsurge.net,spotify.com,ss64.com,starxinvestor.com,stgeorge.com.au,stream-livehd.online,stream.sportsspeed.site,streameast.app,streameast.ch,streameast.ec,streameast.fi,streameast.ms,streameast.ph,streameast.ps,streameast.sg,streameast.sk,stripe.com,sugargliderfaqs.com,support-lock.com,taazaalerts.com,techexpress360.in,techishant.in,tejtime24.com,telefullhd.com,telehealth.epic.com,tennisonline.me,test-website-b.pages.dev,thera-link.com,thestreameast.ru,thestreameast.st,thestreameast.su,thevouz.in,thunder-io.com,tmxskyspace.in,trancebazar.com,trezor.io,tv247365.link,tvableon.me,tvrium.click,tvsportslive.fr,twitch.tv,uploadbank.com,uploadmall.com,upscseva.in,userlytics.com,vanguard.com,velodata.app,vipbox.lc,viprow.nu,vipstand.pm,vizzy.io,volcom.ca,wavewalt.me,webdexscans.com,whatsapp.com,wheel.health,wheelofpets.com,wikifilmia.com,worldsports.me,xfinity.com,youtube.com,zealy.io,zee5.com,zoom.us,zoro.to##+js(brave-fix)
 cnnespanol.cnn.com##+js(rmnt, script, location.replace)
 marcus.com,hackerrank.com##+js(aopr, navigator.brave)
 marcus.com,geforcenow.com##+js(set, navigator.brave, undefined)
@@ -35296,7 +35367,7 @@ streamwish.to##+js(set-constant, xRds, true)
 streamwish.to##+js(set-constant, cRAds, false)
 streamwish.to##+js(abort-on-property-read, __Y)
 /^https?:\/\/[a-z]{8,15}\.(com|xyz)\/$/##+js(no-fetch-if, method:HEAD)
-fasel-hd.cam,multimovies.fyi,398fitus.com,123cine.to,hianime.ws,anikai.to,cartelive.club,clerkopera.net,flixbaba.mov,mapple.uk,456movie.nl,111movies.net,vidfast.pro,vidsrc.icu,bloodycount.net,ksohls.ru,gopst.link,antenasport.top,piratecat.online,nhlmonster.com,stellarthread.com,foxtrend.net,streams.center,volokit.xyz,sportsurge.net,streameast.ga,sticky-sports.cfd,dlhd.link,stokourbeti.online,xstreameast.com,streamion.city,insidesport.info,istreameast.is,embedhd.org,embedsports.top,istreameast.is,french-stream.one,ak.sv,mycima.vin,a.asd.homes,m.reviewrate.net,g9r6.com,vidfast.pro,daddyhd.com,sterham.net,1hd.to,4anime.gg,9anime.org.lv,9animetv.to,9kmovies.ren,abysscdn.com,albkinema.in,alions.pro,alphatron.tv,anime4i.vip,animeflv.net,animeflv.zip,animeidhentai.com,animeland.tv,animeonline.ninja,animepahe.ru,animesaturn.cx,animesuge.skin,animexin.dev,aniwatchtv.to,aniyae.net,anroll.net,antenasport.org,asuracomic.net,autoembed.cc,awish.pro,berlagu.com,bigwarp.art,bingewatch.to,boxingstream.me,brjogostorrent.net,buffsports.io,bunniescdn.online,chapmanganato.to,chapmanganelo.com,cineb.rs,cineby.app,cineby.ru,cinego.tv,clickndownload.cfd,cloudnestra.com,cool-etv.net,cracksports.me,cricwatch.io,cuevana.is,daddylivestream.shop,daddylivestream.xyz,dartsstreams.com,databasegdriveplayer.xyz,demonicscans.org,dlhd.dad,donkey.to,dood.wf,doood.site,dopebox.to,dovkembed.pw,drakecomic.org,edgedeliverynetwork.com,embasic.pro,embed.su,embednow.top,embedpk.net,emturbovid.com,epicplayplay.cfd,expertszone.icu,fastflix.top,fbstreams.co,filecrypt.co,filelions.top,filemoon.nl,filepress.live,fitforcedaily.com,flamecomics.xyz,flixhq.to,flixhub.co,flowermanga.net,fmovies.co,freemovieswatch.cc,freesportshq.shop,french-stream.one,fstream365.com,fullmoviesw.com,gdtot.dad,gogoanime3.cc,gogoanimes.fi,goku.sx,golfstreams.me,gomstreams.info,gomstreams.online,hanatyury.online,harimanga.me,hdtoday.cc,hdtodaytv.tv,hexload.com,hianime.mn,hianime.nz,hianime.to,hianime.tv,hianimez.to,himovies.sx,hitomi.la,hoca6.com,hollymoviehd.cc,hurawatchz.to,hydrahd.me,idlixku.com,igg-games.com,jxoxkplay.xyz,kaa.mx,kaido.to,kaliscan.io,kickass-anime.ru,kimcartoon.si,klz9.com,krussdomi.com,leercapitulo.co,likemanga.in,likemanga.ink,listeamed.net,liveruparojs.icu,livesteching.com,livestreamtvv.site,lotusgamehd.xyz,lovecdn.ru,lulustream.com,luluvdo.com,mangabat.com,mangabats.com,mangatv.net,mangaworld.ac,mangaworldadult.net,manhastro.com,manhuatop.org,mappletv.uk,mcloud.vvid30c.site,megacloud.blog,megacloud.tube,megacloud.tv,megaup.net,metrolagu.cam,mgeko.cc,minoplres.xyz,miruro.tv,mixdrop.my,mixdrop.sb,mlbbox.me,mmastreams.me,mobilejsr.lol,motogpstream.me,movi.pk,movies2watch.tv,movies4u.bid,movies4us.co,moviesapi.club,moviesapi.to,moviesflix8.com,movieshdwatch.to,moviesjoytv.to,mp4upload.com,multimovies.cloud,myflixer.gs,myflixerz.to,nbabox.co,nbabox.me,nelomanga.net,netmovies.to,netuplayer.top,new.sussytoons.site,o2tvseries4.com,olympuscomic.com,omegascans.org,ouo.press,pahe.ink,pandamovies.org,pepepeyo.xyz,play.frembed.lol,player.videasy.net,poophd.vip,popcornfilmz.com,popcorntimeonline.xyz,prmovies.land,putlocker.vip,qatarstreams.me,rawkuma.net,rawxz.to,readcomiconline.li,reliabletv.me,rereyano.ru,rogmovies.fun,rojadirecta1.net,rugbystreams.me,s3embtaku.pro,saladnut.net,sandratableother.com,sebnsc.dad,seeflix.to,series24.cc,seriesonline.ac,sflix.to,sflix2.to,shahidd4u.net,shazysport.xyz,shinden.pl,shrinkme.click,snapinsta.monster,snowmtl.ru,soap2day.day,socceronline.me,soccerworldcup.me,solarmovieru.com,special-streams.site,sportsstreams.shop,stream.nflbox.me,streamblasters.pm,streamcenter.xyz,streamingcommunity.ooo,streamingnow.mov,streamingunity.to,streamruby.com,streamup.ws,streamwish.top,strmup.to,surfg.org,swatchseries.is,tennisonline.me,thegraveplayer.win,themezon.net,moviesflix8.com,toongod.org,topembed.pw,tpi.li,triipplestreams.xyz,tripplestream.shop,ucast.pro,uqload.net,uqloads.xyz,vegamovies.st,vegamovies4u.beauty,videograbber.cc,vidmoly.to,vidsrc.cc,vidsrc.net,vidsrc.xyz,vidstreaming.xyz,vidtube.one,vipleague.im,vipstand.pm,vixcloud.co,watch-movies.com.pk,watchadsontape.com,watchomovies.guru,watchseries8.to,whisperingauroras.comos.xyz,wiflix-pro.site,wordcount.im,worldsports.st,xrivonet.info,yakkachannels.icu,yellswsa.site,yesmovies.vc,yomovies.taxi,yomucomics.com,yuppow.com,ziggo-gratis.com,zizicoi.online,zoechip.cc,zonatmo.com,zorroplay.xyz,zpjid.com##+js(no-fetch-if, method:HEAD)
+vidara.to,fasel-hd.cam,multimovies.fyi,398fitus.com,123cine.to,hianime.ws,anikai.to,cartelive.club,clerkopera.net,flixbaba.mov,mapple.uk,456movie.nl,111movies.net,vidfast.pro,vidsrc.icu,bloodycount.net,ksohls.ru,gopst.link,antenasport.top,piratecat.online,nhlmonster.com,stellarthread.com,foxtrend.net,streams.center,volokit.xyz,sportsurge.net,streameast.ga,sticky-sports.cfd,dlhd.link,stokourbeti.online,xstreameast.com,streamion.city,insidesport.info,istreameast.is,embedhd.org,embedsports.top,istreameast.is,french-stream.one,ak.sv,mycima.vin,a.asd.homes,m.reviewrate.net,g9r6.com,vidfast.pro,daddyhd.com,sterham.net,1hd.to,4anime.gg,9anime.org.lv,9animetv.to,9kmovies.ren,abysscdn.com,albkinema.in,alions.pro,alphatron.tv,anime4i.vip,animeflv.net,animeflv.zip,animeidhentai.com,animeland.tv,animeonline.ninja,animepahe.ru,animesaturn.cx,animesuge.skin,animexin.dev,aniwatchtv.to,aniyae.net,anroll.net,antenasport.org,asuracomic.net,autoembed.cc,awish.pro,berlagu.com,bigwarp.art,bingewatch.to,boxingstream.me,brjogostorrent.net,buffsports.io,bunniescdn.online,chapmanganato.to,chapmanganelo.com,cineb.rs,cineby.app,cineby.ru,cinego.tv,clickndownload.cfd,cloudnestra.com,cool-etv.net,cracksports.me,cricwatch.io,cuevana.is,daddylivestream.shop,daddylivestream.xyz,dartsstreams.com,databasegdriveplayer.xyz,demonicscans.org,dlhd.dad,donkey.to,dood.wf,doood.site,dopebox.to,dovkembed.pw,drakecomic.org,edgedeliverynetwork.com,embasic.pro,embed.su,embednow.top,embedpk.net,emturbovid.com,epicplayplay.cfd,expertszone.icu,fastflix.top,fbstreams.co,filecrypt.co,filelions.top,filemoon.nl,filepress.live,fitforcedaily.com,flamecomics.xyz,flixhq.to,flixhub.co,flowermanga.net,fmovies.co,freemovieswatch.cc,freesportshq.shop,french-stream.one,fstream365.com,fullmoviesw.com,gdtot.dad,gogoanime3.cc,gogoanimes.fi,goku.sx,golfstreams.me,gomstreams.info,gomstreams.online,hanatyury.online,harimanga.me,hdtoday.cc,hdtodaytv.tv,hexload.com,hianime.mn,hianime.nz,hianime.to,hianime.tv,hianimez.to,himovies.sx,hitomi.la,hoca6.com,hollymoviehd.cc,hurawatchz.to,hydrahd.me,idlixku.com,igg-games.com,jxoxkplay.xyz,kaa.mx,kaido.to,kaliscan.io,kickass-anime.ru,kimcartoon.si,klz9.com,krussdomi.com,leercapitulo.co,likemanga.in,likemanga.ink,listeamed.net,liveruparojs.icu,livesteching.com,livestreamtvv.site,lotusgamehd.xyz,lovecdn.ru,lulustream.com,luluvdo.com,mangabat.com,mangabats.com,mangatv.net,mangaworld.ac,mangaworldadult.net,manhastro.com,manhuatop.org,mappletv.uk,mcloud.vvid30c.site,megacloud.blog,megacloud.tube,megacloud.tv,megaup.net,metrolagu.cam,mgeko.cc,minoplres.xyz,miruro.tv,mixdrop.my,mixdrop.sb,mlbbox.me,mmastreams.me,mobilejsr.lol,motogpstream.me,movi.pk,movies2watch.tv,movies4u.bid,movies4us.co,moviesapi.club,moviesapi.to,moviesflix8.com,movieshdwatch.to,moviesjoytv.to,mp4upload.com,multimovies.cloud,myflixer.gs,myflixerz.to,nbabox.co,nbabox.me,nelomanga.net,netmovies.to,netuplayer.top,new.sussytoons.site,o2tvseries4.com,olympuscomic.com,omegascans.org,ouo.press,pahe.ink,pandamovies.org,pepepeyo.xyz,play.frembed.lol,player.videasy.net,poophd.vip,popcornfilmz.com,popcorntimeonline.xyz,prmovies.land,putlocker.vip,qatarstreams.me,rawkuma.net,rawxz.to,readcomiconline.li,reliabletv.me,rereyano.ru,rogmovies.fun,rojadirecta1.net,rugbystreams.me,s3embtaku.pro,saladnut.net,sandratableother.com,sebnsc.dad,seeflix.to,series24.cc,seriesonline.ac,sflix.to,sflix2.to,shahidd4u.net,shazysport.xyz,shinden.pl,shrinkme.click,snapinsta.monster,snowmtl.ru,soap2day.day,socceronline.me,soccerworldcup.me,solarmovieru.com,special-streams.site,sportsstreams.shop,stream.nflbox.me,streamblasters.pm,streamcenter.xyz,streamingcommunity.ooo,streamingnow.mov,streamingunity.to,streamruby.com,streamup.ws,streamwish.top,strmup.to,surfg.org,swatchseries.is,tennisonline.me,thegraveplayer.win,themezon.net,moviesflix8.com,toongod.org,topembed.pw,tpi.li,triipplestreams.xyz,tripplestream.shop,ucast.pro,uqload.net,uqloads.xyz,vegamovies.st,vegamovies4u.beauty,videograbber.cc,vidmoly.to,vidsrc.cc,vidsrc.net,vidsrc.xyz,vidstreaming.xyz,vidtube.one,vipleague.im,vipstand.pm,vixcloud.co,watch-movies.com.pk,watchadsontape.com,watchomovies.guru,watchseries8.to,whisperingauroras.comos.xyz,wiflix-pro.site,wordcount.im,worldsports.st,xrivonet.info,yakkachannels.icu,yellswsa.site,yesmovies.vc,yomovies.taxi,yomucomics.com,yuppow.com,ziggo-gratis.com,zizicoi.online,zoechip.cc,zonatmo.com,zorroplay.xyz,zpjid.com##+js(no-fetch-if, method:HEAD)
 fasel-hd.cam,multimovies.fyi,398fitus.com,flixbaba.mov,mapple.uk,456movie.nl,111movies.net,vidfast.pro,vidsrc.icu,bloodycount.net,ksohls.ru,sebnsc.dad,gopst.link,antenasport.top,foxtrend.net,streams.center,volokit.xyz,sportsurge.net,streameast.ga,sticky-sports.cfd,dlhd.link,stokourbeti.online,xstreameast.com,streamion.city,insidesport.info,embedhd.org,embedsports.top,istreameast.is,ak.sv,mycima.vin,a.asd.homes,m.reviewrate.net,g9r6.com,daddyhd.com,cracksports.me,nhlbox.me,golfstreams.me,cricwatch.io,mmastreams.me,vipleague.im,sterham.net,vipstand.pm,nflbox.me,buffsports.io,yakkachannels.icu,7fractals.icu,antenasport.org,dlhd.dad,epicplayplay.cfd,tripplestream.shop,universal-lover-zz.icu,yellswsa.site,rollingwheel.shop,jxoxkplay.xyz,zorroplay.xyz,lovecdn.ru,topembed.pw,thegraveplayer.win,kondoplay.cfd,wikisport.wiki,justembeds.cfd,daddyliveplayer.shop##+js(no-xhr-if, method:HEAD)
 fasel-hd.*,multimovies.*,123cine.*,anikai.*,flixbaba.*,mycima.*,dlhd.*,myflixerz.*,french-stream.*,cineby.*,zoechip.*,hianimez.*,tv247365.*,filepress.*,gdtot.*,vidtube.*,clickndownload.*,mixdrop.*,moviesapi.*,anime4i.*,missav.*,mixdrop.*,netmovies.*,swatchseries.*,dramacool.*,animeidhentai.*,drakecomic.*,miruro.*,prmovies.*,soap2day.*,chapmanganelo.*,hdtodaytv.*,yomucomics.*,alphatron.*,flamecomics.*,fmovies.*,harimanga.*,animesaturn.*,series24.*,toonstream.*,vidstreaming.*,donkey.to,hollymoviehd.cc,watchseries8.*,animexin.*,leercapitulo.*,goku.*,solarmovieru.*,mangatv.*,movies4u.*,1hd.*,movi.*,streamingcommunity.*,flowermanga.*,animepahe.*,new.sussytoons.*,omegascans.*,4anime.*,animeflix.*,streamblasters.*,watchomovies.*,likemanga.*,popcorntimeonline.*,seriesonline.*,rogmovies.*,yomovies.*,9kmovies.*,hitomi.*,toongod.*,hydrahd.*,mangafire.*,theflixertv.*,hurawatch.*,gomovies.*,chapmanganato.*,sporttuna.*,sportsonline.*,thedaddy.*,filemoon.*,dlhd.*,couchtuner.*,movies4us.*,fmoviesz.*,gogoanime2.*,gogoanime.*,gogoanimes.*,animeunity.*,fullmoviesw.*,123moviesfree.*,1233movies.*,123movies-series.*,putlocker.*,moviesjoytv.*,alphatron.*,dood.*,doood.*,hdtodayz.*,hianime.*,cinego.*,hdtoday.*,gogoanime3.*,freemovieswatch.*,fmovies.*,f2movies.*,flixhq.*,rugbystreams.*,vegamovies.*,aniwatchtv.*,aniwave.*,9anime.*,9animetv.*,animeonline.*,antennasports.*,readcomiconline.*,myflixer.*,Toonstream.*,fullassia.*,yts.*,rojadirectas.*,movies4ufree.*,tennisonline.*,cricstream.*,socceronline.*##+js(nowoif)
 fasel-hd.*,multimovies.*,123cine.*,anikai.*,flixbaba.*,sportsurge.*,mycima.*,dlhd.*,myflixerz.*,french-stream.*,cineby.*,zoechip.*,hianimez.*,tv247365.*,filepress.*,gdtot.*,vidtube.*,clickndownload.*,mixdrop.*,moviesapi.*,anime4i.*,mixdrop.*,netmovies.*,swatchseries.*,dramacool.*,animeidhentai.*,drakecomic.*,kimcartoon.*,miruro.*,prmovies.*,soap2day.*,chapmanganelo.*,hdtodaytv.*,yomucomics.*,alphatron.*,flamecomics.*,fmovies.*,harimanga.*,animesaturn.*,series24.*,vidstreaming.*,hollymoviehd.*,watchseries8.*,animexin.*,leercapitulo.*,goku.*,solarmovieru.*,mangatv.*,movies4u.*,1hd.*,movi.*,streamingcommunity.*,flowermanga.*,animepahe.*,new.sussytoons.*,omegascans.*,4anime.*,animeflix.*,streamblasters.*,watchomovies.*,likemanga.*,popcorntimeonline.*,vidmoly.*,seriesonline.*,rogmovies.*,yomovies.*,9kmovies.*,hitomi.*,toongod.*,hydrahd.*,vipbox.*,mangafire.*,theflixertv.*,hurawatch.*,gomovies.*,chapmanganato.*,sporttuna.*,sportsonline.*,thedaddy.*,filemoon.*,dlhd.*,couchtuner.*,movies4us.*,fmoviesz.*,gogoanime2.*,gogoanime.*,gogoanimes.*,animeunity.*,fullmoviesw.*,123moviesfree.*,1233movies.*,123movies-series.*,putlocker.*,moviesjoytv.*,alphatron.*,dood.*,doood.*,hdtodayz.*,hianime.*,cinego.*,hdtoday.*,gogoanime3.*,freemovieswatch.*,fmovies.*,f2movies.*,flixhq.*,rugbystreams.*,vegamovies.*,aniwatchtv.*,aniwave.*,animeflv.*,9anime.*,9animetv.*,animeonline.*,antennasports.*,readcomiconline.*,myflixer.*,toonstream.*,fullassia.*,yts.*,rojadirectas.*,fbstreams.*,movies4ufree.*,tennisonline.*,cricstream.*,socceronline.*##+js(no-fetch-if, method:HEAD)
@@ -35378,7 +35449,7 @@ livejournal.com##+js(aopr, webpackJsonpSSPjs)
 ||itmedia.co.jp/spv/images/career_en_300x250.jpg
 ||itmedia.co.jp/spv/images/career_en_320x50.jpg
 
-! --- fanboy-cookiemonster.txt (24284 rules) ---
+! --- fanboy-cookiemonster.txt (24286 rules) ---
 -consent-banner-
 -consent-banner.
 -cookie-banner-$script
@@ -52452,6 +52523,7 @@ play.google.com###gb > div[style*="background-color"]
 careers.lilly.com,dell.com,itnews.com.au,jibtv.com,vandyke.com###gdpr-alert
 aza.org###gdpr-bar
 sharefaith.com###gdpr-bot
+nanotalegame.com###gdpr-consent-form
 almaasdiamonds.com,cfu-airport.gr,clustrmaps.com,cobau.com.br,croatiaexcursions.com,estrelladecastilla.es,gofoexpress.com,jsi-airport.gr,kgs-airport.gr,leube.cz,map.purpleair.com,portal.amity.copiri.com,rho-airport.gr,skg-airport.gr,tapas.io,teamspeak.com,zth-airport.gr###gdpr-cookie-message
 quizwiz.pro###gdpr-cookie-msg
 usg.edu###gdpr-cookie-notification
@@ -55412,7 +55484,7 @@ carsharingi.ru,garant.ru,jenner.com,kwebler.com,legiscope.com,nmsu.edu,tech-amer
 fnx.co.il,sprintersports.com,xxlnutrition.com##.bottom-0.left-0
 educationendowmentfoundation.org.uk,rshb.ru##.bottom-0.right-0
 onassis.org##.bottom-0.relative
-1password.com,70mai.com,99app.com,aberrant.io,aci.dev,actievandedag.nl,adspower.com,adspower.net,aksam.com.tr,androidide.com,animalpolitico.com,anjunadeep.com,aplikuj.pl,app.daily.dev,archive.ics.uci.edu,auf1.info,auf1.tv,auroracloud.dev,ausbildung-in-der-it.de,autodiiler.ee,avislease.sk,back4app.com,ballonvaartcentrumvanmanen.nl,bbcrewind.co.uk,bcfc.com,bellevue-hamburg.de,bestsellers.hu,betway.com.gh,bigcommerce.com,biggerthanallofus.com,biljardihuolto.fi,blickers.com,blog.appsignal.com,blomus.com,bookiply.com,boords.com,britishrenewables.com,bsbfashion.com,bulldogjob.com,bulldogjob.pl,canal1.com.co,canaries.co.uk,chipcitycookies.com,clickz.com,clipfarm.watch,clubmed.co.nz,clubmed.co.uk,clubmed.com.ar,clubmed.com.mx,clubmed.ru,clubmed.se,clubmed.us,codeanlabs.com,codeclimate.com,combokit.net,confi.com.vc,count.co,crosshairhub.com,cryptomaan.eu,curator.io,curiositystream.com,czepeku.com,delio.com.pl,dhakapost.com,discords.com,ditjesendatjes.nl,divvydiary.com,doctorweb.id,drank.nl,drweb-av.de,drweb-av.es,drweb-av.it,drweb-av.pl,drweb.by,drweb.cn,drweb.co.jp,drweb.com,drweb.fr,drweb.kz,drweb.ru,drweb.uz,elo7.com.br,eluniverso.com,elvah.de,emergency.wa.gov.au,emiratespost.ae,epic.com,epochtimes.se,espres.so,everifin.com,eversafe.id.telus.com,evolutionary-insights.com,faceiqlabs.com,fakings.com,fanzo.com,femometer.com,fetch.ai,financestrategists.com,findaport.com,first-law.com,flakehub.com,fluxaiimagegenerator.com,focus-entmt.com,food52.com,form3.tech,fvd.nl,garbanzo.io,gauss.hr,glideapps.com,goafricaonline.com,goflink.com,greenmatch.co.uk,ground.news,haproxy.com,hendy.co.uk,hrt.hr,icecat.biz,ideo.com,idprotect.trendmicro.com,inewi.pl,institute.global,institutoaocp.org.br,interdiscount.ch,invezz.com,iotworldtoday.com,ipon.hu,issf-sports.org,jdoodle.com,jimejinak.cz,jobicon.pracuj.pl,jobyaviation.com,keeb-finder.com,kyero.com,licenseglobal.com,liverpool.com.mx,lorde.co.nz,lounges.tv,madlifes.com,majorfood.com,matkakeisari.fi,mclarenstore.com,medimagazin.com.tr,mein-apothekenmanager.de,meyka.com,mintegral.com,mitec.net,mod.gov.ua,moises.ai,mynrma.com.au,nanobananas.ai,nationalprivacytest.org,nbg.gov.ge,nedicom.ru,newschecker.in,nigged.com,nis2vision.eu,nitronationworldtour.com,npistanbul.com,ntv.com.tr,numerologist.com,oberlo.com,oko.press,oldspitalfieldsmarket.com,onsk.no,opening-hours.today,parqet.com,penger.no,pepeporn.com,peppagame.com,perille.fi,podsqueeze.com,pornermates.com,prettylittlething.com,pricempire.com,procrosshairs.com,productpine.com,prographers.com,propello.bike,publicsquare.com,puma.com,pump.fun,qogita.com,qr.nspk.ru,qwertee.com,qwickbirr.com,ranzijn.nl,raport.pse.pl,redcross.ee,regiojet.at,regiojet.com,regiojet.de,regiojet.hu,regiojet.pl,regiojet.sk,regiojet.ua,regiojethotels.at,regiojethotels.com,remarkable.com,runmercury.com,selfstock.com,shakuro.com,shopflavcity.com,sistic.com.sg,sitecore.com,skinsrestorer.net,skyfi.com,skynet.ru,sleep.me,slimsaas.com,smartthingsfind.samsung.com,snoop.app,soniox.com,splav.ru,spletnik.ru,spotlighttheatres.com,ssrchat.com,standwithcrypto.org,store.ligonier.org,streamawards.de,stylesandpartners.com,surnamedb.com,synapse.patsnap.com,tekninen.fi,teltonika-gps.com,teltonika-networks.com,temporal.io,thehappytoolbox.com,threatlandscape.io,tierschutzverein-muenchen.de,tina.io,tinybird.co,trixit.cz,truthsocial.com,tweetyai.com,twitchcon.com,uc.pt,unikriviera.com.br,unox.com,vantilburgonline.nl,vegetology.com,veryfront.com,wizzair.com,wyylde.com,yunexpress.com,zubi.swiss##.bottom-0.fixed
+1password.com,70mai.com,99app.com,aberrant.io,aci.dev,actievandedag.nl,adspower.com,adspower.net,aksam.com.tr,androidide.com,animalpolitico.com,anjunadeep.com,aplikuj.pl,app.daily.dev,archestra.ai,archive.ics.uci.edu,auf1.info,auf1.tv,auroracloud.dev,ausbildung-in-der-it.de,autodiiler.ee,avislease.sk,back4app.com,ballonvaartcentrumvanmanen.nl,bbcrewind.co.uk,bcfc.com,bellevue-hamburg.de,bestsellers.hu,betway.com.gh,bigcommerce.com,biggerthanallofus.com,biljardihuolto.fi,blickers.com,blog.appsignal.com,blomus.com,bookiply.com,boords.com,britishrenewables.com,bsbfashion.com,bulldogjob.com,bulldogjob.pl,canal1.com.co,canaries.co.uk,chipcitycookies.com,clickz.com,clipfarm.watch,clubmed.co.nz,clubmed.co.uk,clubmed.com.ar,clubmed.com.mx,clubmed.ru,clubmed.se,clubmed.us,codeanlabs.com,codeclimate.com,combokit.net,confi.com.vc,count.co,crosshairhub.com,cryptomaan.eu,curator.io,curiositystream.com,czepeku.com,delio.com.pl,dhakapost.com,discords.com,ditjesendatjes.nl,divvydiary.com,doctorweb.id,drank.nl,drweb-av.de,drweb-av.es,drweb-av.it,drweb-av.pl,drweb.by,drweb.cn,drweb.co.jp,drweb.com,drweb.fr,drweb.kz,drweb.ru,drweb.uz,elo7.com.br,eluniverso.com,elvah.de,emergency.wa.gov.au,emiratespost.ae,epic.com,epochtimes.se,espres.so,everifin.com,eversafe.id.telus.com,evolutionary-insights.com,faceiqlabs.com,fakings.com,fanzo.com,femometer.com,fetch.ai,financestrategists.com,findaport.com,first-law.com,flakehub.com,fluxaiimagegenerator.com,focus-entmt.com,food52.com,form3.tech,fvd.nl,garbanzo.io,gauss.hr,glideapps.com,goafricaonline.com,goflink.com,greenmatch.co.uk,ground.news,haproxy.com,hendy.co.uk,hrt.hr,icecat.biz,ideo.com,idprotect.trendmicro.com,inewi.pl,institute.global,institutoaocp.org.br,interdiscount.ch,invezz.com,iotworldtoday.com,ipon.hu,issf-sports.org,jdoodle.com,jimejinak.cz,jobicon.pracuj.pl,jobyaviation.com,keeb-finder.com,kyero.com,licenseglobal.com,liverpool.com.mx,lorde.co.nz,lounges.tv,madlifes.com,majorfood.com,matkakeisari.fi,mclarenstore.com,medimagazin.com.tr,mein-apothekenmanager.de,meyka.com,mintegral.com,mitec.net,mod.gov.ua,moises.ai,mynrma.com.au,nanobananas.ai,nationalprivacytest.org,nbg.gov.ge,nedicom.ru,newschecker.in,nigged.com,nis2vision.eu,nitronationworldtour.com,npistanbul.com,ntv.com.tr,numerologist.com,oberlo.com,oko.press,oldspitalfieldsmarket.com,onsk.no,opening-hours.today,parqet.com,penger.no,pepeporn.com,peppagame.com,perille.fi,podsqueeze.com,pornermates.com,prettylittlething.com,pricempire.com,procrosshairs.com,productpine.com,prographers.com,propello.bike,publicsquare.com,puma.com,pump.fun,qogita.com,qr.nspk.ru,qwertee.com,qwickbirr.com,ranzijn.nl,raport.pse.pl,redcross.ee,regiojet.at,regiojet.com,regiojet.de,regiojet.hu,regiojet.pl,regiojet.sk,regiojet.ua,regiojethotels.at,regiojethotels.com,remarkable.com,runmercury.com,selfstock.com,shakuro.com,shopflavcity.com,sistic.com.sg,sitecore.com,skinsrestorer.net,skyfi.com,skynet.ru,sleep.me,slimsaas.com,smartthingsfind.samsung.com,snoop.app,soniox.com,splav.ru,spletnik.ru,spotlighttheatres.com,ssrchat.com,standwithcrypto.org,store.ligonier.org,streamawards.de,stylesandpartners.com,surnamedb.com,synapse.patsnap.com,tekninen.fi,teltonika-gps.com,teltonika-networks.com,temporal.io,thehappytoolbox.com,threatlandscape.io,tierschutzverein-muenchen.de,tina.io,tinybird.co,trixit.cz,truthsocial.com,tweetyai.com,twitchcon.com,uc.pt,unikriviera.com.br,unox.com,vantilburgonline.nl,vegetology.com,veryfront.com,wizzair.com,wyylde.com,yunexpress.com,zubi.swiss##.bottom-0.fixed
 argyle.com,artma-zaproszenia.pl,claude.ai,deno.com,getmerlin.in,olecams.com,producthunt.com,vello.fi,videochaterotico.com,youverify.co##.bottom-2
 airlinkflightschool.com,apmoller.com,app.houseofcb.com,ilmanifesto.it,lofigirl.com,momentosdealegriace.com.br,predecessorgame.com,wimotic.fr##.bottom-6
 app.gnosispay.com,cinobo.com,jdslabs.com,lukso.network,lumoar.com,mymarket.ge,platform.stability.ai,risazatvorchestvo.com,skyline-emu.one,vloot.io,weather.com##.bottom-5
@@ -58242,6 +58314,7 @@ finambank.ru###cookie-consent-popup
 ria-m.tv###cookie-msg
 companies.rbc.ru###cookie-popup
 violity.com###cookieConsentPopup
+zia.aero###cookieDisclaimer
 aeroflot.ru###cookieInfo
 abok.ru###cookieNotice
 itweek.ru###cookie_notification
@@ -59664,7 +59737,7 @@ concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.b
 concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.be,sap.com,tmz.com,tripit.com#@#.truste_box_overlay
 concursolutions.com,forbes.com,formula1.com,fortune.com,proximus.be,proximustv.be,sap.com,tmz.com,tripit.com#@#.truste_overlay:not(body):not(html)
 
-! --- filter.txt (2445 rules) ---
+! --- filter.txt (2446 rules) ---
 $removeparam=x-clickref
 $removeparam=x-source
 $removeparam=x-a-medium
@@ -60286,6 +60359,7 @@ $removeparam=s-id,domain=item.rakuten.co.jp|www.rakuten.co.jp
 ||akakce.com/r/?c=$removeparam=u
 ||domclick.ru^$removeparam=from
 ||buydomains.com/lander/*?domain=$removeparam
+||duckduckgo.com^$removeparam=origin
 ||duckduckgo.com/y.js$removeparam=ad_provider
 ||duckduckgo.com/y.js$removeparam=ad_domain
 ||duckduckgo.com/y.js$removeparam=click_metadata
