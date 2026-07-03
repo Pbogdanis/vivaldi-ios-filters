@@ -1,18 +1,18 @@
 [Adblock Plus 2.0]
 ! Title: Vivaldi iOS Combined (Auto-Updated)
-! Version: 20260702
+! Version: 20260703
 ! Expires: 1 days
-! Global Rules: 56171
+! Global Rules: 56394
 ! Source Breakdown:
-! • https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt: 4074 unique rules
-! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 18064 unique rules
+! • https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt: 4070 unique rules
+! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 18290 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt: 3989 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt: 2406 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt: 653 unique rules
-! • https://www.fanboy.co.nz/fanboy-cookiemonster.txt: 24500 unique rules
+! • https://www.fanboy.co.nz/fanboy-cookiemonster.txt: 24501 unique rules
 ! • https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt: 2485 unique rules
 
-! --- easyprivacy-minified.txt (4074 rules) ---
+! --- easyprivacy-minified.txt (4070 rules) ---
 [Adblock Plus 2.0]
 &action=js_stats
 &ev=PageView&
@@ -2051,7 +2051,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||convertkit.com^*/visit
 ||count-server.sharethis.com^
 ||count.xxxssk.com^
-||counter-growthbook.minute-ly.com^
 ||counter.powr.io^
 ||counter.rambler.ru^
 ||counter.tldw.me^
@@ -2217,7 +2216,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||intake-analytics.wikimedia.org^
 ||invitejs.trustpilot.com^
 ||io.narrative.io/?$third-party
-||ip-check-perf.radar.cloudflare.com^$third-party
 ||iqzone.com^$third-party
 ||iraiser.eu/analytics.js
 ||iterable.com/analytics.js
@@ -2262,7 +2260,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||lit.connatix.com^
 ||live-tv.top/js/k.min.js
 ||lma.npaw.com^
-||lnk.to/~/tr/visit
 ||log.cookieyes.com^
 ||log.go.com^
 ||log.olark.com^
@@ -2460,7 +2457,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||sitescdn.net/ytag/ytag.min.js
 ||slackb.com^
 ||smarthint.co/Scripts/i/SmartHintTrack.Full.min.js
-||smarturl.it/~/tr/visit
 ||solutions.invocacdn.com^
 ||soundestlink.com/rest/forms/v2/track/
 ||sp.tinymce.com^
@@ -2809,6 +2805,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||pixel.barion.com^
 ||api.tblcontent.com*/log/
 ||tvid.in/log/
+||gopay.sh/collect
 ||mediagroupnetwork.com/js/ua.js
 ||oval.id/tracker/
 ||un.kumparan.com^
@@ -3424,7 +3421,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||skyscanner.*/slipstream/view
 ||slack.com/beacon/
 ||slack.com/clog/track/
-||slc.cbssports.com/events
 ||smetrics.inova.org^
 ||snapchat.com/web/metrics
 ||soundcloud.com^$ping
@@ -4088,7 +4084,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||prm.ua/en/events/
 ||assets.adobedtm.com/extensions/*/AppMeasurement$script,domain=medscape.com|skinny.co.nz
 
-! --- easylist-minified.txt (18064 rules) ---
+! --- easylist-minified.txt (18290 rules) ---
 -ad-manager/$~stylesheet
 -ads/assets/$script,domain=~web-ads.org
 -banner-ads-$~script
@@ -4736,6 +4732,7 @@ flightaware.com#@#.sticky-footer-ad
 ||11112door.net^
 ||1111runtime.com^
 ||11df2f7d8d.com^
+||11policy.net^
 ||12112336.pix-cdn.org^
 ||1214interface.com^
 ||121basic.com^
@@ -4838,6 +4835,7 @@ flightaware.com#@#.sticky-footer-ad
 ||25solutions.net^
 ||264b0a99f6.com^
 ||266o97nhwfw3nt.rest^
+||26x31rj18tx2im43.rest^
 ||27pgck2eqzc7it.cfd^
 ||27qhxh4wmcrhcf.cfd^
 ||28oojtf2zwlt4qqec7ifwx5i.cfd^
@@ -4888,6 +4886,7 @@ flightaware.com#@#.sticky-footer-ad
 ||300statistics.net^
 ||30304federation.net^
 ||303bus.net^
+||303reliable.net^
 ||30c774812d.com^
 ||30inwarehouses.com^
 ||30statistics.net^
@@ -4943,6 +4942,7 @@ flightaware.com#@#.sticky-footer-ad
 ||3jev49bjrmnzrff55yyntr1j7lqfgy.cfd^
 ||3l26385fiv11kvyo.cfd^
 ||3lift.com^
+||3lp5jbwp4ep5oh9x.cfd^
 ||3n2hf8kzowuur654mb.cfd^
 ||3pkf5m0gd.com^
 ||3r2r2i76k4cyjkw3.rest^
@@ -4990,6 +4990,7 @@ flightaware.com#@#.sticky-footer-ad
 ||47txg6pezhmbzeyb8k4gze.rest^
 ||480executors.net^
 ||492plugins.com^
+||492tracker.net^
 ||49a15e8b76.com^
 ||49cwxbn4ujhzw94927bpxno749.cfd^
 ||49toactivate.net^
@@ -5048,6 +5049,7 @@ flightaware.com#@#.sticky-footer-ad
 ||56voxor.net^
 ||570dad652f.com^
 ||5761b6af55.com^
+||57703b28d4.com^
 ||57l3yuuwpxq1qfp.rest^
 ||588376732a.com^
 ||59clouou2n4jmm8xc.cfd^
@@ -5084,6 +5086,7 @@ flightaware.com#@#.sticky-footer-ad
 ||6000brixtix.com^
 ||6000function.com^
 ||6000nexeo.com^
+||600fiber.net^
 ||600network.com^
 ||600rexola.net^
 ||6060instruments.net^
@@ -5106,7 +5109,6 @@ flightaware.com#@#.sticky-footer-ad
 ||650927ca6a.com^
 ||650frame.net^
 ||650inold.com^
-||65fcb6f3fe.com^
 ||666innovations.net^
 ||66f4mej92etu96.cfd^
 ||66pxwy2r6q5v5qe.rest^
@@ -5121,7 +5123,6 @@ flightaware.com#@#.sticky-footer-ad
 ||69t84ihi9fli3rbjzx8.cfd^
 ||69tovalid.com^
 ||6a2596e48d.com^
-||6a80d8df82.com^
 ||6b7hrpu64xtun2ci.cfd^
 ||6boj1v8nbf6c2feuw9giitbehme1qeemf52up.cfd^
 ||6brq8rmyti21mmz55177e3zb6gxp48m4.rest^
@@ -5137,6 +5138,7 @@ flightaware.com#@#.sticky-footer-ad
 ||6jim4b7h79r3cyhz1.cfd^
 ||6ko3tqx71gt7z6ujf88rwtv9iu.rest^
 ||6mbzgf698fmquukl1.rest^
+||6n61c39cvx4qq9n.rest^
 ||6peiophcz6ccyfrw1tir9z.cfd^
 ||6qif8ezfblui19ly77i3.cfd^
 ||6r16lfvzzpo36k2in59y34z847r65huvb.cfd^
@@ -5198,7 +5200,6 @@ flightaware.com#@#.sticky-footer-ad
 ||7c11c184e6.com^
 ||7d6e366acd.com^
 ||7d7eab9082.com^
-||7eit28evocng5gjuu.rest^
 ||7f89d90c6f.com^
 ||7ff9dd031a.com^
 ||7fhginl5cekq8ykr5hc9bn26xwb.cfd^
@@ -5221,6 +5222,7 @@ flightaware.com#@#.sticky-footer-ad
 ||7wl4ewbiey6py5.cfd^
 ||7wqnxuznr1zm15.cfd^
 ||7xylvi8v9up5pbxbj.cfd^
+||7ycmoi6cn24n9knolu.rest^
 ||8000inpulse.com^
 ||8080statistics.com^
 ||811b27ab9f.com^
@@ -5230,6 +5232,7 @@ flightaware.com#@#.sticky-footer-ad
 ||82llnp8rqitlfxkyl4yil4o7383gp.cfd^
 ||82query.com^
 ||83cbda598a.com^
+||84067f6a2e.com^
 ||840withnetworks.net^
 ||84d28a94b3.com^
 ||84e867f7b4.com^
@@ -5258,7 +5261,6 @@ flightaware.com#@#.sticky-footer-ad
 ||89xj3fti5tmeh7ch7.rest^
 ||8a4f3c8d93.com^
 ||8aef6f3c8b.com^
-||8afb98c0d8.com^
 ||8b24cvw5njxzeebk.rest^
 ||8b81ffcb90.com^
 ||8bcfwi4tqnrg81exx1kwk.cfd^
@@ -5302,6 +5304,7 @@ flightaware.com#@#.sticky-footer-ad
 ||94hexon.com^
 ||9595hn6i7uijpqu2grkb6kxg84.cfd^
 ||95instances.net^
+||95ziegv587wohx9rzj.cfd^
 ||96hexer.net^
 ||970vantage.net^
 ||97inservices.net^
@@ -5662,6 +5665,7 @@ flightaware.com#@#.sticky-footer-ad
 ||afzehmazj.com^
 ||agaenteitor.com^
 ||agalmaexhedra.qpon^
+||agapaicrittur.shop^
 ||agapeicflexoragreing.qpon^
 ||agavestreflefalse.qpon^
 ||agavewrasses.cfd^
@@ -5732,7 +5736,6 @@ flightaware.com#@#.sticky-footer-ad
 ||ainenhdfsjbuf.online^
 ||aipxlvrgwbafb.space^
 ||airbaglinenysorghe.cyou^
-||airconditionstrodefist.com^
 ||airingsstirrup.qpon^
 ||airlingyperite.qpon^
 ||airportburrahpieta.cfd^
@@ -5817,6 +5820,7 @@ flightaware.com#@#.sticky-footer-ad
 ||aliveswim.pro^
 ||aljamasensum.qpon^
 ||aljjihonjs.in^
+||allaysnab.shop^
 ||alldatenow.com^
 ||allenepopedomunshod.cfd^
 ||allicebooky.shop^
@@ -5827,6 +5831,7 @@ flightaware.com#@#.sticky-footer-ad
 ||allowoozoid.cfd^
 ||allowseshehasn.com^
 ||allputuphesa.com^
+||allytextlore.qpon^
 ||almiqueleeful.qpon^
 ||aloofmigrans.cfd^
 ||alooseprotepulvil.cfd^
@@ -5947,6 +5952,7 @@ flightaware.com#@#.sticky-footer-ad
 ||anterinaugure.cyou^
 ||antiadblocksystems.com^
 ||antiarkinnor.shop^
+||antiliavex.shop^
 ||antiopekerite.cfd^
 ||antresboing.qpon^
 ||anym8.com^
@@ -6005,6 +6011,7 @@ flightaware.com#@#.sticky-footer-ad
 ||apychzfrkjvyr.website^
 ||aqauikfd.com^
 ||aqazqbqdueeob.website^
+||aqefcinrbylid.website^
 ||aqeognplbpirm.space^
 ||aqfxtibru.in^
 ||aqgjgynufhoqp.site^
@@ -6047,6 +6054,7 @@ flightaware.com#@#.sticky-footer-ad
 ||areekpinta.cfd^
 ||arespissy.cfd^
 ||aresttuxes.cyou^
+||argalasaminscurship.qpon^
 ||argalsagua.cyou^
 ||argansnubbin.qpon^
 ||arganspaonetc.qpon^
@@ -6130,6 +6138,7 @@ flightaware.com#@#.sticky-footer-ad
 ||assisspoof.shop^
 ||assistantinsignificantthings.com^
 ||assuagegeoside.qpon^
+||assurgeamictusnoyau.cfd^
 ||assyriaupbuild.com^
 ||astablehazanut.cyou^
 ||astartlycea.qpon^
@@ -6208,6 +6217,7 @@ flightaware.com#@#.sticky-footer-ad
 ||auikeilhosl.com^
 ||aukgiecbioahe.website^
 ||aukharier.cyou^
+||aukygkusnaqxf.online^
 ||aumeryoilcakeswag.cyou^
 ||aunterberainpyr.qpon^
 ||aupsuwvfyqnpf.online^
@@ -6304,6 +6314,7 @@ flightaware.com#@#.sticky-footer-ad
 ||azothatollspace.qpon^
 ||azotousdeports.shop^
 ||azoximematapi.com^
+||azoximemurrah.cyou^
 ||azwvcioqzjtu.in^
 ||azznwuc.com^
 ||azzulqlecucki.space^
@@ -6367,6 +6378,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bailbezetta.cfd^
 ||baithoph.net^
 ||bajreepiferoduets.qpon^
+||bajreesunrose.qpon^
 ||bajrieyebrowsenusi.cfd^
 ||balanceaquarid.qpon^
 ||balancedsuppercreed.com^
@@ -6428,6 +6440,7 @@ flightaware.com#@#.sticky-footer-ad
 ||barnaclerefutation.com^
 ||barneyselfin.cfd^
 ||barrelaffloofatrophy.qpon^
+||barrier2plugins.net^
 ||bartcons.com^
 ||barundilissomegreing.qpon^
 ||baryesagrecamisia.cfd^
@@ -6488,6 +6501,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bdrrtgdhzqbxk.online^
 ||bdsshofarmalls.cyou^
 ||bdwyvivktgwh.com^
+||beachesdixit.cfd^
 ||beafuelerlazary.qpon^
 ||beamedvedro.qpon^
 ||beamyfogas.qpon^
@@ -6509,6 +6523,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bedamnssoaks.cyou^
 ||bedashawned.qpon^
 ||bedashliegiersubset.cyou^
+||beddedsinuose.qpon^
 ||bedenphonos.qpon^
 ||bedevilribber.qpon^
 ||bedlamsdilucid.cyou^
@@ -6626,6 +6641,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bezilsglint.cyou^
 ||bezzopricerretent.qpon^
 ||bf-ad.net^
+||bfakujblprwjf.site^
 ||bfepzyczofwtf.space^
 ||bfhspobdvajttb.com^
 ||bfirpqcbyfd.com^
@@ -6723,11 +6739,11 @@ flightaware.com#@#.sticky-footer-ad
 ||bitonalachuas.shop^
 ||bitseroralize.cyou^
 ||bitter-inevitable.pro^
-||bitterstupid.com^
 ||bitumedsimiansdigenic.cyou^
 ||bixqmhdbjn.com^
 ||bixzcnzczobsg.space^
 ||biyrseggdidiy.site^
+||bizcwuhi.in^
 ||bj1igpq93k1yfw145yk7j3.cfd^
 ||bj6535jz.xyz^
 ||bjatrfmfcxdsne.com^
@@ -6741,6 +6757,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bjwftenausnmb.space^
 ||bkezgkhgnqcpb.online^
 ||bkhhmyjvmfgxg.online^
+||bkhwrqrnmdmzg.site^
 ||bkibtbefjo.com^
 ||bkjkuukaobqcjjd.com^
 ||bkjswgpfkdwia.site^
@@ -6748,6 +6765,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bkmmafrixfake.website^
 ||bkuntihdhjwpd.site^
 ||bkwhgjgfhsnbu.com^
+||blackedlegated.qpon^
 ||blameff.cyou^
 ||blankbreakfast.pro^
 ||blankitspoonedbirds.cfd^
@@ -6757,6 +6775,7 @@ flightaware.com#@#.sticky-footer-ad
 ||blastedopiane.qpon^
 ||blastedscatt.cyou^
 ||blatchhypogyn.qpon^
+||blatgeums.cfd^
 ||blaykwakari.qpon^
 ||blazedwaypostrecoat.qpon^
 ||blcdog.com^
@@ -6812,6 +6831,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bmjmtewumbiqx.website^
 ||bmnuledgpd.com^
 ||bmnwmfvjmltrl.space^
+||bmpyeypnzuqmv.online^
 ||bmqgwfz99quzoli.rest^
 ||bmtekvannmeho.website^
 ||bmzvbwcmaueqo.space^
@@ -6819,6 +6839,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bngdin.com^
 ||bngprm.com^
 ||bngtrak.com^
+||bnkofmbmxc.com^
 ||bntpbhktnkjrn.site^
 ||boarderoomph.cyou^
 ||boarishshreddy.qpon^
@@ -6851,6 +6872,7 @@ flightaware.com#@#.sticky-footer-ad
 ||boguingmowra.cfd^
 ||bohawnhating.qpon^
 ||boipbshmjoatp.site^
+||bokarddockets.qpon^
 ||bokoawreak.cfd^
 ||boldestedifierfijian.cfd^
 ||bolidedecided.cyou^
@@ -6918,6 +6940,7 @@ flightaware.com#@#.sticky-footer-ad
 ||bothairport.com^
 ||botkdllphxivv.space^
 ||bottierrangleneavil.cfd^
+||bouffecubans.cfd^
 ||bougarspassquilly.qpon^
 ||bougeebayingmealy.qpon^
 ||boundenlapon.cyou^
@@ -6963,6 +6986,7 @@ flightaware.com#@#.sticky-footer-ad
 ||braveryriftraining.com^
 ||brawexstill.shop^
 ||brawledsqueege.cfd^
+||brayersxematitlike.qpon^
 ||brazennibung.cfd^
 ||brazensstaling.cfd^
 ||brditqozcvagl.site^
@@ -6994,6 +7018,7 @@ flightaware.com#@#.sticky-footer-ad
 ||brightcoremind.com^
 ||brightestmarriagegrape.com^
 ||brightsbrayers.cfd^
+||brimsesugarer.cyou^
 ||bringalzolaist.qpon^
 ||brinkmarko.com^
 ||brinnyyeta.qpon^
@@ -7024,10 +7049,10 @@ flightaware.com#@#.sticky-footer-ad
 ||brotherinlawbarbedspend.com^
 ||broughtkittock.qpon^
 ||browdcelaeno.cfd^
-||brown-cry.com^
 ||browsiprod.com^
 ||brqxtydteljet.website^
 ||brrzwrilblppk.space^
+||brsnnzgydzkpv.site^
 ||brtwzoygdqohq.website^
 ||brucinabloke.cfd^
 ||bruisesacopic.shop^
@@ -7039,6 +7064,7 @@ flightaware.com#@#.sticky-footer-ad
 ||brulotspinkish.cyou^
 ||brushertuftier.shop^
 ||brushetvivace.shop^
+||brutrequit.cfd^
 ||brxjgvho5kkjuu.cfd^
 ||brxsapfmentyy.online^
 ||brynzadolley.cyou^
@@ -7060,6 +7086,7 @@ flightaware.com#@#.sticky-footer-ad
 ||btndobbxqqfgl.space^
 ||btofoayyqedfg.site^
 ||btpopoogrnqvj.site^
+||btrijioqoidwi.site^
 ||bttrack.com^
 ||btuebtacnueoy.website^
 ||btuhaboubfiches.cyou^
@@ -7127,6 +7154,7 @@ flightaware.com#@#.sticky-footer-ad
 ||burscommon.cyou^
 ||burspiak.in^
 ||burstedchowk.cfd^
+||burstythroddymellows.qpon^
 ||busherstabelbail.qpon^
 ||bushetamidins.shop^
 ||bushfulabiston.cfd^
@@ -7141,6 +7169,7 @@ flightaware.com#@#.sticky-footer-ad
 ||butwehaveino.com^
 ||butylplexor.cfd^
 ||butyrinbrest.qpon^
+||buyablerefalls.cfd^
 ||buzvophsxtvn.com^
 ||buzzesdimin.cfd^
 ||buzzsawcodecs.cyou^
@@ -7186,6 +7215,7 @@ flightaware.com#@#.sticky-footer-ad
 ||byeepodgiercunonia.qpon^
 ||byehd3.life^
 ||byeipdfctomc.com^
+||byganedash.cyou^
 ||bygoingskeezix.cfd^
 ||bygoneudderpension.com^
 ||bykamfod.com^
@@ -7288,6 +7318,7 @@ flightaware.com#@#.sticky-footer-ad
 ||camaligsnuckkreng.cyou^
 ||camaypsid.qpon^
 ||cambiabilesmoses.cfd^
+||cambiamonacid.qpon^
 ||camelusnightly.qpon^
 ||cameracebids.cyou^
 ||cameraeuntruth.shop^
@@ -7316,6 +7347,7 @@ flightaware.com#@#.sticky-footer-ad
 ||capkinaculeus.cfd^
 ||capkkfuiticpo.space^
 ||capletsbenote.qpon^
+||capletsyird.cfd^
 ||caplingfashesdzerin.cyou^
 ||caplockcestas.cfd^
 ||caplvexdhgvbz.website^
@@ -7393,6 +7425,7 @@ flightaware.com#@#.sticky-footer-ad
 ||caudalenfonce.cyou^
 ||caufdorminsanglo.qpon^
 ||caulkersyria.shop^
+||caumpavings.qpon^
 ||cauralesolvedduroc.cfd^
 ||causersoldan.cyou^
 ||cautelspritty.cyou^
@@ -7402,6 +7435,7 @@ flightaware.com#@#.sticky-footer-ad
 ||cavederasionantired.cfd^
 ||cavortbelling.cyou^
 ||cavortsunmake.qpon^
+||cavuskirver.shop^
 ||cawnygelosefenagle.cfd^
 ||cayucotomand.cyou^
 ||caziqueregald.cfd^
@@ -7414,6 +7448,7 @@ flightaware.com#@#.sticky-footer-ad
 ||cbogxhsvaqfxd.website^
 ||cbvyghlu.com^
 ||cbzjerbxjdiph.online^
+||ccbfyfuuyyetx.online^
 ||ccflxer9b5tg2q9x.rest^
 ||ccgbernpkbwid.com^
 ||cchvgvgnqxrjr.space^
@@ -7429,6 +7464,7 @@ flightaware.com#@#.sticky-footer-ad
 ||cdahuceceqiqt.space^
 ||cddeisjcimyni.space^
 ||cdhzzqqmnmpqf.website^
+||cdimgbpvoricw.online^
 ||cdn.house^
 ||cdn.optmn.cloud^
 ||cdn4ads.com^
@@ -7450,10 +7486,10 @@ flightaware.com#@#.sticky-footer-ad
 ||cedarswinston.shop^
 ||cedensmedusalphulwa.cfd^
 ||cedisetagre.cyou^
+||cedrenemopane.qpon^
 ||ceidjaq.life^
 ||cejjfojaxkpecd.com^
 ||celebsdongon.cfd^
-||cellfancied.com^
 ||cemiocw.com^
 ||cenont.xyz^
 ||censesbefogsennett.qpon^
@@ -7533,6 +7569,7 @@ flightaware.com#@#.sticky-footer-ad
 ||chasmedabature.shop^
 ||chastebrussel.com^
 ||chattahheists.cfd^
+||chazytypicon.qpon^
 ||cheapendeaness.cyou^
 ||cheapiefoisty.cfd^
 ||cheaplyhumiliatedhunt.com^
@@ -7630,6 +7667,7 @@ flightaware.com#@#.sticky-footer-ad
 ||citatorundeafheft.cfd^
 ||cithersdogman.cyou^
 ||citralschancrecensing.qpon^
+||citrictituli.qpon^
 ||citrousamex.cyou^
 ||civitebacile.cfd^
 ||civorydryopepardo.cfd^
@@ -7859,6 +7897,7 @@ flightaware.com#@#.sticky-footer-ad
 ||considerableinsanityaside.com^
 ||consortcyclist.cfd^
 ||constellationexclusion.com^
+||consulsdealate.cyou^
 ||consulting2quartz.com^
 ||consumeririssalary.com^
 ||consyeyemark.shop^
@@ -7881,7 +7920,6 @@ flightaware.com#@#.sticky-footer-ad
 ||coolishrocked.com^
 ||coolserving.com^
 ||coolsmurexidagouti.qpon^
-||coontieprimmed.cfd^
 ||cooperydiptych.cyou^
 ||coosdtzwworiu.space^
 ||coosync.com^
@@ -7900,7 +7938,6 @@ flightaware.com#@#.sticky-footer-ad
 ||core.dimatter.ai^
 ||coreadness.com^
 ||coredsemeion.cyou^
-||coresfaecal.qpon^
 ||corftreedzostera.qpon^
 ||coriinbonelet.shop^
 ||corkdeclarationfourteenth.com^
@@ -7914,7 +7951,6 @@ flightaware.com#@#.sticky-footer-ad
 ||corporateeveningsyawn.com^
 ||corpspatrol.cfd^
 ||corpulentperjury.com^
-||corramba.lol^
 ||correalakmitecomenic.cyou^
 ||correctdialperch.com^
 ||correctdilutetrophy.com^
@@ -7932,6 +7968,7 @@ flightaware.com#@#.sticky-footer-ad
 ||cosherspocosen.shop^
 ||cosinchukor.qpon^
 ||cothambaumetoroid.cyou^
+||coticealophasmuffs.qpon^
 ||cottaeinglesaforold.qpon^
 ||cotylarhatrackbowlder.cfd^
 ||cougarsblaflum.shop^
@@ -8098,7 +8135,6 @@ flightaware.com#@#.sticky-footer-ad
 ||cupulesgothics.cfd^
 ||curablymuncher.cyou^
 ||curacescalper.cyou^
-||curacoababyish.cyou^
 ||curatnestful.com^
 ||curessuccub.cfd^
 ||curiaradiazole.cfd^
@@ -8139,6 +8175,7 @@ flightaware.com#@#.sticky-footer-ad
 ||cvxsbbysnnyxq.space^
 ||cvzbchlxyuzzd.site^
 ||cwonjakwxipnq.online^
+||cwoolsmcagis.in^
 ||cwqtqpxudxicq.space^
 ||cxbugvdccwybp.site^
 ||cxcjuhbxaysnj.site^
@@ -8216,6 +8253,7 @@ flightaware.com#@#.sticky-footer-ad
 ||daimyostenchy.cfd^
 ||dainchakharwarhonda.qpon^
 ||dairyakasa.cyou^
+||daisiedveritecabda.cfd^
 ||dakhinifraela.cfd^
 ||dakoityramilie.cfd^
 ||dakotasinseamaskers.cyou^
@@ -8283,8 +8321,10 @@ flightaware.com#@#.sticky-footer-ad
 ||ddhwkjvctuxpl.space^
 ||ddoqtrdsglql.com^
 ||ddynlqwtkjlyg.website^
+||ddytwtumsiopf.space^
 ||deafentabs.qpon^
 ||deafestbordure.cyou^
+||deairedhehe.shop^
 ||dealerskaolins.qpon^
 ||dearerslarthfanes.cfd^
 ||dearestaccess.pro^
@@ -8311,6 +8351,7 @@ flightaware.com#@#.sticky-footer-ad
 ||deepcloudfield.com^
 ||deerflybeefier.cfd^
 ||defactoloupedbathing.cyou^
+||defatwhalers.cfd^
 ||defectsslatishquasher.qpon^
 ||defeisediked.cfd^
 ||defendsepawn.cyou^
@@ -8348,6 +8389,7 @@ flightaware.com#@#.sticky-footer-ad
 ||demand.supply^$script
 ||demandingoverdriveunthread.com^
 ||demarkpoonce.cyou^
+||demelebianchi.shop^
 ||demihagpareja.qpon^
 ||demimancackles.cyou^
 ||demimanexseclingers.cfd^
@@ -8394,6 +8436,7 @@ flightaware.com#@#.sticky-footer-ad
 ||despisekirkmen.cfd^
 ||desposeatheistaccused.qpon^
 ||detachmentcancelsuspicion.com^
+||detailedguitar.pro^
 ||detdredskin.cyou^
 ||determinedrepentancetelephone.com^
 ||detikpcprolans.cyou^
@@ -8586,6 +8629,7 @@ flightaware.com#@#.sticky-footer-ad
 ||dmarchebeclap.cfd^
 ||dmdxzdhu.com^
 ||dmhmxfsaf.com^
+||dmqalkgfdpeca.space^
 ||dmuwytkriecke.com^
 ||dmwbspizchjlu.website^
 ||dnaiwexdkemhp.website^
@@ -8614,7 +8658,6 @@ flightaware.com#@#.sticky-footer-ad
 ||dohxgyjobgzfb.website^
 ||doiqopihbxatd.online^
 ||dolapdarmbldn.site^
-||doledbasalts.qpon^
 ||dolitecommo.cyou^
 ||dollarcarbohydratesunrise.com^
 ||dolleycamata.qpon^
@@ -8933,6 +8976,7 @@ flightaware.com#@#.sticky-footer-ad
 ||duckiesnotcheraramids.cfd^
 ||duckieswonner.qpon^
 ||ducosignory.cyou^
+||ductsstourybyrnies.cfd^
 ||duddydismals.cyou^
 ||dudgeonideo.com^
 ||dudleymerer.qpon^
@@ -9035,6 +9079,7 @@ flightaware.com#@#.sticky-footer-ad
 ||e2j6r5onm4vbohv.cfd^
 ||e311c9ae61.com^
 ||e3n7jpuwo57nqv.cfd^
+||e427d04a02.com^
 ||e443007367.com^
 ||e5726f832b.com^
 ||e5zklj5ynjjcpt8.rest^
@@ -9102,6 +9147,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ecyklqrkcz.com^
 ||ecypazzlxorfg.online^
 ||edckqbigcgcyl.online^
+||edexpvvr.com^
 ||edginggrommet.cyou^
 ||edisonjellaba.qpon^
 ||editingsolionbeebee.qpon^
@@ -9126,8 +9172,10 @@ flightaware.com#@#.sticky-footer-ad
 ||eelameultklv.com^
 ||eelfpsgnicy.com^
 ||eelpotcarices.cyou^
+||eelxrrsnormoc.space^
 ||eenlezhjqlrcl.website^
 ||eepchzcjafwje.online^
+||eeqrfnqtnlcqi.space^
 ||eerfumerel.com^
 ||eevhqgeudnqeg.space^
 ||ef5787f742.com^
@@ -9140,6 +9188,7 @@ flightaware.com#@#.sticky-footer-ad
 ||effectscouncilman.com^
 ||effendiswonksubfief.qpon^
 ||efficientorbit.co^
+||efforcedandie.shop^
 ||efkycmuil.com^
 ||efoafzdcgnaxm.space^
 ||efryqqbee.com^
@@ -9177,6 +9226,8 @@ flightaware.com#@#.sticky-footer-ad
 ||eivtciyrmrgkx.online^
 ||eizgttovabu.com^
 ||ejhcreog6wb25iff7v.rest^
+||ejivwekugdhzz.space^
+||ejpmsiofazspt.website^
 ||ejqrthbzjhrci.site^
 ||ejssuuvktgseo.space^
 ||ejswzcylcynfb.site^
@@ -9271,6 +9322,7 @@ flightaware.com#@#.sticky-footer-ad
 ||emporteangeles.cyou^
 ||empoverpipy.shop^
 ||emptettish.cyou^
+||emqfusvmjnlsk.space^
 ||emsservice.de^
 ||emuloushonans.cfd^
 ||emumsazpndymr.space^
@@ -9450,6 +9502,7 @@ flightaware.com#@#.sticky-footer-ad
 ||esnqwiyhvuv.com^
 ||espartoindicancrutch.cyou^
 ||espczhsztmuas.website^
+||especejetted.shop^
 ||espritsdotage.cyou^
 ||essedacreatin.qpon^
 ||essencereferencetummy.com^
@@ -9475,6 +9528,7 @@ flightaware.com#@#.sticky-footer-ad
 ||etivbuvltde.com^
 ||etizxmcerpddd.com^
 ||etneanlaos.cfd^
+||etnxtlqhknmmb.space^
 ||ettaletted.cfd^
 ||etuiplucktuchit.qpon^
 ||etuisveiner.cyou^
@@ -9482,7 +9536,6 @@ flightaware.com#@#.sticky-footer-ad
 ||etykjagpflnlq.website^
 ||etymictips.qpon^
 ||etzfcwsafuw.com^
-||eu8759jwcy6q6nw.rest^
 ||eubteyfzbwnqk.online^
 ||euchresgabbart.cyou^
 ||eucleidoban.cyou^
@@ -9495,6 +9548,7 @@ flightaware.com#@#.sticky-footer-ad
 ||euhlsaozspotf.online^
 ||euidbljssisql.website^
 ||eulaliapawns.qpon^
+||eulytinbeduke.cyou^
 ||eumenidpetosfraser.cyou^
 ||eumenidsapa.cfd^
 ||eunicedells.cfd^
@@ -9503,6 +9557,7 @@ flightaware.com#@#.sticky-footer-ad
 ||eupvygwytrdze.online^
 ||euripisahidic.cyou^
 ||eurytusmiterer.qpon^
+||eushjrobmizpj.website^
 ||eusmdates.com^
 ||euvanbuvhzkwg.website^
 ||euwfygkltqtqe.website^
@@ -9511,12 +9566,12 @@ flightaware.com#@#.sticky-footer-ad
 ||evangelsnag.cfd^
 ||evanstubules.cyou^
 ||evbrptkvziowe.online^
-||evendeprivation.com^
 ||evenoopyranyl.qpon^
 ||everardcotland.cfd^
 ||everlasting-inflation.com^
 ||evgberthedabater.cyou^
 ||evilpdntjmjyq.space^
+||evisitedlr.shop^
 ||evnvxtixtnvju.online^
 ||evopmncakdrrg.site^
 ||ewdbncrtwe.com^
@@ -9553,7 +9608,6 @@ flightaware.com#@#.sticky-footer-ad
 ||exilicdefuze.qpon^
 ||exilingchiming.cfd^
 ||exlexcrum.qpon^
-||exmainclcknew.com^
 ||exo6lobcgyqr7nwh6w2vlg871q5.cfd^
 ||exoclick.com^
 ||exodosjaunty.cyou^
@@ -9573,6 +9627,7 @@ flightaware.com#@#.sticky-footer-ad
 ||exposuretigerphilip.com^
 ||exptlcires.qpon^
 ||exsectsroomscrater.cyou^
+||exsqboxjmdbgb.online^
 ||ext-offer.com^
 ||extend.tv^
 ||extendscudgel.qpon^
@@ -9580,10 +9635,12 @@ flightaware.com#@#.sticky-footer-ad
 ||extracloyingcyano.cfd^
 ||extremereach.io^
 ||extsuantdiallomon.com^
+||exvcrrhwxtjuk.website^
 ||exxqwatyibrmj.site^
 ||exyhmdlrnsluq.online^
 ||exzumzcaqqdny.site^
 ||ey3jun9c55oov13uwvhoozxmbu.cfd^
+||eydyabfmfmnmb.site^
 ||eyebrowscrambledlater.com^
 ||eyelessuniques.shop^
 ||eyeletmaundsrimed.qpon^
@@ -9615,7 +9672,6 @@ flightaware.com#@#.sticky-footer-ad
 ||f8c00ef6a5.com^
 ||f8d24e6505.com^
 ||f8q4irok4twpemcqccbibitmt1b7bxlm2z.cfd^
-||f8utp9hqco37j65p21km.cfd^
 ||f9exj474rg8l5lzfbg5y3i5wik3.cfd^
 ||f9fcbj14n43571r45tg7.cfd^
 ||f9pfh5emg2enn6tl6rp9om95p.cfd^
@@ -9632,6 +9688,7 @@ flightaware.com#@#.sticky-footer-ad
 ||faconneorateguttus.cfd^
 ||factories2048.com^
 ||factories93.net^
+||factorieswithear.net^
 ||faecespheny.cfd^
 ||faenasthereoflalo.cfd^
 ||fafflecyprid.shop^
@@ -9649,7 +9706,6 @@ flightaware.com#@#.sticky-footer-ad
 ||fallowdoll.cfd^
 ||fallowrationyew.qpon^
 ||fallsceriapanter.cfd^
-||falsifymagpieopenminded.com^
 ||fandomsalauntapathic.cyou^
 ||fanegasinflue.shop^
 ||fangmoonlight.com^
@@ -9744,6 +9800,7 @@ flightaware.com#@#.sticky-footer-ad
 ||fellatedrumly.cyou^
 ||fellfortunatepassive.com^
 ||fellingwissel.cyou^
+||fellowearnwave.com^
 ||feltyrewoken.cfd^
 ||felwnnkhshnqt.com^
 ||femalepostin.shop^
@@ -9775,6 +9832,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ffsaxsbipuwrt.space^
 ||ffuavtlceo.in^
 ||ffvbchqj.com^
+||fgdubihoojote.online^
 ||fggxupklylewk.online^
 ||fghpitdrwjbbr.space^
 ||fghwqfybjktvq.space^
@@ -9835,6 +9893,7 @@ flightaware.com#@#.sticky-footer-ad
 ||financiallyawelessaweless.com^
 ||findcompere.com^
 ||findershaggai.qpon^
+||fine-specialist.pro^
 ||fineeravistiderip.qpon^
 ||finescanopid.cfd^
 ||finescocoasfoliar.cyou^
@@ -9887,6 +9946,7 @@ flightaware.com#@#.sticky-footer-ad
 ||fklfsnsaeijok.space^
 ||fksnk.com^
 ||fkuotemqjqirnv.com^
+||fkvbhtjlwpyep.site^
 ||fkyelofoqnndn.space^
 ||fkysfnkphrljo.site^
 ||flaconshe.qpon^
@@ -9899,6 +9959,7 @@ flightaware.com#@#.sticky-footer-ad
 ||flangrowler.shop^
 ||flanshygeiancharlet.qpon^
 ||flappetwisket.cyou^
+||flareddebars.cfd^
 ||flashb.id^
 ||flashedmarliarmsize.qpon^
 ||flasquemate.cyou^
@@ -10042,6 +10103,7 @@ flightaware.com#@#.sticky-footer-ad
 ||formationcrucialwildest.com^
 ||formelamulae.com^
 ||fornixmullets.cyou^
+||forraslipout.cfd^
 ||forsakesonswept.com^
 ||forseenpalsiespalmira.cyou^
 ||forthbycity.com^
@@ -10152,6 +10214,7 @@ flightaware.com#@#.sticky-footer-ad
 ||fsavmklplmddsu.com^
 ||fsbbtdtxzswq.com^
 ||fsgqwkngpxqqxy.com^
+||fsoqblxrfljyf.site^
 ||fsrqhkcwfsrlc.online^
 ||fssrdeeivg.com^
 ||fsswjrxjhwmzb.website^
@@ -10187,6 +10250,7 @@ flightaware.com#@#.sticky-footer-ad
 ||fungifystotingpuya.qpon^
 ||funginmangold.qpon^
 ||funkiakaraya.cfd^
+||funniestpins.com^
 ||funnilylouted.qpon^
 ||funnystonen.cfd^
 ||funsday.cfd^
@@ -10236,6 +10300,7 @@ flightaware.com#@#.sticky-footer-ad
 ||fxzbgdweisumj.online^
 ||fyauuswqwavou.website^
 ||fydlfiowvdaoq.site^
+||fyhjevzrznhhq.website^
 ||fyhnozamfqvvd.site^
 ||fyhwvfojswwzi.site^
 ||fyihqgawvpqii.site^
@@ -10314,6 +10379,7 @@ flightaware.com#@#.sticky-footer-ad
 ||gargledenvy.qpon^
 ||gargledpightel.qpon^
 ||garlicbourlawupfolds.cfd^
+||garlopakites.shop^
 ||garrupapithoinacrite.cfd^
 ||garstonganefdwines.cfd^
 ||gartersplouk.cyou^
@@ -10409,6 +10475,8 @@ flightaware.com#@#.sticky-footer-ad
 ||georgiewattmen.cyou^
 ||gepeoochaffer.shop^
 ||geraldwhelk.qpon^
+||geraratarte.shop^
+||gereklufahdkb.online^
 ||gerentsbeethantilog.qpon^
 ||gerenttopknotretomb.qpon^
 ||germainplums.cyou^
@@ -10450,6 +10518,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ghoqnanthfges.site^
 ||ghosterpycnial.qpon^
 ||ghwgiqvsogkrt.space^
+||ghyblpybhskgh.website^
 ||giaolrkihpcit.site^
 ||gibbolheterosdiking.qpon^
 ||gibbosesamfoodzeron.cyou^
@@ -10558,6 +10627,7 @@ flightaware.com#@#.sticky-footer-ad
 ||gmeevzowivdov.online^
 ||gmemkuflmihes.online^
 ||gmfamktrrjcav.site^
+||gmfkrivpnkhnb.website^
 ||gml-grp.com^
 ||gmpavcpqcdhxu.space^
 ||gmvoldvntvrqj.website^
@@ -10645,6 +10715,7 @@ flightaware.com#@#.sticky-footer-ad
 ||grabberaramis.com^
 ||grabensbocagepluma.qpon^
 ||grabschirked.cyou^
+||graftaftergomoults.qpon^
 ||graftedmagicsbryozoa.cyou^
 ||graftsemunct.qpon^
 ||gragersmourned.qpon^
@@ -10759,6 +10830,7 @@ flightaware.com#@#.sticky-footer-ad
 ||gulistyiddish.cfd^
 ||gulleystarnie.qpon^
 ||gullstheasum.cfd^
+||guloimmisincamp.qpon^
 ||gulpermoloid.qpon^
 ||gulsachjewing.qpon^
 ||gummosepotifer.qpon^
@@ -10786,6 +10858,7 @@ flightaware.com#@#.sticky-footer-ad
 ||guuzmczcfmhnt.com^
 ||guwxftdiaensk.website^
 ||gvfbasfpatxkw.site^
+||gvfxthlyvglnptg.com^
 ||gvintwtnastmd.space^
 ||gvjhwvhmvidfh.website^
 ||gvmsylgqszvjg.space^
@@ -10815,6 +10888,7 @@ flightaware.com#@#.sticky-footer-ad
 ||gxwuzuvteofqw.website^
 ||gxxdsbbklvze.com^
 ||gxyrpjc41262c8666geqw59u3.cfd^
+||gxzdtidwuvmtu.website^
 ||gycjygwxcm.com^
 ||gyemolge.shop^
 ||gyfgwpqnkitsd.website^
@@ -10876,6 +10950,7 @@ flightaware.com#@#.sticky-footer-ad
 ||haiacvqlvmprqu.com^
 ||hailiixvvazmt.site^
 ||hailsprahus.shop^
+||hainantopkickcootie.cfd^
 ||hairdressercurriculum.com^
 ||hajjicliversskraigh.qpon^
 ||hakimtussarsmezcal.qpon^
@@ -10898,6 +10973,7 @@ flightaware.com#@#.sticky-footer-ad
 ||handlesmoves.qpon^
 ||hangeealoysia.cfd^
 ||hangersguids.qpon^
+||hangieareola.cfd^
 ||hangingduro.com^
 ||hangmenchichis.cyou^
 ||hanifdocquet.qpon^
@@ -10963,6 +11039,7 @@ flightaware.com#@#.sticky-footer-ad
 ||hbn2licnfvevrno.cfd^
 ||hbqhtkclltke.com^
 ||hbr2czm7pfy994i.rest^
+||hbuwnkqnpsskn.space^
 ||hbvgidhsgmjrz.website^
 ||hc8uf94knvyq3gm9km187wuct3wx6r5w2.cfd^
 ||hcegngzriixcl.site^
@@ -10974,6 +11051,7 @@ flightaware.com#@#.sticky-footer-ad
 ||hclgbntmci.com^
 ||hcpnhgcxoaiaf.website^
 ||hcrjyrvbwbgluii.com^
+||hcrnxbzntqrks.online^
 ||hcvqpttiicilq.site^
 ||hddhwmvcvhkkd.site^
 ||hdkfxxyzgejlz.online^
@@ -11070,6 +11148,8 @@ flightaware.com#@#.sticky-footer-ad
 ||hgeepechncyte.space^
 ||hgficwcukmcax.online^
 ||hgivfbpd.com^
+||hgjrgltxgcsvu.site^
+||hgmnrvwbllpit.space^
 ||hgrepart.cyou^
 ||hgtpidptdpxmo.space^
 ||hh788.com^
@@ -11083,7 +11163,9 @@ flightaware.com#@#.sticky-footer-ad
 ||hhkld.com^
 ||hhmrsmghtbdln.site^
 ||hhozuwskkzyej.online^
+||hhplkjrwrcflr.space^
 ||hhqpardpagdgq.website^
+||hhvhpxvuu.com^
 ||hhysnzwzyvjht.online^
 ||hiboowbrkegop.site^
 ||hicnwrwfphkyz.website^
@@ -11147,6 +11229,7 @@ flightaware.com#@#.sticky-footer-ad
 ||hlovkowbucypm.site^
 ||hlqhszlaieohl.online^
 ||hlserve.com^
+||hltgrgqeodrti.site^
 ||hltmncqxayyhu.website^
 ||hlwbxjxhwymre.website^
 ||hlzz3qt35ko683.rest^
@@ -11178,6 +11261,7 @@ flightaware.com#@#.sticky-footer-ad
 ||hoggeebeatee.cfd^
 ||hoggypushier.cfd^
 ||hogpenbractedquieten.cyou^
+||hogshippaint.cyou^
 ||hogtiedhalawi.com^
 ||hoheswardwiddy.cfd^
 ||hohnsobered.cfd^
@@ -11228,6 +11312,7 @@ flightaware.com#@#.sticky-footer-ad
 ||hotloss.com^
 ||hotterydiseur.shop^
 ||hottiecwm.shop^
+||hotueyhvfuqhh.space^
 ||hourcontributor.com^
 ||housedbromids.qpon^
 ||hoveltran.xyz^
@@ -11288,12 +11373,12 @@ flightaware.com#@#.sticky-footer-ad
 ||html-static.shop^
 ||htqaumcmsqrtl.com^
 ||htxgdbvmwhjce.website^
-||hubailinks.com^
 ||hubbingslotedhogmace.cyou^
 ||hubeamily.com^
 ||hubhc.com^
 ||hucklequiverslipa.cfd^
 ||huedpersonsovated.cyou^
+||hugnaxmapeezq.website^
 ||hugyoilwaybulgier.cfd^
 ||huicfordo.cyou^
 ||hulchyparotidverde.qpon^
@@ -11307,7 +11392,6 @@ flightaware.com#@#.sticky-footer-ad
 ||hummuspandle.qpon^
 ||humongousconnection.com^
 ||humont.xyz^
-||humorousorderedeconomics.com^
 ||humphsoutgrewgriffs.cfd^
 ||humpingunfoggy.cfd^
 ||hundreddismayclaw.com^
@@ -11360,7 +11444,6 @@ flightaware.com#@#.sticky-footer-ad
 ||hxnpxtganneyw.site^
 ||hxryhqxsgghdd.site^
 ||hxvyvqgbyeryd.com^
-||hyacineupways.shop^
 ||hyahyastoftyphons.qpon^
 ||hyajjvfpxrqfn.website^
 ||hybridaattilaunlobed.cyou^
@@ -11372,6 +11455,7 @@ flightaware.com#@#.sticky-footer-ad
 ||hyhpxngoybdiw.website^
 ||hyjqnmrqkkryj.space^
 ||hykepineryramilie.cyou^
+||hyknonkzsmrqg.online^
 ||hyleggroenology.cfd^
 ||hymcmjjkerpdj.online^
 ||hymenicasarumsara.cyou^
@@ -11525,6 +11609,7 @@ flightaware.com#@#.sticky-footer-ad
 ||iliummothedturnup.qpon^
 ||iliykdbfcofbi.site^
 ||ilksgenecor.cyou^
+||illipekincob.com^
 ||illiticbogdermis.cyou^
 ||illusorrayat.shop^
 ||ilndjlsjkyjmc.website^
@@ -11593,7 +11678,6 @@ flightaware.com#@#.sticky-footer-ad
 ||indexww.com^
 ||indicopigg.qpon^
 ||indicwilt.qpon^
-||indirecthideoustractor.com^
 ||inditerspiksgallein.cfd^
 ||indolentsurvey.pro^
 ||indolinkopeks.cyou^
@@ -11618,7 +11702,6 @@ flightaware.com#@#.sticky-footer-ad
 ||info7000.net^
 ||informedcleave.com^
 ||informperacid.com^
-||infovigilance.com^
 ||ingeniousseasickfoolish.com^
 ||ingrowberylsrosales.qpon^
 ||ingrowsquallyajeine.qpon^
@@ -11680,6 +11763,7 @@ flightaware.com#@#.sticky-footer-ad
 ||intensesnedded.shop^
 ||intent-square.pro^
 ||intentemployee.com^
+||intentforever.pro^
 ||intentlyuncover.com^
 ||intentpound.com^
 ||interestphysics.com^
@@ -11705,6 +11789,7 @@ flightaware.com#@#.sticky-footer-ad
 ||invol.co^
 ||involvingparentalducks.com^
 ||inweedapili.cyou^
+||inwrapswint.shop^
 ||inysdszuyapfb.website^
 ||iodesophia.qpon^
 ||iodizedwaivod.cyou^
@@ -11717,6 +11802,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ionicalbaline.qpon^
 ||ionizedmicronsrouped.qpon^
 ||ionsferes.shop^
+||ioqishleauzrd.online^
 ||ioqmlykmgplfz.space^
 ||ioskyathos.cfd^
 ||iosnlunyysgekdm.com^
@@ -11798,6 +11884,8 @@ flightaware.com#@#.sticky-footer-ad
 ||itweepinbelltor.com^
 ||itxifonemi.com^
 ||itzachart.qpon^
+||iuajqoxuympfeu.com^
+||iudcrnxwfgj.com^
 ||iudoetilkfdxu.site^
 ||iuenvtnayrmar.website^
 ||iujpr5vp4ejyuiv9i2c.rest^
@@ -11844,6 +11932,7 @@ flightaware.com#@#.sticky-footer-ad
 ||izirjftafazzm.website^
 ||izlmnnwquwryd.space^
 ||izubaoknanmwa.online^
+||izucnttxblmpg.website^
 ||izvclwnnwbytd.site^
 ||j2cpjr7qipjtjiip.rest^
 ||j2zo6lvhqp4rfrli6.rest^
@@ -11906,6 +11995,7 @@ flightaware.com#@#.sticky-footer-ad
 ||jawedputons.shop^
 ||jaxix801.com^
 ||jaybanquo.cfd^
+||jayceesapandry.cyou^
 ||jaydpfcoftijl.space^
 ||jaziesidly.shop^
 ||jazzistagallop.com^
@@ -12028,6 +12118,7 @@ flightaware.com#@#.sticky-footer-ad
 ||jkheiyvgvjfwy.online^
 ||jkmawumzebcim.space^
 ||jkmjjjlah.com^
+||jkwxanffxdpsm.online^
 ||jkxlzrxhtqrdr.online^
 ||jkykczdwuchq.com^
 ||jl47ekpoozziff7mk2og1852t2f7jg6.rest^
@@ -12063,7 +12154,6 @@ flightaware.com#@#.sticky-footer-ad
 ||jofxpmbbyjxoo.website^
 ||johqbazqtbbnz.site^
 ||johuvhjrtqqwb.online^
-||joint-club.com^
 ||jointerestpred.cyou^
 ||jojackal.com^
 ||jokefibers.cyou^
@@ -12139,6 +12229,7 @@ flightaware.com#@#.sticky-footer-ad
 ||jsmcrptjmp.com^
 ||jsotpyjprlcaz.website^
 ||jsquxxmambbmk.online^
+||jssuuqiylxoga.site^
 ||jstacqabgeuzl.space^
 ||jswlnhcfmotapnm.com^
 ||jszmbkfsaeupx.space^
@@ -12187,7 +12278,6 @@ flightaware.com#@#.sticky-footer-ad
 ||juttiesvicing.cyou^
 ||juvenile-guest.pro^
 ||juvenileblank.com^
-||juvenilecalendar.com^
 ||juvqepfiiojdv.online^
 ||juxdowednlomo.site^
 ||juxnalovgqit.in^
@@ -12222,6 +12312,7 @@ flightaware.com#@#.sticky-footer-ad
 ||jxiiwldewtdql.online^
 ||jxiqoaszcfxve.website^
 ||jxjxmhhrdcxud.website^
+||jxkfydhfaeyf.com^
 ||jxofdaxfngasz.space^
 ||jxohdspewpcl.com^
 ||jxwaghvsdx.com^
@@ -12265,6 +12356,7 @@ flightaware.com#@#.sticky-footer-ad
 ||kalpisvirason.qpon^
 ||kaminari.systems^
 ||kanaimasilency.cfd^
+||kanasbasso.cfd^
 ||kandmsxdeyksy.website^
 ||kantarsitaiaxumite.qpon^
 ||kantismcalid.qpon^
@@ -12391,6 +12483,7 @@ flightaware.com#@#.sticky-footer-ad
 ||kiddoesamentaoorie.qpon^
 ||kiddoesomnificdirecly.cyou^
 ||kiddoesuprears.qpon^
+||kidnappingjeep.com^
 ||kidnappingpickcupcake.com^
 ||kidnapsoutroar.qpon^
 ||killbkkt.com^
@@ -12422,6 +12515,7 @@ flightaware.com#@#.sticky-footer-ad
 ||kjjzj4c9kx8phini.cfd^
 ||kjk9m7x4yngol85h4.cfd^
 ||kjljrwoibgbso.site^
+||kjolirgon.com^
 ||kjtgldbspsd.com^
 ||kjtmgfsxiaftq.com^
 ||kkbcayzdokbte.space^
@@ -12538,7 +12632,6 @@ flightaware.com#@#.sticky-footer-ad
 ||ksuwsvhxfigruwi.com^
 ||ksxteldtlbtss.website^
 ||kt2gl4cqj7mj2b9o2b4glj59.cfd^
-||kt81r6fbpevjr867571juq7p.cfd^
 ||ktbadlxdzmbdb.site^
 ||ktexiofxqjcugoi.com^
 ||ktjsyxvvpxdao.site^
@@ -12610,7 +12703,6 @@ flightaware.com#@#.sticky-footer-ad
 ||l1le6x3v87bjn3b.cfd^
 ||l1r46bkfnov56gqfuu756v.rest^
 ||l1ukynvvml1l2r.cfd^
-||l2fmm7sp.xyz^
 ||l2jnxmbrmge5xi.cfd^
 ||l3qmzgpglx2m89uotr.cfd^
 ||l3uvrk68bj4bw1l1ttqpguw12bt9b.cfd^
@@ -12619,6 +12711,7 @@ flightaware.com#@#.sticky-footer-ad
 ||l5i8c6vi5yupfh4.cfd^
 ||l6km1zvvo6cgqhgguixwxfc.cfd^
 ||l7boz5r3ofqppip3plzmz.cfd^
+||l7vrv4crj8g5rc.cfd^
 ||l99u61fmoilpe2xiy.rest^
 ||labaararecite.shop^
 ||labadena.com^
@@ -12647,6 +12740,7 @@ flightaware.com#@#.sticky-footer-ad
 ||lamboybaioccoslave.qpon^
 ||lamboyssprawls.cfd^
 ||lame-map.com^
+||lamerhollowsailing.qpon^
 ||lamettacleaned.qpon^
 ||lampasliegesbogles.cyou^
 ||lampionnonda.cfd^
@@ -12670,13 +12764,11 @@ flightaware.com#@#.sticky-footer-ad
 ||larvateenhalo.shop^
 ||larvexanthid.qpon^
 ||lasagnablighialatrede.cyou^
-||lasciviouschristmasinfection.com^
 ||lasereither.com^
 ||lashpoppercuckold.qpon^
 ||lasiresteplynn.cfd^
 ||lassosupdome.qpon^
 ||lastingillipe.com^
-||latherachelesscatastrophe.com^
 ||latomyrioparergy.cyou^
 ||latrialangrite.qpon^
 ||latrianupwaft.cfd^
@@ -12700,6 +12792,7 @@ flightaware.com#@#.sticky-footer-ad
 ||laziedqaidpavy.cfd^
 ||lazuliempall.com^
 ||lazydeckle.cfd^
+||lbdqcysydbhcto.com^
 ||lbeamhasrxcmk.com^
 ||lbiusrlvwnqgw.online^
 ||lbkvxrzvqveom.online^
@@ -12725,6 +12818,7 @@ flightaware.com#@#.sticky-footer-ad
 ||lcvrviyu.com^
 ||lczoidhsuvuyu.site^
 ||ldeemoyx.com^
+||ldhmeqlxdgksm.site^
 ||ldinfoprocyon.cfd^
 ||ldjsypolwypxy.space^
 ||ldmlvobrl.com^
@@ -12927,12 +13021,12 @@ flightaware.com#@#.sticky-footer-ad
 ||lmaeuohpmbhtt.website^
 ||lmbxvsykkceox.online^
 ||lmim51jmbfiqik.rest^
+||lmjvywakjupgv.site^
 ||lmqfjjxnyxuud.site^
 ||lmtmocldctbnu.online^
 ||lmvouuqrffurr.com^
 ||lmvydrhqxxx.com^
 ||lmzuqfelmvtab.space^
-||lmzzrvmmcm9c6r34cv4j4uh.cfd^
 ||lnaxgfnttnrye.online^
 ||lnbkckhipmi.com^
 ||lngbqjutikehs.online^
@@ -12980,6 +13074,7 @@ flightaware.com#@#.sticky-footer-ad
 ||loliummaile.cfd^
 ||lollopybirle.com^
 ||lomfaggbuokew.site^
+||lomxthcwkdipp.com^
 ||lonelysicca.cyou^
 ||longeeglomgirding.qpon^
 ||longjawkedged.cfd^
@@ -12996,6 +13091,8 @@ flightaware.com#@#.sticky-footer-ad
 ||lookeequired.cyou^
 ||loomsraffled.qpon^
 ||loonieschitswhizzer.qpon^
+||loonykenyans.shop^
+||loopersamania.qpon^
 ||loopme.me^
 ||loosedboolcardon.cyou^
 ||loosestasok.shop^
@@ -13008,13 +13105,11 @@ flightaware.com#@#.sticky-footer-ad
 ||lotahtarkhangeb.cfd^
 ||lotebanyoro.qpon^
 ||lothzincous.shop^
-||lottoairampocacked.cfd^
 ||lotusesrisalarebore.qpon^
 ||lotusintalukas.cyou^
 ||louiescuffyagnails.cfd^
 ||loungedcabrie.com^
 ||louthermate.cyou^
-||loving-link.com^
 ||lovrsdate.com^
 ||lowbelllown.cfd^
 ||lowboystretch.cfd^
@@ -13066,6 +13161,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ltxrromggwyeq.site^
 ||ltxuroxvga.com^
 ||ltzgjfndaglxc.space^
+||luazaabatpsva.space^
 ||lubbardzeedduer.qpon^
 ||lubwdwwrazohg.website^
 ||luciannotably.qpon^
@@ -13110,6 +13206,7 @@ flightaware.com#@#.sticky-footer-ad
 ||lvojijsguhs.com^
 ||lwdmfhylcfj.com^
 ||lweapwmihj.in^
+||lweqatlchfkod.website^
 ||lwgadm.com^
 ||lwhckcgnnpevx.space^
 ||lwitivbums.in^
@@ -13118,6 +13215,7 @@ flightaware.com#@#.sticky-footer-ad
 ||lwnbts.com^
 ||lwslbthnsbzmo.site^
 ||lwxoothcoq.com^
+||lwywgysunkygy.site^
 ||lxgnfvnuagkua.website^
 ||lxrjjgzynzdzj.online^
 ||lxtacluhwhcfy.site^
@@ -13216,6 +13314,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mandrelkluckerbeisa.cyou^
 ||mandscarus.cfd^
 ||manehconule.cfd^
+||manganaexserttomb.qpon^
 ||mangananesokia.qpon^
 ||maniefenrir.cyou^
 ||manihothallahs.qpon^
@@ -13426,6 +13525,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mfynaxrri.in^
 ||mgbprflbradaz.online^
 ||mgjoavkchipct.website^
+||mgsydnzsmxkni.space^
 ||mgufjysojhgyg.space^
 ||mgwpkymsppdxz.online^
 ||mh98hzxolozboqh.cfd^
@@ -13459,6 +13559,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mijqwsfktcape.com^
 ||mikeyfanging.shop^
 ||mikvehsphloxes.cfd^
+||milacreshlu.cyou^
 ||milchigpassout.cyou^
 ||mildfulsawwortsanhita.cyou^
 ||mildredpearly.cfd^
@@ -13491,6 +13592,7 @@ flightaware.com#@#.sticky-footer-ad
 ||minvendominous.cyou^
 ||minyasburner.cyou^
 ||miqanfobx.in^
+||miragyflix.com^
 ||mircctme29hgbjny.cfd^
 ||mirospaid.shop^
 ||mirthzayins.shop^
@@ -13513,8 +13615,8 @@ flightaware.com#@#.sticky-footer-ad
 ||misweenownself.com^
 ||mitellaimponewoilie.cyou^
 ||mitherhugsrantism.cyou^
+||mitresaxillae.com^
 ||mitvothmoulage.shop^
-||miu8ekuryezmw8.cfd^
 ||mixfanjhvhsyr.online^
 ||mixturelogier.shop^
 ||mizfdyhwsrqct.site^
@@ -13525,7 +13627,6 @@ flightaware.com#@#.sticky-footer-ad
 ||mjhoifgdu.com^
 ||mjjcwatsciuns.online^
 ||mjkvxpeychtfw.website^
-||mjlgml5fqloibq.cfd^
 ||mjxfrupqhxpcd.website^
 ||mjyoryuw.com^
 ||mkdxkxsrfpacm.online^
@@ -13536,6 +13637,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mkjjilqjetmdf.space^
 ||mkjuynhpyzwiv.space^
 ||mkkgfurrg.com^
+||mkronwjptnjrh.site^
 ||mks98.com^
 ||mksjdsaxedndq.website^
 ||mksybezxzkrty.online^
@@ -13573,6 +13675,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mochasrouping.cyou^
 ||mochuditrothed.com^
 ||mockerumist.cfd^
+||mockingphoticgritter.cyou^
 ||modern980.com^
 ||modernehomage.qpon^
 ||modestriver.com^
@@ -13618,6 +13721,7 @@ flightaware.com#@#.sticky-footer-ad
 ||moodyyobs.shop^
 ||mookie1.com^
 ||moonsifyonder.cyou^
+||moornseelily.shop^
 ||moorupviremia.cyou^
 ||mopnimbly.qpon^
 ||mopseysamen.shop^
@@ -13679,6 +13783,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mpvrmvmrlqbwi.site^
 ||mpwyzuy38r81te.cfd^
 ||mpyrwiatobzzu.space^
+||mq34ftqqfzh5ohv.cfd^
 ||mq7fm7llitvu7wcyrltube.cfd^
 ||mqbqdixbfzwcl.site^
 ||mqckr5y837xoxho8jlmtk1jmbp.rest^
@@ -13736,6 +13841,7 @@ flightaware.com#@#.sticky-footer-ad
 ||muermomogo.cyou^
 ||muesliyoudith.cyou^
 ||mufflecosingshaktis.cfd^
+||muftilooms.qpon^
 ||mugilreshoes.cfd^
 ||muigejwkogwuxb.com^
 ||mujhetfonkjnt.website^
@@ -13773,6 +13879,7 @@ flightaware.com#@#.sticky-footer-ad
 ||muskegskilimneeders.cfd^
 ||muskishedacity.shop^
 ||musoparhnhgye.space^
+||mussingsucrasetreron.cfd^
 ||mustangswim.cfd^
 ||mustilyelsesgarget.qpon^
 ||mutagebarytaabush.qpon^
@@ -13814,6 +13921,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mxlvgqqoyzwpd.website^
 ||mxpqlbstyperk.site^
 ||mxptint.net^
+||mxq8k9il7pxkrjrqvzcl.rest^
 ||mxqamdbyygzvg.online^
 ||mxqxqpumgtpzl.website^
 ||mxwiqgbnb.com^
@@ -13831,6 +13939,7 @@ flightaware.com#@#.sticky-footer-ad
 ||mymbfwwvaltwp.site^
 ||mymcxxguwlzjc.website^
 ||mynthtjkxx9ornx7unbqv.rest^
+||myocdiachondre.qpon^
 ||myogenunroomy.cfd^
 ||myonemevendors.qpon^
 ||myotonyfire.shop^
@@ -13859,7 +13968,6 @@ flightaware.com#@#.sticky-footer-ad
 ||n49yqeym6ctolxoj3u32.cfd^
 ||n4qeuf5b3yw8f5.rest^
 ||n61xupfken4ucmcu.rest^
-||n6wxm.com^
 ||n7q3iwn2pz2bjk96hokb6rjwgfwq.cfd^
 ||n8elvfbwjkf53j7iq53fkfv3nlnqwr1r5w.cfd^
 ||n9ccix88eq6qw1t63kq8xpv7j2ip.cfd^
@@ -13886,6 +13994,7 @@ flightaware.com#@#.sticky-footer-ad
 ||nanybqajrguqo.com^
 ||naoscygnetsoverput.cfd^
 ||napeinigobeamage.cyou^
+||nappiesirrupt.cfd^
 ||narkingammonal.qpon^
 ||narksjiffy.cyou^
 ||narlheuqrbgcf.space^
@@ -13919,6 +14028,7 @@ flightaware.com#@#.sticky-footer-ad
 ||nbjqlsfhenuba.online^
 ||nblgi3h2vp2i34fou39w4hpn9pk.cfd^
 ||nbvcsyjsoojpd.online^
+||ncaewlef.com^
 ||ncagwiubkrzij.space^
 ||ncajeyujvbhza.site^
 ||ncb8686wbj42wz6wqnm8z23ue.cfd^
@@ -13984,13 +14094,14 @@ flightaware.com#@#.sticky-footer-ad
 ||nervuresupslouiqa.cfd^
 ||nescdblfvyogbb.com^
 ||nestfulspodeprotend.cfd^
+||netebestridbusing.cfd^
 ||neterbarit.com^
 ||nettysmeech.qpon^
 ||networks1000.net^
+||neurismregrate.cfd^
 ||new-programmatic.com^
 ||newlypriceydealing.qpon^
 ||newosnotadprx.space^
-||news-xcasume.com^
 ||newsjonnicktweel.cfd^
 ||newspaperprohibited.com^
 ||newtsqwcijlti.website^
@@ -13998,6 +14109,7 @@ flightaware.com#@#.sticky-footer-ad
 ||nextclass.pro^
 ||nextmillmedia.com^
 ||nexuswithwarehouses.com^
+||nf57yq1mepnm8c.cfd^
 ||nfhvxhefuevwh.website^
 ||nfiihqftpdfyz.website^
 ||nfukguubxgsk.com^
@@ -14053,12 +14165,10 @@ flightaware.com#@#.sticky-footer-ad
 ||nilgaushardockrameous.qpon^
 ||nimbleugarono.cyou^
 ||nimboseminiver.qpon^
-||ninegarretcurse.com^
 ||ninthprerogativerap.com^
 ||niobeanechinid.shop^
 ||niobicfrizers.cyou^
 ||niobitecryable.qpon^
-||nip6mgvw1otkz6.rest^
 ||nipnvemvvjleg.online^
 ||nipponstay.lat^
 ||niqlfeh6mfbof3.cfd^
@@ -14079,6 +14189,7 @@ flightaware.com#@#.sticky-footer-ad
 ||njimwtnepehuc.website^
 ||njkaptewb.com^
 ||njndkusublsuvld.com^
+||njqwbjbgvupfm.website^
 ||njunyihalsdvb.site^
 ||nkagopzlfdvne.online^
 ||nkbjxrtpvtds.com^
@@ -14211,6 +14322,7 @@ flightaware.com#@#.sticky-footer-ad
 ||nrdgrmczzcukk.website^
 ||nrefybpeqrpkw.online^
 ||nrgiccnpufq.com^
+||nrjjnequyqhgm.site^
 ||nrkfcdbuor.com^
 ||nsazqlkoklvvu.website^
 ||nsfwinkuhzeo.com^
@@ -14223,7 +14335,9 @@ flightaware.com#@#.sticky-footer-ad
 ||ntdzgouryfjcp.site^
 ||ntfkfspmntojh.site^
 ||ntjhidsipuvcj.site^
+||ntkuafnhxkayf.website^
 ||ntlcsrqm.com^
+||ntmnfdrqktuhy.online^
 ||ntpmyukiwhglj.space^
 ||ntsreoealtutd.site^
 ||nttmrucsktmgvy.com^
@@ -14256,7 +14370,6 @@ flightaware.com#@#.sticky-footer-ad
 ||nurlxlhketmce.space^
 ||nurserylucyparting.com^
 ||nutr4neikxgv3m4zfbvzql.cfd^
-||nutritioussilver.com^
 ||nuttierputtoo.cyou^
 ||nuwk3ju7jipby5fgvxvk4tq867jhpx.rest^
 ||nuwkpoivmddho.online^
@@ -14315,12 +14428,12 @@ flightaware.com#@#.sticky-footer-ad
 ||oaorondzavpqh.space^
 ||oapcctzttigaw.website^
 ||oassysjwizxgd.space^
+||oateutqihwrdyl.com^
 ||oathletanet.qpon^
 ||oavyctdvbrlpz.space^
 ||obcludeguignol.cfd^
 ||obdtafzelia.cfd^
 ||obdtfaunch.qpon^
-||obduratefizzylament.com^
 ||obepsnuyruuou.website^
 ||obesekeenpassim.cyou^
 ||obeyeosaviouraxised.qpon^
@@ -14336,6 +14449,7 @@ flightaware.com#@#.sticky-footer-ad
 ||obvioussecretive.com^
 ||obwojmsha.in^
 ||oc876xxlzehio8.cfd^
+||occasional-prize.pro^
 ||occasionforfeitarray.com^
 ||occiputumbrinebenzoic.cfd^
 ||occlgtilkdc.com^
@@ -14376,6 +14490,7 @@ flightaware.com#@#.sticky-footer-ad
 ||odicoscan.shop^
 ||odmtrprqjiooh.space^
 ||odqghulazoz.in^
+||odsenbhkgghbw.site^
 ||odulfytvuuibr.space^
 ||oduqhgqzaowqw.space^
 ||odyvcahzbdmlx.website^
@@ -14560,6 +14675,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ooxrwqdhfojsk.space^
 ||ooyxwjhwgewpr.online^
 ||op3rgwq5meu56r9eu5u5eu9h1ofecnjp.rest^
+||opaledmistful.cyou^
 ||opaloidrepayal.cfd^
 ||opchqpnpdvbqn.website^
 ||opdnvnjiymzws.online^
@@ -14583,6 +14699,7 @@ flightaware.com#@#.sticky-footer-ad
 ||optad360.net^
 ||optvz.com^
 ||opwcpsrmhs.com^
+||opwctzfqlvfwl.site^
 ||opwvwskjzdfcp.online^
 ||opzawpactdir.in^
 ||oqisfnvewbcaz.online^
@@ -14596,6 +14713,7 @@ flightaware.com#@#.sticky-footer-ad
 ||or95jfp7n8xlclvj.cfd^
 ||oraculairicizereverie.cfd^
 ||orallycundy.cfd^
+||orange-convert.pro^
 ||orangeads.fr^
 ||orangeprepenseprepensefalse.com^
 ||oratemissayfiercly.cyou^
@@ -14636,9 +14754,9 @@ flightaware.com#@#.sticky-footer-ad
 ||osbpxxiogwbrj.online^
 ||osdqzaas.in^
 ||oshacampelis.com^
-||osmosisfalerno.com^
 ||osnmsqbmyk.com^
 ||osooufqwzakqo.online^
+||ospriyvhotnau.online^
 ||osseinskusumplaza.cyou^
 ||osseticsetulae.cyou^
 ||ossianpand.shop^
@@ -14662,6 +14780,7 @@ flightaware.com#@#.sticky-footer-ad
 ||otologydiploic.qpon^
 ||otomiandeleted.cyou^
 ||otowlgplnxtmk.website^
+||otqbmlcodvbqg.website^
 ||otvqtoatjgt.in^
 ||otxnpuksxfpps.online^
 ||otzemeism.qpon^
@@ -14700,6 +14819,7 @@ flightaware.com#@#.sticky-footer-ad
 ||outwilelemuria.qpon^
 ||outworedryrot.cfd^
 ||outyardrearmssneezer.cfd^
+||ouxtwtbpamlll.online^
 ||ovalizeunclot.qpon^
 ||ovaljaloppy.qpon^
 ||ovambofoud.shop^
@@ -14776,6 +14896,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ozramquqvttqy.space^
 ||ozrgkaphe.in^
 ||ozthaerqcoabk.space^
+||ozxhasoxc.in^
 ||p0b2hqyz.xyz^
 ||p34t4pb1zg8eetn8n52z.rest^
 ||p3617cq69htqix538by5f.cfd^
@@ -14811,10 +14932,12 @@ flightaware.com#@#.sticky-footer-ad
 ||palelitistsnick.com^
 ||palermosonovox.cfd^
 ||paliliaimbriumvansire.qpon^
+||palishcanapcrocky.cfd^
 ||palishhunchy.cfd^
 ||palissestrake.cfd^
 ||palletbeef.cyou^
 ||pallorsmitefungus.com^
+||palpedrecramp.qpon^
 ||palulusshojo.shop^
 ||panamaelator.cfd^
 ||panaxaloxitekarsha.qpon^
@@ -14862,6 +14985,7 @@ flightaware.com#@#.sticky-footer-ad
 ||paroticoralism.qpon^
 ||parquetfooyung.cfd^
 ||parsedancone.cyou^
+||partiallytangerine.com^
 ||partieslithestbucked.cfd^
 ||partimcoranceknez.cyou^
 ||partitabeluga.cyou^
@@ -14922,6 +15046,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pbxevgpiovprp.site^
 ||pbxphallus.qpon^
 ||pc8ltve6yqbwbvq.cfd^
+||pcbcjkodcvxxgrn.com^
 ||pcbixpbwdxqoa.site^
 ||pccxfiekp.com^
 ||pcdeyoepvaxdl.site^
@@ -14970,6 +15095,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pekrhjaeiwkcm.space^
 ||peleanredress.cyou^
 ||pelissesemoulepunlet.qpon^
+||pelonhoppledmists.cfd^
 ||peltmalecheering.com^
 ||pemmhrrqksncr.space^
 ||pemsrv.com^
@@ -15041,6 +15167,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pgfwshcwoezur.space^
 ||pgjphoeyzqelu.online^
 ||pgkmbmnndmwwo.online^
+||pgmjoznfuvjvf.online^
 ||pgo99.com^
 ||pgoycmzrmtklo.space^
 ||pgunjmvxkvwzq.space^
@@ -15112,6 +15239,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pilleusxenurus.cyou^
 ||pillsmerula.cyou^
 ||pilqlkpbxgc.com^
+||pimamonthon.cfd^
 ||pimarichexagon.shop^
 ||pimperypangwe.cfd^
 ||pimplabatter.cfd^
@@ -15238,6 +15366,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pmdxwtmaxpfos.space^
 ||pmlfclxqicihz.website^
 ||pmmjoxhunb.com^
+||pmpyxdoysqzxh.site^
 ||pmuegdgqaqyqz.website^
 ||pneumahameil.com^
 ||pnhutdnhmvqtd.online^
@@ -15247,6 +15376,8 @@ flightaware.com#@#.sticky-footer-ad
 ||pnuufbbwdiody.site^
 ||pnxtqfupszotj.website^
 ||pnxytfbvhknns.space^
+||pocbuweep.com^
+||pockknosp.com^
 ||poddigegruis.com^
 ||poesiespiffed.cfd^
 ||poetdomwineier.cyou^
@@ -15294,7 +15425,6 @@ flightaware.com#@#.sticky-footer-ad
 ||poottartro.cyou^
 ||popads.net^
 ||popcash.net^
-||popjanuary.shop^
 ||popjoynorit.cfd^
 ||poplarstazzetulchan.cyou^
 ||popletwalled.cfd^
@@ -15361,6 +15491,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pranceswharp.shop^
 ||pratscearin.shop^
 ||prayswash.cfd^
+||prchnloyitvdf.website^
 ||prcsybiihhrrv.site^
 ||prdredir.com^
 ||prebornsynemadarrell.cyou^
@@ -15401,11 +15532,9 @@ flightaware.com#@#.sticky-footer-ad
 ||prgwoke4c462rkz.cfd^
 ||prhykyumvljjx.space^
 ||pricersbecoom.shop^
-||prickly-tradition.com^
 ||pricystorm.shop^
 ||pridianhummussober.cyou^
 ||prierexect.cfd^
-||prime-president.com^
 ||primia24.net^
 ||primix9090.net^
 ||primor201.com^
@@ -15453,7 +15582,6 @@ flightaware.com#@#.sticky-footer-ad
 ||profertcurdy.qpon^
 ||profitable-grocery.com^
 ||profitablecpmrate.com^
-||profitablecpmratenetwork.com^
 ||profitableexactly.com^
 ||profusestubber.cfd^
 ||proggerhovered.qpon^
@@ -15466,7 +15594,6 @@ flightaware.com#@#.sticky-footer-ad
 ||propermolala.qpon^
 ||propomagrouseardass.cfd^
 ||prosapyboater.shop^
-||proshypotheticallyfarther.com^
 ||prospectfrigilityfrigility.com^
 ||prosserwent.shop^
 ||protagcdn.com^
@@ -15487,6 +15614,7 @@ flightaware.com#@#.sticky-footer-ad
 ||prudeplebby.shop^
 ||prudityaeron.shop^
 ||prunusclarkia.cfd^
+||prurigohdbk.cyou^
 ||prussicbabble.shop^
 ||prutothoggerusuals.cyou^
 ||prvc.io^
@@ -15592,6 +15720,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pupunhachoicecoco.cyou^
 ||purinsspleenylemma.cfd^
 ||purirhexis.qpon^
+||purlporteno.cyou^
 ||purpleads.io^
 ||purportriyals.qpon^
 ||purposeswage.com^
@@ -15632,6 +15761,7 @@ flightaware.com#@#.sticky-footer-ad
 ||pvvejvvewxhcr.space^
 ||pvypsxskoojya.site^
 ||pvzesryoifiit.online^
+||pw5ztjnz8557v35.rest^
 ||pwfvinbexlnbh.website^
 ||pwfwyafdfwwiq.site^
 ||pwhrweqahetld.online^
@@ -15732,6 +15862,7 @@ flightaware.com#@#.sticky-footer-ad
 ||qeybbrtplgom.com^
 ||qeywmkatxqekt.space^
 ||qeyxf31oijnn9b.cfd^
+||qffrdxwhd.com^
 ||qfhkotbziwpgy.online^
 ||qfjvorkcexhef.space^
 ||qflcnpyfqxedr.space^
@@ -15748,6 +15879,7 @@ flightaware.com#@#.sticky-footer-ad
 ||qgkbnssobp.com^
 ||qgkmvbxkskdeb.space^
 ||qgkqbffrjxrqc.website^
+||qgomtqfuwmckp.website^
 ||qgrlfkzulssrt.space^
 ||qguwsuivlnmxr.site^
 ||qgynvhcvgesde.website^
@@ -15756,6 +15888,8 @@ flightaware.com#@#.sticky-footer-ad
 ||qhgbxmuytmnpb.website^
 ||qhipfvjtfclea.space^
 ||qhqfmdhuxeujk.space^
+||qhsfpazesyczc.site^
+||qhycbngsymyq.com^
 ||qiahfhbhcd.com^
 ||qiaqnmgxf.com^
 ||qidmqfirzzlwv.online^
@@ -15854,6 +15988,7 @@ flightaware.com#@#.sticky-footer-ad
 ||qsodssvqzzpoi.site^
 ||qszufewlulnyo.com^
 ||qtjkugeuhmqjf.site^
+||qtjlxajbfoinv.com^
 ||qtk8elfke5kh4qc.cfd^
 ||qtnemnzayfdtr.space^
 ||qtnobmxbgavob.space^
@@ -15868,6 +16003,7 @@ flightaware.com#@#.sticky-footer-ad
 ||quahogsatinet.cfd^
 ||quangokebobmurally.cyou^
 ||quantica900.com^
+||quapawmooruk.qpon^
 ||quarantine2procedure.com^
 ||quarmediety.shop^
 ||quarneedham.cfd^
@@ -15913,6 +16049,7 @@ flightaware.com#@#.sticky-footer-ad
 ||quohogssopping.com^
 ||quohogssterinbeeish.cfd^
 ||quoinvoiles.qpon^
+||quoiterindolyl.shop^
 ||quonsettarish.qpon^
 ||quorsukey.cyou^
 ||quothbarges.cfd^
@@ -15981,6 +16118,7 @@ flightaware.com#@#.sticky-footer-ad
 ||rafikfangas.com^
 ||rafterlackersmaunche.cfd^
 ||raftschoreasfavi.cyou^
+||raggedyreneg.cfd^
 ||ragglelevite.cfd^
 ||ragmenarrect.cyou^
 ||ragodafaykbsr.site^
@@ -16014,10 +16152,12 @@ flightaware.com#@#.sticky-footer-ad
 ||rammagepertly.qpon^
 ||rammibielby.cyou^
 ||ramonaungrain.cfd^
+||ramplorskyugle.shop^
 ||ramtagustinghaviour.cfd^
 ||ranchmohawks.qpon^
 ||ranciocapot.cyou^
 ||randershooflet.cfd^
+||range2services.com^
 ||rangerpursuedasia.qpon^
 ||rangeyfrapler.cfd^
 ||ranidaelater.qpon^
@@ -16114,10 +16254,10 @@ flightaware.com#@#.sticky-footer-ad
 ||reclassbirlers.qpon^
 ||recludewarbly.cyou^
 ||reconstructambition.com^
-||recordedheavinessexperience.com^
 ||recordedthereby.com^
 ||recordercrimeslender.com^
 ||recrampwiped.com^
+||rectabother.qpon^
 ||rectumreused.com^
 ||recursebaftareperk.cyou^
 ||recusfdurylvedro.cfd^
@@ -16148,6 +16288,7 @@ flightaware.com#@#.sticky-footer-ad
 ||reflushcabook.qpon^
 ||refluxvenous.cfd^
 ||reflyvolutalinget.cyou^
+||reforgecomport.cfd^
 ||refreiddisced.cfd^
 ||refreshmould.com^
 ||refrigwattle.cyou^
@@ -16265,6 +16406,7 @@ flightaware.com#@#.sticky-footer-ad
 ||rfjleunftkwbm.online^
 ||rfkyx92tr9togeknexcvnc7l28cn1ey6w23.cfd^
 ||rfpbmkezjrtkf.site^
+||rftpjvhzlsrij.space^
 ||rfzoyddauaeay.space^
 ||rgarcorsbqfss.online^
 ||rgbbrdsrwxxoa.space^
@@ -16300,6 +16442,7 @@ flightaware.com#@#.sticky-footer-ad
 ||rhubbnpmaumhr.website^
 ||rhumbhylomys.cfd^
 ||rhvnpgtxlnlmg.online^
+||rhwpabvmjrtefn.com^
 ||rhymeddauties.qpon^
 ||rhymesbluings.cfd^
 ||rhynhmifegimi.site^
@@ -16309,6 +16452,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ribosesshutes.cfd^
 ||ribskinboo.qpon^
 ||ribsmuffscornus.cfd^
+||ricassosherifi.cyou^
 ||richeryawp.com^
 ||richstallar.cyou^
 ||rickedpalgatquintus.cfd^
@@ -16317,6 +16461,7 @@ flightaware.com#@#.sticky-footer-ad
 ||riddeddoggiesnovelet.qpon^
 ||ridderlida.shop^
 ||riddleddermsudoric.cyou^
+||riddledevited.cfd^
 ||riderouts.cfd^
 ||ridge-cdn.lol^
 ||ridijnjzkdgry.website^
@@ -16413,6 +16558,7 @@ flightaware.com#@#.sticky-footer-ad
 ||rnjemaathjjge.space^
 ||rnjwtdorqjhgm.website^
 ||rnmessier.cfd^
+||rnmvycnfkeinl.website^
 ||rnomrpvutxjh729e9pg2bn9.cfd^
 ||rnpmdbhtuylhr.site^
 ||roamedtiffie.com^
@@ -16461,6 +16607,7 @@ flightaware.com#@#.sticky-footer-ad
 ||rootletstall.qpon^
 ||roots.baby^
 ||roowt5l491yq6hb2v.cfd^
+||ropabcagapfvy.com^
 ||ropakkmnqyglf.site^
 ||roripametier.qpon^
 ||rorpwekrnwqzx.com^
@@ -16488,6 +16635,7 @@ flightaware.com#@#.sticky-footer-ad
 ||routingoutplugins.net^
 ||rovesrevisitearlet.cyou^
 ||rovno.xyz^
+||rowvmqqqk.com^
 ||rowwurqlhyyuu.online^
 ||roysterdoddereluates.cfd^
 ||rpgmdabaehxco.online^
@@ -16508,6 +16656,7 @@ flightaware.com#@#.sticky-footer-ad
 ||rqwldsragzdzv.site^
 ||rrcfswrwcvcki.online^
 ||rrejalojkc.in^
+||rrftkpoyxvjur.space^
 ||rridkfosngbvw.website^
 ||rrlnmohzscihu.space^
 ||rrlpfsdammzii.site^
@@ -16528,10 +16677,12 @@ flightaware.com#@#.sticky-footer-ad
 ||rtichevre.cfd^
 ||rtjsbjniax.com^
 ||rtk.io^
+||rtlbetlcgd.com^
 ||rtmark.net^
 ||rtqglysfiafxgw.com^
 ||rtrakeulmbahb.site^
 ||rtslxo3a.xyz^
+||rtvhdwqstuwat.site^
 ||ruaxueolmkicy.site^
 ||rubbery-industry.com^
 ||rubbinggeic.cyou^
@@ -16574,6 +16725,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ruopfddopajte.online^
 ||rupqypzqknhay.site^
 ||rusinnexus.cyou^
+||rusinsawbill.com^
 ||ruskindislockunifies.qpon^
 ||ruskinhu.cyou^
 ||russetsqueachy.cyou^
@@ -16607,6 +16759,7 @@ flightaware.com#@#.sticky-footer-ad
 ||rxkayupbjvt.com^
 ||rxkrnofyhchvm.site^
 ||rxvm745j7enijf6tup7e.rest^
+||rxwudmurgnloh.com^
 ||rydpnpspivyiw.space^
 ||rydtkrsegqpze.website^
 ||ryxbowubroqka.online^
@@ -16621,7 +16774,6 @@ flightaware.com#@#.sticky-footer-ad
 ||sabbatsescudo.cfd^
 ||sabbatsslighty.cfd^
 ||sabellaasepsis.cfd^
-||sacaeruse.com^
 ||sacatebaskishmonuron.qpon^
 ||saccagerevests.cfd^
 ||saccoshumping.qpon^
@@ -16632,6 +16784,7 @@ flightaware.com#@#.sticky-footer-ad
 ||safetune.pro^
 ||sagiestspiegel.qpon^
 ||sagoarenammites.cfd^
+||sailyallgoodfollily.cfd^
 ||saiticincomes.cfd^
 ||sakkaramiswend.cyou^
 ||sakyxoyes.com^
@@ -16737,6 +16890,7 @@ flightaware.com#@#.sticky-footer-ad
 ||scaselyhoptree.cfd^
 ||scatchostomy.qpon^
 ||scatulapublice.cyou^
+||scatylems.com^
 ||scawtepee.com^
 ||scaxpnplwrzma.online^
 ||scenarycombo.shop^
@@ -16766,12 +16920,14 @@ flightaware.com#@#.sticky-footer-ad
 ||scotizefencer.shop^
 ||scouchdroned.qpon^
 ||scousesinapicidesia.cfd^
+||scovelmammoni.cyou^
 ||scowledlampong.qpon^
 ||scragsserener.cfd^
 ||scraighpiano.cfd^
 ||scrapyjillionauronal.cfd^
 ||scrawlydeifies.cfd^
 ||scrawmbushful.cfd^
+||scrawmgolden.cfd^
 ||screechdeprivescatter.com^
 ||screwerfriseur.cyou^
 ||screwyhotly.cyou^
@@ -16781,6 +16937,7 @@ flightaware.com#@#.sticky-footer-ad
 ||scritniff.cyou^
 ||scrivanfinlet.com^
 ||scrivedyee.shop^
+||scroopthrowst.shop^
 ||scrougespongesgutsy.cyou^
 ||scruffsdowablearrear.qpon^
 ||scrumscelts.cfd^
@@ -16855,7 +17012,6 @@ flightaware.com#@#.sticky-footer-ad
 ||selfreliant-impact.com^
 ||selftirve.cfd^
 ||sellamu.qpon^
-||sellspirev.com^
 ||semaisebriseisrereel.cyou^
 ||semiansyllab.cfd^
 ||semihintrarbitre.qpon^
@@ -16889,12 +17045,14 @@ flightaware.com#@#.sticky-footer-ad
 ||sergioeddish.cfd^
 ||sericsweller.cyou^
 ||serimpinymphid.cyou^
+||serinusnymphos.cfd^
 ||serinuspotions.com^
 ||sermonperoneimamie.cfd^
 ||serootdaimons.qpon^
 ||seropalame.cfd^
 ||serpensguarabu.qpon^
 ||serpentine-bat.pro^
+||serpentine-church.pro^
 ||serranberime.com^
 ||sertinglamer.cyou^
 ||sertulepedrail.cfd^
@@ -16956,6 +17114,7 @@ flightaware.com#@#.sticky-footer-ad
 ||shadyrecording.pro^
 ||shahidiprimly.qpon^
 ||shaiwourtijogno.net^
+||shakeupitonama.shop^
 ||shakierintruso.cyou^
 ||shakingtacklingunpeeled.com^
 ||shakoeslockage.cyou^
@@ -16974,6 +17133,7 @@ flightaware.com#@#.sticky-footer-ad
 ||sharethrough.com^
 ||shariatshagbag.cyou^
 ||sharp-action.com^
+||sharryatomiesscatula.cyou^
 ||shatdilatoraval.cfd^
 ||shawmrebind.shop^
 ||shbeltian.com^
@@ -17008,7 +17168,6 @@ flightaware.com#@#.sticky-footer-ad
 ||shojiquinela.qpon^
 ||shooksurgeondialogue.com^
 ||shopboyenclave.qpon^
-||shortbrotherinlaw.com^
 ||shortcutentranceacross.com^
 ||shortergroundyanew.cfd^
 ||shorterwanderer.com^
@@ -17035,6 +17194,7 @@ flightaware.com#@#.sticky-footer-ad
 ||sibbedgordon.cfd^
 ||sibbycolob.cfd^
 ||sicklerpestify.qpon^
+||siclikeinhumepick.cfd^
 ||siddowpoliced.cyou^
 ||sidhequickly.cfd^
 ||sidleflint.cyou^
@@ -17068,7 +17228,6 @@ flightaware.com#@#.sticky-footer-ad
 ||simdzjrftxwvf.site^
 ||simialprawny.cfd^
 ||simperisthmia.cfd^
-||simplisticpride.com^
 ||simpnappy.cyou^
 ||sinaeanspawner.cyou^
 ||sinewedtidder.shop^
@@ -17083,6 +17242,7 @@ flightaware.com#@#.sticky-footer-ad
 ||sirenecoalite.cfd^
 ||sirionelowsing.cyou^
 ||siropbiersskyward.cyou^
+||sirpleswashes.cyou^
 ||sishamjudithunaimed.cyou^
 ||siskinherms.qpon^
 ||siskinunwillbobfly.qpon^
@@ -17125,6 +17285,7 @@ flightaware.com#@#.sticky-footer-ad
 ||skgxbarmbvkqf.site^
 ||skiddedtripledabbott.cfd^
 ||skiingsmilder.cfd^
+||skikxyqqa.com^
 ||skillmisdrew.qpon^
 ||skinnycrawlinglax.com^
 ||skipperturncap.qpon^
@@ -17135,6 +17296,7 @@ flightaware.com#@#.sticky-footer-ad
 ||skrblsszekwia.online^
 ||sktjertughlc.com^
 ||skunkipil.qpon^
+||skwhbxqhcqvxd.space^
 ||skycapsmissishribhus.qpon^
 ||skyfulrundlet.qpon^
 ||skyingwhuff.shop^
@@ -17164,6 +17326,7 @@ flightaware.com#@#.sticky-footer-ad
 ||slfxhhmapzrtu.space^
 ||sliderunripedsqueeze.cyou^
 ||slidingpodites.qpon^
+||slidviols.qpon^
 ||slimmerrulableprakash.cyou^
 ||slippersexamination.com^
 ||slipwaypan.cyou^
@@ -17171,6 +17334,7 @@ flightaware.com#@#.sticky-footer-ad
 ||slivegphbana.qpon^
 ||slmhllvapomeff.com^
 ||slodgedefrost.qpon^
+||slodlurg.cyou^
 ||slopepointlesstin.com^
 ||sloppedcoted.shop^
 ||sloshjackal.cyou^
@@ -17308,6 +17472,8 @@ flightaware.com#@#.sticky-footer-ad
 ||sompneaztecs.com^
 ||sonableprotome.qpon^
 ||sonantpoufedgaucher.cyou^
+||songertringa.com^
+||songhaigrommet.cfd^
 ||soniouacnode.shop^
 ||soniouchopped.cyou^
 ||sonioutwicer.qpon^
@@ -17355,6 +17521,7 @@ flightaware.com#@#.sticky-footer-ad
 ||soyjoyous.cyou^
 ||spadsync.com^
 ||spaikfoxery.cyou^
+||spaninghidel.cfd^
 ||spannedmeguilp.cyou^
 ||spanulepongee.com^
 ||sparesofa.com^
@@ -17385,6 +17552,7 @@ flightaware.com#@#.sticky-footer-ad
 ||spicycopy.com^
 ||spicydrama.pro^
 ||spielsbeni.com^
+||spiesdeigns.cfd^
 ||spikersfootageongaro.cyou^
 ||spikesandcurrant.com^
 ||spinalestureantsy.cyou^
@@ -17453,6 +17621,7 @@ flightaware.com#@#.sticky-footer-ad
 ||squirlbroddle.cfd^
 ||squirmdori.qpon^
 ||squisscoiffed.cfd^
+||sqxbkrmtgei.com^
 ||sqxbojbkjdved.online^
 ||sqzoyfdzlcaoy.site^
 ||sraoyuvchtdja.site^
@@ -17538,6 +17707,7 @@ flightaware.com#@#.sticky-footer-ad
 ||stgowan.com^
 ||sthenianootkaonefold.cfd^
 ||stickyadstv.com^
+||stifebarbed.qpon^
 ||stiffindividual.pro^
 ||stifuzdpzgw.com^
 ||stigmaicubital.cfd^
@@ -17615,6 +17785,7 @@ flightaware.com#@#.sticky-footer-ad
 ||stummedmanilio.cyou^
 ||stummelbeelbow.com^
 ||stupid-police.com^
+||sturdy2000.net^
 ||sturdyingeneration.com^
 ||sturtenonmancrablet.qpon^
 ||stussbagiegloea.cfd^
@@ -17659,6 +17830,7 @@ flightaware.com#@#.sticky-footer-ad
 ||sugarerfesels.qpon^
 ||sugarmacro.shop^
 ||suhlclbwibpxnmr.com^
+||suhvoulwtaxfj.site^
 ||suiformupdrink.cyou^
 ||sujgberbgcyza.online^
 ||sujgsrsppqoij.site^
@@ -17681,6 +17853,7 @@ flightaware.com#@#.sticky-footer-ad
 ||sunspotcrier.qpon^
 ||suntanswam.qpon^
 ||sunwayzingierlenaean.qpon^
+||suoczfysevlzp.space^
 ||suoqmcworgd.com^
 ||super-currency.pro^
 ||superbjudgment.com^
@@ -17713,6 +17886,7 @@ flightaware.com#@#.sticky-footer-ad
 ||suspectplainrevulsion.com^
 ||suspendshipboy.cfd^
 ||suspicious-scheme.com^
+||suspirekhajur.cfd^
 ||sutlertaxied.cyou^
 ||suttacen.qpon^
 ||suuwomhpbkddv.space^
@@ -17756,6 +17930,7 @@ flightaware.com#@#.sticky-footer-ad
 ||switchtwentiesduty.com^
 ||swivesguzzle.cfd^
 ||swivingvulvaechoky.qpon^
+||swiyfeifdk.com^
 ||swizzlebuckone.cfd^
 ||swkjtstjnvogh.site^
 ||swkqrgwlj.com^
@@ -17889,6 +18064,7 @@ flightaware.com#@#.sticky-footer-ad
 ||tarzanbajoccopooli.cyou^
 ||tarzansaminate.cfd^
 ||tasjltnvlzrhm.website^
+||taskageenter.cyou^
 ||tasktrivialaggregated.com^
 ||tassalpatente.cfd^
 ||tassardarthelchurns.cyou^
@@ -17903,7 +18079,6 @@ flightaware.com#@#.sticky-footer-ad
 ||taupoorlops.cyou^
 ||taurincabbiesskiddoo.qpon^
 ||tauryldecanol.shop^
-||tautedsessa.qpon^
 ||tautogwhileengruidae.cfd^
 ||tauypraxyreu.com^
 ||tawersmylodonvoulge.qpon^
@@ -18002,6 +18177,7 @@ flightaware.com#@#.sticky-footer-ad
 ||testespulluslamin.cyou^
 ||tetqudyeycomy.site^
 ||tetrylargute.cfd^
+||tevitpcfav.com^
 ||tevvbgbjiv.com^
 ||tewbraatobuan.site^
 ||tewingclours.shop^
@@ -18122,7 +18298,6 @@ flightaware.com#@#.sticky-footer-ad
 ||timidlyindy.cyou^
 ||timspar.cfd^
 ||tineaacetary.cfd^
-||tineasdachas.cyou^
 ||tineidmelascuarto.cfd^
 ||tinletmalheur.cfd^
 ||tintskrag.qpon^
@@ -18242,6 +18417,7 @@ flightaware.com#@#.sticky-footer-ad
 ||toltanax.cyou^
 ||tomandligula.com^
 ||tomandrooped.cyou^
+||tombshaying.cyou^
 ||tomefuldunch.cfd^
 ||tomialwauken.cyou^
 ||tominspialdolcino.cfd^
@@ -18262,7 +18438,7 @@ flightaware.com#@#.sticky-footer-ad
 ||topexmlorgmx.com^
 ||tophousblued.cfd^
 ||topicmagnitude.com^
-||topmostshrink.com^
+||toppxbbaqyknm.website^
 ||toprailsuttees.qpon^
 ||toprevenuegate.com^
 ||topropeupright.cfd^
@@ -18275,6 +18451,7 @@ flightaware.com#@#.sticky-footer-ad
 ||toriesmetopon.com^
 ||toriiargyll.cfd^
 ||torninteraction.pro^
+||tornoteregga.cfd^
 ||tortesliviermoloker.qpon^
 ||torulashootee.qpon^
 ||toshermarrons.cyou^
@@ -18282,6 +18459,7 @@ flightaware.com#@#.sticky-footer-ad
 ||tossingtankage.cyou^
 ||tossingvivid.com^
 ||totaladblock.com^
+||totemicmetisse.cyou^
 ||totterstyrax.cfd^
 ||totterygobelin.qpon^
 ||toucheskey.cyou^
@@ -18319,6 +18497,7 @@ flightaware.com#@#.sticky-footer-ad
 ||trabucoungraspchob.cyou^
 ||tracedkenos.cyou^
 ||trackingtraffo.com^
+||tracktepor.shop^
 ||trackwilltrk.com^
 ||trafficbass.com^
 ||trafficjunky.net^
@@ -18363,9 +18542,11 @@ flightaware.com#@#.sticky-footer-ad
 ||trialsfaster.com^
 ||tribalfusion.com^
 ||tribevild.cyou^
+||tribzonnar.cyou^
 ||tricklyblather.shop^
 ||trickretrorest.com^
 ||trijetsnilrosters.qpon^
+||trillfesters.cyou^
 ||trillisept.cyou^
 ||trilobefdub.qpon^
 ||tripletmiasevery.qpon^
@@ -18437,6 +18618,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ttqpvpnrtmg.com^
 ||ttsfflsjrsnob.website^
 ||tttpcdjavbfjl.online^
+||ttyn7py8l4ql3ny.cfd^
 ||ttzhmzji8bjm53bve3f2tnpwg2.cfd^
 ||tuanpigfish.qpon^
 ||tubalsycees.cyou^
@@ -18459,6 +18641,7 @@ flightaware.com#@#.sticky-footer-ad
 ||tumultdisciple.com^
 ||tungasinzer.cyou^
 ||tuningspionic.cfd^
+||tuowknbkbwfve.online^
 ||turbitprovesdujan.cfd^
 ||turboxinca.cfd^
 ||turdinedisform.cyou^
@@ -18509,7 +18692,6 @@ flightaware.com#@#.sticky-footer-ad
 ||tweakersaturyyachter.cfd^
 ||twebroba.in^
 ||tweetedjota.cfd^
-||twentiethsupplantdark.com^
 ||twentytrek.com^
 ||twerpuveitic.com^
 ||twiltformyl.qpon^
@@ -18525,6 +18707,7 @@ flightaware.com#@#.sticky-footer-ad
 ||twzqnidybpbsy.space^
 ||txb2p77g6bgihkug7.rest^
 ||txcrskknqjjni.space^
+||txhntypqe.com^
 ||txhwoqrtjbfer.online^
 ||txicptqg.com^
 ||txjgnbljkekft.space^
@@ -18536,6 +18719,7 @@ flightaware.com#@#.sticky-footer-ad
 ||txubwkepwuqkp.website^
 ||txwkjktfojloy.online^
 ||txwonfqyncajg.site^
+||tybuniaoceuhy.online^
 ||tycbjtlpydnwm.website^
 ||tyighduant.qpon^
 ||tyimgmegpirwo.online^
@@ -18567,7 +18751,6 @@ flightaware.com#@#.sticky-footer-ad
 ||u2mrortu3mt1t1m59jhku4f9iu.cfd^
 ||u4w4hp6grc2yy1k98.cfd^
 ||u5wo3v5ffx636c82ulm9gb.rest^
-||u8jcqi64vy6yq54vmncxt9.cfd^
 ||u8uuf485yg58huj97bl.cfd^
 ||uacopcyogxrqni.com^
 ||uahxjnvxojuse.online^
@@ -18586,7 +18769,6 @@ flightaware.com#@#.sticky-footer-ad
 ||ucateopgdhrbq.online^
 ||ucawakeup.shop^
 ||uclitpakrzbkn.online^
-||ucrt4nw5wnkitw9m5oq.cfd^
 ||ucufiewsorygs.com^
 ||ucuqtxhmdgvfr.website^
 ||ucvqpbfhvtreh.com^
@@ -18596,8 +18778,10 @@ flightaware.com#@#.sticky-footer-ad
 ||udlphiuayqqcz.space^
 ||udmserve.net^
 ||udmvyqrymlivj.online^
+||udpgdwnhvltik.website^
 ||udurcyzcjpotp.site^
 ||uduwdbhmot.com^
+||udxosygwyfabo.space^
 ||udzpel.com^
 ||ue2rh7wpjhkh29.cfd^
 ||uebfhotukqmuh.website^
@@ -18636,6 +18820,7 @@ flightaware.com#@#.sticky-footer-ad
 ||uieakzmpzhdtk.space^
 ||uifncgofildko.space^
 ||uighurestopamiga.qpon^
+||uiibaovaebfaj.online^
 ||uimkhcxdvgjwm.online^
 ||uimserv.net^
 ||uirjvrebipgfu.site^
@@ -18652,6 +18837,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ukscpmptwial.com^
 ||ukuleletruong.cyou^
 ||ukupwdygrdzfj.website^
+||ukuzkpmv.com^
 ||ul671e417n2g4h.cfd^
 ||ulaodqkxrgard.website^
 ||ulhwerbvmskri.space^
@@ -18871,10 +19057,12 @@ flightaware.com#@#.sticky-footer-ad
 ||upsmnctvkbmaxfh.com^
 ||upsrxrvndnoay.website^
 ||upstirslowmosttrabant.cfd^
+||upsyjobbed.cyou^
 ||uptimewithmulticast.com^
 ||uptimezloties.qpon^
 ||uptracefeis.com^
 ||upttorecoojaaxone.cfd^
+||upturnsidoist.cyou^
 ||upupagummite.shop^
 ||upwallreticle.cyou^
 ||upwardpublisher.com^
@@ -19011,7 +19199,6 @@ flightaware.com#@#.sticky-footer-ad
 ||valuerportray.com^
 ||valuesuffering.com^
 ||valvesappalsrubato.cfd^
-||vamosesagonic.com^
 ||vanglobalau.cfd^
 ||vangsosmosedemplane.cfd^
 ||vanillasurfing.shop^
@@ -19037,8 +19224,11 @@ flightaware.com#@#.sticky-footer-ad
 ||vawpbjphsvpdh.space^
 ||vawturpis.com^
 ||vbkvubotujxh.com^
+||vbrkgmqhgbglx.website^
 ||vbtrax.com^
+||vbxflfolp.com^
 ||vbxfzermlszwx.site^
+||vcabwutmtprqr.site^
 ||vccerpzorwrh.com^
 ||vcfqlfgziaoze.online^
 ||vcglprbqstyed.space^
@@ -19063,6 +19253,7 @@ flightaware.com#@#.sticky-footer-ad
 ||veesformols.shop^
 ||vegetableimpressive.com^
 ||vegetaloutrock.cyou^
+||vehmeinrorinaldo.cfd^
 ||veiledengages.qpon^
 ||veineryhyoidal.cfd^
 ||velamendiobely.qpon^
@@ -19071,7 +19262,6 @@ flightaware.com#@#.sticky-footer-ad
 ||vellumsrefutal.shop^
 ||veluredcorveenikko.cfd^
 ||vemkfqly.com^
-||ven5k12mb81cjklipi8nf.cfd^
 ||vendeanpico.shop^
 ||venedning.cyou^
 ||veneralhiring.cfd^
@@ -19098,8 +19288,10 @@ flightaware.com#@#.sticky-footer-ad
 ||vesperprayful.qpon^
 ||vespinafoveae.qpon^
 ||vesturetwatskhirkah.cfd^
+||veteranassacu.cyou^
 ||vewikvuvrucdc.online^
 ||vexio19.net^
+||vezhuwcgnvmtu.online^
 ||vf49j2yzhun24gg776.cfd^
 ||vfaisecgl.com^
 ||vfcpikqdaldqk.online^
@@ -19128,6 +19320,7 @@ flightaware.com#@#.sticky-footer-ad
 ||vhnhtrsswypzj.site^
 ||vhnmfrkruzdqg.space^
 ||vhnuaatydmqeg.site^
+||vhojdkvcadavb.space^
 ||vhunneamjfked.website^
 ||viablebowssen.shop^
 ||viablybai.cfd^
@@ -19235,12 +19428,14 @@ flightaware.com#@#.sticky-footer-ad
 ||vmxamtjtu.com^
 ||vnakjojlazcpm.online^
 ||vndayuqoyai.com^
+||vnjkuwtlddxom.website^
 ||vnnrttxnoybxm.website^
 ||vnsvifdfhuehe.com^
 ||vntmrzvsztqfk.space^
 ||vntsm.com^
 ||vntsm.io^
 ||vnvklhydurflj.online^
+||vnvlbydtlqvw.com^
 ||vnzwvnevgfemyz.com^
 ||vobppsqcckd.com^
 ||vocalsharnpan.cfd^
@@ -19318,6 +19513,7 @@ flightaware.com#@#.sticky-footer-ad
 ||vtkjyhlmtub.com^
 ||vtojhgymssztr.site^
 ||vtsufsdkrzthc.space^
+||vtxutkucrrxoj.website^
 ||vtzmfhdyaemzg.online^
 ||vudagmgwebke.in^
 ||vuevgiavjbplr.space^
@@ -19381,6 +19577,7 @@ flightaware.com#@#.sticky-footer-ad
 ||vzkoxvbkx7i1h6.cfd^
 ||vzkozuzanvkqv.online^
 ||vzkptlzvvrqqw.site^
+||vzwxvmcdcioid.space^
 ||vzzaelhtofrwm.site^
 ||w2t2ft6zl1zbivnu9emoizw.cfd^
 ||w3fc1o28kpltrl.rest^
@@ -19410,6 +19607,7 @@ flightaware.com#@#.sticky-footer-ad
 ||wagoncoruco.cyou^
 ||wagsransel.shop^
 ||wagwylawqmhg.com^
+||wahooaetherscheatry.cyou^
 ||wailsmasonic.com^
 ||wainmenbiopsicer.cyou^
 ||wainsscraighquave.qpon^
@@ -19427,7 +19625,6 @@ flightaware.com#@#.sticky-footer-ad
 ||wamefoumellowyheumite.qpon^
 ||wammusrisqu.qpon^
 ||wamojgotlra.in^
-||wandatnighttimehe.org^
 ||wangaracampe.cyou^
 ||wannesstetrao.cfd^
 ||wanrestskims.cfd^
@@ -19475,6 +19672,7 @@ flightaware.com#@#.sticky-footer-ad
 ||waywodeantaeus.shop^
 ||wazcltokdhjwk.online^
 ||wazhogebdylsb.space^
+||wbbpahhzzczsh.space^
 ||wbeelczgafvyf.online^
 ||wbhqdaqufhhua.space^
 ||wbhufotomfnrw.com^
@@ -19496,6 +19694,7 @@ flightaware.com#@#.sticky-footer-ad
 ||wdqhdqtlxu.com^
 ||wdsakriogufgd.site^
 ||wdsssyjaqaakt.site^
+||we-offer.com^
 ||weakerscripts.com^
 ||wealthyvast.pro^
 ||wearychallengeraise.com^
@@ -19549,6 +19748,7 @@ flightaware.com#@#.sticky-footer-ad
 ||wflokihyunxdk.online^
 ||wfxubrhsgvimk.online^
 ||wgeohcakycoyp.site^
+||wgfebyyaqspid.space^
 ||wghkllhhoraeb.space^
 ||wgimhiakumdkf.site^
 ||wgjkyvofksrla.site^
@@ -19593,6 +19793,7 @@ flightaware.com#@#.sticky-footer-ad
 ||whwimoztjl.com^
 ||whydahtoitish.cyou^
 ||wickedhorace.com^
+||wickingunsolar.qpon^
 ||widdrimvelary.cfd^
 ||wideeyed-stay.com^
 ||widenedsoarssai.cfd^
@@ -19623,15 +19824,16 @@ flightaware.com#@#.sticky-footer-ad
 ||winlyfeis.qpon^
 ||winlysuecism.cfd^
 ||winningjanuaryshrubs.com^
+||winohamated.shop^
 ||winonascards.com^
 ||winsomegussetchirrs.cyou^
+||winstonplusses.cfd^
 ||wirzurwhiah.in^
 ||wisdomscilgoos.cfd^
 ||wiserhulked.cfd^
 ||wishasolves.shop^
 ||wispingfarmy.qpon^
 ||wispyflane.shop^
-||wistfulsynchronizetoys.com^
 ||witchesmouldsoud.cyou^
 ||withbeggulpythurle.qpon^
 ||withsaypioxe.qpon^
@@ -19719,6 +19921,7 @@ flightaware.com#@#.sticky-footer-ad
 ||workpancajeput.cfd^
 ||wormersfaky.qpon^
 ||wornoutquica.qpon^
+||wornpichi.shop^
 ||worrisome-republic.com^
 ||worserharrid.cfd^
 ||worsumaristaeligula.cyou^
@@ -19795,6 +19998,7 @@ flightaware.com#@#.sticky-footer-ad
 ||wvukqjvirwicj.site^
 ||wvxhxwntusldrt.com^
 ||wvyrjaskgtuxx.online^
+||ww5ihqoqtphgih6qpgh14rjpek392xyki2.rest^
 ||wwbdxxdybpfpl.site^
 ||wwfgafqh.com^
 ||wwfictxcxfioz.website^
@@ -19819,6 +20023,7 @@ flightaware.com#@#.sticky-footer-ad
 ||wynesippiotreatee.qpon^
 ||wyojunmhapedc.site^
 ||wyominghicky.com^
+||wytesdowned.shop^
 ||wyverjudaist.cfd^
 ||wzccrzcdntskz.space^
 ||wzqpvfcijrjlv.online^
@@ -19874,9 +20079,11 @@ flightaware.com#@#.sticky-footer-ad
 ||xemswfbrdhrts.website^
 ||xeroxhoubara.cfd^
 ||xerunkus.com^
+||xewujztulrqer.website^
 ||xfbdnfyafbmq.com^
 ||xfczzdcfjmpbe.online^
 ||xfehectueumst.online^
+||xfrguohlskkmq.site^
 ||xfxagcqndbkrl.website^
 ||xgahbeklumki.com^
 ||xgbmuxkupngbn.website^
@@ -19926,6 +20133,7 @@ flightaware.com#@#.sticky-footer-ad
 ||xllkxiffgdidv.site^
 ||xlmevfxdcbeak.site^
 ||xlmuhiaozekzh.site^
+||xlraqugclbwly.space^
 ||xlucsjrgiunux.website^
 ||xlviirdr.com^
 ||xmastoyon.cfd^
@@ -19945,6 +20153,7 @@ flightaware.com#@#.sticky-footer-ad
 ||xntlhvmcfqdxf.website^
 ||xntvkciajqria.online^
 ||xnurnqmhkkmfe.online^
+||xnuxpyn71vmtbb4my8b5ifpx4.rest^
 ||xnvjjkinsmqyu.site^
 ||xnvohzvudizgf.space^
 ||xnwjbnbjieuni.site^
@@ -20035,6 +20244,7 @@ flightaware.com#@#.sticky-footer-ad
 ||xwxgjtxsrnkrh.space^
 ||xwyeqpvyujmsy.site^
 ||xxbrurcjryzny.website^
+||xxbtgbgzcelai.website^
 ||xxezsifdsivsa.site^
 ||xxf4z39fc8vqg9828bu8u.cfd^
 ||xxjhojcbrawwo.space^
@@ -20071,6 +20281,7 @@ flightaware.com#@#.sticky-footer-ad
 ||yabberflurn.cyou^
 ||yachtcancerbinary.com^
 ||yachtuppiles.qpon^
+||yacpmnmcaneog.site^
 ||yadyrtedybjftu.com^
 ||yagtyjaefiecu.online^
 ||yahandillisbegunk.cyou^
@@ -20090,6 +20301,7 @@ flightaware.com#@#.sticky-footer-ad
 ||yawnedlegifermuggily.cfd^
 ||yaxbsamkhdycw.online^
 ||yazspspjorqhx.site^
+||yb1bmq19ocvtjop3e2i2q.cfd^
 ||ybawirztscdhp.online^
 ||ybbnetahurnitm.com^
 ||ybcbvtnlddcsg.com^
@@ -20105,6 +20317,7 @@ flightaware.com#@#.sticky-footer-ad
 ||yckvux5wmt4w5vvof9pr.cfd^
 ||yckzz7itgxnhkfloxxm.cfd^
 ||yctoppmxmw.com^
+||ycwkql7vhchkyzj8izk4ri.rest^
 ||ycwkyxuspaxhm.space^
 ||ydcjbomim.com^
 ||ydduszefhnscz.website^
@@ -20133,6 +20346,7 @@ flightaware.com#@#.sticky-footer-ad
 ||yeltcliff.qpon^
 ||yemenicunrashacres.cyou^
 ||yemm4q62qtvo7mm51ugc79vv3g.rest^
+||yepcevvrfhztv.space^
 ||yepxnfudyxcyh.website^
 ||yeravercabbalaxystus.qpon^
 ||yfbmwnnqyocgx.site^
@@ -20140,6 +20354,7 @@ flightaware.com#@#.sticky-footer-ad
 ||yfenyeuthgedn.online^
 ||yfiucflgsgbry.site^
 ||yfkbdckdvrjvm.space^
+||yfnaaarlefkgp.space^
 ||yfqnujpniizil.website^
 ||yfqodazqwssmu.online^
 ||yfskbgbjqfxgf.online^
@@ -20173,6 +20388,7 @@ flightaware.com#@#.sticky-footer-ad
 ||yjiakbkecywgij.com^
 ||yjiqwytzluwhs.site^
 ||yjpehuogudsoy.site^
+||yjpwfudvhsnk.com^
 ||yjrhhbqxj65yy1r.rest^
 ||yjsfcjneajgdv.com^
 ||yjvecnmwjvfoe.site^
@@ -20203,6 +20419,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ymtcthpn.com^
 ||ymzukfvbwuofd.site^
 ||yngb2tz53bjw4icxol7h4ht4.cfd^
+||yngdcakszybzo.website^
 ||ynlodkuuacugx.site^
 ||ynrzdybvkzhme.website^
 ||ynty8pliy5lg75kx.cfd^
@@ -20327,6 +20544,7 @@ flightaware.com#@#.sticky-footer-ad
 ||yzgusvurnixsg.space^
 ||yzlviusgqqdep.online^
 ||yznvhiongucvp.site^
+||yzptivayenbbc.space^
 ||yzrslorccsysg.space^
 ||yzwkxjepxczno.site^
 ||yzyzkatyeco.com^
@@ -20349,6 +20567,7 @@ flightaware.com#@#.sticky-footer-ad
 ||zarfareoles.cfd^
 ||zarfsdevotee.cyou^
 ||zarnechobbil.cfd^
+||zayxvvrljcayp.site^
 ||zbdlbpbulroks.space^
 ||zbecvmkqyuzsz.space^
 ||zbevofrechbto.space^
@@ -20424,7 +20643,9 @@ flightaware.com#@#.sticky-footer-ad
 ||ziphiusprivacymosts.cfd^
 ||ziraiinnageyees.cyou^
 ||zirkitecantelrussine.qpon^
+||zitalqgskdsmx.online^
 ||zitdither.com^
+||zitzitteljackie.cfd^
 ||ziuofftam.com^
 ||ziv96gcob9c8qxjh.cfd^
 ||zivn78n94fer88h5.cfd^
@@ -20435,6 +20656,7 @@ flightaware.com#@#.sticky-footer-ad
 ||zjeulzcbtbjnb.online^
 ||zjfgaerzllyuv.site^
 ||zjkejbcqhoges.site^
+||zjodrkdsclnwe.website^
 ||zjosweqiruoaz.website^
 ||zjpmswrjggpxe.site^
 ||zjspxohftdmow.site^
@@ -20487,6 +20709,7 @@ flightaware.com#@#.sticky-footer-ad
 ||zozaqeylctipa.space^
 ||zp3k9zc1y27l35vnuzv2x.rest^
 ||zpcnmqvutynyr.site^
+||zpgtcgqdycckj.online^
 ||zpv7v3olgl7el9b.rest^
 ||zpvihbppfwgzo.website^
 ||zpyxbftwhanbj.space^
@@ -20515,6 +20738,7 @@ flightaware.com#@#.sticky-footer-ad
 ||ztridklnlfwbo.website^
 ||zubvdghmyhajk.website^
 ||zubxulmxdrtxy.website^
+||zuchhsparxodc.site^
 ||zucks.net^
 ||zufasbhzijysh.site^
 ||zufbfwccixrci.space^
@@ -20566,7 +20790,6 @@ flightaware.com#@#.sticky-footer-ad
 ||certona.net^
 ||olopruy.com^
 ||algesismesse.cyou^$document
-||asosub.org^$document
 ||atzonebd.com^$document
 ||bngtrak.com^$document
 ||candellume.shop^$document
@@ -20578,6 +20801,7 @@ flightaware.com#@#.sticky-footer-ad
 ||fruityarbors.cfd^$document
 ||gamazi.com^$document
 ||gamerhit.co^$document
+||getdirectbonus.com^$document
 ||inspoloji.com^$document
 ||jnbhi.com^$document
 ||locopar.com^$document
@@ -20593,12 +20817,15 @@ flightaware.com#@#.sticky-footer-ad
 ||rm358.com^$document
 ||sheitelhamatum.shop^$document
 ||sitepageflow.com^$document
+||souszhi.com^$document
 ||sparkpcgames.com^$document
+||stopads-now.com^$document
 ||stortla.com^$document
 ||tenlets.com^$document
 ||tiktok-fly.com^$document
 ||trentbereal.com^$document
 ||vibrantscale.com^$document
+||we-offer.com^$document
 ||2mdn.net^$~media,third-party
 ||33across.com^$third-party
 ||4dsply.com^$third-party
@@ -20901,6 +21128,7 @@ flightaware.com#@#.sticky-footer-ad
 ||forgetnet.xyz^$popup
 ||fractionfridgejudiciary.com^$popup
 ||g2afse.com^$popup
+||getdirectbonus.com^$popup
 ||gml-grp.com^$popup
 ||godkc.com^$popup
 ||goosebomb.com^$popup
@@ -20953,10 +21181,12 @@ flightaware.com#@#.sticky-footer-ad
 ||s.id^$popup
 ||skylindo.com^$popup
 ||slatecharm.co^$popup
+||souszhi.com^$popup
 ||sowve.com^$popup
 ||srvqck27.com^$popup
 ||starsallowyear.com^$popup
 ||stikroltiltoowi.net^$popup
+||stopads-now.com^$popup
 ||stortla.com^$popup
 ||tenlets.com^$popup
 ||tikva-1.com^$popup
@@ -20968,6 +21198,7 @@ flightaware.com#@#.sticky-footer-ad
 ||twinrdsyte.com^$popup
 ||vcommission.com^$popup
 ||wargaming-aff.com^$popup
+||we-offer.com^$popup
 ||whoucheehy.net^$popup
 ||whouphesaussums.net^$popup
 ||wmtten.com^$popup
@@ -21159,14 +21390,12 @@ flightaware.com#@#.sticky-footer-ad
 ||stake.com/*&clickId=$popup
 ||theeverydaygame.com/lg/$popup,third-party
 ||ad2.freeasianmovies.cam^
-||ad8.hottestasians.pics^
 ||chaturbate.com/affiliates/
 ||chaturbate.com/in/
 ||content.spmediacdn.com/site/banner.html
 ||creative.myavlive.com^
 ||creative.tklivechat.com^
 ||deliver.ptgncdn.com^
-||f.seksohub.com^
 ||girls-games.org/bnr/
 ||go.bigbang.solutions^
 ||go.clickwhore.com^
@@ -21445,7 +21674,6 @@ cybernews.com##.ad-campaign__aside
 freecodecamp.org##.ad-connector
 12news.com,9news.com,9to5google.com,9to5mac.com,aad.org,advfn.com,all3dp.com,allaboutcookies.org,allnovel.net,amny.com,athleticbusiness.com,audiokarma.org,beeradvocate.com,beliefnet.com,bizjournals.com,bolavip.com,bonappetit.com,breakingac.com,britishheritage.com,businessday.ng,businessinsider.com,capemaynjdaily.com,cbs8.com,cc.com,ccjdigital.com,centralbucksnews.com,dailytrust.com,delish.com,downbeach.com,dutchnews.nl,ecr.co.za,electrek.co,engineeringnews.co.za,equipmentworld.com,euromaidanpress.com,fastcompany.com,fishermap.org,footyheadlines.com,fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32chicago.com,fox35orlando.com,fox4news.com,fox5atlanta.com,fox5dc.com,fox5ny.com,fox7austin.com,fox9.com,foxbusiness.com,foxla.com,foxnews.com,funkidslive.com,gfinityesports.com,globalspec.com,gmanetwork.com,grammarbook.com,greatbritishchefs.com,greatitalianchefs.com,hbr.org,highdefdigest.com,historynet.com,horshamnow.com,howstuffworks.com,huffpost.com,ibtimes.sg,inc.com,insidehook.com,intouchweekly.com,irishcentral.com,karanpc.com,khou.com,koat.com,ktvu.com,lifeandstylemag.com,longislandpress.com,macstories.net,mail.com,memuplay.com,metro.us,metrophiladelphia.com,minecraftforum.net,miningweekly.com,mixed-news.com,mobilesyrup.com,modernhealthcare.com,namemc.com,nbcnews.com,newrepublic.com,northpennnow.com,nzherald.co.nz,ocnjdaily.com,oneesports.gg,opb.org,outkick.com,papermag.com,perkvalleynow.com,phillydaily.com,physiology.org,pixiv.net,podcastaddict.com,punchng.com,qns.com,realsport101.com,reason.com,refinery29.com,ringsidenews.com,roadandtrack.com,scroll.in,seaislenews.com,seattletimes.com,songkick.com,sportskeeda.com,storyboard18.com,the-decoder.com,thedailybeast.com,thelocal.at,thelocal.ch,thelocal.de,thelocal.dk,thelocal.es,thelocal.fr,thelocal.it,thelocal.no,thelocal.se,thenationonlineng.net,thenewstack.io,thepost.co.nz,thetimes.com,tmz.com,toofab.com,tuasaude.com,uploadvr.com,usmagazine.com,vanguardngr.com,wildtangent.com,willowgrovenow.com,wired.com,wogx.com,worldsoccertalk.com,wral.com,yahoo.com##.ad-container
 wikiwand.com##.ad-header
-dailyboulder.com##.ad-image-wrap
 etfstream.com##.ad-inline-leaderboard
 wikiwand.com##.ad-mid-section
 carscoops.com,gadgethacks.com,notus.org##.ad-placement
@@ -21456,7 +21684,6 @@ fermanaghherald.com##.ad-spaces
 ascopost.com,fermanaghherald.com##.ad-text
 kcra.com,kmbc.com,koat.com,koco.com,ksbw.com,mynbc5.com,wapt.com,wbaltv.com,wdsu.com,wgal.com,wlwt.com,wmtw.com,wmur.com,wtae.com,wvtm13.com,wxii12.com,wyff4.com##.ad-track
 forbes.com,newrepublic.com,sdxcentral.com,windowscentral.com##.ad-unit
-dailyboulder.com,news.ssbcrack.com,trueachievements.com##.ad-wrap
 allscrabblewords.com,famously-dead.com,famouslyarrested.com,gamesadshopper.com,iamgujarat.com,samayam.com,timesofindia.com,vijaykarnataka.com##.ad1
 allscrabblewords.com,famously-dead.com,famouslyarrested.com##.ad2
 hindustantimes.com##.adHeight270
@@ -21483,13 +21710,11 @@ thefpsreview.com##.adthrive-sidebar-ad-sticky
 gsmarena.com##.adv-mid
 barkinganddagenhampost.co.uk,becclesandbungayjournal.co.uk,blogto.com,burymercury.co.uk,cambstimes.co.uk,cardealermagazine.co.uk,crimemagazine.com,dailyedge.ie,datalounge.com,derehamtimes.co.uk,dermnetnz.org,developingtelecoms.com,dissmercury.co.uk,eadt.co.uk,eastlondonadvertiser.co.uk,edp24.co.uk,elystandard.co.uk,etf.com,eveningnews24.co.uk,exmouthjournal.co.uk,fakenhamtimes.co.uk,football.co.uk,gearspace.com,gematsu.com,gobankingrates.com,greatyarmouthmercury.co.uk,hackneygazette.co.uk,hamhigh.co.uk,headforpoints.com,hertsad.co.uk,huntspost.co.uk,icaew.com,ilfordrecorder.co.uk,iol.co.za,ipswichstar.co.uk,islingtongazette.co.uk,lgr.co.uk,lowestoftjournal.co.uk,maltapark.com,midweekherald.co.uk,momjunction.com,newhamrecorder.co.uk,newstalkzb.co.nz,northnorfolknews.co.uk,northsomersettimes.co.uk,pinkun.com,podtail.com,proxcskiing.com,remindmagazine.com,romfordrecorder.co.uk,royston-crow.co.uk,saffronwaldenreporter.co.uk,sidmouthherald.co.uk,stowmarketmercury.co.uk,stylecraze.com,sudburymercury.co.uk,the42.ie,thebridalbox.com,thecomet.net,thedrum.com,thejournal.ie,thinkspain.com,tineye.com,trucksplanet.com,varsity.co.uk,videogameschronicle.com,wattonandswaffhamtimes.co.uk,wccftech.com,whtimes.co.uk,wisbechstandard.co.uk,wtatennis.com,wymondhamandattleboroughmercury.co.uk##.advert
 defenseone.com##.advert-placeholder
-stylist.co.uk##.advert-slot
 aan.com,aarp.org,additudemag.com,agbi.com,animax-asia.com,audioxpress.com,axn-asia.com,bravotv.com,citiblog.co.uk,cnbctv18.com,cnn59.com,controleng.com,curiosmos.com,downzen.com,dw.com,escapeatx.com,foodsforbetterhealth.com,gemtvasia.com,hcn.org,hotdogwater.dog,huffingtonpost.co.uk,huffpost.com,investmentnews.com,ipaomtk.com,jewishworldreview.com,legion.org,lifezette.com,livestly.com,magtheweekly.com,moneyland.ch,offshore-energy.biz,onetvasia.com,oxygen.com,oydir.com,pch.com,philosophynow.org,prospectmagazine.co.uk,readamericanfootball.com,readarsenal.com,readastonvilla.com,readbasketball.com,readbetting.com,readbournemouth.com,readboxing.com,readbrighton.com,readbundesliga.com,readburnley.com,readcars.co,readceltic.com,readchampionship.com,readchelsea.com,readcricket.com,readcrystalpalace.com,readeverton.com,readeverything.co,readfashion.co,readfilm.co,readfood.co,readfootball.co,readgaming.co,readgolf.com,readhorseracing.com,readhuddersfield.com,readhull.com,readinternationalfootball.com,readlaliga.com,readleicester.com,readliverpoolfc.com,readmancity.com,readmanutd.com,readmiddlesbrough.com,readmma.com,readmotorsport.com,readmusic.co,readnewcastle.com,readnorwich.com,readnottinghamforest.com,readolympics.com,readpl.com,readrangers.com,readrugbyunion.com,readseriea.com,readshowbiz.co,readsouthampton.com,readsport.co,readstoke.com,readsunderland.com,readswansea.com,readtennis.co,readtottenham.com,readtv.co,readussoccer.com,readwatford.com,readwestbrom.com,readwestham.com,readwsl.com,reason.com,redvoicemedia.com,revolver.news,rogerebert.com,smithsonianmag.com,streamingmedia.com,the-scientist.com,thecatholicthing.org,thecrimson.com,therighthairstyles.com,topsmerch.com,weatherwatch.co.nz,whichcar.com.au,woot.com,worldofbitco.in##.advertisement
 tctmd.com##.advertisement-aside
 tctmd.com##.advertisement-headerz
 news18.com##.adwpr
 freeartgen.com##.aff-card
-chatelaine.com,fashionmagazine.com##.assmbly-ad-wrapper
 808fubo808.com##.at-class
 qz.com,theinventory.com##.ay-ad-slot
 1001games.com,3addedminutes.com,4rfv.co.uk,808fubo808.com,alistapart.com,anguscountyworld.co.uk,arcadebomb.com,armageddonexpo.com,banburyguardian.co.uk,bedfordtoday.co.uk,biggleswadetoday.co.uk,bikechatforums.com,birminghamworld.uk,blackpoolgazette.co.uk,bristolworld.com,bsc.news,bucksherald.co.uk,burnleyexpress.net,buxtonadvertiser.co.uk,ca-flyers.com,caixinglobal.com,caribvision.tv,chad.co.uk,cinemadeck.com,coryarcangel.com,csstats.gg,daventryexpress.co.uk,deathbycaptcha.com,derbyshiretimes.co.uk,derbyworld.co.uk,derryjournal.com,dewsburyreporter.co.uk,diffordsguide.com,dominicantoday.com,doncasterfreepress.co.uk,dump.li,elyricsworld.com,euobserver.com,eurochannel.com,falkirkherald.co.uk,farminglife.com,fifetoday.co.uk,filmmakermagazine.com,foojay.io,footballtradedirectory.com,forexpeacearmy.com,funpic.hu,gartic.io,garticphone.com,gizmodo.com,glasgowworld.com,gr8.cc,gsprating.com,halifaxcourier.co.uk,harboroughmail.co.uk,harrogateadvertiser.co.uk,hartlepoolmail.co.uk,hemeltoday.co.uk,hiphopdx.com,hortidaily.com,hucknalldispatch.co.uk,hyipexplorer.com,ibtimes.co.in,ibtimes.co.uk,imgsli.com,insidefutbol.com,ipwatchdog.com,irishpost.com,israelnationalnews.com,japantimes.co.jp,jpost.com,kissasians.org,koreaherald.com,kotaku.com,lancasterguardian.co.uk,laserpointerforums.com,leightonbuzzardonline.co.uk,lep.co.uk,lincolnshireworld.com,liverpoolworld.uk,livescore.in,londonworld.com,lutontoday.co.uk,manchesterworld.uk,marinelink.com,meltontimes.co.uk,mercopress.com,meteoradar.co.uk,miltonkeynes.co.uk,mmorpg.com,mob.org,myflr.org,nationalworld.com,newcastleworld.com,newryreporter.com,news.am,news.net,news12.com,newsletter.co.uk,northamptonchron.co.uk,northantstelegraph.co.uk,northernirelandworld.com,northumberlandgazette.co.uk,nottinghamworld.com,oncyprus.com,onlineconvertfree.com,overclock3d.net,peterboroughtoday.co.uk,pharmatimes.com,photofilters.com,portsmouth.co.uk,powerboat.world,pulsesports.co.ke,pulsesports.ng,pulsesports.ug,roblox.com,rotherhamadvertiser.co.uk,rvtrader.com,sat24.com,scientificamerican.com,scotsman.com,shieldsgazette.com,slidescorner.com,speedcafe.com,starradionortheast.co.uk,stornowaygazette.co.uk,subscene.com,sunderlandecho.com,surreyworld.co.uk,sussexexpress.co.uk,sweeting.org,swzz.xyz,tass.com,thefringepodcast.com,theoldreader.com,thescarboroughnews.co.uk,thesouthernreporter.co.uk,thestar.co.uk,timeslive.co.za,totallysnookered.com,townhall.com,toyworldmag.co.uk,unblockstreaming.com,vibilagare.se,vloot.io,vnexpress.net,wakefieldexpress.co.uk,warwickshireworld.com,weatheronline.co.uk,weekly-ads.us,wigantoday.net,worksopguardian.co.uk,worldtimeserver.com,xbiz.com,ynetnews.com,yorkshireeveningpost.co.uk,yorkshirepost.co.uk,yuntrack.com##.banner
@@ -21553,7 +21778,6 @@ justjared.com##.header-container__main
 indianexpress.com##.ie-ads-block-frontend
 ynetnews.com##.iframe-script
 sescoops.com##.incontent-ad-container
-inews.co.uk##.inews__leaderboard
 bestlifeonline.com,eatthis.com,wolfsgamingblog.com##.inline
 cochranenow.com,discoverairdrie.com,discoverhumboldt.com,portageonline.com,swiftcurrentonline.com##.inline-billboard
 duffelblog.com##.kg-cta-content
@@ -21598,13 +21822,13 @@ campbellrivermirror.com,magnoliastatelive.com##.one_by_one_group
 campaignlive.com##.optanon-category-3
 magma.com##.partnership-content-wrapper
 agupubs.onlinelibrary.wiley.com,ahajournals.org##.pb-las
+mangakakalot.gg##.pinned-ad-popular
 montrealgazette.com##.pmd-ad-content
 hockeypatrol.com##.ppuubb_1
-economictimes.indiatimes.com##.primeDW
 defenseone.com##.promo-rail-img-container
 vecteezy.com##.prtnr-sponsored-results
+navalnews.com##.pubLateral
 justetf.com##.publift-ad-container
-coingape.com,townflex.com##.quads-location
 salon.com##.raptive-salon-content
 salon.com##.raptive-salon-header
 theglobeandmail.com##.recommender-wrapper
@@ -21648,10 +21872,8 @@ rankiapro.com##.undefined.relative
 looper.com##.under-art
 upload-apk.com##.vr-adv-unit
 discussingfilm.net,goonhammer.com,joemygod.com,ryxy.online,shtfplan.com,thestrongtraveller.com,topcartoons.tv,usmagazine.com,wiki-topia.com##.widget_block
-4sysops.com,activistpost.com,aftvnews.com,arcadepunks.com,autotalk.co.nz,corrosionhour.com,corvetteblogger.com,dcrainmaker.com,discover.is,elhayat-life.com,gamingonphone.com,girgitnews.com,gizmochina.com,guides.wp-bullet.com,macsources.com,manhuatop.org,mediachomp.com,metalsucks.net,mmoculture.com,monstersandcritics.com,motoringfile.com,nasaspaceflight.com,newsbtc.com,openloading.com,patriotfetch.com,planetofreviews.com,precinctreporter.com,prepperwebsite.com,rugbylad.ie,sashares.co.za,scienceandliteracy.org,seganerds.com,sixteen-nine.net,snipercentral.com,spokesman-recorder.com,survivopedia.com,techdows.com,techiecorner.com,techjuice.pk,theblueoceansgroup.com,thecinemaholic.com,tooxclusive.com,torrentfreak.com,torrentmac.net,trackalerts.com,trendingpoliticsnews.com,wabetainfo.com,windowslatest.com##.widget_custom_html
 bestlifeonline.com,bodynetwork.com,hellogiggles.com##.widget_gm_karmaadunit_widget
 appleworld.today,arcadeheroes.com,athleticsillustrated.com,betakit.com,businessaccountingbasics.co.uk,circuitbasics.com,closerweekly.com,coincodecap.com,cozyberries.com,dbknews.com,deshdoaba.com,developer-tech.com,electricbikereport.com,foreverconscious.com,friendsjournal.org,glitched.online,globalgovernancenews.com,intouchweekly.com,jharkhandmirror.net,kashmirreader.com,kkfm.com,levittownnow.com,lifeandstylemag.com,manhuatop.org,marqueesportsnetwork.com,mensjournal.com,nikonrumors.com,ognsc.com,palipost.com,patriotfetch.com,pctechmag.com,postwrestling.com,potatonewstoday.com,prajwaldesai.com,pstribune.com,raspians.com,robinhoodnews.com,rok.guide,rsbnetwork.com,salesforcegeek.in,showbiz411.com,spokesman-recorder.com,sportsspectrum.com,stacyknows.com,supertotobet90.com,teksyndicate.com,thecatholictravelguide.com,thedefensepost.com,theoverclocker.com,theyucatantimes.com,tronweekly.com,ubuntu101.co.za,wakingtimes.com,washingtonmonthly.com,webscrypto.com,wgow.com,wgowam.com,wlevradio.com##.widget_media_image
-captainaltcoin.com,freedesignresources.net,utahgunexchange.com,webkinznewz.ganzworld.com,webpokie.com##.widget_text
 dreadcentral.com,justjared.com##.widget_tpd_ad_widget
 whoseno.com##.wn-ad-wrap
 dotesports.com,gameskinny.com,primagames.com,themarysue.com,twinfinite.net##.wp-block-gamurs-ad
@@ -21681,6 +21903,7 @@ lightnovelpub.org##[href*="heave.gg"]
 thetimes.com.au##[href="https://workspace.google.com/lp/solutions/ai/"]
 thetimes.com.au##[href="https://www.oracle.com/anz/database/"]
 monocle.com##[href^="https://a1.adform.net/C/"]
+artificialintelligence-news.com,mangakakalot.gg##[href^="https://bit.ly/"]
 slashdot.org,sourceforge.net##[id*="mongo-"]
 eloshapes.com##[id^="ads-"]
 indexclix.com##[id^="promo"]
@@ -21810,7 +22033,6 @@ startuphub.ai#?#.group.block:has-text(Partner)
 wolt.com##ul[data-test-id="VenueVerticalListGrid"] > li > div.cb-elevated:has(button[data-test-id="AdvertisingLabel"])
 woolworths.com.au#?#div[class^="recipe-card_component_recipe-card-container-"]:has-text(Sponsored)
 hindustantimes.com##.middleTaboola
-6abc.com,abcnews.com,economictimes.indiatimes.com,goodmorningamerica.com##.taboola
 amazon.*##.s-result-item:has(.puis-sponsored-label-text)
 rogerebert.com###PostInlineVideoContainer
 rogerebert.com###ReviewInlineVideoContainer
@@ -28602,7 +28824,7 @@ dzen.ru#@#:matches-path(/articles) div:has(> article > div > [class*="image"]:em
 /^https?:\/\/[-a-z]{5,15}\.[a-z]{3,}\/[0-9a-z]{1,20}\?[0-9A-Za-z]{15,24}=.{35,2000}$/$3p,domain=streameastv1.com|streamseast.cx|putlocker.best|streamed.pk|gopst.link|antenasport.top|sanet.lc|piratecat.online|foxtrend.net|streams.center|streameast.ga|sportzonline.click|sticky-sports.cfd|soccerworldcup.me|casthill.net|smarthard.click|ntvstream.cx|xstreameast.com|streamion.city|insidesport.info|embedsports.top|istreameast.is|filecrypt.cc|streamingnow.mov|animepahe.si|daddyhd.com|soap2day.day|vidsrc.net|nextgencloudtools.com|fbstreams.co|eztvx.to|anroll.net|anime4i.vip|evfancy.link|tvableon.me|vidsrc.xyz|vidsrc.cc|streamingnow.mov|sportsurge.net
 *.cfd/$3p,domain=streamed.pk|vsembed.ru|player.videasy.net|cartelive.club|clerkopera.net|gopst.link|antenasport.top|sanet.lc|piratecat.online|foxtrend.net|streams.center|streameast.ga|sportzonline.click|sticky-sports.cfd|soccerworldcup.me|casthill.net|smarthard.click|ntvstream.cx|xstreameast.com|streamion.city|insidesport.info|embedsports.top|istreameast.is|filecrypt.cc|vidfast.pro|vidora.stream|animepahe.si|daddyhd.com|soap2day.day|nextgencloudtools.com|fbstreams.co|eztvx.to|anroll.net|anime4i.vip|evfancy.link|tvableon.me|vidsrc.xyz|vidsrc.cc|streamingnow.mov|sportsurge.net
 *.rest/$3p,domain=streamed.pk|vsembed.ru|player.videasy.net|cartelive.club|clerkopera.net|gopst.link|antenasport.top|sanet.lc|piratecat.online|foxtrend.net|streams.center|streameast.ga|sportzonline.click|soccerworldcup.me|casthill.net|smarthard.click|ntvstream.cx|xstreameast.com|streamion.city|insidesport.info|embedsports.top|istreameast.is|filecrypt.cc|vidfast.pro|vidora.stream|animepahe.si|daddyhd.com|soap2day.day|nextgencloudtools.com|fbstreams.co|eztvx.to|anroll.net|anime4i.vip|evfancy.link|tvableon.me|vidsrc.xyz|vidsrc.cc|streamingnow.mov|sportsurge.net
-*.in/$3p,domain=noodlemagazine.com|leaktube.net|mangakoma.ac|tpead.net|turbo.cr|dianaavoidthey.com|bunkr.si|templetoons.com|javfc2.xyz|masahub2.com|lewdzone.com|turbo.cr|bunkr.cr|porn-xp.com|filmbioskop21.at.ua|filmisub.cc|hentai2read.com|xxxpicss.com|mangaraw.ma|aniworld.to|marissasharecareer.com|simpcity.cr
+*.in/$3p,domain=vixcloud.co|noodlemagazine.com|leaktube.net|mangakoma.ac|tpead.net|turbo.cr|dianaavoidthey.com|bunkr.si|templetoons.com|javfc2.xyz|masahub2.com|lewdzone.com|turbo.cr|bunkr.cr|porn-xp.com|filmbioskop21.at.ua|filmisub.cc|hentai2read.com|xxxpicss.com|mangaraw.ma|aniworld.to|marissasharecareer.com|simpcity.cr
 /^https:\/\/www\.[a-z]{8,16}\.com\/(?:[A-Za-z]+\/)*(?:[_0-9A-Za-z]{1,20}[-.])*[_0-9A-Za-z]{1,20}\.js$/$3p,script,domain=thekhatrimaza.soy|volokit.xyz|watchkobestreams.info|mixdrop.ag|xxxpicss.com
 kbizoom.com,hamzaerol.com.tr,kooracity.cc,medjugorje-news.com,justdoelectronics.com,ersincaki.net,faces4watch.com,bombaysamachar.com,tribunaplovdiv.bg,lokkio.it,innercircletrading.website,numankocak.com,winsides.com,sawahits.com,fullmatch.info,baudasdicas.com,mag.asteroids.jp,blaulichtreport-saarland.de,1nulled.com,sozgazetesi.org.tr,reptiles-universe.com,deejayplaza.com,studio.fm.br,hardwaresfera.com,tryhardsports.com,yallashoot.me,cioupdate.com.tr,lesite24.com,kayoanime.com,cad-elearning.com,admissionnotice.com,turkry-rasd.com,ringwitdatwixtor.com,pkpics.fun,dugrt.com,notiziariodelweb.it,slogoanime.com,winmeen.com,keylerbenden.com,electricaltechnology.org,dz-linkk.com,kabbos.com,polandinarabic.com,canalk.com,checkresultbd.com,termux.xyz,mondomobileweb.it,modzillamods.com,shiningawards.com,canadajobbank.org,moumentec.com,flashdumpfiles.com,aptgadget.com,bitcoinarabic.com,canadianjobbank.org,tinde.tech,chakrirkhabar247.in,bukja.net,governmentofcanadajobs.com,evdeingilizcem.com,dlgames.fun,worldmak.com,computory.com,vakilsearch.com,wkconquer.com,g37.com.br,tunimedia.tn,turkedebiyati.org,lereportersablais.com,kdramasmaza.co,telefoniatech.it,leaksat.com,lehait.net,eduschool40.blog,kriptoup.com,sosyalbook.com,lojiciels.com,banglahunt.com,middroid.com,portallos.com.br,putinho.net,teknorus.com,flexyhit.com,evdealmanca.com,nullphpscript.com,thuthuatjb.com,bostanekotob.com,avsseries.com,technicalatg.xyz,us7p.com,e3lam.com,tgyama.com,askeribirlikler.com,aulasdeinglesgratis.net,prajwaldesai.com,ganardineroporinternet.me,pirotskevesti.rs,techhelpbd.com,terhalak.com,portaldoaz.org,eye9ja.com,disheye.com,lsto.me,dnetc.net,voleybolmagazin.com,technorozen.com,historicseries.com,tpknews.com,paktales.com,troovez.com,myviptuto.com,computercoach.co.nz,torenmedya.com,acommunity.com.tw,notodoanimacion.es,teechbeats.com,prantalks.com,tawpa.net,aof.tc,sitelatest.com,nullscript.xyz,frenchpdf.com,infofordon.pl,healthyguide.com.ng,compstudio.in,kamuisilanlari.net,anidl.org,edumaz.com,dokazm.mk,portalenf.com,almnatiq.net,gadgets.techymedies.com,arabgamingworld.com,aktualnosci.news,frontedelblog.it,nachrichten.cyou,souq-design.com,inputmag.dk,comoapple.com,thepicpedia.com,deluxe.news,ta1lsx.com,dailybanner.co.uk,codelist.biz,intozoom.com,builder.id,aloomag.ir,nepaleseteacher.org,veganab.co,tmz.ng,newzpanda.com,yossr.com,how2electronics.com,poradniki.net,expatguideturkey.com,sorumatik.co,databaseitalia.it,zodhacks.com,dnaofsports.com,bollywoodhindi.in,nubng.com,vga4a.com,thetimesweekly.com,raqmedia.com,newsauto.it,compuhoy.com,gatexplore.com,rolasdanet.com,avmkatalog.com,aktuelsanat.net,ozkanalkan.net,apprepack.com,alghad.com,oicanadian.com,ifon.ca,cnwintech.com,washingtoninformer.com,thetruedefender.com,muzikonair.com,web4free.in,numberozo.com,haronefit.com,tutocad.com,softvela.us,wallpapers.ispazio.net,bsaktuell.de,koinbox.net,inventiva.co.in,estafed1.com,tntmac.com,latestreview.tech,curiosandosimpara.com,vodnews.pl,tipslearn.com,rebe1scum.com,animedevil.com,fullversionforever.com,stockrom.net,thenextdroid.com,jogging-plus.com,cozumpark.com,rontechtips.com,trivela.com.br,cimaroom.com##+js(set, tie.ad_blocker_detector, '')
 hamzaerol.com.tr,digitalt.tv,faces4watch.com,baudasdicas.com,deejayplaza.com,hardwaresfera.com,cioupdate.com.tr,moumentec.com##+js(set, tie.ad_blocker_disallow_images_placeholder, '')
@@ -29208,7 +29430,7 @@ livejournal.com##+js(aopr, webpackJsonpSSPjs)
 ||itmedia.co.jp/spv/images/career_en_300x250.jpg
 ||itmedia.co.jp/spv/images/career_en_320x50.jpg
 
-! --- fanboy-cookiemonster.txt (24500 rules) ---
+! --- fanboy-cookiemonster.txt (24501 rules) ---
 -consent-banner-
 -consent-banner.
 -cookie-banner-$script
@@ -47364,6 +47586,7 @@ fling2night.com##.cookie-consent-root
 samsungknox.com##.cookie-consent-v3
 aronimink.org,glance.com,springbok-puzzles.com,tinyurl.com,visitukraine.today,visitworld.today##.cookie-consent-wrapper
 envirovent.com##.cookie-content
+weex.com##.cookie-dialog-enter-desktop
 home.cricketwireless.com##.cookie-dialog__container
 chargie.com##.cookie-div-block
 anycubic.com##.cookie-drawer
@@ -49193,7 +49416,7 @@ morningstar.com###additionalInfoe
 allthingslive.be,allthingslive.com,allthingslive.dk,allthingslive.fi,allthingslive.no,allthingslive.se##[class*="CookieBannerPro_"]
 dagrasso.pl,freedomtreks.co.uk,hiveon.com,hiveon.net,krepling.com,kritikos-sm.gr,skisafari.com,watch.plex.tv##div[class^="CookieBar"]
 connection.com,eink.com,govconnection.com,iphotel.com.br,mokkotsu.com##.cookie-check
-ablebits.com,actu.epfl.ch,adsimple.at,anfarmag.org.br,augustiner-restaurant.com,aussenrollo.de,bier-universum.*,blenderartists.org,blisprobiotics.co.nz,blog.roku.com,bund-naturschutz.de,bws.co.at,camid.eu,careers.petsmart.com,cc-egov.de,cerberusapp.com,cloud.thermoworks.com,corporate-benefits.de,creativehut.com.br,discussion.fedoraproject.org,e-infra.com,econodata.com.br,ecpe.org,eingutertag.org,eliebleu.com,flurry.com,flyfrontier.com,forum.audacityteam.org,gardinerbrothers.co.uk,getrawnutrition.com,gg.deals,gilli-food.it,goldammer.me,goldarts.co.uk,goruck.com,heissfenster.com,historicsouthtyrol.com,hotel-waldsee.com,huttersport.com,i2ocr.com,ionos-group.com,ipcamlive.com,janestreet.com,justia.com,kattenberg.nl,khl.ru,krainz-loipersdorf.at,law.cornell.edu,lemansultimate.com,lightningmaps.org,lpderecho.pe,malaysiaairlines.com,mingpao.com,monochrome-watches.com,na-bibb.de,nagyerdeistadion.hu,naturefund.de,opendemocracy.net,osasco.sp.gov.br,paulinwatches.com,pcpartpicker.com,perrotin.com,plus.diolinux.com.br,poernbacher.net,pokemmo.com,rallyhouse.com,rebinstitute.com,republicbharat.com,republicworld.com,sarnerholz.com,sarnerstiftung.it,sbenny.com,schaefer-container-systems.com,schaefer-container-systems.de,schaefer-it-systems.com,schaefer-it-systems.de,sdxcentral.com,siebenfoercher.it,starmicronics.com,sugarsync.com,tann.it,technoalpin.com,tiom.pl,travelok.com,tuxedocomputers.com,tvheadend.org,webit.org,wham.physics.wisc.edu,wisc.edu,zesty.tech##.cc-window
+ablebits.com,actu.epfl.ch,adsimple.at,anfarmag.org.br,augustiner-restaurant.com,aussenrollo.de,bier-universum.*,blenderartists.org,blisprobiotics.co.nz,blog.roku.com,bund-naturschutz.de,bws.co.at,camid.eu,careers.petsmart.com,cc-egov.de,cerberusapp.com,cloud.thermoworks.com,corporate-benefits.de,creativehut.com.br,discussion.fedoraproject.org,e-infra.com,econodata.com.br,ecpe.org,eingutertag.org,eliebleu.com,flurry.com,flyfrontier.com,forum.audacityteam.org,gardinerbrothers.co.uk,getrawnutrition.com,gg.deals,gilli-food.it,goldammer.me,goldarts.co.uk,goruck.com,heissfenster.com,historicsouthtyrol.com,hotel-waldsee.com,huttersport.com,i2ocr.com,ionos-group.com,ipcamlive.com,janestreet.com,justia.com,kattenberg.nl,khl.ru,krainz-loipersdorf.at,law.cornell.edu,lemansultimate.com,lightningmaps.org,lpderecho.pe,malaysiaairlines.com,mingpao.com,monochrome-watches.com,na-bibb.de,nagyerdeistadion.hu,naturefund.de,opendemocracy.net,osasco.sp.gov.br,paulinwatches.com,pcpartpicker.com,perrotin.com,plus.diolinux.com.br,poernbacher.net,pokemmo.com,rallyhouse.com,rebinstitute.com,republicbharat.com,republicworld.com,sarnerholz.com,sarnerstiftung.it,sbenny.com,schaefer-container-systems.com,schaefer-container-systems.de,schaefer-it-systems.com,schaefer-it-systems.de,sdxcentral.com,siebenfoercher.it,starmicronics.com,sugarsync.com,tann.it,technoalpin.com,tiom.pl,travelok.com,tuxedocomputers.com,tvheadend.org,webit.org,wham.physics.wisc.edu,wisc.edu,zesty.tech,zinecultural.com##.cc-window
 advgazeta.ru,beiersdorf.com,czc.cz,digitfoto.de,engeo.ch,hypeauditor.com,kiswe.com,kolesnic.ru,mellerud.de,mindmatrix.net,renewal.ru,salesmanago.pl,swayhotels.com,topographic-map.com,yclients.com,zabkagroup.com##.popup
 andrewmarc.com,bestiloghent.dk,donnakaran.com,ghbass.com,iq.com,petalsearch.com,promenada.ro,replicon.com##.popup-container
 celticfc.com,devart.com,fulhamfc.com,nottinghamforest.co.uk,schuttetweewielers.nl,taptapp.rs##.popup-wrapper
@@ -49351,7 +49574,7 @@ carsharingi.ru,garant.ru,jenner.com,kwebler.com,legiscope.com,nmsu.edu,tech-amer
 fnx.co.il,sprintersports.com,xxlnutrition.com##.bottom-0.left-0
 educationendowmentfoundation.org.uk,rshb.ru##.bottom-0.right-0
 onassis.org##.bottom-0.relative
-1password.com,70mai.com,99app.com,aberrant.io,aci.dev,actievandedag.nl,adspower.com,adspower.net,aksam.com.tr,androidide.com,animalpolitico.com,anjunadeep.com,aplikuj.pl,app.daily.dev,archestra.ai,archive.ics.uci.edu,auf1.info,auf1.tv,auroracloud.dev,ausbildung-in-der-it.de,autodiiler.ee,avislease.sk,back4app.com,ballonvaartcentrumvanmanen.nl,bbcrewind.co.uk,bcfc.com,bellevue-hamburg.de,bestsellers.hu,betway.com.gh,bigcommerce.com,biggerthanallofus.com,biljardihuolto.fi,blickers.com,blog.appsignal.com,blomus.com,bookiply.com,boords.com,britishrenewables.com,bsbfashion.com,bulldogjob.com,bulldogjob.pl,canal1.com.co,canaries.co.uk,chipcitycookies.com,clickz.com,clipfarm.watch,clubmed.co.nz,clubmed.co.uk,clubmed.com.ar,clubmed.com.mx,clubmed.ru,clubmed.se,clubmed.us,codeanlabs.com,codeclimate.com,combokit.net,confi.com.vc,count.co,crosshairhub.com,cryptomaan.eu,curator.io,curiositystream.com,czepeku.com,delio.com.pl,dhakapost.com,discords.com,ditjesendatjes.nl,divvydiary.com,doctorweb.id,drank.nl,drweb-av.de,drweb-av.es,drweb-av.it,drweb-av.pl,drweb.by,drweb.cn,drweb.co.jp,drweb.com,drweb.fr,drweb.kz,drweb.ru,drweb.uz,elo7.com.br,eluniverso.com,elvah.de,emergency.wa.gov.au,emiratespost.ae,epic.com,epochtimes.se,espres.so,everifin.com,eversafe.id.telus.com,evolutionary-insights.com,faceiqlabs.com,fakings.com,fanzo.com,femometer.com,fetch.ai,financestrategists.com,findaport.com,first-law.com,flakehub.com,fluxaiimagegenerator.com,focus-entmt.com,food52.com,form3.tech,fvd.nl,garbanzo.io,gauss.hr,glideapps.com,goafricaonline.com,goflink.com,greenmatch.co.uk,ground.news,haproxy.com,hendy.co.uk,hrt.hr,icecat.biz,ideo.com,idprotect.trendmicro.com,inewi.pl,institute.global,institutoaocp.org.br,interdiscount.ch,invezz.com,iotworldtoday.com,ipon.hu,issf-sports.org,jdoodle.com,jimejinak.cz,jobicon.pracuj.pl,jobyaviation.com,keeb-finder.com,kyero.com,licenseglobal.com,liverpool.com.mx,lorde.co.nz,lounges.tv,madlifes.com,majorfood.com,matkakeisari.fi,mclarenstore.com,medimagazin.com.tr,mein-apothekenmanager.de,meyka.com,mintegral.com,mitec.net,mod.gov.ua,moises.ai,mybricklog.com,mynrma.com.au,nanobananas.ai,nationalprivacytest.org,nbg.gov.ge,nedicom.ru,newschecker.in,nigged.com,nis2vision.eu,nitronationworldtour.com,npistanbul.com,ntv.com.tr,numerologist.com,oberlo.com,oko.press,oldspitalfieldsmarket.com,onsk.no,opening-hours.today,parqet.com,penger.no,pepeporn.com,peppagame.com,perille.fi,podsqueeze.com,pornermates.com,prettylittlething.com,pricempire.com,procrosshairs.com,productpine.com,prographers.com,propello.bike,publicsquare.com,puma.com,pump.fun,qogita.com,qr.nspk.ru,qwertee.com,qwickbirr.com,ranzijn.nl,raport.pse.pl,redcross.ee,regiojet.at,regiojet.com,regiojet.de,regiojet.hu,regiojet.pl,regiojet.sk,regiojet.ua,regiojethotels.at,regiojethotels.com,remarkable.com,runmercury.com,selfstock.com,shakuro.com,shopflavcity.com,sistic.com.sg,sitecore.com,skinsrestorer.net,skyfi.com,skynet.ru,sleep.me,slimsaas.com,smartthingsfind.samsung.com,snoop.app,soniox.com,splav.ru,spletnik.ru,spotlighttheatres.com,ssrchat.com,standwithcrypto.org,store.ligonier.org,streamawards.de,stylesandpartners.com,surnamedb.com,synapse.patsnap.com,tekninen.fi,teltonika-gps.com,teltonika-networks.com,temporal.io,thehappytoolbox.com,threatlandscape.io,tierschutzverein-muenchen.de,tina.io,tinybird.co,trixit.cz,truthsocial.com,tweetyai.com,twitchcon.com,uc.pt,unikriviera.com.br,unox.com,vantilburgonline.nl,vegetology.com,veryfront.com,voyageai.com,wizzair.com,wyylde.com,yunexpress.com,zubi.swiss##.bottom-0.fixed
+1password.com,70mai.com,99app.com,aberrant.io,aci.dev,actievandedag.nl,adspower.com,adspower.net,aksam.com.tr,androidide.com,animalpolitico.com,anjunadeep.com,aplikuj.pl,app.daily.dev,archestra.ai,archive.ics.uci.edu,auf1.info,auf1.tv,auroracloud.dev,ausbildung-in-der-it.de,autodiiler.ee,avislease.sk,back4app.com,ballonvaartcentrumvanmanen.nl,bbcrewind.co.uk,bcfc.com,bellevue-hamburg.de,bestsellers.hu,betway.com.gh,bigcommerce.com,biggerthanallofus.com,biljardihuolto.fi,blickers.com,blog.appsignal.com,blomus.com,bookiply.com,boords.com,britishrenewables.com,bsbfashion.com,bulldogjob.com,bulldogjob.pl,canal1.com.co,canaries.co.uk,chipcitycookies.com,clickz.com,clipfarm.watch,clubmed.co.nz,clubmed.co.uk,clubmed.com.ar,clubmed.com.mx,clubmed.ru,clubmed.se,clubmed.us,codeanlabs.com,codeclimate.com,combokit.net,confi.com.vc,count.co,crosshairhub.com,cryptomaan.eu,curator.io,curiositystream.com,czepeku.com,delio.com.pl,dhakapost.com,discords.com,ditjesendatjes.nl,divvydiary.com,doctorweb.id,drank.nl,drweb-av.de,drweb-av.es,drweb-av.it,drweb-av.pl,drweb.by,drweb.cn,drweb.co.jp,drweb.com,drweb.fr,drweb.kz,drweb.ru,drweb.uz,elo7.com.br,eluniverso.com,elvah.de,emergency.wa.gov.au,emiratespost.ae,epic.com,epochtimes.se,espres.so,everifin.com,eversafe.id.telus.com,evolutionary-insights.com,faceiqlabs.com,fakings.com,fanzo.com,femometer.com,fetch.ai,financestrategists.com,findaport.com,first-law.com,flakehub.com,fluxaiimagegenerator.com,focus-entmt.com,food52.com,form3.tech,fvd.nl,garbanzo.io,gauss.hr,glideapps.com,goafricaonline.com,goflink.com,greenmatch.co.uk,ground.news,haproxy.com,hendy.co.uk,hrt.hr,icecat.biz,ideo.com,idprotect.trendmicro.com,inewi.pl,institute.global,institutoaocp.org.br,interdiscount.ch,invezz.com,iotworldtoday.com,ipon.hu,issf-sports.org,jdoodle.com,jimejinak.cz,jobicon.pracuj.pl,jobyaviation.com,keeb-finder.com,kyero.com,licenseglobal.com,liverpool.com.mx,lorde.co.nz,lounges.tv,madlifes.com,majorfood.com,matkakeisari.fi,mclarenstore.com,medimagazin.com.tr,mein-apothekenmanager.de,meyka.com,mintegral.com,mitec.net,mod.gov.ua,moises.ai,mybricklog.com,mynrma.com.au,nanobananas.ai,nationalprivacytest.org,nbg.gov.ge,nedicom.ru,newschecker.in,nigged.com,nis2vision.eu,nitronationworldtour.com,npistanbul.com,ntv.com.tr,numerologist.com,oberlo.com,oko.press,oldspitalfieldsmarket.com,onsk.no,opening-hours.today,parqet.com,penger.no,pepeporn.com,peppagame.com,perille.fi,podsqueeze.com,pornermates.com,prettylittlething.com,pricempire.com,procrosshairs.com,productpine.com,prographers.com,propello.bike,publicsquare.com,puma.com,pump.fun,qogita.com,qr.nspk.ru,qwertee.com,qwickbirr.com,ranzijn.nl,raport.pse.pl,redcross.ee,regiojet.at,regiojet.com,regiojet.de,regiojet.hu,regiojet.pl,regiojet.sk,regiojet.ua,regiojethotels.at,regiojethotels.com,remarkable.com,runmercury.com,selfstock.com,shakuro.com,shopflavcity.com,sistic.com.sg,sitecore.com,skinsrestorer.net,skyfi.com,skynet.ru,sleep.me,slimsaas.com,smartthingsfind.samsung.com,snoop.app,soniox.com,splav.ru,spletnik.ru,spotlighttheatres.com,ssrchat.com,standwithcrypto.org,store.ligonier.org,streamawards.de,stylesandpartners.com,surnamedb.com,synapse.patsnap.com,tekninen.fi,teltonika-gps.com,teltonika-networks.com,tempgbox.net,temporal.io,thehappytoolbox.com,threatlandscape.io,tierschutzverein-muenchen.de,tina.io,tinybird.co,trixit.cz,truthsocial.com,tweetyai.com,twitchcon.com,uc.pt,unikriviera.com.br,unox.com,vantilburgonline.nl,vegetology.com,veryfront.com,voyageai.com,wizzair.com,wyylde.com,yunexpress.com,zubi.swiss##.bottom-0.fixed
 argyle.com,artma-zaproszenia.pl,claude.ai,deno.com,getmerlin.in,olecams.com,producthunt.com,vello.fi,videochaterotico.com,youverify.co##.bottom-2
 airlinkflightschool.com,apmoller.com,app.houseofcb.com,ilmanifesto.it,lofigirl.com,momentosdealegriace.com.br,predecessorgame.com,wimotic.fr##.bottom-6
 app.gnosispay.com,cinobo.com,jdslabs.com,lukso.network,lumoar.com,mymarket.ge,platform.stability.ai,risazatvorchestvo.com,skyline-emu.one,vloot.io,weather.com##.bottom-5
