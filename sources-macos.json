@@ -1,0 +1,33 @@
+{
+  "output_file": "vivaldi-ios-combined-hagezi.txt",
+  "sources": [
+    {
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt",
+      "skip_cosmetic": false,
+      "priority": 1
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt",
+      "skip_cosmetic": false,
+      "priority": 2
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt",
+      "skip_cosmetic": false,
+      "priority": 4
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds.txt",
+      "skip_cosmetic": false,
+      "priority": 5
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.apple.txt",
+      "skip_cosmetic": false,
+      "priority": 6
+    }
+  ],
+  "deduplicate": true,
+  "remove_comments": true,
+  "max_rules": 500000
+}
