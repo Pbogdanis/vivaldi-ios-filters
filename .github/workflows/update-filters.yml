@@ -63,39 +63,93 @@ jobs:
           seen = set()
           max_rules = config.get('max_rules', 110000)
 
+          # Global defaults for booleans (fallback if not defined in JSON)
+          global_skip_allowlist = config.get('skip_allowlist', True)
+          global_skip_cosmetic = config.get('prefer_network_rules', True)
+          global_skip_long_rules = config.get('skip_long_rules', False)
+          global_skip_rare_syntax = config.get('skip_rare_syntax', False)
+          global_skip_duplicates = config.get('skip_duplicates', True)
+
           for source in config['sources']:
               if isinstance(source, str):
                   url = source
-                  skip_cosmetic = config.get('prefer_network_rules', True)
+                  skip_allowlist = global_skip_allowlist
+                  skip_cosmetic = global_skip_cosmetic
+                  skip_long_rules = global_skip_long_rules
+                  skip_rare_syntax = global_skip_rare_syntax
+                  skip_duplicates = global_skip_duplicates
                   keywords = None
               else:
                   url = source['url']
-                  skip_cosmetic = source.get('skip_cosmetic', config.get('prefer_network_rules', True))
+                  # Allow source-specific overrides, fallback to global
+                  skip_allowlist = source.get('skip_allowlist', global_skip_allowlist)
+                  skip_cosmetic = source.get('skip_cosmetic', global_skip_cosmetic)
+                  skip_long_rules = source.get('skip_long_rules', global_skip_long_rules)
+                  skip_rare_syntax = source.get('skip_rare_syntax', global_skip_rare_syntax)
+                  skip_duplicates = source.get('skip_duplicates', global_skip_duplicates)
                   keywords = source.get('keep_only_keywords')
 
               try:
                   resp = requests.get(url, headers=headers, timeout=30)
                   resp.raise_for_status()
                   rules = []
+                  raw_count = 0
+                  
+                  # Counters for debugging
+                  dropped_allowlist = 0
+                  dropped_cosmetic = 0
+                  dropped_long = 0
+                  dropped_rare = 0
+                  dropped_dupes = 0
+                  dropped_keywords = 0
+                  
                   for line in resp.text.splitlines():
                       line = line.strip()
-                      if not line or line.startswith('!') or line.startswith('@@'):
+                      if not line or line.startswith('!'):
                           continue
+                          
+                      raw_count += 1
+                      
+                      if skip_allowlist and line.startswith('@@'):
+                          dropped_allowlist += 1
+                          continue
+                          
                       if skip_cosmetic and line.startswith('##'):
+                          dropped_cosmetic += 1
                           continue
-                      if config.get('skip_long_rules') and len(line) > 300:
+                          
+                      if skip_long_rules and len(line) > 300:
+                          dropped_long += 1
                           continue
-                      if config.get('skip_rare_syntax'):
+                          
+                      if skip_rare_syntax:
                           if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
+                              dropped_rare += 1
                               continue
+                              
                       if keywords and line.startswith('##'):
                           if not any(kw in line.lower() for kw in keywords):
+                              dropped_keywords += 1
                               continue
-                      if line not in seen:
-                          seen.add(line)
-                          rules.append(line)
+                              
+                      if skip_duplicates and line in seen:
+                          dropped_dupes += 1
+                          continue
+                          
+                      seen.add(line)
+                      rules.append(line)
+                      
                   source_data.append((url, rules))
-                  print(f"✅ {url.split('/')[-1]}: {len(rules)} unique rules")
+                  print(f"✅ {url.split('/')[-1]}:")
+                  print(f"   - Raw Rules in File: {raw_count}")
+                  print(f"   - Kept (New):        {len(rules)}")
+                  print(f"   - Dropped Dupes:     {dropped_dupes}")
+                  print(f"   - Dropped Allowlist: {dropped_allowlist}")
+                  print(f"   - Dropped Cosmetic:  {dropped_cosmetic}")
+                  print(f"   - Dropped Long:      {dropped_long}")
+                  print(f"   - Dropped Rare:      {dropped_rare}")
+                  print(f"   - Dropped Keywords:  {dropped_keywords}")
+                  print("-" * 40)
               except Exception as e:
                   print(f"⚠️ Failed to fetch {url}: {e}")
                   source_data.append((url, []))
