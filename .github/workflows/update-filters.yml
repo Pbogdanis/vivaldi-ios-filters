@@ -23,7 +23,7 @@ jobs:
             fromJSON(
               github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
               && format('["{0}"]', github.event.inputs.config_file) 
-              || '["sources.json", "sources-150kLimit.json"]'
+              || '["sources.json", "sources-150kLimit.json", "sources-hagezi.json"]'
             )
           }}
       fail-fast: false
