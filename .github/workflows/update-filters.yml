@@ -64,8 +64,8 @@ jobs:
           max_rules = config.get('max_rules', 110000)
 
           # Global defaults for booleans (fallback if not defined in JSON)
-          global_skip_allowlist = config.get('skip_allowlist', True)
-          global_skip_cosmetic = config.get('prefer_network_rules', True)
+          global_skip_allowlist = config.get('skip_allowlist', False)
+          global_skip_cosmetic = config.get('prefer_network_rules', False)
           global_skip_long_rules = config.get('skip_long_rules', False)
           global_skip_rare_syntax = config.get('skip_rare_syntax', False)
           global_skip_duplicates = config.get('skip_duplicates', True)
