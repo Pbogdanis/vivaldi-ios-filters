@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       config_file:
-        description: 'Config to run (leave blank to run both daily configs)'
+        description: 'Config to run (leave blank to run all daily configs)'
         required: false
         default: ''
         type: string
@@ -45,8 +45,27 @@ jobs:
       - name: Write merge script
         run: |
           cat > merge_filters.py << 'EOF'
-          import json, requests, os, sys
+          import json, requests, os, sys, re
           from datetime import datetime, timezone
+
+          def is_valid_abp_rule(line: str) -> bool:
+              """Validate that a line is a syntactically valid Adblock Plus rule."""
+              line = line.strip()
+              if not line or line.startswith('!'):
+                  return False
+              # Valid ABP rules start with one of these patterns:
+              if line.startswith(('||', '|', '##', '#@#', '@@', '/')):
+                  return True
+              # Cosmetic rules with domain restrictions (e.g., example.com##.ad)
+              if '##' in line and (line.count('#') >= 2 or '$' in line):
+                  return True
+              # Exception rules with domain/context modifiers
+              if line.startswith('@@') and ('||' in line or '|' in line or line.startswith('@@/')):
+                  return True
+              # Reject URL fragments, query params, or bare strings
+              if re.match(r'^[&?][a-zA-Z0-9_]+=', line):
+                  return False
+              return False
 
           config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
           print(f"📄 Processing config: {config_filename}")
@@ -102,6 +121,7 @@ jobs:
                   dropped_rare = 0
                   dropped_dupes = 0
                   dropped_keywords = 0
+                  dropped_invalid = 0
                   
                   for line in resp.text.splitlines():
                       line = line.strip()
@@ -109,6 +129,11 @@ jobs:
                           continue
                           
                       raw_count += 1
+                      
+                      # NEW: Validate ABP syntax first
+                      if not is_valid_abp_rule(line):
+                          dropped_invalid += 1
+                          continue
                       
                       if skip_allowlist and line.startswith('@@'):
                           dropped_allowlist += 1
@@ -143,6 +168,7 @@ jobs:
                   print(f"✅ {url.split('/')[-1]}:")
                   print(f"   - Raw Rules in File: {raw_count}")
                   print(f"   - Kept (New):        {len(rules)}")
+                  print(f"   - Dropped Invalid:   {dropped_invalid}")
                   print(f"   - Dropped Dupes:     {dropped_dupes}")
                   print(f"   - Dropped Allowlist: {dropped_allowlist}")
                   print(f"   - Dropped Cosmetic:  {dropped_cosmetic}")
@@ -164,6 +190,7 @@ jobs:
           output_file = config.get('output_file', 'vivaldi-ios-combined.txt')
           truncation_note = " (TRUNCATED)" if truncated else ""
 
+          # Write header ONCE at top of file
           header_lines = [
               "[Adblock Plus 2.0]",
               f"! Title: Vivaldi iOS Combined (Auto-Updated){truncation_note}",
@@ -177,7 +204,10 @@ jobs:
           header_lines.append("")
 
           with open(output_file, 'w') as f:
+              # Write header first
               f.write('\n'.join(header_lines))
+              
+              # Then write rules grouped by source (no duplicate headers)
               remaining = len(all_rules)
               for url, rules in source_data:
                   if remaining <= 0:
@@ -185,6 +215,7 @@ jobs:
                   section = rules[:remaining]
                   remaining -= len(section)
                   if section:
+                      # Section comment only (no [Adblock Plus] header)
                       f.write(f"\n! --- {url.split('/')[-1]} ({len(section)} rules) ---\n")
                       f.write('\n'.join(section) + '\n')
 
