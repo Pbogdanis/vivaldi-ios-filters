@@ -2,10 +2,10 @@
 ! Title: Vivaldi macOS Combined (Auto-Updated)
 ! Version: 20260817
 ! Expires: 1 days
-! Global Rules: 205252
+! Global Rules: 205255
 ! Source Breakdown:
 ! • https://easylist-downloads.adblockplus.org/easyprivacy.txt: 52992 unique rules
-! • https://easylist-downloads.adblockplus.org/easylist.txt: 76986 unique rules
+! • https://easylist-downloads.adblockplus.org/easylist.txt: 76987 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt: 1179 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt: 2407 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt: 752 unique rules
@@ -18,7 +18,7 @@
 ! • https://ublockorigin.github.io/uAssetsCDN/filters/unbreak.min.txt: 2384 unique rules
 ! • https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext: 0 unique rules
 ! • https://ublockorigin.pages.dev/thirdparties/easylist-cookies.txt: 2813 unique rules
-! • https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/filters/annoyances-cookies.txt: 2339 unique rules
+! • https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/filters/annoyances-cookies.txt: 2341 unique rules
 ! • https://www.void.gr/kargig/void-gr-filters.txt: 1218 unique rules
 
 ! --- easyprivacy.txt (52992 rules) ---
@@ -53015,7 +53015,7 @@
 @@||netcoresmartech.com/smartechclient.js$domain=cgv.vn
 @@|http://r.i.ua/s?*&p*&l$image,domain=swordmaster.org
 
-! --- easylist.txt (76986 rules) ---
+! --- easylist.txt (76987 rules) ---
 /88/tag.min.js
 /?abt_opts=1&
 /?fp=*&poru=$subdocument
@@ -72981,6 +72981,7 @@ lagruyere.ch#@##adv-top
 ||boguingmowra.cfd^
 ||bogustrouble.com^
 ||bogwortviews.cyou^
+||bohaiwljqaogu.space^
 ||bohawnhating.qpon^
 ||bohcgusfdrmyt.site^
 ||bohgveklrtgpxna.com^
@@ -201736,7 +201737,7 @@ aargauer-wanderwege.ch,appenzellerwanderwege.ch,glarnerwanderwege.ch,luzerner-wa
 espoo.fi,luvn.fi##div[aria-label="Denna webbplats använder webbkakor"]
 espoo.fi,luvn.fi##div[aria-label="Sivustolla käytetään evästeitä"]
 
-! --- annoyances-cookies.txt (2339 rules) ---
+! --- annoyances-cookies.txt (2341 rules) ---
 *###catapult-cookie-bar
 *###cmplz-cookiebanner-container
 *###cookie-law
@@ -202149,6 +202150,8 @@ engirank.eu,perspektywy.pl##+js(trusted-set-local-storage-item, cookieConsent, '
 hailo-windsystems.com##+js(trusted-set-cookie, cookie_consent, '{"method":"DENY","groups":[]}', , , reload, 1, domain, .hailo-windsystems.com)
 otakuthon.com##+js(trusted-set-cookie, otakuthon_cookie_consent, '{"choice":"denied","analytics":false,"updatedAt":"$currentISODate$"}')
 aistudio.xiaomimimo.com##+js(trusted-set-local-storage-item, cookieConsent, '{"value":{"analytical":false,"functional":false,"lastConsentTime":"$currentISODate$"},"createdTime":"$currentISODate$","updateTime":"$currentISODate$","version":1}')
+happy-420.de##+js(set-cookie, cookieconsent_status, deny)
+happy-420.de##+js(trusted-set-cookie, cookieconsent_preferences_disabled, 'analytics,marketing,functionality')
 dailymail.co.uk,dailymail.com##+js(trusted-click-element, div[data-project="mol-fe-cmp"] button[class*="consent"]:not([class*="reject"]))
 1001games.com,1001hry.cz,1001jeux.fr,1001jocuri.ro,1001jogos.com.br,1001jogos.pt,1001pelit.com,1001spiele.de,auth.hbomax.com,elkspel.nl,gamespot.com,giochixl.it,glamour.com,grajteraz.pl,isladejuegos.com,jatekokxl.hu,mtvuutiset.fi,paixnidiaxl.gr,pushsquare.com,spelo.se,spillespill.no,spilxl.dk,thejournal.ie,thetrainline.com,vkmag.com,zdnet.com##+js(trusted-set-cookie, OptanonAlertBoxClosed, $currentDate$, 1year)
 evaair.com##+js(trusted-set-cookie, _EVAcookieaccept, Y, 1year)
