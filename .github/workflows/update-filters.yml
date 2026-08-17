@@ -2,7 +2,7 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 3 * * *'  # Daily at 3 AM UTC
   workflow_dispatch:
     inputs:
       config_file:
@@ -46,157 +46,169 @@ jobs:
         run: |
           cat > merge_filters.py << 'EOF'
           import json, requests, os, sys, re
-from datetime import datetime, timezone
+          from datetime import datetime, timezone
 
-def is_valid_abp_rule(line: str) -> bool:
-    """Validate that a line is a syntactically valid Adblock Plus rule."""
-    line = line.strip()
-    if not line or line.startswith('!'):
-        return False
-    if line.startswith(('||', '|', '##', '#@#', '@@', '/')):
-        return True
-    if '##' in line and (line.count('#') >= 2 or '$' in line):
-        return True
-    if line.startswith('@@') and ('||' in line or '|' in line or line.startswith('@@/')):
-        return True
-    if re.match(r'^[&?][a-zA-Z0-9_]+=', line):
-        return False
-    return False
+          def is_valid_abp_rule(line: str) -> bool:
+              """Validate that a line is a syntactically valid Adblock Plus rule."""
+              line = line.strip()
+              if not line or line.startswith('!'):
+                  return False
+              # Valid ABP rules start with one of these patterns:
+              if line.startswith(('||', '|', '##', '#@#', '@@', '/')):
+                  return True
+              # Cosmetic rules with domain restrictions (e.g., example.com##.ad)
+              if '##' in line and (line.count('#') >= 2 or '$' in line):
+                  return True
+              # Exception rules with domain/context modifiers
+              if line.startswith('@@') and ('||' in line or '|' in line or line.startswith('@@/')):
+                  return True
+              # Reject URL fragments, query params, or bare strings
+              if re.match(r'^[&?][a-zA-Z0-9_]+=', line):
+                  return False
+              return False
 
-config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
-print(f"📄 Processing config: {config_filename}")
+          config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
+          print(f"📄 Processing config: {config_filename}")
 
-if not os.path.exists(config_filename):
-    print(f"❌ Config file not found: {config_filename}")
-    sys.exit(1)
+          if not os.path.exists(config_filename):
+              print(f"❌ Config file not found: {config_filename}")
+              sys.exit(1)
 
-with open(config_filename) as f:
-    config = json.load(f)
+          with open(config_filename) as f:
+              config = json.load(f)
 
-headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
-source_data = []
-seen = set()
-max_rules = config.get('max_rules', 200000)  # macOS: no hard limit, use high value
+          headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
+          source_data = []
+          seen = set()
+          max_rules = config.get('max_rules', 200000)  # macOS: no hard limit, use high value
 
-global_skip_allowlist = config.get('skip_allowlist', False)
-global_skip_cosmetic = config.get('prefer_network_rules', False)
-global_skip_long_rules = config.get('skip_long_rules', False)
-global_skip_rare_syntax = config.get('skip_rare_syntax', False)
-global_skip_duplicates = config.get('skip_duplicates', True)
+          # Global defaults for booleans (fallback if not defined in JSON)
+          global_skip_allowlist = config.get('skip_allowlist', False)
+          global_skip_cosmetic = config.get('prefer_network_rules', False)
+          global_skip_long_rules = config.get('skip_long_rules', False)
+          global_skip_rare_syntax = config.get('skip_rare_syntax', False)
+          global_skip_duplicates = config.get('skip_duplicates', True)
 
-for source in config['sources']:
-    if isinstance(source, str):
-        url = source
-        skip_allowlist = global_skip_allowlist
-        skip_cosmetic = global_skip_cosmetic
-        skip_long_rules = global_skip_long_rules
-        skip_rare_syntax = global_skip_rare_syntax
-        skip_duplicates = global_skip_duplicates
-        keywords = None
-    else:
-        url = source['url']
-        skip_allowlist = source.get('skip_allowlist', global_skip_allowlist)
-        skip_cosmetic = source.get('skip_cosmetic', global_skip_cosmetic)
-        skip_long_rules = source.get('skip_long_rules', global_skip_long_rules)
-        skip_rare_syntax = source.get('skip_rare_syntax', global_skip_rare_syntax)
-        skip_duplicates = source.get('skip_duplicates', global_skip_duplicates)
-        keywords = source.get('keep_only_keywords')
+          for source in config['sources']:
+              if isinstance(source, str):
+                  url = source
+                  skip_allowlist = global_skip_allowlist
+                  skip_cosmetic = global_skip_cosmetic
+                  skip_long_rules = global_skip_long_rules
+                  skip_rare_syntax = global_skip_rare_syntax
+                  skip_duplicates = global_skip_duplicates
+                  keywords = None
+              else:
+                  url = source['url']
+                  # Allow source-specific overrides, fallback to global
+                  skip_allowlist = source.get('skip_allowlist', global_skip_allowlist)
+                  skip_cosmetic = source.get('skip_cosmetic', global_skip_cosmetic)
+                  skip_long_rules = source.get('skip_long_rules', global_skip_long_rules)
+                  skip_rare_syntax = source.get('skip_rare_syntax', global_skip_rare_syntax)
+                  skip_duplicates = source.get('skip_duplicates', global_skip_duplicates)
+                  keywords = source.get('keep_only_keywords')
 
-    try:
-        resp = requests.get(url, headers=headers, timeout=30)
-        resp.raise_for_status()
-        rules = []
-        raw_count = 0
-        dropped_allowlist = dropped_cosmetic = dropped_long = dropped_rare = dropped_dupes = dropped_keywords = dropped_invalid = 0
-        
-        for line in resp.text.splitlines():
-            line = line.strip()
-            if not line or line.startswith('!'):
-                continue
-            raw_count += 1
-            if not is_valid_abp_rule(line):
-                dropped_invalid += 1
-                continue
-            if skip_allowlist and line.startswith('@@'):
-                dropped_allowlist += 1
-                continue
-            if skip_cosmetic and line.startswith('##'):
-                dropped_cosmetic += 1
-                continue
-            if skip_long_rules and len(line) > 500:  # macOS: allow longer rules
-                dropped_long += 1
-                continue
-            if skip_rare_syntax:
-                if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
-                    dropped_rare += 1
-                    continue
-            if keywords and line.startswith('##'):
-                if not any(kw in line.lower() for kw in keywords):
-                    dropped_keywords += 1
-                    continue
-            if skip_duplicates and line in seen:
-                dropped_dupes += 1
-                continue
-            seen.add(line)
-            rules.append(line)
-        source_data.append((url, rules))
-        print(f"✅ {url.split('/')[-1]}: Raw={raw_count}, Kept={len(rules)}, Invalid={dropped_invalid}")
-    except Exception as e:
-        print(f"⚠️ Failed to fetch {url}: {e}")
-        source_data.append((url, []))
+              try:
+                  resp = requests.get(url, headers=headers, timeout=30)
+                  resp.raise_for_status()
+                  rules = []
+                  raw_count = 0
+                  dropped_allowlist = dropped_cosmetic = dropped_long = dropped_rare = dropped_dupes = dropped_keywords = dropped_invalid = 0
+                  
+                  for line in resp.text.splitlines():
+                      line = line.strip()
+                      if not line or line.startswith('!'):
+                          continue
+                      raw_count += 1
+                      # Validate ABP syntax first
+                      if not is_valid_abp_rule(line):
+                          dropped_invalid += 1
+                          continue
+                      if skip_allowlist and line.startswith('@@'):
+                          dropped_allowlist += 1
+                          continue
+                      if skip_cosmetic and line.startswith('##'):
+                          dropped_cosmetic += 1
+                          continue
+                      if skip_long_rules and len(line) > 500:  # macOS: allow longer rules
+                          dropped_long += 1
+                          continue
+                      if skip_rare_syntax:
+                          if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
+                              dropped_rare += 1
+                              continue
+                      if keywords and line.startswith('##'):
+                          if not any(kw in line.lower() for kw in keywords):
+                              dropped_keywords += 1
+                              continue
+                      if skip_duplicates and line in seen:
+                          dropped_dupes += 1
+                          continue
+                      seen.add(line)
+                      rules.append(line)
+                  source_data.append((url, rules))
+                  print(f"✅ {url.split('/')[-1]}: Raw={raw_count}, Kept={len(rules)}, Invalid={dropped_invalid}")
+              except Exception as e:
+                  print(f"⚠️ Failed to fetch {url}: {e}")
+                  source_data.append((url, []))
 
-all_rules = [r for _, rules in source_data for r in rules]
+          all_rules = [r for _, rules in source_data for r in rules]
 
-# === ADD BING REWARDS EXCEPTIONS HERE ===
-bing_exceptions = [
-    "@@||bat.bing.com^",
-    "@@||rewards.bing.com^", 
-    "@@||c.bing.com^",
-    "@@||login.microsoftonline.com^$domain=bing.com|rewards.bing.com",
-    "@@||*.bing.com^$domain=bing.com|rewards.bing.com",
-    "@@||bing.com/WidgetServ/RequestWidgetService.aspx?$xmlhttprequest,domain=rewards.bing.com"
-]
-for rule in reversed(bing_exceptions):
-    if rule not in seen:
-        all_rules.insert(0, rule)
-        seen.add(rule)
-print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
-# === END BING EXCEPTIONS ===
+          # === ADD BING REWARDS EXCEPTIONS HERE (must be at TOP of file) ===
+          bing_exceptions = [
+              "@@||bat.bing.com^",
+              "@@||rewards.bing.com^", 
+              "@@||c.bing.com^",
+              "@@||login.microsoftonline.com^$domain=bing.com|rewards.bing.com",
+              "@@||*.bing.com^$domain=bing.com|rewards.bing.com",
+              "@@||bing.com/WidgetServ/RequestWidgetService.aspx?$xmlhttprequest,domain=rewards.bing.com"
+          ]
+          # Insert at beginning in reverse order so first exception ends up at index 0
+          for rule in reversed(bing_exceptions):
+              if rule not in seen:
+                  all_rules.insert(0, rule)
+                  seen.add(rule)
+          print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
+          # === END BING EXCEPTIONS ===
 
-truncated = len(all_rules) > max_rules
-if truncated:
-    print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
-    all_rules = all_rules[:max_rules]
+          truncated = len(all_rules) > max_rules
+          if truncated:
+              print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
+              all_rules = all_rules[:max_rules]
 
-today = datetime.now(timezone.utc).strftime('%Y%m%d')
-output_file = config.get('output_file', 'vivaldi-macos-combined.txt')
-truncation_note = " (TRUNCATED)" if truncated else ""
+          today = datetime.now(timezone.utc).strftime('%Y%m%d')
+          output_file = config.get('output_file', 'vivaldi-macos-combined.txt')
+          truncation_note = " (TRUNCATED)" if truncated else ""
 
-header_lines = [
-    "[Adblock Plus 2.0]",
-    f"! Title: Vivaldi macOS Combined (Auto-Updated){truncation_note}",
-    f"! Version: {today}",
-    "! Expires: 1 days",
-    f"! Global Rules: {len(all_rules)}{truncation_note}",
-    "! Source Breakdown:"
-]
-for url, rules in source_data:
-    header_lines.append(f"! • {url}: {len(rules)} unique rules")
-header_lines.append("")
+          # Write header ONCE at top of file
+          header_lines = [
+              "[Adblock Plus 2.0]",
+              f"! Title: Vivaldi macOS Combined (Auto-Updated){truncation_note}",
+              f"! Version: {today}",
+              "! Expires: 1 days",
+              f"! Global Rules: {len(all_rules)}{truncation_note}",
+              "! Source Breakdown:"
+          ]
+          for url, rules in source_data:
+              header_lines.append(f"! • {url}: {len(rules)} unique rules")
+          header_lines.append("")
 
-with open(output_file, 'w') as f:
-    f.write('\n'.join(header_lines))
-    remaining = len(all_rules)
-    for url, rules in source_data:
-        if remaining <= 0:
-            break
-        section = rules[:remaining]
-        remaining -= len(section)
-        if section:
-            f.write(f"\n! --- {url.split('/')[-1]} ({len(section)} rules) ---\n")
-            f.write('\n'.join(section) + '\n')
+          with open(output_file, 'w') as f:
+              # Write header first
+              f.write('\n'.join(header_lines))
+              # Then write rules grouped by source (no duplicate headers)
+              remaining = len(all_rules)
+              for url, rules in source_data:
+                  if remaining <= 0:
+                      break
+                  section = rules[:remaining]
+                  remaining -= len(section)
+                  if section:
+                      # Section comment only (no [Adblock Plus] header)
+                      f.write(f"\n! --- {url.split('/')[-1]} ({len(section)} rules) ---\n")
+                      f.write('\n'.join(section) + '\n')
 
-print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
+          print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
           EOF
 
       - name: Run merge script
