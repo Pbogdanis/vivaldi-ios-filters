@@ -179,30 +179,6 @@ jobs:
           print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
           # === END BING EXCEPTIONS ===
 
-          # === ADD REDDIT RULES HERE (Same pattern as Bing) ===
-          reddit_rules = [
-              "||ads.reddit.com^",
-              "||redditstatic.com/ads^",
-              "||redditmedia.com/static/advertising^",
-              "||pixel.reddit.com^",
-              "||events.reddit.com^",
-              "||reddit.com/api/v1/ad/track^",
-              "##.promoted-link",
-              "##.promoted-grant-treated",
-              "##[data-adclicktype]",
-              "##.thing.link.promoted",
-              "##.ad-banner",
-              "##.sponsored-post",
-              "##.promoted-tag",
-              "##.ad-label"
-          ]
-          for rule in reversed(reddit_rules):
-              if rule not in seen:
-                  all_rules.insert(0, rule)
-                  seen.add(rule)
-          print(f"✅ Added {len(reddit_rules)} Reddit ad rules at top of file")
-          # === END REDDIT RULES ===
-
           truncated = len(all_rules) > max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
