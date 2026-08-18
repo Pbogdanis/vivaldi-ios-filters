@@ -1,28 +1,88 @@
 {
-  "output_file": "vivaldi-macos-combined-hagezi.txt",
+  "output_file": "vivaldi-macos-combined.txt",
   "sources": [
     {
-      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt",
+      "url": "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
       "skip_cosmetic": false,
       "priority": 1
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt",
+      "url": "https://easylist-downloads.adblockplus.org/easylist.txt",
+      "skip_cosmetic": false,
+      "priority": 2
+    },
+    {
+      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt",
+      "skip_cosmetic": false,
+      "priority": 3
+    },
+    {
+      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt",
       "skip_cosmetic": false,
       "priority": 4
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds.txt",
-      "skip_cosmetic": false,
+      "url": "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt",
+      "skip_cosmetic": true,
       "priority": 5
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.apple.txt",
+      "url": "https://www.fanboy.co.nz/fanboy-cookiemonster.txt",
       "skip_cosmetic": false,
       "priority": 6
+    },
+    {
+      "url": "https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt",
+      "skip_cosmetic": false,
+      "priority": 7
+    },
+    {
+      "url": "https://ublockorigin.github.io/uAssetsCDN/filters/filters.min.txt",
+      "skip_cosmetic": false,
+      "priority": 9
+    },
+    {
+      "url": "https://ublockorigin.pages.dev/filters/badware.min.txt",
+      "skip_cosmetic": false,
+      "priority": 10
+    },
+    {
+      "url": "https://ublockorigin.pages.dev/filters/privacy.min.txt",
+      "skip_cosmetic": false,
+      "priority": 11
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/filters/quick-fixes.min.txt",
+      "skip_cosmetic": false,
+      "priority": 12
+    },
+    {
+      "url": "https://ublockorigin.github.io/uAssetsCDN/filters/unbreak.min.txt",
+      "skip_cosmetic": false,
+      "priority": 13
+    },
+    {
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
+      "skip_cosmetic": false,
+      "priority": 14
+    },
+    {
+      "url": "https://ublockorigin.pages.dev/thirdparties/easylist-cookies.txt",
+      "skip_cosmetic": false,
+      "priority": 15
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/filters/annoyances-cookies.txt",
+      "skip_cosmetic": false,
+      "priority": 16
+    },
+    {
+      "url": "https://www.void.gr/kargig/void-gr-filters.txt",
+      "skip_cosmetic": false,
+      "priority": 17
     }
   ],
   "deduplicate": true,
   "remove_comments": true,
-  "max_rules": 10000000
+  "max_rules": 1100000
 }
