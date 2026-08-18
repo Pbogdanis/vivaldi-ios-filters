@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
-! Title: Vivaldi macOS Combined (Auto-Updated)
+! Title: Vivaldi 150K Limit Combined (Auto-Updated)
 ! Version: 20260818
 ! Expires: 1 days
-! Global Rules: 101335
+! Global Rules: 101337
 ! Source Breakdown:
 ! • https://easylist-downloads.adblockplus.org/easyprivacy-minified.txt: 4097 unique rules
-! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 19227 unique rules
+! • https://easylist-downloads.adblockplus.org/easylist-minified.txt: 19229 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt: 3787 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt: 2469 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt: 780 unique rules
@@ -5833,6 +5833,7 @@
 ||amniacupheave.shop^
 ||amoralslog.qpon^
 ||amoriniecology.shop^
+||amormycetescautela.cfd^
 ||amorphleatmen.qpon^
 ||amotusjimmy.shop^
 ||amovingimsonicvlsi.cyou^
@@ -7251,6 +7252,7 @@
 ||cakmzschaasdf.space^
 ||calamiredact.qpon^
 ||calathicolleen.cfd^
+||calculatingreveal.pro^
 ||calendsshouldn.cfd^
 ||calicococos.cfd^
 ||caligoatabals.com^
@@ -86310,7 +86312,7 @@ borntobefuck.com##.vast-container
 chatgpt.com##+js(trusted-json-edit, [?.type=="ads"].visibility.status="hidden")
 chatgpt.com##+js(trusted-json-edit, ..suppress_ads=true)
 chatgpt.com##+js(json-prune, messages.*.ads messages.*.renderedAdsHtml)
-chatgpt.com##+js(trusted-replace-outbound-text, TextDecoder.prototype.decode, /^\{"type":\s*"ads"\,.*?("ads_request_id":.*?"ads_response_id"|"ads_response_id":.*?"ads_request_id"):.*\}$/, {})
+chatgpt.com##+js(trusted-replace-outbound-text, TextDecoder.prototype.decode, /<template data-assistant-ads-html=""><aside aria-label.+?<\/aside><\/template>/)
 ourcoincash.xyz,softdevelopp.com##+js(noeval-if, Adblock)
 ||umamianal.vercel.app^$domain=willow.arlen.icu
 willow.arlen.icu##+js(nowoif)
