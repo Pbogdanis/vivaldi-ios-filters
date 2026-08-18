@@ -92,6 +92,7 @@ jobs:
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
           source_data = []
           seen = set()
+          all_rules = []
           max_rules = config.get('max_rules', 200000)
 
           global_skip_allowlist = config.get('skip_allowlist', False)
@@ -100,6 +101,35 @@ jobs:
           global_skip_rare_syntax = config.get('skip_rare_syntax', False)
           global_skip_duplicates = config.get('skip_duplicates', True)
 
+          # === STEP 1: INJECT REDDIT RULES FIRST (Protected from dedup/truncation) ===
+          REDDIT_RULES = [
+              # Network blocks (prevent ad requests)
+              "||ads.reddit.com^",
+              "||redditstatic.com/ads^",
+              "||redditmedia.com/static/advertising^",
+              "||pixel.reddit.com^",
+              "||events.reddit.com^",
+              "||reddit.com/api/v1/ad/track^",
+              # Cosmetic hides (remove ad UI)
+              "##.promoted-link",
+              "##.promoted-grant-treated",
+              "##[data-adclicktype]",
+              "##.thing.link.promoted",
+              "##.ad-banner",
+              "##.sponsored-post",
+              "##.promoted-tag",
+              "##.ad-label",
+              "##div:is([class*='promoted'], [class*='sponsored']):not([class*='user'])"
+          ]
+          # Inject at index 0 + add to seen set (immune to dedup/truncation)
+          for rule in reversed(REDDIT_RULES):
+              if rule not in seen:
+                  all_rules.insert(0, rule)
+                  seen.add(rule)
+          print(f"✅ Pre-injected {len(REDDIT_RULES)} WebKit-safe Reddit rules at file top")
+          # === END REDDIT INJECTION ===
+
+          # === STEP 2: Process remaining sources normally ===
           for source in config['sources']:
               if isinstance(source, str):
                   url = source
@@ -161,9 +191,14 @@ jobs:
                   print(f"⚠️ Failed to fetch {url}: {e}")
                   source_data.append((url, []))
 
-          all_rules = [r for _, rules in source_data for r in rules]
+          # === STEP 3: Add remaining rules from sources to all_rules ===
+          for _, rules in source_data:
+              for rule in rules:
+                  if rule not in seen:
+                      all_rules.append(rule)
+                      seen.add(rule)
 
-          # === ADD BING REWARDS EXCEPTIONS HERE ===
+          # === STEP 4: Add Bing Rewards exceptions (after Reddit, before truncation) ===
           bing_exceptions = [
               "@@||bat.bing.com^",
               "@@||rewards.bing.com^", 
@@ -179,6 +214,7 @@ jobs:
           print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
           # === END BING EXCEPTIONS ===
 
+          # === STEP 5: Truncate if needed ===
           truncated = len(all_rules) > max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
