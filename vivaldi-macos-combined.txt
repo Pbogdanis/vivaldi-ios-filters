@@ -2,10 +2,10 @@
 ! Title: Vivaldi macOS Combined (Auto-Updated)
 ! Version: 20260818
 ! Expires: 1 days
-! Global Rules: 205496
+! Global Rules: 205445
 ! Source Breakdown:
 ! • https://easylist-downloads.adblockplus.org/easyprivacy.txt: 52992 unique rules
-! • https://easylist-downloads.adblockplus.org/easylist.txt: 77142 unique rules
+! • https://easylist-downloads.adblockplus.org/easylist.txt: 77147 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt: 1181 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-ios-specific.txt: 2407 unique rules
 ! • https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt: 752 unique rules
@@ -20,7 +20,7 @@
 ! • https://ublockorigin.pages.dev/thirdparties/easylist-cookies.txt: 2813 unique rules
 ! • https://cdn.jsdelivr.net/gh/uBlockOrigin/uAssetsCDN@main/filters/annoyances-cookies.txt: 2341 unique rules
 ! • https://www.void.gr/kargig/void-gr-filters.txt: 1218 unique rules
-! • https://cdn.jsdelivr.net/gh/BevizLaszlo/UBlock-Filters-for-Social-Media@latest/filterlist.txt: 66 unique rules
+! • https://raw.githubusercontent.com/BevizLaszlo/UBlock-Filters-for-Social-Media/refs/heads/main/dist/reddit.txt: 10 unique rules
 @@||bat.bing.com^
 @@||rewards.bing.com^
 @@||c.bing.com^
@@ -79230,6 +79230,7 @@ lagruyere.ch#@##adv-top
 ||emufimenpcwsl.online^
 ||emuloushonans.cfd^
 ||emumsazpndymr.space^
+||emungemuzarab.qpon^
 ||emv3qtl986wv6q.cfd^
 ||emvlgutgkxcwq.website^
 ||emwksqauungjg.website^
@@ -80567,6 +80568,7 @@ lagruyere.ch#@##adv-top
 ||fhxolhfopegyp.site^
 ||fhxyofvlnthdu.site^
 ||fiafydmfzzsul.space^
+||fiancedmidn.cfd^
 ||fiatgrabbed.com^
 ||fibbooze.com^
 ||fibclrdoopiuv.online^
@@ -85015,6 +85017,7 @@ lagruyere.ch#@##adv-top
 ||ikubypxrzqjah.store^
 ||ikyjfuuaucmqs.website^
 ||ikzwvkuxrymqu.space^
+||ilaixsjjwkjoc.online^
 ||ilaterdeallyig.info^
 ||ilcdllaojci.com^
 ||ilclqdpkuquix.com^
@@ -87835,6 +87838,7 @@ lagruyere.ch#@##adv-top
 ||kslfjvhhmbrgg.online^
 ||kslfqcxumewry.store^
 ||ksnhwtjoaoeim.space^
+||ksnvnkmvtvwkj.site^
 ||ksprjvv.com^
 ||kspyqwogczssl.website^
 ||ksuwsvhxfigruwi.com^
@@ -92821,6 +92825,7 @@ lagruyere.ch#@##adv-top
 ||ocxlihabtozf.com^
 ||ocxmbarylsyde.space^
 ||ocxvseqluyfwq.site^
+||ocytedeeping.cfd^
 ||oczltdjfcrvhvq.com^
 ||odakhzdbrzbny.website^
 ||odbsmbtdcjuzp.site^
@@ -205451,46 +205456,6 @@ zoomnews.gr##IMG[src*="ad-emea.doubleclick.net/"]
 @@||skaihd-f.akamaihd.net/z/advert/*
 @@||www.antenna.gr/js/adman-video*.js$script,domain=www.antenna.gr
 @@||xe.gr/property/recent_ads?*
-www.youtube.com##ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]:upward(ytd-video-renderer)
-www.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytd-reel-shelf-renderer
-www.youtube.com##ytd-rich-shelf-renderer[is-shorts],ytd-rich-shelf-renderer[is-shorts]:upward(ytd-rich-section-renderer)
-www.youtube.com##ytd-rich-item-renderer[rendered-from-rich-grid] ytm-shorts-lockup-view-model:upward(ytd-rich-item-renderer[rendered-from-rich-grid])
-www.youtube.com##ytd-guide-entry-renderer:has(.ytd-guide-entry-renderer[title="Shorts"])
-www.youtube.com##ytd-mini-guide-entry-renderer:has(.ytd-mini-guide-entry-renderer[title="Shorts"])
-www.youtube.com##yt-tab-shape[tab-title="Shorts"]
-www.youtube.com##yt-chip-cloud-chip-renderer:has(.ytChipShapeInactive:has-text(/^Shorts$/i))
-www.youtube.com##ytm-shorts-lockup-view-model-v2:upward(grid-shelf-view-model)
-m.youtube.com##ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-video-with-context-renderer)
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-reel-shelf-renderer
-m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
-m.youtube.com##:matches-path(/^(?!\/feed\/history).*$/)ytm-shorts-lockup-view-model:upward(ytm-rich-section-renderer)
-m.youtube.com##yt-tab-shape[tab-title="Shorts"]
-www.youtube.com##ytm-chip-cloud-chip-renderer:has([aria-label="Shorts"])
-m.youtube.com##ytm-shorts-lockup-view-model:upward(grid-shelf-view-model)
-www.youtube.com##.ytp-show-tiles.videowall-endscreen.ytp-player-content.html5-endscreen
-www.youtube.com##ytd-browse[page-subtype="home"]
-www.youtube.com###scroll-container > .yt-chip-cloud-renderer.style-scope
-www.youtube.com##ytd-item-section-renderer.ytd-watch-next-secondary-results-renderer.style-scope
-www.youtube.com##div#secondary>div#secondary-inner>div#related
-www.youtube.com##div#primary>div#primary-inner>div#below>div#related
-m.youtube.com##div.related-items-container
-m.youtube.com##grid-shelf-view-model:has(ytm-shorts-lockup-view-model)
-m.youtube.com##[section-identifier="related-items"]
-m.youtube.com##:matches-path(/^\/$/).tab-content
-www.youtube.com##div.ytp-fullscreen-grid-main-content
-www.facebook.com##.x193iq5w.xgmub6v.x1ceravr.x1v0nzow
-www.facebook.com##.x1hc1fzr.x1unhpq9.x6o7n8i
-www.facebook.com##ul.xuk3077.x78zum5.x1iyjqo2.xl56j7k.xe11lzi.x1vy8oqc.x88anuq>li:nth-child(2)
-www.facebook.com##ul.xuk3077.x78zum5.x1iyjqo2.xl56j7k.xe11lzi.x1vy8oqc.x88anuq>li:nth-child(4)
-www.facebook.com##ul.xuk3077.x78zum5.x1iyjqo2.xl56j7k.xe11lzi.x1vy8oqc.x88anuq>li:nth-child(5)
-www.facebook.com##.x1us19tq.x1iyjqo2.xdt5ytf.x78zum5 > .x1iyjqo2 li.x1c1uobl.x18d9i69.xyri2b.xexx8yu.x1lziwak.xat24cr.x14z9mp.xdj266r.html-li:has(span:has-text(/^Reels$/))
-www.facebook.com###_r_7q_ > div.x193iq5w.x2lah0s.xdt5ytf.x78zum5.x9f619.x1ja2u2z.x1n2onr6:has(span:has-text(/^Reels$/))
-facebook.com##body.Android div#screen-root>div>div>div.m:has(div[aria-label="What's on your mind?"]) ~ *
-facebook.com##body.iOS div#screen-root>div>div>div.m:has(div[aria-label="What's on your mind?"]) ~ *
-facebook.com##body.Android div[role="tablist"] div.bg-s3.m:nth-of-type(4)
-facebook.com##body.Android div[role="tablist"] div.bg-s3.m:nth-of-type(6)
-facebook.com##body.iOS div.bg-s3.m:nth-of-type(4)
-facebook.com##body.iOS div.bg-s3.m:nth-of-type(6)
 www.reddit.com##shreddit-app[pagetype="home"] .main-container
 www.reddit.com##shreddit-app[pagetype="popular"] #subgrid-container
 www.reddit.com##shreddit-app[pagetype="all"] .main-container
@@ -205501,19 +205466,3 @@ www.reddit.com###section_0_pipeline_1_trending_query ~ *
 www.reddit.com###search-dropdown-results-container > div:has(svg[icon-name="trend"])
 www.reddit.com###search-dropdown-results-container > div:has(svg[icon-name="trend"]) ~ *
 www.reddit.com##faceplate-tracker[noun="discovery_unit"]
-www.twitch.tv##[aria-label="Recommended Channels"]
-www.twitch.tv##[aria-label="Recommended Categories"]
-www.twitch.tv##[aria-label="Live Channels"]
-www.twitch.tv##[aria-label*="Viewers Also Watch"]
-www.twitch.tv##main:has(#front-page-main-content)
-x.com##[aria-label="Timeline: Your Home Timeline"]
-www.instagram.com##+js(json-prune, require.0.3.0.__bbox.require.0.3.1.__bbox.result.data.xdt_api__v1__feed__timeline__connection.edges.[-].node.explore_story.media.explore.title data.xdt_api__v1__feed__timeline__connection.edges.[-].node.explore_story.media.explore.title)
-www.instagram.com##+js(json-prune, require.0.3.0.__bbox.require.0.3.1.__bbox.result.data.xdt_api__v1__feed__timeline__connection.edges.[-].node.bloks_netego.payload)
-www.instagram.com##+js(json-prune-xhr-response, data.xdt_api__v1__feed__timeline__connection.edges.[-].node.bloks_netego.payload, , propsToMatch, url:/api/graphql)
-www.instagram.com##a[href="https://www.threads.net/"]
-www.instagram.com##.xc26acl.xh8yej3.x1iyjqo2 > div:has(span:has-text(/^Reels$/))
-www.instagram.com##.xh8yej3.xaw8158.x78zum5 > div > :has(title:has-text(/^Reels$/))
-www.linkedin.com##main>.feed-sort-toggle-dsa__wrapper
-www.linkedin.com##main:has(.feed-sort-toggle-dsa__wrapper)>.relative
-linkedin.com##div[data-testid="mainFeed"] > div:not(:first-child)
-linkedin.com##main > section > ol.feed-container
