@@ -23,7 +23,7 @@ jobs:
             fromJSON(
               github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
               && format('["{0}"]', github.event.inputs.config_file) 
-              || '["sources.json", "sources-150kLimit.json", "sources-macos.json"]'
+              || '["sources-150kLimit.json", "sources-macos.json"]'
             )
           }}
       fail-fast: false
@@ -49,6 +49,7 @@ jobs:
           from datetime import datetime, timezone
 
           def is_valid_abp_rule(line: str) -> bool:
+              """Validate that a line is a syntactically valid Adblock Plus rule."""
               line = line.strip()
               if not line or line.startswith('!'):
                   return False
@@ -72,10 +73,25 @@ jobs:
           with open(config_filename) as f:
               config = json.load(f)
 
+          # === DYNAMIC TITLE FROM CONFIG FILENAME ===
+          config_basename = os.path.basename(config_filename)
+          if config_basename.startswith('sources-') and config_basename.endswith('.json'):
+              platform_tag = config_basename[len('sources-'):-len('.json')]
+              platform_map = {
+                  'ios': 'iOS',
+                  'macos': 'macOS',
+                  '150klimit': '150K Limit',
+                  'testing': 'Testing',
+                  'hagezi': 'Hagezi'
+              }
+              platform_display = platform_map.get(platform_tag.lower(), platform_tag.title())
+          else:
+              platform_display = 'Combined'
+          # === END DYNAMIC TITLE ===
+
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
           source_data = []
           seen = set()
-          all_rules = []
           max_rules = config.get('max_rules', 200000)
 
           global_skip_allowlist = config.get('skip_allowlist', False)
@@ -84,32 +100,7 @@ jobs:
           global_skip_rare_syntax = config.get('skip_rare_syntax', False)
           global_skip_duplicates = config.get('skip_duplicates', True)
 
-          # === STEP 1: Fetch Reddit rules FIRST and inject at top ===
-          reddit_url = "https://cdn.jsdelivr.net/gh/BevizLaszlo/UBlock-Filters-for-Social-Media@latest/dist/reddit.txt"
-          try:
-              resp = requests.get(reddit_url, headers=headers, timeout=30)
-              resp.raise_for_status()
-              reddit_rules = []
-              for line in resp.text.splitlines():
-                  line = line.strip()
-                  if not line or line.startswith('!') or not is_valid_abp_rule(line):
-                      continue
-                  if line not in seen:
-                      reddit_rules.append(line)
-                      seen.add(line)
-              for rule in reversed(reddit_rules):
-                  all_rules.insert(0, rule)
-              print(f"✅ Pre-injected {len(reddit_rules)} auto-updating Reddit rules at file top")
-          except Exception as e:
-              print(f"⚠️ Failed to fetch Reddit rules: {e}")
-
-          # === STEP 2: Process remaining sources ===
           for source in config['sources']:
-              if isinstance(source, str) and source == reddit_url:
-                  continue
-              if isinstance(source, dict) and source.get('url') == reddit_url:
-                  continue
-                  
               if isinstance(source, str):
                   url = source
                   skip_allowlist = global_skip_allowlist
@@ -170,14 +161,9 @@ jobs:
                   print(f"⚠️ Failed to fetch {url}: {e}")
                   source_data.append((url, []))
 
-          # === STEP 3: Add remaining rules ===
-          for _, rules in source_data:
-              for rule in rules:
-                  if rule not in seen:
-                      all_rules.append(rule)
-                      seen.add(rule)
+          all_rules = [r for _, rules in source_data for r in rules]
 
-          # === STEP 4: Add Bing exceptions ===
+          # === ADD BING REWARDS EXCEPTIONS HERE ===
           bing_exceptions = [
               "@@||bat.bing.com^",
               "@@||rewards.bing.com^", 
@@ -191,20 +177,20 @@ jobs:
                   all_rules.insert(0, rule)
                   seen.add(rule)
           print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
+          # === END BING EXCEPTIONS ===
 
-          # === STEP 5: Truncate if needed ===
           truncated = len(all_rules) > max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
               all_rules = all_rules[:max_rules]
 
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
-          output_file = config.get('output_file', 'vivaldi-macos-combined.txt')
+          output_file = config.get('output_file', 'vivaldi-combined.txt')
           truncation_note = " (TRUNCATED)" if truncated else ""
 
           header_lines = [
               "[Adblock Plus 2.0]",
-              f"! Title: Vivaldi macOS Combined (Auto-Updated){truncation_note}",
+              f"! Title: Vivaldi {platform_display} Combined (Auto-Updated){truncation_note}",
               f"! Version: {today}",
               "! Expires: 1 days",
               f"! Global Rules: {len(all_rules)}{truncation_note}",
@@ -219,7 +205,7 @@ jobs:
               if all_rules:
                   f.write('\n'.join(all_rules) + '\n')
 
-          print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
+          print(f"✅ Generated {output_file} with {len(all_rules)} final rules (Platform: {platform_display})")
           EOF
 
       - name: Run merge script
