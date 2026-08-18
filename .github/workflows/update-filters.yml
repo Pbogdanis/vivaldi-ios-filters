@@ -1,255 +1,180 @@
-name: Update Filter Lists
+import json, requests, os, sys, re
+from datetime import datetime, timezone
 
-on:
-  schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
-    inputs:
-      config_file:
-        description: 'Config to run (leave blank to run all daily configs)'
-        required: false
-        default: ''
-        type: string
+def is_valid_abp_rule(line: str) -> bool:
+    """Validate that a line is a syntactically valid Adblock Plus rule."""
+    line = line.strip()
+    if not line or line.startswith('!'):
+        return False
+    if line.startswith(('||', '|', '##', '#@#', '@@', '/')):
+        return True
+    if '##' in line and (line.count('#') >= 2 or '$' in line):
+        return True
+    if line.startswith('@@') and ('||' in line or '|' in line or line.startswith('@@/')):
+        return True
+    if re.match(r'^[&?][a-zA-Z0-9_]+=', line):
+        return False
+    return False
 
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    strategy:
-      matrix:
-        config_file: >-
-          ${{ 
-            fromJSON(
-              github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
-              && format('["{0}"]', github.event.inputs.config_file) 
-              || '["sources-150kLimit.json", "sources-macos.json"]'
-            )
-          }}
-      fail-fast: false
+config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
+print(f"📄 Processing config: {config_filename}")
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+if not os.path.exists(config_filename):
+    print(f"❌ Config file not found: {config_filename}")
+    sys.exit(1)
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+with open(config_filename) as f:
+    config = json.load(f)
 
-      - name: Install requests
-        run: pip install requests
+headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
+source_data = []
+seen = set()
+all_rules = []
+max_rules = config.get('max_rules', 200000)
 
-      - name: Write merge script
-        run: |
-          cat > merge_filters.py << 'EOF'
-          import json, requests, os, sys, re
-          from datetime import datetime, timezone
+global_skip_allowlist = config.get('skip_allowlist', False)
+global_skip_cosmetic = config.get('prefer_network_rules', False)
+global_skip_long_rules = config.get('skip_long_rules', False)
+global_skip_rare_syntax = config.get('skip_rare_syntax', False)
+global_skip_duplicates = config.get('skip_duplicates', True)
 
-          def is_valid_abp_rule(line: str) -> bool:
-              """Validate that a line is a syntactically valid Adblock Plus rule."""
-              line = line.strip()
-              if not line or line.startswith('!'):
-                  return False
-              if line.startswith(('||', '|', '##', '#@#', '@@', '/')):
-                  return True
-              if '##' in line and (line.count('#') >= 2 or '$' in line):
-                  return True
-              if line.startswith('@@') and ('||' in line or '|' in line or line.startswith('@@/')):
-                  return True
-              if re.match(r'^[&?][a-zA-Z0-9_]+=', line):
-                  return False
-              return False
+# === STEP 1: Fetch Reddit rules FIRST and inject at top ===
+reddit_url = "https://cdn.jsdelivr.net/gh/BevizLaszlo/UBlock-Filters-for-Social-Media@latest/dist/reddit.txt"
+try:
+    resp = requests.get(reddit_url, headers=headers, timeout=30)
+    resp.raise_for_status()
+    reddit_rules = []
+    for line in resp.text.splitlines():
+        line = line.strip()
+        if not line or line.startswith('!') or not is_valid_abp_rule(line):
+            continue
+        if line not in seen:
+            reddit_rules.append(line)
+            seen.add(line)
+    # Inject Reddit rules at VERY TOP of all_rules (index 0)
+    for rule in reversed(reddit_rules):
+        all_rules.insert(0, rule)
+    print(f"✅ Pre-injected {len(reddit_rules)} auto-updating Reddit rules at file top")
+except Exception as e:
+    print(f"⚠️ Failed to fetch Reddit rules: {e}")
+# === END REDDIT PRE-INJECTION ===
 
-          config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
-          print(f"📄 Processing config: {config_filename}")
+# === STEP 2: Process remaining sources normally ===
+for source in config['sources']:
+    # Skip the Reddit URL if it's in sources.json (we already fetched it)
+    if isinstance(source, str) and source == reddit_url:
+        continue
+    if isinstance(source, dict) and source.get('url') == reddit_url:
+        continue
+        
+    if isinstance(source, str):
+        url = source
+        skip_allowlist = global_skip_allowlist
+        skip_cosmetic = global_skip_cosmetic
+        skip_long_rules = global_skip_long_rules
+        skip_rare_syntax = global_skip_rare_syntax
+        skip_duplicates = global_skip_duplicates
+        keywords = None
+    else:
+        url = source['url']
+        skip_allowlist = source.get('skip_allowlist', global_skip_allowlist)
+        skip_cosmetic = source.get('skip_cosmetic', global_skip_cosmetic)
+        skip_long_rules = source.get('skip_long_rules', global_skip_long_rules)
+        skip_rare_syntax = source.get('skip_rare_syntax', global_skip_rare_syntax)
+        skip_duplicates = source.get('skip_duplicates', global_skip_duplicates)
+        keywords = source.get('keep_only_keywords')
 
-          if not os.path.exists(config_filename):
-              print(f"❌ Config file not found: {config_filename}")
-              sys.exit(1)
+    try:
+        resp = requests.get(url, headers=headers, timeout=30)
+        resp.raise_for_status()
+        rules = []
+        raw_count = 0
+        dropped_allowlist = dropped_cosmetic = dropped_long = dropped_rare = dropped_dupes = dropped_keywords = dropped_invalid = 0
+        
+        for line in resp.text.splitlines():
+            line = line.strip()
+            if not line or line.startswith('!'):
+                continue
+            raw_count += 1
+            if not is_valid_abp_rule(line):
+                dropped_invalid += 1
+                continue
+            if skip_allowlist and line.startswith('@@'):
+                dropped_allowlist += 1
+                continue
+            if skip_cosmetic and line.startswith('##'):
+                dropped_cosmetic += 1
+                continue
+            if skip_long_rules and len(line) > 500:
+                dropped_long += 1
+                continue
+            if skip_rare_syntax:
+                if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
+                    dropped_rare += 1
+                    continue
+            if keywords and line.startswith('##'):
+                if not any(kw in line.lower() for kw in keywords):
+                    dropped_keywords += 1
+                    continue
+            if skip_duplicates and line in seen:
+                dropped_dupes += 1
+                continue
+            seen.add(line)
+            rules.append(line)
+        source_data.append((url, rules))
+        print(f"✅ {url.split('/')[-1]}: Raw={raw_count}, Kept={len(rules)}, Invalid={dropped_invalid}")
+    except Exception as e:
+        print(f"⚠️ Failed to fetch {url}: {e}")
+        source_data.append((url, []))
 
-          with open(config_filename) as f:
-              config = json.load(f)
+# === STEP 3: Add remaining rules from sources to all_rules ===
+for _, rules in source_data:
+    for rule in rules:
+        if rule not in seen:
+            all_rules.append(rule)
+            seen.add(rule)
 
-          # === DYNAMIC TITLE FROM CONFIG FILENAME ===
-          config_basename = os.path.basename(config_filename)
-          if config_basename.startswith('sources-') and config_basename.endswith('.json'):
-              platform_tag = config_basename[len('sources-'):-len('.json')]
-              platform_map = {
-                  'ios': 'iOS',
-                  'macos': 'macOS',
-                  '150klimit': '150K Limit',
-                  'testing': 'Testing',
-                  'hagezi': 'Hagezi'
-              }
-              platform_display = platform_map.get(platform_tag.lower(), platform_tag.title())
-          else:
-              platform_display = 'Combined'
-          # === END DYNAMIC TITLE ===
+# === STEP 4: Add Bing Rewards exceptions (after Reddit, before truncation) ===
+bing_exceptions = [
+    "@@||bat.bing.com^",
+    "@@||rewards.bing.com^", 
+    "@@||c.bing.com^",
+    "@@||login.microsoftonline.com^$domain=bing.com|rewards.bing.com",
+    "@@||*.bing.com^$domain=bing.com|rewards.bing.com",
+    "@@||bing.com/WidgetServ/RequestWidgetService.aspx?$xmlhttprequest,domain=rewards.bing.com"
+]
+for rule in reversed(bing_exceptions):
+    if rule not in seen:
+        all_rules.insert(0, rule)
+        seen.add(rule)
+print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
+# === END BING EXCEPTIONS ===
 
-          headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
-          source_data = []
-          seen = set()
-          max_rules = config.get('max_rules', 200000)
+# === STEP 5: Truncate if needed ===
+truncated = len(all_rules) > max_rules
+if truncated:
+    print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
+    all_rules = all_rules[:max_rules]
 
-          global_skip_allowlist = config.get('skip_allowlist', False)
-          global_skip_cosmetic = config.get('prefer_network_rules', False)
-          global_skip_long_rules = config.get('skip_long_rules', False)
-          global_skip_rare_syntax = config.get('skip_rare_syntax', False)
-          global_skip_duplicates = config.get('skip_duplicates', True)
+today = datetime.now(timezone.utc).strftime('%Y%m%d')
+output_file = config.get('output_file', 'vivaldi-macos-combined.txt')
+truncation_note = " (TRUNCATED)" if truncated else ""
 
-          for source in config['sources']:
-              if isinstance(source, str):
-                  url = source
-                  skip_allowlist = global_skip_allowlist
-                  skip_cosmetic = global_skip_cosmetic
-                  skip_long_rules = global_skip_long_rules
-                  skip_rare_syntax = global_skip_rare_syntax
-                  skip_duplicates = global_skip_duplicates
-                  keywords = None
-              else:
-                  url = source['url']
-                  skip_allowlist = source.get('skip_allowlist', global_skip_allowlist)
-                  skip_cosmetic = source.get('skip_cosmetic', global_skip_cosmetic)
-                  skip_long_rules = source.get('skip_long_rules', global_skip_long_rules)
-                  skip_rare_syntax = source.get('skip_rare_syntax', global_skip_rare_syntax)
-                  skip_duplicates = source.get('skip_duplicates', global_skip_duplicates)
-                  keywords = source.get('keep_only_keywords')
+header_lines = [
+    "[Adblock Plus 2.0]",
+    f"! Title: Vivaldi macOS Combined (Auto-Updated){truncation_note}",
+    f"! Version: {today}",
+    "! Expires: 1 days",
+    f"! Global Rules: {len(all_rules)}{truncation_note}",
+    "! Source Breakdown:"
+]
+for url, rules in source_data:
+    header_lines.append(f"! • {url}: {len(rules)} unique rules")
+header_lines.append("")
 
-              try:
-                  resp = requests.get(url, headers=headers, timeout=30)
-                  resp.raise_for_status()
-                  rules = []
-                  raw_count = 0
-                  dropped_allowlist = dropped_cosmetic = dropped_long = dropped_rare = dropped_dupes = dropped_keywords = dropped_invalid = 0
-                  
-                  for line in resp.text.splitlines():
-                      line = line.strip()
-                      if not line or line.startswith('!'):
-                          continue
-                      raw_count += 1
-                      if not is_valid_abp_rule(line):
-                          dropped_invalid += 1
-                          continue
-                      if skip_allowlist and line.startswith('@@'):
-                          dropped_allowlist += 1
-                          continue
-                      if skip_cosmetic and line.startswith('##'):
-                          dropped_cosmetic += 1
-                          continue
-                      if skip_long_rules and len(line) > 500:
-                          dropped_long += 1
-                          continue
-                      if skip_rare_syntax:
-                          if '$redirect=' in line or '$csp=' in line or '$jsonprune=' in line:
-                              dropped_rare += 1
-                              continue
-                      if keywords and line.startswith('##'):
-                          if not any(kw in line.lower() for kw in keywords):
-                              dropped_keywords += 1
-                              continue
-                      if skip_duplicates and line in seen:
-                          dropped_dupes += 1
-                          continue
-                      seen.add(line)
-                      rules.append(line)
-                  source_data.append((url, rules))
-                  print(f"✅ {url.split('/')[-1]}: Raw={raw_count}, Kept={len(rules)}, Invalid={dropped_invalid}")
-              except Exception as e:
-                  print(f"⚠️ Failed to fetch {url}: {e}")
-                  source_data.append((url, []))
+with open(output_file, 'w') as f:
+    f.write('\n'.join(header_lines))
+    if all_rules:
+        f.write('\n'.join(all_rules) + '\n')
 
-          all_rules = [r for _, rules in source_data for r in rules]
-
-          # === ADD BING REWARDS EXCEPTIONS HERE ===
-          bing_exceptions = [
-              "@@||bat.bing.com^",
-              "@@||rewards.bing.com^", 
-              "@@||c.bing.com^",
-              "@@||login.microsoftonline.com^$domain=bing.com|rewards.bing.com",
-              "@@||*.bing.com^$domain=bing.com|rewards.bing.com",
-              "@@||bing.com/WidgetServ/RequestWidgetService.aspx?$xmlhttprequest,domain=rewards.bing.com"
-          ]
-          for rule in reversed(bing_exceptions):
-              if rule not in seen:
-                  all_rules.insert(0, rule)
-                  seen.add(rule)
-          print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
-          # === END BING EXCEPTIONS ===
-
-          truncated = len(all_rules) > max_rules
-          if truncated:
-              print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
-              all_rules = all_rules[:max_rules]
-
-          today = datetime.now(timezone.utc).strftime('%Y%m%d')
-          output_file = config.get('output_file', 'vivaldi-combined.txt')
-          truncation_note = " (TRUNCATED)" if truncated else ""
-
-          header_lines = [
-              "[Adblock Plus 2.0]",
-              f"! Title: Vivaldi {platform_display} Combined (Auto-Updated){truncation_note}",
-              f"! Version: {today}",
-              "! Expires: 1 days",
-              f"! Global Rules: {len(all_rules)}{truncation_note}",
-              "! Source Breakdown:"
-          ]
-          for url, rules in source_data:
-              header_lines.append(f"! • {url}: {len(rules)} unique rules")
-          header_lines.append("")
-
-          with open(output_file, 'w') as f:
-              f.write('\n'.join(header_lines))
-              if all_rules:
-                  f.write('\n'.join(all_rules) + '\n')
-
-          print(f"✅ Generated {output_file} with {len(all_rules)} final rules (Platform: {platform_display})")
-          EOF
-
-      - name: Run merge script
-        env:
-          CONFIG_FILE: ${{ matrix.config_file }}
-        run: python3 merge_filters.py
-
-      - name: Commit and push changes
-        env:
-          CONFIG_FILE: ${{ matrix.config_file }}
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git fetch origin
-          git pull --rebase origin ${{ github.ref_name }} || true
-          
-          OUTPUT_FILE=$(python3 -c "import json, os; cfg=json.load(open(os.environ.get('CONFIG_FILE'))); print(cfg['output_file'])")
-          echo "📦 Output file: $OUTPUT_FILE"
-          
-          if [ -f "$OUTPUT_FILE" ]; then
-            git add "$OUTPUT_FILE"
-            if ! git diff --cached --quiet; then
-              git pull --rebase origin ${{ github.ref_name }} || true
-              git commit -m "chore: auto-update filter lists ($(date +%Y%m%d), config: $CONFIG_FILE)"
-              for i in 1 2 3; do
-                if git push origin ${{ github.ref_name }}; then
-                  echo "✅ Changes pushed for $CONFIG_FILE"
-                  break
-                elif [ $i -eq 3 ]; then
-                  echo "❌ Push failed after 3 attempts for $CONFIG_FILE"
-                  exit 1
-                else
-                  echo "⚠️ Push attempt $i failed, retrying in 5s..."
-                  git fetch origin
-                  git pull --rebase origin ${{ github.ref_name }} || true
-                  sleep 5
-                fi
-              done
-            else
-              echo "ℹ️ No changes for $CONFIG_FILE"
-            fi
-          else
-            echo "❌ Output file not found: $OUTPUT_FILE"
-            ls -la
-            exit 1
-          fi
+print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
