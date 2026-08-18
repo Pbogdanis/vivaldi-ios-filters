@@ -178,6 +178,35 @@ jobs:
                   seen.add(rule)
           print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
           # === END BING EXCEPTIONS ===
+          # === ADD REDDIT AD BLOCKING RULES ===
+          reddit_rules = [
+          "||reddit.com/api/request_promo.json",
+          "||rereddit.com^",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##shreddit-comment-tree-ad",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##.promotedlink:not([style^=\"height: 1px;\"])",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##div[data-before-content]",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href^=\"https://PornGameFree.fun\"]",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##.ii4q9d-0.fePAzF > div.s1g6rpxu-1",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##div[id^=\"sidebar-btf\"]",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion###ad_main_top",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[style*=\"fakelightbox-overlay-\"] ~ div[tabindex] > div >  div > div > div[data-redditstyle=\"false\"]:has(> div > div > div[data-before-content=\"advertisement\"])",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[data-testid=\"frontpage-sidebar\"] > div[class]:has(> div[data-before-content])",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[data-redditstyle] > div[style] > div[data-slot] > div[data-before-content]:upward(div[data-redditstyle])",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[style=\"margin-left:24px;margin-top:0\"][class] > div[class] > div[class^=\"_\"]:not([data-redditstyle]):has(> div[class] div[class] > div[class] > div[data-before-content=\"advertisement\"])",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#.ListingLayout-outerContainer > div[class] > div[style][class] > div[style][class] > div[class] div[class]:not([data-redditstyle]):has(> div[class] > div[class] > .SidebarAd)",
+          "old.reddit.com##.native-ad-container",
+          "old.reddit.com##.sb-unit",
+          "reddit.com##[data-faceplate-tracking-context*=\"\\\"promoted\\\":true\"]",
+          "reddit.com##div[data-before-content=\"advertisement\"]",
+          "reddit.com##shreddit-ad-post",
+          "reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##shreddit-comments-page-ad"
+          ]
+          for rule in reversed(reddit_rules):
+              if rule not in seen:
+                  all_rules.insert(0, rule)
+                  seen.add(rule)
+          print(f"✅ Added {len(reddit_rules)} Reddit ad blocking rules at top of file")
+          # === END REDDIT RULES ===
 
           truncated = len(all_rules) > max_rules
           if truncated:
