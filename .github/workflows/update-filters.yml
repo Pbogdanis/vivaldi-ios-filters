@@ -59,8 +59,9 @@ jobs:
                   return True
               if line.startswith('@@') and ('||' in line or '|' in line or line.startswith('@@/')):
                   return True
-              if re.match(r'^[&?][a-zA-Z0-9_]+=', line):
-                  return False
+              # Query param filters ARE valid ABP syntax (e.g., &utm_source=, ?clickid=)
+              if re.match(r'^[&?][a-zA-Z0-9_]+=[^$]*$', line) and '$' not in line and '##' not in line:
+                  return True
               return False
 
           config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
