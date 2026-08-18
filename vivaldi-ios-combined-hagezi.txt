@@ -10,8 +10,12 @@
 ! • https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt: 1220 unique rules
 ! • https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds.txt: 445 unique rules
 ! • https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.apple.txt: 40 unique rules
-
-! --- ultimate.mini.txt (81908 rules) ---
+@@||bat.bing.com^
+@@||rewards.bing.com^
+@@||c.bing.com^
+@@||login.microsoftonline.com^$domain=bing.com|rewards.bing.com
+@@||*.bing.com^$domain=bing.com|rewards.bing.com
+@@||bing.com/WidgetServ/RequestWidgetService.aspx?$xmlhttprequest,domain=rewards.bing.com
 ||0.0-02.net^
 ||2.004k.com^
 ||www.007-dvd.com^
@@ -81920,8 +81924,6 @@
 ||zzux.com^
 ||zzx9.cn^
 ||zzzperform.com^
-
-! --- fake.txt (16247 rules) ---
 ||eoutlet.2023shoponline.com^
 ||eu.2bagsvalley.cn^
 ||ai.55aiagents.com^
@@ -98169,8 +98171,6 @@
 ||zyphorbit-at.com^
 ||zyra-amsterdam.nl^
 ||zyronpaneele.com^
-
-! --- popupads.txt (44855 rules) ---
 ||fd01ce9a02.0012e30263.com^
 ||0db65504c2.012dadaa06.com^
 ||c8d9e11a82.031dcf857c.com^
@@ -143026,8 +143026,6 @@
 ||zzzjvqzmkazvo.top^
 ||zzzmjfixezere.site^
 ||zzzmyl.com^
-
-! --- dyndns.txt (1220 rules) ---
 ||dyn.addr.tools^
 ||changeip.co.uk^
 ||dynamicdns.co.uk^
@@ -144248,8 +144246,6 @@
 ||zsh.jp^
 ||zverovich.net^
 ||zyix.com^
-
-! --- spam-tlds.txt (445 rules) ---
 ||*.actor^
 ||*.africa^$denyallow=nation.africa
 ||*.agency^$denyallow=apptoro.agency|baam.agency|battlefield.agency|byteful.agency|robotzebra.agency|uphotel.agency|usenet.agency|ws.agency
@@ -144695,8 +144691,6 @@
 ||*.xn--yfro4i67o^
 ||*.xn--ygbi2ammx^
 ||*.xn--zfr164b^
-
-! --- native.apple.txt (40 rules) ---
 ||diagassets.g.aaplimg.com^
 ||prod-news-notification-events.v.aaplimg.com^
 ||securemetrics-cn.v.aaplimg.com^
