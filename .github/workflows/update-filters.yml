@@ -23,7 +23,7 @@ jobs:
             fromJSON(
               github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
               && format('["{0}"]', github.event.inputs.config_file) 
-              || '["sources.json", "sources-150kLimit.json", "sources-hagezi.json", "sources-macos.json"]'
+              || '["sources-150kLimit.json", "sources-macos.json"]'
             )
           }}
       fail-fast: false
@@ -72,6 +72,22 @@ jobs:
 
           with open(config_filename) as f:
               config = json.load(f)
+
+          # === DYNAMIC TITLE FROM CONFIG FILENAME ===
+          config_basename = os.path.basename(config_filename)
+          if config_basename.startswith('sources-') and config_basename.endswith('.json'):
+              platform_tag = config_basename[len('sources-'):-len('.json')]
+              platform_map = {
+                  'ios': 'iOS',
+                  'macos': 'macOS',
+                  '150klimit': '150K Limit',
+                  'testing': 'Testing',
+                  'hagezi': 'Hagezi'
+              }
+              platform_display = platform_map.get(platform_tag.lower(), platform_tag.title())
+          else:
+              platform_display = 'Combined'
+          # === END DYNAMIC TITLE ===
 
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
           source_data = []
@@ -169,12 +185,12 @@ jobs:
               all_rules = all_rules[:max_rules]
 
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
-          output_file = config.get('output_file', 'vivaldi-macos-combined.txt')
+          output_file = config.get('output_file', 'vivaldi-combined.txt')
           truncation_note = " (TRUNCATED)" if truncated else ""
 
           header_lines = [
               "[Adblock Plus 2.0]",
-              f"! Title: Vivaldi macOS Combined (Auto-Updated){truncation_note}",
+              f"! Title: Vivaldi {platform_display} Combined (Auto-Updated){truncation_note}",
               f"! Version: {today}",
               "! Expires: 1 days",
               f"! Global Rules: {len(all_rules)}{truncation_note}",
@@ -189,7 +205,7 @@ jobs:
               if all_rules:
                   f.write('\n'.join(all_rules) + '\n')
 
-          print(f"✅ Generated {output_file} with {len(all_rules)} final rules")
+          print(f"✅ Generated {output_file} with {len(all_rules)} final rules (Platform: {platform_display})")
           EOF
 
       - name: Run merge script
