@@ -59,9 +59,8 @@ jobs:
                   return True
               if line.startswith('@@') and ('||' in line or '|' in line or line.startswith('@@/')):
                   return True
-              # Query param filters ARE valid ABP syntax (e.g., &utm_source=, ?clickid=)
-              if re.match(r'^[&?][a-zA-Z0-9_]+=[^$]*$', line) and '$' not in line and '##' not in line:
-                  return True
+              if re.match(r'^[&?][a-zA-Z0-9_]+=', line):
+                  return False
               return False
 
           config_filename = os.environ.get('CONFIG_FILE', 'sources.json')
@@ -93,7 +92,6 @@ jobs:
           headers = {'User-Agent': 'Vivaldi-iOS-FilterMerger/1.0'}
           source_data = []
           seen = set()
-          all_rules = []
           max_rules = config.get('max_rules', 200000)
 
           global_skip_allowlist = config.get('skip_allowlist', False)
@@ -102,32 +100,6 @@ jobs:
           global_skip_rare_syntax = config.get('skip_rare_syntax', False)
           global_skip_duplicates = config.get('skip_duplicates', True)
 
-          # === INJECT REDDIT RULES AT VERY TOP (Before any processing) ===
-          REDDIT_RULES = [
-              "||ads.reddit.com^",
-              "||redditstatic.com/ads^",
-              "||redditmedia.com/static/advertising^",
-              "||pixel.reddit.com^",
-              "||events.reddit.com^",
-              "||reddit.com/api/v1/ad/track^",
-              "##.promoted-link",
-              "##.promoted-grant-treated",
-              "##[data-adclicktype]",
-              "##.thing.link.promoted",
-              "##.ad-banner",
-              "##.sponsored-post",
-              "##.promoted-tag",
-              "##.ad-label"
-          ]
-          # Inject at index 0 + add to seen set (immune to dedup/truncation)
-          for rule in reversed(REDDIT_RULES):
-              if rule not in seen:
-                  all_rules.insert(0, rule)
-                  seen.add(rule)
-          print(f"✅ Pre-injected {len(REDDIT_RULES)} WebKit-safe Reddit rules at file top")
-          # === END REDDIT INJECTION ===
-
-          # === Process remaining sources normally ===
           for source in config['sources']:
               if isinstance(source, str):
                   url = source
@@ -189,14 +161,9 @@ jobs:
                   print(f"⚠️ Failed to fetch {url}: {e}")
                   source_data.append((url, []))
 
-          # === Add remaining rules from sources to all_rules ===
-          for _, rules in source_data:
-              for rule in rules:
-                  if rule not in seen:
-                      all_rules.append(rule)
-                      seen.add(rule)
+          all_rules = [r for _, rules in source_data for r in rules]
 
-          # === Add Bing Rewards exceptions (after Reddit, before truncation) ===
+          # === ADD BING REWARDS EXCEPTIONS HERE ===
           bing_exceptions = [
               "@@||bat.bing.com^",
               "@@||rewards.bing.com^", 
@@ -212,7 +179,6 @@ jobs:
           print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions at top of file")
           # === END BING EXCEPTIONS ===
 
-          # === Truncate if needed ===
           truncated = len(all_rules) > max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
