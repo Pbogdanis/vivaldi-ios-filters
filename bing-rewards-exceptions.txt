@@ -1,0 +1,27 @@
+[Adblock Plus 2.0]
+! Title: Bing Rewards Exceptions for Vivaldi
+! Version: 20260818
+! Expires: 1 days
+! Homepage: https://github.com/Pbogdanis/vivaldi-ios-filters
+! Description: Exception rules to allow Bing Rewards telemetry while using ad blockers in Vivaldi native blocker.
+
+! === BING REWARDS EXCEPTIONS ===
+! Allow Bing telemetry beacon that registers searches for rewards
+@@||bat.bing.com^
+@@||rewards.bing.com^
+@@||c.bing.com^
+
+! Allow Microsoft auth for rewards sync (scoped to Bing domains)
+@@||login.microsoftonline.com^$domain=bing.com|rewards.bing.com
+
+! Allow first-party Bing resources needed for rewards UI
+@@||*.bing.com^$domain=bing.com|rewards.bing.com
+
+! Allow rewards widget API call (scoped to rewards.bing.com)
+@@||bing.com/WidgetServ/RequestWidgetService.aspx?$xmlhttprequest,domain=rewards.bing.com
+
+! === NOTES ===
+! These rules ONLY allow essential Bing Rewards functionality.
+! They do NOT disable ad blocking on Bing or other sites.
+! If Bing Rewards still doesn't count: toggle this list OFF → wait 10s → ON in Vivaldi.
+! Update this list if Microsoft changes their ad/telemetry endpoints.
