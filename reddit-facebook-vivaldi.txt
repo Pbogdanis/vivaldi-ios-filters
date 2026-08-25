@@ -3,9 +3,10 @@
 ! Version: 20260818
 ! Expires: 1 days
 ! Homepage: https://github.com/Pbogdanis/vivaldi-ios-filters
+! Description: WebKit-compatible rules for blocking Reddit and Facebook ads in Vivaldi native blocker
 
-! === REDDIT ADS ===
-! Block ad network requests
+! === REDDIT ADS - Network Blocks ===
+||alb.reddit.com/cr?*
 ||ads.reddit.com^
 ||redditstatic.com/ads^
 ||redditmedia.com/static/advertising^
@@ -13,66 +14,42 @@
 ||events.reddit.com^
 ||reddit.com/api/v1/ad/track^
 
-! Hide ad containers (cosmetic rules)
+! === REDDIT ADS - Cosmetic Hides ===
+reddit.com##a[rel*="sponsored"]
+reddit.com##a[href*="/cr?"]
+reddit.com##[data-adclicktype]
 reddit.com##.promoted-link
 reddit.com##.promoted-grant-treated
-reddit.com##[data-adclicktype]
 reddit.com##.thing.link.promoted
 reddit.com##.ad-banner
 reddit.com##.sponsored-post
 reddit.com##.promoted-tag
 reddit.com##.ad-label
 
-! === FACEBOOK ADS ===
-! Block ad network requests
+! === FACEBOOK ADS - Network Blocks ===
+||facebook.com/tr/
+||facebook.com/tr?
 ||facebook.com/ads/
 ||facebook.com/ad_preferences/
 ||facebook.com/ad_activity/
 ||facebook.com/adsmanager/
-||facebook.com/ads_injection/
-||facebook.com/tr/
-||facebook.com/tr?
-||facebook.com/ajax/bz
-||graph.facebook.com/*/ad
 ||an.facebook.com^
+||graph.facebook.com/*/ad
 
-! Hide sponsored posts and ad containers
-facebook.com##[data-ad-preview]
-facebook.com##[data-adclicktype]
-facebook.com##[data-testid="story-ads"]
-facebook.com##[data-testid="placement_tracking"]
-facebook.com##div[data-ad-comet-preview]
-facebook.com##div[data-ad-status="unpaid"]
-facebook.com##div[data-ad-status="paid"]
-facebook.com##div[data-ad-status="sponsored"]
-facebook.com##div[data-ad-status="ad"]
+! === FACEBOOK ADS - Cosmetic Hides ===
 facebook.com##[aria-label="Sponsored"]
-facebook.com##[aria-label="Sponsored · Create ad"]
-facebook.com##div[data-pagelet*="FeedUnit"]:has([data-testid="story-ads"])
-facebook.com##div[data-pagelet*="FeedUnit"]:has([data-ad-comet-preview])
-facebook.com##div[data-pagelet*="FeedUnit"]:has(span:contains("Sponsored"))
-facebook.com##div[data-pagelet*="FeedUnit"]:has(a[href*="/ads/"])
-
-! Hide "Sponsored" labels and ad footers
+facebook.com##[aria-label*="Sponsored"]
+facebook.com##a[rel="nofollow"][href*="utm_"]
+facebook.com##a[rel="nofollow"][href*="fbclid="]
 facebook.com##span:has-text("Sponsored")
-facebook.com##div[data-testid="post-feedback"]
-facebook.com##div[data-testid="UFI2CommentsList"] + div[data-ad-status]
+facebook.com##div[data-testid="post-feedback"]:has-text("Sponsored")
 
-! === EXCEPTIONS (Prevent breakage) ===
-! Allow essential Facebook functionality
+! === EXCEPTIONS - Prevent Breakage ===
 @@||facebook.com/dialog/
 @@||facebook.com/login.php
 @@||facebook.com/ajax/bootloader-endpoint/
-@@||facebook.com/ajax/bz$~xmlhttprequest
-
-! Allow Reddit functionality (non-ad)
 @@||reddit.com/api/v1/me$~xmlhttprequest
 @@||reddit.com/api/v1/user/
 @@||reddit.com/.compact/
 @@||reddit.com/r/
 @@||reddit.com/user/
-
-! === PLATFORM NOTES ===
-! This list uses only ABP-compatible syntax for Vivaldi native blocker.
-! For best results: enable this list + disable overlapping built-in lists.
-! Toggle list OFF → wait 10s → ON to force refresh in Vivaldi iOS.
