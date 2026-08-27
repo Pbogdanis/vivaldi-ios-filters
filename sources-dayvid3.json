@@ -2,54 +2,39 @@
   "output_file": "vivaldi-ios-combined-dayvid3.txt",
   "sources": [
     {
-      "url": "https://downloads.vivaldi.com/ddg/tds-v2-current.json",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.mini.txt",
       "skip_cosmetic": false,
       "priority": 1
     },
     {
-      "url": "https://downloads.vivaldi.com/easylist/easyprivacy-current.txt",
+      "url": "https://downloads.vivaldi.com/lists/abp/abp-filters-anti-cv-current.txt",
       "skip_cosmetic": false,
       "priority": 2
     },
     {
-      "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_trackers.txt",
+      "url": "https://downloads.vivaldi.com/lists/abp/antiadblockfilters-current.txt",
       "skip_cosmetic": false,
       "priority": 3
     },
     {
-      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.mini.txt",
+      "url": "https://downloads.vivaldi.com/easylist/easylist-current.txt",
       "skip_cosmetic": false,
       "priority": 4
     },
     {
-      "url": "https://downloads.vivaldi.com/lists/abp/abp-filters-anti-cv-current.txt",
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&mimetype=plaintext",
       "skip_cosmetic": false,
       "priority": 5
     },
     {
-      "url": "https://downloads.vivaldi.com/lists/abp/antiadblockfilters-current.txt",
+      "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
       "skip_cosmetic": false,
       "priority": 6
     },
     {
-      "url": "https://downloads.vivaldi.com/easylist/easylist-current.txt",
-      "skip_cosmetic": false,
-      "priority": 7
-    },
-    {
-      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&mimetype=plaintext",
-      "skip_cosmetic": false,
-      "priority": 8
-    },
-    {
-      "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
-      "skip_cosmetic": false,
-      "priority": 9
-    },
-    {
       "url": "https://filters.adtidy.org/extension/ublock/filters/19.txt",
       "skip_cosmetic": false,
-      "priority": 10
+      "priority": 7
     }
   ],
   "deduplicate": true,
