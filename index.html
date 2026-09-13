@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filter List Rule Counter</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --danger: #ef4444;
+      --danger-hover: #dc2626;
+      --border: #334155;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    input[type="url"] {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      background-color: var(--card-bg);
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+    }
+
+    input[type="url"]:focus {
+      border-color: var(--accent);
+    }
+
+    button {
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.5rem;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-add {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+
+    .btn-add:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-remove {
+      background-color: transparent;
+      color: var(--danger);
+      border: 1px solid var(--danger);
+      padding: 0.35rem 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .btn-remove:hover {
+      background-color: var(--danger);
+      color: #fff;
+    }
+
+    .summary-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .summary-card div span {
+      font-weight: bold;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--card-bg);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    th, td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.05);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:not(:last-child) td {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .url-cell {
+      word-break: break-all;
+      max-width: 400px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .badge-loading { background-color: #eab308; color: #0f172a; }
+    .badge-error { background-color: var(--danger); color: #fff; }
+    .badge-success { background-color: #22c55e; color: #0f172a; }
+
+    @media (max-width: 600px) {
+      .input-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Filter List Inspector</h1>
+  <p class="subtitle">Enter URLs of adblock filter lists to calculate active rule counts.</p>
+
+  <form id="add-form" class="input-group">
+    <input 
+      type="url" 
+      id="list-url" 
+      placeholder="http://example.com/filter-list.txt" 
+      required 
+    />
+    <button type="submit" class="btn-add">Add List</button>
+  </form>
+
+  <div class="summary-card">
+    <div>Total Lists: <span id="total-lists">0</span></div>
+    <div>Total Rules: <span id="total-rules">0</span></div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Filter List URL</th>
+        <th>Rules</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="list-table-body">
+      <tr id="empty-row">
+        <td colspan="4" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+          No lists added yet.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    const form = document.getElementById('add-form');
+    const urlInput = document.getElementById('list-url');
+    const tableBody = document.getElementById('list-table-body');
+    const emptyRow = document.getElementById('empty-row');
+    const totalListsEl = document.getElementById('total-lists');
+    const totalRulesEl = document.getElementById('total-rules');
+
+    let lists = [];
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const url = urlInput.value.trim();
+      if (!url) return;
+
+      urlInput.value = '';
+      addFilterList(url);
+    });
+
+    async function addFilterList(url) {
+  const id = Date.now().toString();
+  
+  // Resolve known problematic URLs to their functioning HTTPS mirrors
+  let fetchUrl = url;
+  if (url.includes('stanev.org/abp/adblock_bg.txt')) {
+    fetchUrl = 'https://raw.githubusercontent.com/RealEnder/adblockbg/master/adblockbg.txt';
+  } else if (fetchUrl.startsWith('http://')) {
+    fetchUrl = fetchUrl.replace(/^http:\/\//i, 'https://');
+  }
+
+  const listItem = {
+    id,
+    url, // Retains original input in UI table
+    count: 0,
+    status: 'loading',
+    errorMsg: ''
+  };
+
+  lists.push(listItem);
+  render();
+
+  let fetchedText = null;
+
+  // 1. Direct fetch (Works natively for raw.githubusercontent.com and CORS-enabled hosts)
+  try {
+    const response = await fetch(fetchUrl);
+    if (response.ok) {
+      fetchedText = await response.text();
+    }
+  } catch (err) {}
+
+  // 2. Fallback CORS proxy for other non-CORS HTTPS links
+  if (!fetchedText) {
+    try {
+      const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(fetchUrl)}`;
+      const response = await fetch(proxyUrl);
+      if (response.ok) {
+        fetchedText = await response.text();
+      }
+    } catch (err) {}
+  }
+
+  if (fetchedText !== null) {
+    listItem.count = countRules(fetchedText);
+    listItem.status = 'success';
+  } else {
+    listItem.status = 'error';
+    listItem.errorMsg = 'Fetch failed (CORS/HTTP restriction)';
+  }
+
+  render();
+}
+
+    function countRules(text) {
+      const lines = text.split(/\r?\n/);
+      let count = 0;
+
+      for (let line of lines) {
+        line = line.trim();
+        
+        // Skip empty lines, standard comments (!), and section headers ([...])
+        if (!line) continue;
+        if (line.startsWith('!')) continue;
+        if (line.startsWith('[') && line.endsWith(']')) continue;
+
+        count++;
+      }
+
+      return count;
+    }
+
+    function removeList(id) {
+      lists = lists.filter(item => item.id !== id);
+      render();
+    }
+
+    function render() {
+      if (lists.length === 0) {
+        emptyRow.style.display = 'table-row';
+        tableBody.innerHTML = '';
+        tableBody.appendChild(emptyRow);
+        totalListsEl.textContent = '0';
+        totalRulesEl.textContent = '0';
+        return;
+      }
+
+      emptyRow.style.display = 'none';
+      tableBody.innerHTML = '';
+
+      let grandTotalRules = 0;
+
+      lists.forEach(item => {
+        if (item.status === 'success') {
+          grandTotalRules += item.count;
+        }
+
+        const tr = document.createElement('tr');
+
+        // URL cell
+        const tdUrl = document.createElement('td');
+        tdUrl.className = 'url-cell';
+        tdUrl.textContent = item.url;
+
+        // Rules Count cell
+        const tdCount = document.createElement('td');
+        tdCount.textContent = item.status === 'success' ? item.count.toLocaleString() : '-';
+
+        // Status cell
+        const tdStatus = document.createElement('td');
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+
+        if (item.status === 'loading') {
+          badge.classList.add('badge-loading');
+          badge.textContent = 'Fetching...';
+        } else if (item.status === 'success') {
+          badge.classList.add('badge-success');
+          badge.textContent = 'Ready';
+        } else {
+          badge.classList.add('badge-error');
+          badge.textContent = item.errorMsg || 'Error';
+        }
+        tdStatus.appendChild(badge);
+
+        // Action cell
+        const tdAction = document.createElement('td');
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'btn-remove';
+        removeBtn.textContent = 'Remove';
+        removeBtn.onclick = () => removeList(item.id);
+        tdAction.appendChild(removeBtn);
+
+        tr.appendChild(tdUrl);
+        tr.appendChild(tdCount);
+        tr.appendChild(tdStatus);
+        tr.appendChild(tdAction);
+
+        tableBody.appendChild(tr);
+      });
+
+      totalListsEl.textContent = lists.length;
+      totalRulesEl.textContent = grandTotalRules.toLocaleString();
+    }
+  </script>
+</body>
+</html>
