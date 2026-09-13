@@ -1,0 +1,42 @@
+{
+  "output_file": "vivaldi-ios-combined-dayvid3.txt",
+  "sources": [
+    {
+      "url": "https://downloads.vivaldi.com/lists/abp/abp-filters-anti-cv-current.txt",
+      "skip_cosmetic": false,
+      "priority": 1
+    },
+    {
+      "url": "https://downloads.vivaldi.com/lists/abp/antiadblockfilters-current.txt",
+      "skip_cosmetic": false,
+      "priority": 2
+    },
+    {
+      "url": "https://downloads.vivaldi.com/easylist/easylist-current.txt",
+      "skip_cosmetic": false,
+      "priority": 3
+    },
+    {
+      "url": "https://downloads.vivaldi.com/lists/vivaldi/blocklist-current.txt",
+      "skip_cosmetic": false,
+      "priority": 4
+    },
+    {
+      "url": "https://www.void.gr/kargig/void-gr-filters.txt",
+      "skip_cosmetic": false,
+      "priority": 5
+    },
+    {
+      "url": "https://small.oisd.nl/",
+      "skip_cosmetic": false,
+      "priority": 6
+    },
+    {
+      "url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt",
+      "skip_cosmetic": false,
+      "priority": 7
+  ],
+  "deduplicate": true,
+  "remove_comments": true,
+  "max_rules": 150000
+}
