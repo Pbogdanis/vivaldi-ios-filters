@@ -10,3 +10,23 @@ Adblocking filter list for vivaldi iOS ( version 15+ ) that remains under 150K r
 I also added a github page in order to check how many rules are in each filterlist I want to add. Most community filter lists are hosted or mirrored on **GitHub**, **GitLab**, or **CDNs** (like jsDelivr or Statically). These services natively support `HTTPS` and send proper `CORS` headers out of the box.
 
 Whenever possible, use the raw mirror link instead of the personal website link.
+
+## Current setup
+
+Through use I found that somethings not translated correctly when merging the filterlists. Since my knowledge on the subject is limited, I am right now testing the below setup. 
+
+Trackers: 
+
+EasyPrivacy ( provided by the browser ) 
+
+Adblock: 
+
+ABP-Anti circumvention list ( provided by the browser ) 
+Adblock warning removal list ( provided by the browser ) 
+Easylist ( provided by the browser ) 
+Vivaldi block list ( provided by the browser ) 
+Greek Void.gr ( provided by the browser ) 
+OISD Big ( for macos, replace with OISDSmall for iOS ) - https://big.oisd.nl, https://small.oisd.nl
+UBlock Quick Fixes - https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt
+
+
