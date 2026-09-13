@@ -15,18 +15,18 @@ Whenever possible, use the raw mirror link instead of the personal website link.
 
 Through use I found that somethings not translated correctly when merging the filterlists. Since my knowledge on the subject is limited, I am right now testing the below setup. 
 
-Trackers: 
+Trackers: <br>
 
-EasyPrivacy ( provided by the browser ) 
+EasyPrivacy ( provided by the browser ) <br>
 
-Adblock: 
+Adblock: <br>
 
-ABP-Anti circumvention list ( provided by the browser ) 
-Adblock warning removal list ( provided by the browser ) 
-Easylist ( provided by the browser ) 
-Vivaldi block list ( provided by the browser ) 
-Greek Void.gr ( provided by the browser ) 
-OISD Big ( for macos, replace with OISDSmall for iOS ) - https://big.oisd.nl, https://small.oisd.nl
+ABP-Anti circumvention list ( provided by the browser ) <br>
+Adblock warning removal list ( provided by the browser ) <br>
+Easylist ( provided by the browser ) <br>
+Vivaldi block list ( provided by the browser ) <br>
+Greek Void.gr ( provided by the browser ) <br>
+OISD Big ( for macos, replace with OISDSmall for iOS ) - https://big.oisd.nl, https://small.oisd.nl <br>
 UBlock Quick Fixes - https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt
 
 
