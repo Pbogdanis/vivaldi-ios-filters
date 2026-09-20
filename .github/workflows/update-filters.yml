@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-        strategy:
+    strategy:
       matrix:
         config_file: >-
-          ${{ 
+          ${{
             fromJSON(
-              github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
-              && format('["{0}"]', github.event.inputs.config_file) 
+              github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != ''
+              && format('["{0}"]', github.event.inputs.config_file)
               || '["sources-150kLimit.json", "sources-macos.json"]'
             )
           }}
@@ -62,7 +62,6 @@ jobs:
           max_rules = config.get('max_rules', 150000)
           output_file = config.get('output_file', 'vivaldi-combined.txt')
 
-          # Dynamic title logic (simplified)
           config_basename = os.path.basename(config_filename)
           if config_basename.startswith('sources-') and config_basename.endswith('.json'):
               platform_tag = config_basename[len('sources-'):-len('.json')]
@@ -82,15 +81,11 @@ jobs:
                   rules = []
                   for line in resp.text.splitlines():
                       line = line.strip()
-                      # Ignore empty lines, comments (!), and headers ([Adblock Plus 2.0])
                       if not line or line.startswith('!') or line.startswith('['):
                           continue
-
-                      # Deduplicate (keep this - it protects the 150k limit)
                       if line not in seen:
                           seen.add(line)
                           rules.append(line)
-
                   all_rules.extend(rules)
                   source_counts[url] = len(rules)
                   print(f"✅ {url.split('/')[-1]}: Kept {len(rules)} unique rules")
@@ -98,7 +93,6 @@ jobs:
                   print(f"⚠️ Failed to fetch {url}: {e}")
                   source_counts[url] = 0
 
-          # Add Bing Rewards exceptions at the top
           bing_exceptions = [
               "@@||bat.bing.com^",
               "@@||rewards.bing.com^",
@@ -113,11 +107,9 @@ jobs:
                   seen.add(rule)
           print(f"✅ Added {len(bing_exceptions)} Bing Rewards exceptions")
 
-          # Truncate if necessary
           truncated = len(all_rules) > max_rules
           if truncated:
               print(f"⚠️ WARNING: Truncated from {len(all_rules)} to {max_rules} rules")
-              print(f"⚠️ TIP: Reorder your sources.json to put your most important lists at the TOP!")
               all_rules = all_rules[:max_rules]
 
           today = datetime.now(timezone.utc).strftime('%Y%m%d')
