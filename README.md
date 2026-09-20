@@ -28,5 +28,6 @@ Vivaldi block list ( provided by the browser ) <br>
 Greek Void.gr ( provided by the browser ) <br>
 OISD Big ( for macos, replace with OISDSmall for iOS ) - https://big.oisd.nl, https://small.oisd.nl <br>
 UBlock Quick Fixes - https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt
+1HostsLite - https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt
 
 
