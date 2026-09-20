@@ -16,13 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    strategy:
+        strategy:
       matrix:
         config_file: >-
           ${{ 
-            github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
-            && format('["{0}"]', github.event.inputs.config_file) 
-            || '["sources-150kLimit.json", "sources-macos.json"]' | fromJSON(...)
+            fromJSON(
+              github.event_name == 'workflow_dispatch' && github.event.inputs.config_file != '' 
+              && format('["{0}"]', github.event.inputs.config_file) 
+              || '["sources-150kLimit.json", "sources-macos.json"]'
+            )
           }}
       fail-fast: false
 
