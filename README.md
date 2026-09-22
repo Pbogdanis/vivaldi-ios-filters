@@ -23,7 +23,7 @@ Adblock: <br>
 
 ABP-Anti circumvention list ( provided by the browser ) <br>
 Adblock warning removal list ( provided by the browser ) <br>
-Easylist ( provided by the browser ) <br>
+Easylist ( provided by the browser ), https://easylist-downloads.adblockplus.org/easylist-minified.txt <br>
 Vivaldi block list ( provided by the browser ) <br>
 Greek Void.gr ( provided by the browser ) <br>
 HAGEZI Ultimate MINI - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.mini.txt <br>
