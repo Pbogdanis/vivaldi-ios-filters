@@ -26,8 +26,6 @@ Adblock warning removal list ( provided by the browser ) <br>
 Easylist ( provided by the browser ) <br>
 Vivaldi block list ( provided by the browser ) <br>
 Greek Void.gr ( provided by the browser ) <br>
-OISD Big ( for macos, replace with OISDSmall for iOS ) - https://big.oisd.nl, https://small.oisd.nl <br>
-UBlock Quick Fixes - https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt
-1HostsLite - https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt
+HAGEZI Ultimate MINI - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.mini.txt <br>
 
 
